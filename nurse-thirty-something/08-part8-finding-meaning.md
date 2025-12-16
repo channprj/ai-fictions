@@ -1,4 +1,3 @@
----
 [← 이전: 커피 한 잔](./07-part7-coffee-break.md) | [목차](./README.md) | [다음: 작은 변화들 →](./09-part9-small-changes.md)
 
 ---
