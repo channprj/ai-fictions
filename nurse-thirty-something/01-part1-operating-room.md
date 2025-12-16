@@ -1,4 +1,3 @@
----
 [← 이전: 프롤로그](./00-prologue.md) | [목차](./README.md) | [다음: 선배와 후배 사이 →](./02-part2-generation-gap.md)
 
 ---

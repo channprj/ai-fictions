@@ -1,4 +1,3 @@
----
 [← 이전: 새로운 시작](./10-part10-new-beginning.md) | [목차](./README.md)
 
 ---

@@ -1,4 +1,3 @@
----
 [← 이전: 의미 찾기](./08-part8-finding-meaning.md) | [목차](./README.md) | [다음: 새로운 시작 →](./10-part10-new-beginning.md)
 
 ---

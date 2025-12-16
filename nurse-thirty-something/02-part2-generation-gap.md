@@ -1,4 +1,3 @@
----
 [← 이전: 수술실의 법칙](./01-part1-operating-room.md) | [목차](./README.md) | [다음: 나이트의 밤 →](./03-part3-night-shift.md)
 
 ---

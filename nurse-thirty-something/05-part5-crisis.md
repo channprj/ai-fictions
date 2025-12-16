@@ -1,4 +1,3 @@
----
 [← 이전: 32살의 무게](./04-part4-thirty-something.md) | [목차](./README.md) | [다음: 한계점 →](./06-part6-breaking-point.md)
 
 ---
