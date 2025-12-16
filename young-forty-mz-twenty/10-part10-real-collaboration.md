@@ -1,5 +1,5 @@
----
 [← 이전: 첫 걸음](./09-part9-awkward-harmony.md) | [목차](./README.md) | [다음: 루프 →](./11-epilogue.md)
+
 ---
 
 # PART 10

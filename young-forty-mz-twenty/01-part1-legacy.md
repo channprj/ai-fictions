@@ -1,4 +1,3 @@
----
 [← 이전: 프롤로그](./00-prologue.md) | [목차](./README.md) | [다음: 워라밸 선언 →](./02-part2-mz-freedom.md)
 
 ---

@@ -1,5 +1,5 @@
----
 [← 이전: 바닥](./06-part6-rock-bottom.md) | [목차](./README.md) | [다음: 변화 →](./08-part8-leadership-refactoring.md)
+
 ---
 
 # PART 7

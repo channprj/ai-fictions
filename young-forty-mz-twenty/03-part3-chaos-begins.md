@@ -1,4 +1,3 @@
----
 [← 이전: 워라밸 선언](./02-part2-mz-freedom.md) | [목차](./README.md) | [다음: 네 탓 →](./04-part4-blame-game.md)
 
 ---

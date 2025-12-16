@@ -1,5 +1,5 @@
----
 [← 이전: 네 탓](./04-part4-blame-game.md) | [목차](./README.md) | [다음: 바닥 →](./06-part6-rock-bottom.md)
+
 ---
 
 # PART 5

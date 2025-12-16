@@ -1,5 +1,5 @@
----
 [← 이전: 변화](./08-part8-leadership-refactoring.md) | [목차](./README.md) | [다음: 머지 →](./10-part10-real-collaboration.md)
+
 ---
 
 # PART 9

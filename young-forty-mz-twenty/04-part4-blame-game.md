@@ -1,5 +1,5 @@
----
 [← 이전: 충돌](./03-part3-chaos-begins.md) | [목차](./README.md) | [다음: 폭망 →](./05-part5-failing-project.md)
+
 ---
 
 # PART 4

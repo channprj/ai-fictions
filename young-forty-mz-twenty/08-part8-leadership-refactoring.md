@@ -1,5 +1,5 @@
----
 [← 이전: 커피 한 잔](./07-part7-human-debugging.md) | [목차](./README.md) | [다음: 첫 걸음 →](./09-part9-awkward-harmony.md)
+
 ---
 
 # PART 8
