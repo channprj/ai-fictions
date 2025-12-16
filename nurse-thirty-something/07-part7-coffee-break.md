@@ -1,4 +1,3 @@
----
 [← 이전: 한계점](./06-part6-breaking-point.md) | [목차](./README.md) | [다음: 의미 찾기 →](./08-part8-finding-meaning.md)
 
 ---
