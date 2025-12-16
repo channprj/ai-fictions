@@ -5,7 +5,9 @@
       "Bash(grep:*)",
       "Bash(sort:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)"
     ]
   }
 }
