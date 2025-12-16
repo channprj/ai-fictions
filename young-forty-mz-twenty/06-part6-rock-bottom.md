@@ -1,5 +1,5 @@
----
 [← 이전: 폭망](./05-part5-failing-project.md) | [목차](./README.md) | [다음: 커피 한 잔 →](./07-part7-human-debugging.md)
+
 ---
 
 # PART 6

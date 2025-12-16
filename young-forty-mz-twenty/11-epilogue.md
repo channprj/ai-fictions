@@ -1,5 +1,5 @@
----
 [← 이전: 머지](./10-part10-real-collaboration.md) | [목차](./README.md)
+
 ---
 
 # EPILOGUE
