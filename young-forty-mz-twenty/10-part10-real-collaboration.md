@@ -6,7 +6,7 @@
 
 ## 머지: 하나가 되다
 
-> *"merge는 두 개의 branch를 합치는 것이 아니다. 서로 다른 생각을 하나의 코드로 만드는 것이다."*
+> _"merge는 두 개의 branch를 합치는 것이 아니다. 서로 다른 생각을 하나의 코드로 만드는 것이다."_
 
 ---
 
@@ -113,11 +113,11 @@ async function processPayment(amount: number): Promise<PaymentResult> {
   try {
     const cachedResult = await cache.get<PaymentResult>(amount);
     if (cachedResult) {
-      logger.debug('Cache hit for payment', { amount });
+      logger.debug("Cache hit for payment", { amount });
       return cachedResult;
     }
   } catch (cacheError) {
-    logger.warn('Cache read failed, proceeding without cache', { cacheError });
+    logger.warn("Cache read failed, proceeding without cache", { cacheError });
   }
 
   // [박지은] 타입 안전성 강화
@@ -130,7 +130,7 @@ async function processPayment(amount: number): Promise<PaymentResult> {
   try {
     await cache.set(amount, result, { ttl: 3600 });
   } catch (cacheError) {
-    logger.warn('Cache write failed', { cacheError });
+    logger.warn("Cache write failed", { cacheError });
   }
 
   return result;
@@ -349,6 +349,7 @@ Deploying to production...
 좋아요 8,721개.
 
 댓글:
+
 - "실화냐"
 - "저도 우리 팀 바꾸고 싶은데 방법이 있을까요?"
 - "포기하지 않으면... 좋은 말이다"
@@ -364,20 +365,25 @@ Deploying to production...
 **슬랙 #dev-team**
 
 **@김철수**
+
 > 공지: 다음 프로젝트 PM은 박지은 씨입니다.
 > ML 추천 시스템 고도화 프로젝트.
 > 모두 협조 부탁드립니다.
 
 **@이준호**
+
 > 오 지은이 PM? 축하해!
 
 **@최민수**
+
 > 와 대박. 응원합니다!
 
 **@박지은**
+
 > 감사합니다... 열심히 하겠습니다 😊
 
 **@김철수**
+
 > 니가 잘 할 거야. 믿어.
 
 ---
@@ -400,8 +406,8 @@ git merge legacy modern.
 
 ---
 
-*에필로그에서 계속...*
+_에필로그에서 계속..._
 
 ---
-[← 이전: 첫 걸음](./09-part9-awkward-harmony.md) | [목차](./README.md) | [다음: 루프 →](./11-epilogue.md)
----
+
+## [← 이전: 첫 걸음](./09-part9-awkward-harmony.md) | [목차](./README.md) | [다음: 루프 →](./11-epilogue.md)
