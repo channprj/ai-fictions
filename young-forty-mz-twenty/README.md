@@ -31,20 +31,20 @@ MZ세대의 표본. 워라밸의 수호자. 야근은 무능의 증거라 믿는
 
 ## 목차
 
-| | 제목 | 부제 |
-|:---:|------|------|
-| 0 | [사표](./00-prologue.md) | 아직은 품 안에 |
-| 1 | [꼰대의 탄생](./01-part1-legacy.md) | 15년 경력의 그늘 |
-| 2 | [워라밸 선언](./02-part2-mz-freedom.md) | 6시 이후는 제 시간입니다 |
-| 3 | [충돌](./03-part3-chaos-begins.md) | 첫 번째 회의 |
-| 4 | [네 탓](./04-part4-blame-game.md) | 누구의 책임인가 |
-| 5 | [폭망](./05-part5-failing-project.md) | 예정된 실패 |
-| 6 | [바닥](./06-part6-rock-bottom.md) | 마지막 야근 |
-| 7 | [커피 한 잔](./07-part7-human-debugging.md) | 처음 나누는 대화 |
-| 8 | [변화](./08-part8-leadership-refactoring.md) | 작은 시작 |
-| 9 | [첫 걸음](./09-part9-awkward-harmony.md) | 어색함을 견디며 |
-| 10 | [머지](./10-part10-real-collaboration.md) | 하나가 되다 |
-| 11 | [루프](./11-epilogue.md) | 또 다른 시작 |
+|     | 제목                                         | 부제                     |
+| :-: | -------------------------------------------- | ------------------------ |
+|  0  | [사표](./00-prologue.md)                     | 아직은 품 안에           |
+|  1  | [꼰대의 탄생](./01-part1-legacy.md)          | 15년 경력의 그늘         |
+|  2  | [워라밸 선언](./02-part2-mz-freedom.md)      | 6시 이후는 제 시간입니다 |
+|  3  | [충돌](./03-part3-chaos-begins.md)           | 첫 번째 회의             |
+|  4  | [네 탓](./04-part4-blame-game.md)            | 누구의 책임인가          |
+|  5  | [폭망](./05-part5-failing-project.md)        | 예정된 실패              |
+|  6  | [바닥](./06-part6-rock-bottom.md)            | 마지막 야근              |
+|  7  | [커피 한 잔](./07-part7-human-debugging.md)  | 처음 나누는 대화         |
+|  8  | [변화](./08-part8-leadership-refactoring.md) | 작은 시작                |
+|  9  | [첫 걸음](./09-part9-awkward-harmony.md)     | 어색함을 견디며          |
+| 10  | [머지](./10-part10-real-collaboration.md)    | 하나가 되다              |
+| 11  | [루프](./11-epilogue.md)                     | 또 다른 시작             |
 
 ---
 
@@ -65,5 +65,4 @@ MZ세대의 표본. 워라밸의 수호자. 야근은 무능의 증거라 믿는
 
 ---
 
-*이 소설은 픽션입니다. 등장하는 인물, 회사, 사건은 모두 허구이며, 실제와 무관합니다.*
-*...라고 말하고 싶지만, 당신의 회사에도 김철수와 박지은이 있을 것입니다.*
+이 소설들은 [Claude](https://claude.ai)를 활용하여 AI와 자체 편집 및 퇴고를 통해 제작된 창작물입니다.

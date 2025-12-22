@@ -20,19 +20,19 @@
 
 ```
 ai-fictions/
-├── young-forty-mz-twenty/     # 개발팀의 기쁨과 슬픔
+├── fiction-name1/
 │   ├── 00-prologue.md
 │   ├── 01~10-part*.md
 │   ├── 11-epilogue.md
 │   ├── README.md
 │   └── dist/                  # 배포용 압축 파일
 │
-└── nurse-thirty-something/    # 마취과 간호사의 기쁨과 슬픔
+└── fiction-name2/
     ├── 00-prologue.md
     ├── 01~10-part*.md
     ├── 11-epilogue.md
     ├── README.md
-    └── dist/                  # 배포용 압축 파일
+    └── dist/
 ```
 
 ### 파일 명명 규칙
