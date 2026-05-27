@@ -15,5 +15,5 @@
 9. 08-vol6-opensource.md (6권: 오픈소스와 마법 생물 패치)
 10. 09-vol7-darkweb.md (7권: 다크웹 방어전)
 11. 10-vol8-demon.md (8권: 마계 레거시 무효화)
-12. 10-chapter10.md (9권: 창조신의 코어 서버 접근)
-13. 11-epilogue.md (10권 결말: 월드 리부트 v2.0)
+12. 11-vol9-creator.md (9권: 창조신의 코어 서버 접근)
+13. 12-vol10-reboot.md (10권 결말: 월드 리부트 v2.0)
