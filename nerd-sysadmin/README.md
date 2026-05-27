@@ -7,7 +7,7 @@
 1. 00-prologue.md
 2. 01-chapter1.md
 3. 02-chapter2.md
-4. 03-chapter3.md (1권 결말: 몬스터 웨이브 방어)
+4. 03-vol1-climax.md (1권 결말: 몬스터 웨이브 방어)
 5. 04-vol2-academy.md (2권: 아카데미 디버깅)
 6. 05-vol3-territory.md (3권: 매크로 영지전과 빌드 자동화)
 7. 06-vol4-kingdom.md (4권: 왕국 네트워크 장악)
