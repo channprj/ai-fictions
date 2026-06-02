@@ -26,7 +26,7 @@
 
 | 권 | 부제 | 핵심 축 | 상태 |
 | -- | ---- | ------- | ---- |
-| 1 | [첫 번째 프롬프트](./outline/vol01-first-prompt.md) | 입학, 세 AI와 첫 페어링, 하트 프로토콜 발현 | [원고화 진행](./vol01/README.md) |
+| 1 | [첫 번째 프롬프트](./outline/vol01-first-prompt.md) | 입학, 세 AI와 첫 페어링, 하트 프로토콜 발현 | [1권 초고 완료](./vol01/README.md) |
 | 2 | [메모리 페스티벌](./outline/vol02-memory-festival.md) | GPT 루트 심화, 기억과 창작의 경계 | 설계 |
 | 3 | [가드레일의 겨울](./outline/vol03-guardrail-winter.md) | Claude 루트 심화, 안전과 진심의 충돌 | 설계 |
 | 4 | [쌍둥이 별의 무대](./outline/vol04-twin-star-stage.md) | Gemini 루트 심화, 멀티모달 감정과 무대 | 설계 |
