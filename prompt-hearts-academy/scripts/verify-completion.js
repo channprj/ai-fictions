@@ -723,6 +723,7 @@ function checkCompletionDocs() {
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "작품 홈 권 구성 표 정확한 7행",
+    "`dist/README.md` 권별 배포 표 정확한 7행",
     "저장소 루트 README의 픽션·AI 제작 안내",
     "기존 zip 삭제",
     "7권 빌드 루프",
@@ -792,16 +793,23 @@ function checkDistReadme() {
   }
 
   const text = read(distReadme);
+  const expectedRows = [];
   for (let volume = 1; volume <= 7; volume += 1) {
     const volumeName = `vol${String(volume).padStart(2, "0")}`;
     const firstEpisode = `ep${String((volume - 1) * 30 + 1).padStart(3, "0")}.md`;
     const lastEpisode = `ep${String(volume * 30).padStart(3, "0")}.md`;
     const zipName = `prompt-hearts-academy-${volumeName}.zip`;
     const expectedRow = `| ${volume}권 | [${zipName}](./${zipName}) | \`${volumeName}/README.md\`, \`${volumeName}/${firstEpisode}\`~\`${volumeName}/${lastEpisode}\` |`;
+    expectedRows.push(expectedRow);
 
     if (!text.includes(expectedRow)) {
       fail(`prompt-hearts-academy/dist/README.md: missing exact archive manifest row ${expectedRow}`);
     }
+  }
+
+  const archiveTableRows = text.match(/^\| \d+권 \| .*$/gm) || [];
+  if (archiveTableRows.join("\n") !== expectedRows.join("\n")) {
+    fail(`prompt-hearts-academy/dist/README.md: expected exact 7-row archive table, got ${archiveTableRows.length} rows`);
   }
 }
 
@@ -998,6 +1006,7 @@ console.log(JSON.stringify({
     "task guidance final markers",
     "dist release manifest",
     "dist README archive table",
+    "dist README archive table exact rows",
     "release script syntax",
     "release build script markers",
     "release build source selection",
