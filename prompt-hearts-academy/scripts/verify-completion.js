@@ -17,6 +17,14 @@ const volumeMetadata = [
   { title: "하트 프로토콜", outline: "vol07-heart-protocol.md" },
 ];
 const manuscriptPlaceholderMarker = /TODO|TBD|FIXME|PLACEHOLDER|\{\{|\}\}|\[\[|\]\]/g;
+const canonMemoRequiredLabels = [
+  "신규 고유명사/설정",
+  "관련 회차",
+  "기존 BIBLE/outline과의 관계",
+  "떡밥 상태 변화",
+  "후속 회차에서 조심할 점",
+  "BIBLE 업데이트 제안 위치",
+];
 
 function rel(file) {
   return path.relative(repoRoot, file).replaceAll(path.sep, "/");
@@ -223,8 +231,16 @@ function checkVolumes() {
     if (navigationLine !== expectedNavigation) {
       fail(`${rel(episodePath)}: expected navigation "${expectedNavigation}", got "${navigationLine || "<missing>"}"`);
     }
-    if (!text.includes("## Canon Memo")) {
+    const canonMemoStart = text.indexOf("## Canon Memo");
+    if (canonMemoStart === -1) {
       fail(`${rel(episodePath)}: missing Canon Memo`);
+    } else {
+      const canonMemo = text.slice(canonMemoStart);
+      for (const label of canonMemoRequiredLabels) {
+        if (!canonMemo.includes(`- ${label}:`)) {
+          fail(`${rel(episodePath)}: missing Canon Memo field ${label}`);
+        }
+      }
     }
     const placeholders = text.match(manuscriptPlaceholderMarker);
     if (placeholders) {
@@ -503,6 +519,7 @@ function checkCompletionDocs() {
     "본편 회차를 수정할 때는 제210화의 최종 상태인 공식 오버랩 페어링 종료, 비독점·철회 가능 자유 접속, 거절권 보존 결말을 깨지 않는다.",
     "시리즈 루트·outline·scripts 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
+    "회차 Canon Memo 필수 항목",
     "node prompt-hearts-academy/scripts/verify-completion.js",
     "node prompt-hearts-academy/scripts/build-dist.js",
   ]);
@@ -658,6 +675,7 @@ console.log(JSON.stringify({
     "project layout exact file set",
     "episode ranges",
     "episode title/navigation/canon memo",
+    "episode canon memo required fields",
     "episode placeholder markers",
     "episode title parity",
     "episode sequential navigation",
