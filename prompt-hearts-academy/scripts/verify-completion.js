@@ -610,6 +610,8 @@ function checkCompletionDocs() {
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "기존 zip 삭제",
+    "7권 빌드 루프",
+    "`main()` 진입점",
     "node prompt-hearts-academy/scripts/verify-completion.js",
     "node prompt-hearts-academy/scripts/build-dist.js",
   ]);
@@ -700,8 +702,15 @@ function checkReleaseScripts() {
     "fs.rmSync(zipPath, { force: true });",
     "run(\"zip\", [\"-X\", \"-q\", path.join(\"dist\", zipName), ...files]);",
     "run(\"zip\", [\"-T\", zipName], { cwd: distDir });",
+    "function main() {",
+    "fs.mkdirSync(distDir, { recursive: true });",
+    "const archives = [];",
+    "for (let volume = 1; volume <= expectedVolumes; volume += 1) {",
+    "archives.push(buildArchive(volume));",
+    "const checksumLines = archives.map((archive) => {",
     "fs.writeFileSync(path.join(distDir, \"SHA256SUMS\"), `${checksumLines.join(\"\\n\")}\\n`);",
     "run(\"node\", [path.join(\"scripts\", \"verify-completion.js\")]);",
+    "main();",
   ]);
 }
 
@@ -850,6 +859,7 @@ console.log(JSON.stringify({
     "release script syntax",
     "release build script markers",
     "release build source selection",
+    "release build orchestration",
     "dist exact file set",
     "dist checksum manifest",
     "doc stale markers",
