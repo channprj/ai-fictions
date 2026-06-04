@@ -620,6 +620,8 @@ function checkRootCatalog() {
   }
 
   const text = read(rootReadme);
+  checkUniqueFirstLineHeading(rootReadme, "README.md", "# AI Fictions");
+
   const requiredCatalogSnippets = [
     "프롬프트 하트 아카데미",
     "본편 7권 210화 초고 완결",
@@ -824,6 +826,7 @@ function checkCompletionDocs() {
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "작품 홈 권 구성 표 정확한 7행",
     "작품 홈 권 구성 표 정확한 헤더",
+    "저장소 루트 README 제목 H1 고유성과 첫 줄 배치",
     "저장소 루트 작품 목록 표 정확한 1행",
     "저장소 루트 작품 목록 표 정확한 헤더",
     "`dist/README.md` 권별 배포 표 정확한 헤더와 7행",
@@ -1148,6 +1151,7 @@ console.log(JSON.stringify({
     "outline episode table exact header",
     "outline episode table no extra rows",
     "root catalog",
+    "root catalog unique first-line title heading",
     "root catalog table row",
     "root catalog table exact rows",
     "root catalog table exact header",
