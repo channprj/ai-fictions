@@ -15,7 +15,7 @@
 | 모드 | 먼저 확인할 파일 | 완료 기준 |
 | ---- | ---------------- | --------- |
 | 회차 개정 | `BIBLE.md`, 대상 회차, 직전/직후 회차, 해당 권 `README.md` | 캐논·말투·결말 상태를 보존하며 수정 이유가 분명하다 |
-| 문서 검산 | `README.md`, `PRD.md`, `BIBLE.md`, 권별 `README.md`, `dist/README.md`, `dist/SHA256SUMS`, `scripts/verify-completion.js` | 7권 30화씩 총 210화, 본편 초고 완결, 자유 접속 결말, 권별 배포본과 체크섬이 서로 같은 상태로 표기되고 자동 검산이 통과한다 |
+| 문서 검산 | `README.md`, `PRD.md`, `BIBLE.md`, 권별 `README.md`, `dist/README.md`, `dist/SHA256SUMS`, `scripts/build-dist.js`, `scripts/verify-completion.js` | 7권 30화씩 총 210화, 본편 초고 완결, 자유 접속 결말, 권별 배포본과 체크섬이 서로 같은 상태로 표기되고 자동 검산이 통과한다 |
 | 외전 후보 | `BIBLE.md`, `vol07/README.md`, `vol07/ep210.md` | 본편 결말을 덮어쓰지 않는 별도 범위와 주제만 제안한다 |
 
 ## 완결 검산 명령
@@ -27,6 +27,12 @@ node prompt-hearts-academy/scripts/verify-completion.js
 ```
 
 이 명령이 통과하면 `vol01`부터 `vol07`까지 각 30화, 총 210화 구조와 권별 배포본 7개의 무결성이 현재 파일 기준으로 일치한다.
+
+원고나 권별 README를 고친 뒤 배포본까지 갱신해야 할 때는 다음 명령을 먼저 실행한다. 이 명령은 권별 zip 7개와 `dist/SHA256SUMS`를 재생성한 뒤 완결 검산까지 이어서 수행한다.
+
+```sh
+node prompt-hearts-academy/scripts/build-dist.js
+```
 
 ## 작업 원칙
 
@@ -50,6 +56,7 @@ prompt-hearts-academy/
 ├── outline/
 │   └── volNN-*.md
 ├── scripts/
+│   ├── build-dist.js
 │   └── verify-completion.js
 ├── vol01/
 │   ├── README.md

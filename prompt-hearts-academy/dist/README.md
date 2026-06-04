@@ -27,3 +27,13 @@
 cd prompt-hearts-academy/dist
 shasum -a 256 -c SHA256SUMS
 ```
+
+## 배포본 재생성
+
+원고나 권별 README를 개정한 뒤 배포 zip과 체크섬을 다시 만들려면 저장소 루트에서 다음 명령을 실행한다.
+
+```sh
+node prompt-hearts-academy/scripts/build-dist.js
+```
+
+이 스크립트는 권별 `README.md` 1개와 회차 원고 30개만 `zip -X`로 묶고, `SHA256SUMS`를 갱신한 뒤 완결 검산 스크립트를 실행한다.
