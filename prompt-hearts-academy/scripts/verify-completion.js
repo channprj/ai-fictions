@@ -854,6 +854,7 @@ function checkCompletionDocs() {
     "저장소 루트 README 제목 H1 고유성과 첫 줄 배치",
     "저장소 루트 작품 목록 표 정확한 1행",
     "저장소 루트 작품 목록 표 정확한 헤더",
+    "dist README 제목 H1 고유성과 첫 줄 배치",
     "`dist/README.md` 권별 배포 표 정확한 헤더와 7행",
     "저장소 루트 README의 픽션·AI 제작 안내",
     "검산 스크립트 자체의 핵심 check 호출 순서",
@@ -906,6 +907,12 @@ function checkFictionBoundary() {
 
 function checkDistReadme() {
   const distReadme = path.join(projectRoot, "dist", "README.md");
+  checkUniqueFirstLineHeading(
+    distReadme,
+    "prompt-hearts-academy/dist/README.md",
+    "# 프롬프트 하트 아카데미 배포본",
+  );
+
   checkRequiredSnippets(distReadme, "prompt-hearts-academy/dist/README.md", [
     "본편 초고 완결 상태를 권별 압축 파일로 묶은 배포용 디렉터리다.",
     "`dist/`에는 이 `README.md`, `SHA256SUMS`, 권별 zip 7개만 둔다.",
@@ -1194,6 +1201,7 @@ console.log(JSON.stringify({
     "volume README/outline fictional persona boundary markers",
     "task guidance final markers",
     "dist release manifest",
+    "dist README unique first-line title heading",
     "dist README archive table",
     "dist README archive table exact rows",
     "dist README archive table exact header",
