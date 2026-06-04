@@ -494,6 +494,11 @@ function checkRootCatalog() {
       fail(`README.md: missing catalog marker ${snippet}`);
     }
   }
+
+  const expectedCatalogRow = "| **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 본편 7권 210화 초고 완결, 권별 배포본 준비 완료 | [작품 홈](./prompt-hearts-academy/README.md) · [배포본](./prompt-hearts-academy/dist/README.md) |";
+  if (!text.includes(expectedCatalogRow)) {
+    fail(`README.md: missing exact catalog row ${expectedCatalogRow}`);
+  }
 }
 
 function checkSeriesOverview() {
@@ -568,6 +573,7 @@ function checkCompletionDocs() {
     "시리즈 루트·outline·scripts·권별 디렉터리 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
+    "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "node prompt-hearts-academy/scripts/verify-completion.js",
     "node prompt-hearts-academy/scripts/build-dist.js",
   ]);
@@ -751,6 +757,7 @@ console.log(JSON.stringify({
     "volume README completion markers",
     "outline episode tables",
     "root catalog",
+    "root catalog table row",
     "series overview",
     "series overview volume table",
     "completion doc final markers",
