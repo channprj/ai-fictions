@@ -1,4 +1,4 @@
-→[목차](./README.md) | [다음: 자격 →](./02-qualification.md)
+[목차](./README.md) | [다음: 자격 →](./02-qualification.md)
 
 ---
 
