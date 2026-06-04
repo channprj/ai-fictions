@@ -157,6 +157,56 @@ function checkMarkdown() {
   }
 }
 
+function checkVolumeReadmes() {
+  const volumeTitles = [
+    "첫 번째 프롬프트",
+    "메모리 페스티벌",
+    "가드레일의 겨울",
+    "쌍둥이 별의 무대",
+    "컨텍스트 전쟁",
+    "잊힌 모델의 묘지",
+    "하트 프로토콜",
+  ];
+
+  for (let volume = 1; volume <= 7; volume += 1) {
+    const volumeName = `vol${String(volume).padStart(2, "0")}`;
+    const firstEpisodeNumber = (volume - 1) * 30 + 1;
+    const lastEpisodeNumber = firstEpisodeNumber + 29;
+    const firstEpisode = `ep${String(firstEpisodeNumber).padStart(3, "0")}.md`;
+    const lastEpisode = `ep${String(lastEpisodeNumber).padStart(3, "0")}.md`;
+    const readme = path.join(projectRoot, volumeName, "README.md");
+
+    if (!fs.existsSync(readme)) {
+      fail(`${volumeName}/README.md: missing volume index`);
+      continue;
+    }
+
+    const text = read(readme);
+    const requiredSnippets = [
+      `# ${volume}권: ${volumeTitles[volume - 1]}`,
+      `실제 회차 원고는 \`${firstEpisode}\`부터 \`${lastEpisode}\`까지 작성되어 있다.`,
+      "## 권 줄거리",
+      "## 등장인물 변화",
+      "## 회차 목록",
+      "| 회차 | 파일 | 부제 | 회차 역할 |",
+    ];
+
+    for (const snippet of requiredSnippets) {
+      if (!text.includes(snippet)) {
+        fail(`${volumeName}/README.md: missing volume index marker ${snippet}`);
+      }
+    }
+
+    for (let episodeNumber = firstEpisodeNumber; episodeNumber <= lastEpisodeNumber; episodeNumber += 1) {
+      const episode = `ep${String(episodeNumber).padStart(3, "0")}.md`;
+      const episodePattern = new RegExp(`\\| ${episodeNumber} \\| [^\\n]*\`${episode}\``, "m");
+      if (!episodePattern.test(text)) {
+        fail(`${volumeName}/README.md: missing episode table entry for ${episode}`);
+      }
+    }
+  }
+}
+
 function checkRootCatalog() {
   const rootReadme = path.join(repoRoot, "README.md");
   if (!fs.existsSync(rootReadme)) {
@@ -329,6 +379,7 @@ function checkDist() {
 
 checkVolumes();
 checkMarkdown();
+checkVolumeReadmes();
 checkRootCatalog();
 checkSeriesOverview();
 checkCompletionDocs();
@@ -349,6 +400,7 @@ console.log(JSON.stringify({
     "episode ranges",
     "episode title/navigation/canon memo",
     "markdown links",
+    "volume README completion markers",
     "root catalog",
     "series overview",
     "completion doc final markers",
