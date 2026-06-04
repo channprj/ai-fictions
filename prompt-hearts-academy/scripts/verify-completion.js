@@ -617,12 +617,24 @@ function checkSeriesOverview() {
     }
   }
 
+  const expectedRows = [];
   for (let volume = 1; volume <= 7; volume += 1) {
     const { title, outline, axis, status } = volumeMetadata[volume - 1];
     const expectedRow = `| ${volume} | [${title}](./outline/${outline}) | ${axis} | ${status} |`;
+    expectedRows.push(expectedRow);
     if (!text.includes(expectedRow)) {
       fail(`prompt-hearts-academy/README.md: missing exact volume overview row ${expectedRow}`);
     }
+  }
+
+  const volumeSectionStart = text.indexOf("## 권 구성");
+  const volumeSectionEnd = volumeSectionStart === -1 ? -1 : text.indexOf("\n## ", volumeSectionStart + 1);
+  const volumeTableSection = volumeSectionStart === -1
+    ? ""
+    : text.slice(volumeSectionStart, volumeSectionEnd === -1 ? undefined : volumeSectionEnd);
+  const actualRows = volumeTableSection.match(/^\| \d+ \| .*$/gm) || [];
+  if (actualRows.join("\n") !== expectedRows.join("\n")) {
+    fail(`prompt-hearts-academy/README.md: expected exact 7-row volume overview table, got ${actualRows.length} rows`);
   }
 }
 
@@ -710,6 +722,7 @@ function checkCompletionDocs() {
     "텍스트 파일 LF 줄바꿈과 마지막 개행",
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
+    "작품 홈 권 구성 표 정확한 7행",
     "저장소 루트 README의 픽션·AI 제작 안내",
     "기존 zip 삭제",
     "7권 빌드 루프",
@@ -976,6 +989,7 @@ console.log(JSON.stringify({
     "root catalog table row",
     "series overview",
     "series overview volume table",
+    "series overview volume table exact rows",
     "final episode ending markers",
     "completion doc final markers",
     "fictional persona boundary markers",
