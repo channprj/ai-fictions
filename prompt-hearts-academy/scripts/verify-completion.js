@@ -52,6 +52,7 @@ const volumeMetadata = [
   },
 ];
 const manuscriptPlaceholderMarker = /TODO|TBD|FIXME|PLACEHOLDER|\{\{|\}\}|\[\[|\]\]/g;
+const minimumManuscriptLength = 4800;
 const canonMemoRequiredLabels = [
   "신규 고유명사/설정",
   "관련 회차",
@@ -299,6 +300,9 @@ function checkVolumes() {
     const placeholders = text.match(manuscriptPlaceholderMarker);
     if (placeholders) {
       fail(`${rel(episodePath)}: manuscript placeholder marker ${[...new Set(placeholders)].join(", ")}`);
+    }
+    if (text.length < minimumManuscriptLength) {
+      fail(`${rel(episodePath)}: manuscript length ${text.length} is below minimum ${minimumManuscriptLength}`);
     }
   }
 }
@@ -657,6 +661,7 @@ function checkCompletionDocs() {
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
     "회차 Canon Memo 필수 항목과 말미 배치",
+    "회차 원고 최소 길이",
     "권별 README 완결 범위와 정확한 30화 목록",
     "회차 파일 셀·링크 target",
     "회차 역할 칸 비어 있지 않음",
@@ -911,6 +916,7 @@ console.log(JSON.stringify({
     "episode canon memo required fields",
     "episode canon memo terminal placement",
     "episode placeholder markers",
+    "episode manuscript minimum length",
     "episode title parity",
     "episode sequential navigation",
     "post-210 episode guard",
