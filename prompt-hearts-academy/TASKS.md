@@ -15,12 +15,12 @@
 | 모드 | 먼저 확인할 파일 | 완료 기준 |
 | ---- | ---------------- | --------- |
 | 회차 개정 | `BIBLE.md`, 대상 회차, 직전/직후 회차, 해당 권 `README.md` | 캐논·말투·결말 상태를 보존하며 수정 이유가 분명하다 |
-| 문서 검산 | `README.md`, `PRD.md`, `BIBLE.md`, 권별 `README.md`, `dist/README.md`, `dist/SHA256SUMS`, `scripts/build-dist.js`, `scripts/verify-completion.js` | 7권 30화씩 총 210화, 본편 초고 완결, 자유 접속 결말, 권별 배포본·체크섬·원본 파일 내용이 서로 같은 상태로 표기되고 자동 검산이 통과한다 |
+| 문서 검산 | 저장소 루트 `README.md`, `README.md`, `PRD.md`, `BIBLE.md`, 권별 `README.md`, `dist/README.md`, `dist/SHA256SUMS`, `scripts/build-dist.js`, `scripts/verify-completion.js` | 7권 30화씩 총 210화, 본편 초고 완결, 자유 접속 결말, 권별 배포본·체크섬·원본 파일 내용·저장소 루트 작품 목록이 서로 같은 상태로 표기되고 자동 검산이 통과한다 |
 | 외전 후보 | `BIBLE.md`, `vol07/README.md`, `vol07/ep210.md` | 본편 결말을 덮어쓰지 않는 별도 범위와 주제만 제안한다 |
 
 ## 완결 검산 명령
 
-본편 회차, 권별 색인, 문서 링크, 완결 상태 문구, 배포 zip, SHA-256 체크섬, 압축본과 원본의 내용 일치를 한 번에 확인하려면 저장소 루트에서 다음 명령을 실행한다.
+본편 회차, 권별 색인, 저장소 루트 작품 목록, 문서 링크, 완결 상태 문구, 배포 zip, SHA-256 체크섬, 압축본과 원본의 내용 일치를 한 번에 확인하려면 저장소 루트에서 다음 명령을 실행한다.
 
 ```sh
 node prompt-hearts-academy/scripts/verify-completion.js

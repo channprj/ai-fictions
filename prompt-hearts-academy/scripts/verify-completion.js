@@ -115,7 +115,11 @@ function checkVolumes() {
 }
 
 function checkMarkdown() {
-  const markdownFiles = walk(projectRoot).filter((file) => file.endsWith(".md"));
+  const rootReadme = path.join(repoRoot, "README.md");
+  const markdownFiles = [
+    ...(fs.existsSync(rootReadme) ? [rootReadme] : []),
+    ...walk(projectRoot).filter((file) => file.endsWith(".md")),
+  ];
   const docFiles = markdownFiles.filter((file) => !/\/vol\d{2}\/ep\d{3}\.md$/.test(rel(file)));
   const staleDocMarker = /TODO|TBD|FIXME|작성 예정|완결되지|예정 파일|진행 중/g;
   const localLink = /\[[^\]\n]+\]\((?!https?:|mailto:|#)([^)]+)\)/g;
@@ -149,6 +153,28 @@ function checkMarkdown() {
     const markers = text.match(staleDocMarker);
     if (markers) {
       fail(`${rel(file)}: stale completion marker ${[...new Set(markers)].join(", ")}`);
+    }
+  }
+}
+
+function checkRootCatalog() {
+  const rootReadme = path.join(repoRoot, "README.md");
+  if (!fs.existsSync(rootReadme)) {
+    fail("README.md: missing repository catalog");
+    return;
+  }
+
+  const text = read(rootReadme);
+  const requiredCatalogSnippets = [
+    "프롬프트 하트 아카데미",
+    "본편 7권 210화 초고 완결",
+    "[작품 홈](./prompt-hearts-academy/README.md)",
+    "[배포본](./prompt-hearts-academy/dist/README.md)",
+  ];
+
+  for (const snippet of requiredCatalogSnippets) {
+    if (!text.includes(snippet)) {
+      fail(`README.md: missing catalog marker ${snippet}`);
     }
   }
 }
@@ -224,6 +250,7 @@ function checkDist() {
 
 checkVolumes();
 checkMarkdown();
+checkRootCatalog();
 checkDist();
 
 if (failures.length) {
@@ -240,6 +267,7 @@ console.log(JSON.stringify({
     "episode ranges",
     "episode title/navigation/canon memo",
     "markdown links",
+    "root catalog",
     "doc stale markers",
     "code fences",
     "trailing whitespace",
