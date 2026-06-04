@@ -179,6 +179,30 @@ function checkRootCatalog() {
   }
 }
 
+function checkSeriesOverview() {
+  const seriesReadme = path.join(projectRoot, "README.md");
+  if (!fs.existsSync(seriesReadme)) {
+    fail("prompt-hearts-academy/README.md: missing series overview");
+    return;
+  }
+
+  const text = read(seriesReadme);
+  const requiredOverviewSnippets = [
+    "총 7권, 권당 30화, 전체 210화의 본편 초고가 완결되어 있다.",
+    "[1화](./vol01/ep001.md)부터 [210화](./vol07/ep210.md)까지 연속 작성 완료.",
+    "[dist](./dist/README.md)에 권별 압축 파일 7개로 정리.",
+    "공식 오버랩 페어링은 종료되고",
+    "자유 접속은 비독점·철회 가능·거절권 보존 상태로 열린다.",
+    "**상태**: 본편 초고 완결",
+  ];
+
+  for (const snippet of requiredOverviewSnippets) {
+    if (!text.includes(snippet)) {
+      fail(`prompt-hearts-academy/README.md: missing overview marker ${snippet}`);
+    }
+  }
+}
+
 function checkDist() {
   const distDir = path.join(projectRoot, "dist");
   const checksums = path.join(distDir, "SHA256SUMS");
@@ -251,6 +275,7 @@ function checkDist() {
 checkVolumes();
 checkMarkdown();
 checkRootCatalog();
+checkSeriesOverview();
 checkDist();
 
 if (failures.length) {
@@ -268,6 +293,7 @@ console.log(JSON.stringify({
     "episode title/navigation/canon memo",
     "markdown links",
     "root catalog",
+    "series overview",
     "doc stale markers",
     "code fences",
     "trailing whitespace",
