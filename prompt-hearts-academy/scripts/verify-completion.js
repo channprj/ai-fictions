@@ -275,11 +275,21 @@ function checkVolumes() {
     if (lines[1] !== "" || lines[2] !== expectedNavigation || lines[3] !== "") {
       fail(`${rel(episodePath)}: expected opening scaffold title, blank line, navigation, blank line`);
     }
-    const canonMemoStart = text.indexOf("## Canon Memo");
-    if (canonMemoStart === -1) {
+    const canonMemoHeadings = [...text.matchAll(/^## Canon Memo$/gm)];
+    if (!canonMemoHeadings.length) {
       fail(`${rel(episodePath)}: missing Canon Memo`);
     } else {
+      if (canonMemoHeadings.length !== 1) {
+        fail(`${rel(episodePath)}: expected exactly one Canon Memo heading, got ${canonMemoHeadings.length}`);
+      }
+
+      const canonMemoStart = canonMemoHeadings[0].index;
       const canonMemo = text.slice(canonMemoStart);
+      const trailingSection = canonMemo.slice("## Canon Memo".length).match(/\n##\s+(.+)/);
+      if (trailingSection) {
+        fail(`${rel(episodePath)}: Canon Memo must be the final markdown section, found trailing section ${trailingSection[1]}`);
+      }
+
       for (const label of canonMemoRequiredLabels) {
         if (!canonMemo.includes(`- ${label}:`)) {
           fail(`${rel(episodePath)}: missing Canon Memo field ${label}`);
@@ -625,6 +635,7 @@ function checkCompletionDocs() {
     "시리즈 루트·outline·scripts·권별 디렉터리 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
+    "회차 Canon Memo 필수 항목과 말미 배치",
     "SHA256SUMS 정확한 줄 형식",
     "텍스트 파일 마지막 개행",
     "제210화 최종 결말 마커",
@@ -874,6 +885,7 @@ console.log(JSON.stringify({
     "episode title/navigation/canon memo",
     "episode opening scaffold",
     "episode canon memo required fields",
+    "episode canon memo terminal placement",
     "episode placeholder markers",
     "episode title parity",
     "episode sequential navigation",
