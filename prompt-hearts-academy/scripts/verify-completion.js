@@ -600,6 +600,28 @@ function checkCompletionDocs() {
   ]);
 }
 
+function checkFictionBoundary() {
+  checkRequiredSnippets(path.join(projectRoot, "README.md"), "prompt-hearts-academy/README.md", [
+    "이 소설은 픽션이며, 등장하는 인물, 기관, AI 페르소나, 사건은 모두 허구의 창작 설정입니다.",
+    "GPT, Claude, Gemini는 작품 내에서 의인화된 가상 페르소나로 다루며 실제 서비스의 공식 성격이나 입장을 대변하지 않습니다.",
+  ]);
+
+  checkRequiredSnippets(path.join(projectRoot, "PRD.md"), "prompt-hearts-academy/PRD.md", [
+    "실제 AI 브랜드를 다루되 공식 대변처럼 쓰지 않고, 픽션 의인화라는 경계가 모든 문서에 명시되어야 한다.",
+    "핵심 안내 문서(`README.md`, `PRD.md`, `BIBLE.md`)는 GPT, Claude, Gemini를 실제 서비스의 공식 캐릭터가 아닌 허구적 페르소나로 명시하고, outline과 원고는 이 경계를 따른다.",
+    "실존 기업, 모델, 서비스는 허구적 페르소나로 재창작한다.",
+  ]);
+
+  checkRequiredSnippets(path.join(projectRoot, "BIBLE.md"), "prompt-hearts-academy/BIBLE.md", [
+    "GPT, Claude, Gemini는 실제 서비스 그 자체가 아니라, 작품 내에서 세이라이트가 교육용으로 계약한 **허구적 페르소나 아바타**다.",
+  ]);
+
+  checkRequiredSnippets(path.join(projectRoot, "TASKS.md"), "prompt-hearts-academy/TASKS.md", [
+    "픽션 경계 유지",
+    "GPT, Claude, Gemini는 실제 서비스의 공식 성격이 아니라 작품 속 허구적 페르소나다.",
+  ]);
+}
+
 function checkDistReadme() {
   const distReadme = path.join(projectRoot, "dist", "README.md");
   checkRequiredSnippets(distReadme, "prompt-hearts-academy/dist/README.md", [
@@ -751,6 +773,7 @@ checkRootCatalog();
 checkSeriesOverview();
 checkFinalEpisodeEnding();
 checkCompletionDocs();
+checkFictionBoundary();
 checkDistReadme();
 checkReleaseScripts();
 checkDist();
@@ -785,6 +808,7 @@ console.log(JSON.stringify({
     "series overview volume table",
     "final episode ending markers",
     "completion doc final markers",
+    "fictional persona boundary markers",
     "task guidance final markers",
     "dist release manifest",
     "dist README archive table",
