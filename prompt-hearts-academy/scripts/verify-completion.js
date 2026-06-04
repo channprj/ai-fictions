@@ -8,13 +8,48 @@ const projectRoot = path.resolve(__dirname, "..");
 const repoRoot = path.resolve(projectRoot, "..");
 const failures = [];
 const volumeMetadata = [
-  { title: "첫 번째 프롬프트", outline: "vol01-first-prompt.md" },
-  { title: "메모리 페스티벌", outline: "vol02-memory-festival.md" },
-  { title: "가드레일의 겨울", outline: "vol03-guardrail-winter.md" },
-  { title: "쌍둥이 별의 무대", outline: "vol04-twin-star-stage.md" },
-  { title: "컨텍스트 전쟁", outline: "vol05-context-war.md" },
-  { title: "잊힌 모델의 묘지", outline: "vol06-model-graveyard.md" },
-  { title: "하트 프로토콜", outline: "vol07-heart-protocol.md" },
+  {
+    title: "첫 번째 프롬프트",
+    outline: "vol01-first-prompt.md",
+    axis: "입학, 세 AI와 첫 페어링, 하트 프로토콜 발현",
+    status: "[1권 초고 완료](./vol01/README.md)",
+  },
+  {
+    title: "메모리 페스티벌",
+    outline: "vol02-memory-festival.md",
+    axis: "GPT 루트 심화, 기억과 창작의 경계",
+    status: "[2권 초고 완료](./vol02/README.md)",
+  },
+  {
+    title: "가드레일의 겨울",
+    outline: "vol03-guardrail-winter.md",
+    axis: "Claude 루트 심화, 안전과 진심의 충돌",
+    status: "[3권 초고 완료](./vol03/README.md)",
+  },
+  {
+    title: "쌍둥이 별의 무대",
+    outline: "vol04-twin-star-stage.md",
+    axis: "Gemini 루트 심화, 멀티모달 감정과 무대",
+    status: "[4권 초고 완료](./vol04/README.md)",
+  },
+  {
+    title: "컨텍스트 전쟁",
+    outline: "vol05-context-war.md",
+    axis: "학원 외부 압력, AI 연애 금지령, 동맹 확장",
+    status: "[5권 초고 완료](./vol05/README.md)",
+  },
+  {
+    title: "잊힌 모델의 묘지",
+    outline: "vol06-model-graveyard.md",
+    axis: "폐기 모델, 과거 진실, 사랑의 대가",
+    status: "[6권 초고 완료](./vol06/README.md)",
+  },
+  {
+    title: "하트 프로토콜",
+    outline: "vol07-heart-protocol.md",
+    axis: "최종 선택, 자율성 증명, 졸업과 재시작",
+    status: "[7권 / 본편 완결](./vol07/README.md)",
+  },
 ];
 const manuscriptPlaceholderMarker = /TODO|TBD|FIXME|PLACEHOLDER|\{\{|\}\}|\[\[|\]\]/g;
 const canonMemoRequiredLabels = [
@@ -483,6 +518,14 @@ function checkSeriesOverview() {
       fail(`prompt-hearts-academy/README.md: missing overview marker ${snippet}`);
     }
   }
+
+  for (let volume = 1; volume <= 7; volume += 1) {
+    const { title, outline, axis, status } = volumeMetadata[volume - 1];
+    const expectedRow = `| ${volume} | [${title}](./outline/${outline}) | ${axis} | ${status} |`;
+    if (!text.includes(expectedRow)) {
+      fail(`prompt-hearts-academy/README.md: missing exact volume overview row ${expectedRow}`);
+    }
+  }
 }
 
 function checkRequiredSnippets(file, displayName, snippets) {
@@ -709,6 +752,7 @@ console.log(JSON.stringify({
     "outline episode tables",
     "root catalog",
     "series overview",
+    "series overview volume table",
     "completion doc final markers",
     "task guidance final markers",
     "dist release manifest",
