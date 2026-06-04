@@ -609,6 +609,7 @@ function checkCompletionDocs() {
     "회차 Canon Memo 필수 항목",
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
+    "기존 zip 삭제",
     "node prompt-hearts-academy/scripts/verify-completion.js",
     "node prompt-hearts-academy/scripts/build-dist.js",
   ]);
@@ -690,6 +691,7 @@ function checkReleaseScripts() {
   checkRequiredSnippets(buildDistScript, "prompt-hearts-academy/scripts/build-dist.js", [
     "const expectedVolumes = 7;",
     "const episodesPerVolume = 30;",
+    "fs.rmSync(zipPath, { force: true });",
     "run(\"zip\", [\"-X\", \"-q\", path.join(\"dist\", zipName), ...files]);",
     "run(\"zip\", [\"-T\", zipName], { cwd: distDir });",
     "fs.writeFileSync(path.join(distDir, \"SHA256SUMS\"), `${checksumLines.join(\"\\n\")}\\n`);",
