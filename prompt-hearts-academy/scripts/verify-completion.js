@@ -607,6 +607,7 @@ function checkCompletionDocs() {
     "시리즈 루트·outline·scripts·권별 디렉터리 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
+    "SHA256SUMS 정확한 줄 형식",
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "저장소 루트 README의 픽션·AI 제작 안내",
@@ -667,6 +668,7 @@ function checkDistReadme() {
     "본편 이후 신규 회차 파일은 포함하지 않는다.",
     "[SHA256SUMS](./SHA256SUMS)",
     "`SHA256SUMS`는 권별 zip 7개에 대한 행만 포함한다.",
+    "`SHA256SUMS`는 빈 줄 없이 마지막 개행으로 끝난다.",
     "shasum -a 256 -c SHA256SUMS",
     "node prompt-hearts-academy/scripts/build-dist.js",
     "압축본과 원본의 내용 일치까지 포함한 완결 검산 스크립트를 실행한다.",
@@ -751,10 +753,18 @@ function checkDist() {
     fail(`dist: expected ${expectedZips.join(", ")}, got ${actualZips.join(", ")}`);
   }
 
-  const checksumText = read(checksums).trimEnd();
+  const checksumRaw = read(checksums);
+  if (!checksumRaw.endsWith("\n")) {
+    fail("dist/SHA256SUMS: expected final newline");
+  }
+  const checksumText = checksumRaw.endsWith("\n") ? checksumRaw.slice(0, -1) : checksumRaw;
   const checksumLines = checksumText ? checksumText.split(/\n/) : [];
   const checksumTargets = [];
   checksumLines.forEach((line, index) => {
+    if (!line) {
+      fail(`dist/SHA256SUMS:${index + 1}: blank checksum line`);
+      return;
+    }
     const match = line.match(/^[a-f0-9]{64}  (.+)$/);
     if (!match) {
       fail(`dist/SHA256SUMS:${index + 1}: malformed checksum line`);
@@ -869,6 +879,7 @@ console.log(JSON.stringify({
     "release build orchestration",
     "dist exact file set",
     "dist checksum manifest",
+    "dist checksum manifest exact formatting",
     "doc stale markers",
     "code fences",
     "trailing whitespace",
