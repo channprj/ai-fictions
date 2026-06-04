@@ -593,11 +593,20 @@ function checkRootCatalog() {
     fail(`README.md: missing exact catalog row ${expectedCatalogRow}`);
   }
 
+  const expectedCatalogTable = [
+    "| 작품 | 장르 | 상태 | 바로가기 |",
+    "| ---- | ---- | ---- | -------- |",
+    expectedCatalogRow,
+  ];
   const catalogSectionStart = text.indexOf("## 작품 목록");
   const catalogSectionEnd = catalogSectionStart === -1 ? -1 : text.indexOf("\n## ", catalogSectionStart + 1);
   const catalogSection = catalogSectionStart === -1
     ? ""
     : text.slice(catalogSectionStart, catalogSectionEnd === -1 ? undefined : catalogSectionEnd);
+  const catalogTableLines = catalogSection.split(/\n/).filter((line) => line.startsWith("| "));
+  if (catalogTableLines.join("\n") !== expectedCatalogTable.join("\n")) {
+    fail(`README.md: expected exact catalog table header and 1 row, got ${catalogTableLines.length} table lines`);
+  }
   const catalogRows = catalogSection.split(/\n/).filter((line) => {
     return line.startsWith("| ")
       && !line.startsWith("| 작품 ")
@@ -738,6 +747,7 @@ function checkCompletionDocs() {
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "작품 홈 권 구성 표 정확한 7행",
     "저장소 루트 작품 목록 표 정확한 1행",
+    "저장소 루트 작품 목록 표 정확한 헤더",
     "`dist/README.md` 권별 배포 표 정확한 7행",
     "저장소 루트 README의 픽션·AI 제작 안내",
     "기존 zip 삭제",
@@ -1011,6 +1021,7 @@ console.log(JSON.stringify({
     "root catalog",
     "root catalog table row",
     "root catalog table exact rows",
+    "root catalog table exact header",
     "series overview",
     "series overview volume table",
     "series overview volume table exact rows",
