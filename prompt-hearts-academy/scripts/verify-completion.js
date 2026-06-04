@@ -609,6 +609,7 @@ function checkCompletionDocs() {
     "회차 Canon Memo 필수 항목",
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
+    "저장소 루트 README의 픽션·AI 제작 안내",
     "기존 zip 삭제",
     "7권 빌드 루프",
     "`main()` 진입점",
@@ -618,6 +619,11 @@ function checkCompletionDocs() {
 }
 
 function checkFictionBoundary() {
+  checkRequiredSnippets(path.join(repoRoot, "README.md"), "README.md", [
+    "이 소설은 픽션이며, 등장하는 인물, 회사, 사건은 모두 허구이며 실제와 무관합니다.",
+    "여러 AI 도구의 도움을 받아 작성되었으며, 자체 편집 및 퇴고를 통해 제작된 창작물입니다.",
+  ]);
+
   checkRequiredSnippets(path.join(projectRoot, "README.md"), "prompt-hearts-academy/README.md", [
     "이 소설은 픽션이며, 등장하는 인물, 기관, AI 페르소나, 사건은 모두 허구의 창작 설정입니다.",
     "GPT, Claude, Gemini는 작품 내에서 의인화된 가상 페르소나로 다루며 실제 서비스의 공식 성격이나 입장을 대변하지 않습니다.",
@@ -852,6 +858,7 @@ console.log(JSON.stringify({
     "final episode ending markers",
     "completion doc final markers",
     "fictional persona boundary markers",
+    "root README fiction/AI disclosure markers",
     "volume README/outline fictional persona boundary markers",
     "task guidance final markers",
     "dist release manifest",
