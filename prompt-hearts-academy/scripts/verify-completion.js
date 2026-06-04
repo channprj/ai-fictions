@@ -359,6 +359,24 @@ function checkMarkdown() {
   }
 }
 
+function checkTextFileFinalNewlines() {
+  const rootReadme = path.join(repoRoot, "README.md");
+  const textFiles = [
+    ...(fs.existsSync(rootReadme) ? [rootReadme] : []),
+    ...walk(projectRoot).filter((file) => {
+      return file.endsWith(".md")
+        || file.endsWith(".js")
+        || path.basename(file) === "SHA256SUMS";
+    }),
+  ];
+
+  for (const file of textFiles) {
+    if (!read(file).endsWith("\n")) {
+      fail(`${rel(file)}: expected final newline`);
+    }
+  }
+}
+
 function checkVolumeReadmes() {
   for (let volume = 1; volume <= 7; volume += 1) {
     const volumeName = `vol${String(volume).padStart(2, "0")}`;
@@ -608,6 +626,7 @@ function checkCompletionDocs() {
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
     "SHA256SUMS 정확한 줄 형식",
+    "텍스트 파일 마지막 개행",
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "저장소 루트 README의 픽션·AI 제작 안내",
@@ -826,6 +845,7 @@ checkProjectLayout();
 checkVolumes();
 checkNoExtraMainStoryFiles();
 checkMarkdown();
+checkTextFileFinalNewlines();
 checkVolumeReadmes();
 checkOutlines();
 checkRootCatalog();
@@ -883,6 +903,7 @@ console.log(JSON.stringify({
     "doc stale markers",
     "code fences",
     "trailing whitespace",
+    "text file final newlines",
     "archive checksums",
     "archive contents",
     "archive source parity",
