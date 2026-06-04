@@ -64,6 +64,42 @@ function expectCommand(command, args, options = {}) {
   return result.stdout;
 }
 
+function volumeNameForEpisode(number) {
+  return `vol${String(Math.ceil(number / 30)).padStart(2, "0")}`;
+}
+
+function episodeFileName(number) {
+  return `ep${String(number).padStart(3, "0")}.md`;
+}
+
+function episodeLinkTarget(fromNumber, targetNumber) {
+  const fromVolume = volumeNameForEpisode(fromNumber);
+  const targetVolume = volumeNameForEpisode(targetNumber);
+  const fileName = episodeFileName(targetNumber);
+  return fromVolume === targetVolume ? `./${fileName}` : `../${targetVolume}/${fileName}`;
+}
+
+function expectedEpisodeNavigationLine(number) {
+  const links = [
+    "[시리즈 홈](../README.md)",
+    "[목차](./README.md)",
+  ];
+
+  if (number > 1) {
+    const previousLabel = (number - 1) % 30 === 0 ? "이전권" : "이전화";
+    links.push(`[${previousLabel}: 제 ${number - 1}화 ←](${episodeLinkTarget(number, number - 1)})`);
+  }
+
+  if (number < 210) {
+    const nextLabel = number % 30 === 0 ? "다음권" : "다음화";
+    links.push(`[${nextLabel}: 제 ${number + 1}화 →](${episodeLinkTarget(number, number + 1)})`);
+  } else {
+    links.push("완결");
+  }
+
+  return links.join(" | ");
+}
+
 function checkVolumes() {
   const episodeFiles = [];
 
@@ -116,6 +152,11 @@ function checkVolumes() {
     }
     if (!text.includes("[시리즈 홈](../README.md)") || !text.includes("[목차](./README.md)")) {
       fail(`${rel(episodePath)}: missing standard navigation links`);
+    }
+    const navigationLine = text.split(/\n/).find((line) => line.startsWith("[시리즈 홈]"));
+    const expectedNavigation = expectedEpisodeNavigationLine(number);
+    if (navigationLine !== expectedNavigation) {
+      fail(`${rel(episodePath)}: expected navigation "${expectedNavigation}", got "${navigationLine || "<missing>"}"`);
     }
     if (!text.includes("## Canon Memo")) {
       fail(`${rel(episodePath)}: missing Canon Memo`);
@@ -350,6 +391,7 @@ function checkCompletionDocs() {
     "후속 에이전트는 본편 `ep211.md`를 만들지 않는다.",
     "완결 원고의 검수, 부분 개정, 외전 후보 판단, 문서 동기화 기준으로 사용한다.",
     "본편 회차를 수정할 때는 제210화의 최종 상태인 공식 오버랩 페어링 종료, 비독점·철회 가능 자유 접속, 거절권 보존 결말을 깨지 않는다.",
+    "회차별 이전/다음 내비게이션",
     "node prompt-hearts-academy/scripts/verify-completion.js",
     "node prompt-hearts-academy/scripts/build-dist.js",
   ]);
@@ -460,6 +502,7 @@ console.log(JSON.stringify({
   checks: [
     "episode ranges",
     "episode title/navigation/canon memo",
+    "episode sequential navigation",
     "markdown links",
     "volume README completion markers",
     "outline episode tables",
