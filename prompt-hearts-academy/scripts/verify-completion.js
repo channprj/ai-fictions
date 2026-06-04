@@ -76,6 +76,10 @@ function episodePathForNumber(number) {
   return path.join(projectRoot, volumeNameForEpisode(number), episodeFileName(number));
 }
 
+function projectRel(file) {
+  return path.relative(projectRoot, file).replaceAll(path.sep, "/");
+}
+
 function episodeTitleForNumber(number) {
   const episodePath = episodePathForNumber(number);
   if (!fs.existsSync(episodePath)) {
@@ -182,6 +186,29 @@ function checkVolumes() {
     }
     if (!text.includes("## Canon Memo")) {
       fail(`${rel(episodePath)}: missing Canon Memo`);
+    }
+  }
+}
+
+function checkNoExtraMainStoryFiles() {
+  const expectedVolumeNames = new Set(volumeMetadata.map((_, index) => {
+    return `vol${String(index + 1).padStart(2, "0")}`;
+  }));
+  const expectedEpisodePaths = new Set(Array.from({ length: 210 }, (_, index) => {
+    const episodeNumber = index + 1;
+    return `${volumeNameForEpisode(episodeNumber)}/${episodeFileName(episodeNumber)}`;
+  }));
+
+  for (const entry of fs.readdirSync(projectRoot, { withFileTypes: true })) {
+    if (entry.isDirectory() && /^vol\d{2}$/.test(entry.name) && !expectedVolumeNames.has(entry.name)) {
+      fail(`${entry.name}: unexpected volume directory after completed vol07`);
+    }
+  }
+
+  for (const file of walk(projectRoot).filter((candidate) => /^ep\d{3}\.md$/.test(path.basename(candidate)))) {
+    const relativePath = projectRel(file);
+    if (!expectedEpisodePaths.has(relativePath)) {
+      fail(`${rel(file)}: unexpected episode file outside completed ep001-ep210 sequence`);
     }
   }
 }
@@ -428,7 +455,7 @@ function checkCompletionDocs() {
 
   checkRequiredSnippets(path.join(projectRoot, "TASKS.md"), "prompt-hearts-academy/TASKS.md", [
     "본편 초고는 `vol01/ep001.md`부터 `vol07/ep210.md`까지 7권 210화 연속 구조로 완결되어 있다.",
-    "후속 에이전트는 본편 `ep211.md`를 만들지 않는다.",
+    "후속 에이전트는 본편 `ep211.md`나 `vol08` 같은 추가 권 디렉터리를 만들지 않는다.",
     "완결 원고의 검수, 부분 개정, 외전 후보 판단, 문서 동기화 기준으로 사용한다.",
     "본편 회차를 수정할 때는 제210화의 최종 상태인 공식 오버랩 페어링 종료, 비독점·철회 가능 자유 접속, 거절권 보존 결말을 깨지 않는다.",
     "회차별 이전/다음 내비게이션",
@@ -520,6 +547,7 @@ function checkDist() {
 }
 
 checkVolumes();
+checkNoExtraMainStoryFiles();
 checkMarkdown();
 checkVolumeReadmes();
 checkOutlines();
@@ -544,6 +572,7 @@ console.log(JSON.stringify({
     "episode title/navigation/canon memo",
     "episode title parity",
     "episode sequential navigation",
+    "post-210 episode guard",
     "markdown links",
     "volume README completion markers",
     "outline episode tables",
