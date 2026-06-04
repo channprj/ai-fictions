@@ -552,8 +552,15 @@ function checkOutlines() {
     }
 
     const text = read(outlinePath);
+    const expectedHeading = `# ${volume}권: ${title}`;
+    checkUniqueFirstLineHeading(
+      outlinePath,
+      `prompt-hearts-academy/outline/${outline}`,
+      expectedHeading,
+    );
+
     const requiredSnippets = [
-      `# ${volume}권: ${title}`,
+      expectedHeading,
       "## 권 목표",
       "## 권 로그라인",
       "## 주요 감정선",
@@ -833,6 +840,7 @@ function checkCompletionDocs() {
     "권별 README 회차 목록 표 정확한 헤더와 추가 행 부재",
     "권별 outline 30화 비트 표 정확한 헤더",
     "권별 outline 30화 비트 표 정확한 헤더와 추가 행 부재",
+    "권별 outline 제목 H1 고유성과 첫 줄 배치",
     "회차 파일 셀·링크 target",
     "회차 역할 칸 비어 있지 않음",
     "SHA256SUMS 정확한 줄 형식",
@@ -1165,6 +1173,7 @@ console.log(JSON.stringify({
     "volume README exact episode file cells",
     "volume README non-empty episode role cells",
     "outline episode tables",
+    "outline unique first-line title heading",
     "outline episode table exact header",
     "outline episode table no extra rows",
     "root catalog",
