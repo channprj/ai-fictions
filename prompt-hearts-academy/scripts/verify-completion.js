@@ -655,6 +655,15 @@ function checkSeriesOverview() {
   const volumeTableSection = volumeSectionStart === -1
     ? ""
     : text.slice(volumeSectionStart, volumeSectionEnd === -1 ? undefined : volumeSectionEnd);
+  const expectedVolumeTable = [
+    "| 권 | 부제 | 핵심 축 | 상태 |",
+    "| -- | ---- | ------- | ---- |",
+    ...expectedRows,
+  ];
+  const volumeTableLines = volumeTableSection.split(/\n/).filter((line) => line.startsWith("| "));
+  if (volumeTableLines.join("\n") !== expectedVolumeTable.join("\n")) {
+    fail(`prompt-hearts-academy/README.md: expected exact volume overview table header and 7 rows, got ${volumeTableLines.length} table lines`);
+  }
   const actualRows = volumeTableSection.match(/^\| \d+ \| .*$/gm) || [];
   if (actualRows.join("\n") !== expectedRows.join("\n")) {
     fail(`prompt-hearts-academy/README.md: expected exact 7-row volume overview table, got ${actualRows.length} rows`);
@@ -746,6 +755,7 @@ function checkCompletionDocs() {
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "작품 홈 권 구성 표 정확한 7행",
+    "작품 홈 권 구성 표 정확한 헤더",
     "저장소 루트 작품 목록 표 정확한 1행",
     "저장소 루트 작품 목록 표 정확한 헤더",
     "`dist/README.md` 권별 배포 표 정확한 7행",
@@ -1025,6 +1035,7 @@ console.log(JSON.stringify({
     "series overview",
     "series overview volume table",
     "series overview volume table exact rows",
+    "series overview volume table exact header",
     "final episode ending markers",
     "completion doc final markers",
     "fictional persona boundary markers",
