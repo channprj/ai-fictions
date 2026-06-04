@@ -801,6 +801,7 @@ function checkCompletionDocs() {
     "저장소 루트 작품 목록 표 정확한 헤더",
     "`dist/README.md` 권별 배포 표 정확한 헤더와 7행",
     "저장소 루트 README의 픽션·AI 제작 안내",
+    "검산 스크립트 자체의 핵심 check 호출 순서",
     "기존 zip 삭제",
     "7권 빌드 루프",
     "`main()` 진입점",
@@ -900,6 +901,7 @@ function checkDistReadme() {
 
 function checkReleaseScripts() {
   const buildDistScript = path.join(projectRoot, "scripts", "build-dist.js");
+  const verifyCompletionScript = path.join(projectRoot, "scripts", "verify-completion.js");
 
   expectCommand("node", ["--check", path.join("scripts", "build-dist.js")]);
   expectCommand("node", ["--check", path.join("scripts", "verify-completion.js")]);
@@ -926,6 +928,41 @@ function checkReleaseScripts() {
     "run(\"node\", [path.join(\"scripts\", \"verify-completion.js\")]);",
     "main();",
   ]);
+
+  const verifierSource = read(verifyCompletionScript);
+  const callBlockStart = verifierSource.indexOf("\ncheckProjectLayout();");
+  const callBlockEnd = callBlockStart === -1 ? -1 : verifierSource.indexOf("\nif (failures.length)", callBlockStart);
+  const expectedVerifierCalls = [
+    "checkProjectLayout();",
+    "checkVolumes();",
+    "checkNoExtraMainStoryFiles();",
+    "checkMarkdown();",
+    "checkTextFileFinalNewlines();",
+    "checkVolumeReadmes();",
+    "checkOutlines();",
+    "checkRootCatalog();",
+    "checkSeriesOverview();",
+    "checkFinalEpisodeEnding();",
+    "checkCompletionDocs();",
+    "checkFictionBoundary();",
+    "checkDistReadme();",
+    "checkReleaseScripts();",
+    "checkDist();",
+  ];
+
+  if (callBlockStart === -1 || callBlockEnd === -1 || callBlockEnd <= callBlockStart) {
+    fail("prompt-hearts-academy/scripts/verify-completion.js: missing verifier check call block");
+  } else {
+    const actualVerifierCalls = verifierSource
+      .slice(callBlockStart, callBlockEnd)
+      .trim()
+      .split(/\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+    if (actualVerifierCalls.join("\n") !== expectedVerifierCalls.join("\n")) {
+      fail(`prompt-hearts-academy/scripts/verify-completion.js: expected exact verifier check sequence ${expectedVerifierCalls.join(", ")}, got ${actualVerifierCalls.join(", ")}`);
+    }
+  }
 }
 
 function checkDist() {
@@ -1104,6 +1141,7 @@ console.log(JSON.stringify({
     "release build script markers",
     "release build source selection",
     "release build orchestration",
+    "verifier check orchestration",
     "dist exact file set",
     "dist checksum manifest",
     "dist checksum manifest exact formatting",
