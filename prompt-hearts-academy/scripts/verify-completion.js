@@ -308,6 +308,10 @@ function checkVolumes() {
         if (labelMatches.length !== 1) {
           fail(`${rel(episodePath)}: expected exactly one Canon Memo field ${label}, got ${labelMatches.length}`);
         }
+        const labelLine = canonMemo.match(new RegExp(`^- ${escapeRegExp(label)}:(.*)$`, "m"));
+        if (labelLine && !labelLine[1].trim()) {
+          fail(`${rel(episodePath)}: Canon Memo field ${label} must not be empty`);
+        }
         if (labelIndex < previousIndex) {
           fail(`${rel(episodePath)}: Canon Memo field ${label} appears before ${previousLabel}; expected canonical field order`);
         }
@@ -685,6 +689,7 @@ function checkCompletionDocs() {
     "회차 Canon Memo 필수 항목과 말미 배치",
     "회차 Canon Memo 필수 항목 순서",
     "회차 Canon Memo 필수 항목 고유성",
+    "회차 Canon Memo 필수 항목 값 비어 있지 않음",
     "회차 원고 최소 길이",
     "권별 README 완결 범위와 정확한 30화 목록",
     "회차 파일 셀·링크 target",
@@ -940,6 +945,7 @@ console.log(JSON.stringify({
     "episode canon memo required fields",
     "episode canon memo field order",
     "episode canon memo unique fields",
+    "episode canon memo non-empty fields",
     "episode canon memo terminal placement",
     "episode placeholder markers",
     "episode manuscript minimum length",
