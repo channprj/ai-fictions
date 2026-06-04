@@ -72,6 +72,21 @@ function episodeFileName(number) {
   return `ep${String(number).padStart(3, "0")}.md`;
 }
 
+function episodePathForNumber(number) {
+  return path.join(projectRoot, volumeNameForEpisode(number), episodeFileName(number));
+}
+
+function episodeTitleForNumber(number) {
+  const episodePath = episodePathForNumber(number);
+  if (!fs.existsSync(episodePath)) {
+    return null;
+  }
+
+  const firstLine = read(episodePath).split(/\n/, 1)[0];
+  const match = firstLine.match(/^# 제 \d+화: (.+)$/);
+  return match ? match[1] : null;
+}
+
 function episodeLinkTarget(fromNumber, targetNumber) {
   const fromVolume = volumeNameForEpisode(fromNumber);
   const targetVolume = volumeNameForEpisode(targetNumber);
@@ -98,6 +113,10 @@ function expectedEpisodeNavigationLine(number) {
   }
 
   return links.join(" | ");
+}
+
+function splitMarkdownTableRow(row) {
+  return row.split("|").slice(1, -1).map((cell) => cell.trim());
 }
 
 function checkVolumes() {
@@ -139,16 +158,19 @@ function checkVolumes() {
   }
 
   for (let number = 1; number <= 210; number += 1) {
-    const volumeName = `vol${String(Math.ceil(number / 30)).padStart(2, "0")}`;
-    const episodePath = path.join(projectRoot, volumeName, `ep${String(number).padStart(3, "0")}.md`);
+    const episodePath = episodePathForNumber(number);
     if (!fs.existsSync(episodePath)) {
       fail(`missing episode ${rel(episodePath)}`);
       continue;
     }
 
     const text = read(episodePath);
+    const episodeTitle = episodeTitleForNumber(number);
     if (!text.startsWith(`# 제 ${number}화:`)) {
       fail(`${rel(episodePath)}: title does not start with "# 제 ${number}화:"`);
+    }
+    if (!episodeTitle) {
+      fail(`${rel(episodePath)}: missing episode title text`);
     }
     if (!text.includes("[시리즈 홈](../README.md)") || !text.includes("[목차](./README.md)")) {
       fail(`${rel(episodePath)}: missing standard navigation links`);
@@ -240,8 +262,19 @@ function checkVolumeReadmes() {
     for (let episodeNumber = firstEpisodeNumber; episodeNumber <= lastEpisodeNumber; episodeNumber += 1) {
       const episode = `ep${String(episodeNumber).padStart(3, "0")}.md`;
       const episodePattern = new RegExp(`\\| ${episodeNumber} \\| [^\\n]*\`${episode}\``, "m");
-      if (!episodePattern.test(text)) {
+      const row = text.split(/\n/).find((line) => line.startsWith(`| ${episodeNumber} |`));
+      if (!episodePattern.test(text) || !row) {
         fail(`${volumeName}/README.md: missing episode table entry for ${episode}`);
+        continue;
+      }
+
+      const cells = splitMarkdownTableRow(row);
+      const episodeTitle = episodeTitleForNumber(episodeNumber);
+      if (cells.length !== 4) {
+        fail(`${volumeName}/README.md: malformed episode table row ${row}`);
+      }
+      if (episodeTitle && cells[2] !== episodeTitle) {
+        fail(`${volumeName}/README.md: episode ${episodeNumber} subtitle "${cells[2]}" differs from source title "${episodeTitle}"`);
       }
     }
   }
@@ -300,9 +333,16 @@ function checkOutlines() {
     }
 
     for (const row of rows) {
-      const cells = row.split("|").slice(1, -1).map((cell) => cell.trim());
+      const cells = splitMarkdownTableRow(row);
       if (cells.length !== 6 || cells.some((cell) => cell.length === 0)) {
         fail(`outline/${outline}: malformed outline row ${row}`);
+        continue;
+      }
+
+      const episodeNumber = Number(cells[0]);
+      const episodeTitle = episodeTitleForNumber(episodeNumber);
+      if (episodeTitle && cells[1] !== episodeTitle) {
+        fail(`outline/${outline}: episode ${episodeNumber} subtitle "${cells[1]}" differs from source title "${episodeTitle}"`);
       }
     }
   }
@@ -502,6 +542,7 @@ console.log(JSON.stringify({
   checks: [
     "episode ranges",
     "episode title/navigation/canon memo",
+    "episode title parity",
     "episode sequential navigation",
     "markdown links",
     "volume README completion markers",
