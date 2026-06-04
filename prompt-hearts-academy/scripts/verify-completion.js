@@ -531,7 +531,8 @@ function checkCompletionDocs() {
 }
 
 function checkDistReadme() {
-  checkRequiredSnippets(path.join(projectRoot, "dist", "README.md"), "prompt-hearts-academy/dist/README.md", [
+  const distReadme = path.join(projectRoot, "dist", "README.md");
+  checkRequiredSnippets(distReadme, "prompt-hearts-academy/dist/README.md", [
     "본편 초고 완결 상태를 권별 압축 파일로 묶은 배포용 디렉터리다.",
     "`dist/`에는 이 `README.md`, `SHA256SUMS`, 권별 zip 7개만 둔다.",
     "각 zip은 권별 `README.md` 1개와 회차 원고 30개를 포함한다.",
@@ -543,6 +544,23 @@ function checkDistReadme() {
     "node prompt-hearts-academy/scripts/build-dist.js",
     "압축본과 원본의 내용 일치까지 포함한 완결 검산 스크립트를 실행한다.",
   ]);
+
+  if (!fs.existsSync(distReadme)) {
+    return;
+  }
+
+  const text = read(distReadme);
+  for (let volume = 1; volume <= 7; volume += 1) {
+    const volumeName = `vol${String(volume).padStart(2, "0")}`;
+    const firstEpisode = `ep${String((volume - 1) * 30 + 1).padStart(3, "0")}.md`;
+    const lastEpisode = `ep${String(volume * 30).padStart(3, "0")}.md`;
+    const zipName = `prompt-hearts-academy-${volumeName}.zip`;
+    const expectedRow = `| ${volume}권 | [${zipName}](./${zipName}) | \`${volumeName}/README.md\`, \`${volumeName}/${firstEpisode}\`~\`${volumeName}/${lastEpisode}\` |`;
+
+    if (!text.includes(expectedRow)) {
+      fail(`prompt-hearts-academy/dist/README.md: missing exact archive manifest row ${expectedRow}`);
+    }
+  }
 }
 
 function checkReleaseScripts() {
@@ -694,6 +712,7 @@ console.log(JSON.stringify({
     "completion doc final markers",
     "task guidance final markers",
     "dist release manifest",
+    "dist README archive table",
     "release script syntax",
     "release build script markers",
     "dist exact file set",
