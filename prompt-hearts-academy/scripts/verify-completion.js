@@ -385,7 +385,11 @@ function checkTextFileFinalNewlines() {
   ];
 
   for (const file of textFiles) {
-    if (!read(file).endsWith("\n")) {
+    const text = read(file);
+    if (text.includes("\r")) {
+      fail(`${rel(file)}: expected LF line endings`);
+    }
+    if (!text.endsWith("\n")) {
       fail(`${rel(file)}: expected final newline`);
     }
   }
@@ -666,7 +670,7 @@ function checkCompletionDocs() {
     "회차 파일 셀·링크 target",
     "회차 역할 칸 비어 있지 않음",
     "SHA256SUMS 정확한 줄 형식",
-    "텍스트 파일 마지막 개행",
+    "텍스트 파일 LF 줄바꿈과 마지막 개행",
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "저장소 루트 README의 픽션·AI 제작 안내",
@@ -948,6 +952,7 @@ console.log(JSON.stringify({
     "doc stale markers",
     "code fences",
     "trailing whitespace",
+    "text file LF line endings",
     "text file final newlines",
     "archive checksums",
     "archive contents",
