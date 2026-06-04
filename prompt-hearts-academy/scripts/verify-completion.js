@@ -442,8 +442,16 @@ function checkVolumeReadmes() {
     }
 
     const text = read(readme);
+    const expectedHeading = `# ${volume}권: ${volumeMetadata[volume - 1].title}`;
+    const titleHeadings = [...text.matchAll(/^# .+$/gm)];
+    if (titleHeadings.length !== 1) {
+      fail(`${volumeName}/README.md: expected exactly one volume title heading, got ${titleHeadings.length}`);
+    } else if (titleHeadings[0].index !== 0 || titleHeadings[0][0] !== expectedHeading) {
+      fail(`${volumeName}/README.md: expected first line volume heading "${expectedHeading}"`);
+    }
+
     const requiredSnippets = [
-      `# ${volume}권: ${volumeMetadata[volume - 1].title}`,
+      expectedHeading,
       `실제 회차 원고는 \`${firstEpisode}\`부터 \`${lastEpisode}\`까지 작성되어 있다.`,
       "## 권 줄거리",
       "## 등장인물 변화",
@@ -784,6 +792,7 @@ function checkCompletionDocs() {
     "회차 Canon Memo 필수 항목 고유성",
     "회차 Canon Memo 필수 항목 값 비어 있지 않음",
     "회차 원고 최소 길이",
+    "권별 README 제목 H1 고유성과 첫 줄 배치",
     "권별 README 완결 범위와 정확한 30화 목록",
     "권별 README 회차 목록 표 정확한 헤더",
     "권별 README 회차 목록 표 정확한 헤더와 추가 행 부재",
@@ -1111,6 +1120,7 @@ console.log(JSON.stringify({
     "post-210 episode guard",
     "markdown links",
     "volume README completion markers",
+    "volume README unique first-line title heading",
     "volume README exact episode tables",
     "volume README episode table exact header",
     "volume README episode table no extra rows",
