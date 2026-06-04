@@ -779,6 +779,22 @@ function checkFinalEpisodeEnding() {
 }
 
 function checkCompletionDocs() {
+  checkUniqueFirstLineHeading(
+    path.join(projectRoot, "PRD.md"),
+    "prompt-hearts-academy/PRD.md",
+    "# PRD: 프롬프트 하트 아카데미",
+  );
+  checkUniqueFirstLineHeading(
+    path.join(projectRoot, "BIBLE.md"),
+    "prompt-hearts-academy/BIBLE.md",
+    "# 시리즈 바이블: 프롬프트 하트 아카데미",
+  );
+  checkUniqueFirstLineHeading(
+    path.join(projectRoot, "TASKS.md"),
+    "prompt-hearts-academy/TASKS.md",
+    "# 장기 집필 태스크: 프롬프트 하트 아카데미",
+  );
+
   checkRequiredSnippets(path.join(projectRoot, "PRD.md"), "prompt-hearts-academy/PRD.md", [
     "본편 초고는 `vol01/ep001.md`부터 `vol07/ep210.md`까지 7권 210화 연속 구조로 완결되어 있다.",
     "배포본은 `dist/` 아래 권별 zip 7개와 `SHA256SUMS` 체크섬 매니페스트로 정리되어 있다.",
@@ -826,6 +842,7 @@ function checkCompletionDocs() {
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "작품 홈 권 구성 표 정확한 7행",
     "작품 홈 권 구성 표 정확한 헤더",
+    "핵심 문서 PRD/BIBLE/TASKS 제목 H1 고유성과 첫 줄 배치",
     "저장소 루트 README 제목 H1 고유성과 첫 줄 배치",
     "저장소 루트 작품 목록 표 정확한 1행",
     "저장소 루트 작품 목록 표 정확한 헤더",
@@ -1162,6 +1179,7 @@ console.log(JSON.stringify({
     "series overview volume table exact header",
     "final episode ending markers",
     "completion doc final markers",
+    "completion doc unique first-line title headings",
     "fictional persona boundary markers",
     "root README fiction/AI disclosure markers",
     "volume README/outline fictional persona boundary markers",
