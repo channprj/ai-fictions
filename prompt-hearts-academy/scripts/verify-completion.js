@@ -291,10 +291,19 @@ function checkVolumes() {
         fail(`${rel(episodePath)}: Canon Memo must be the final markdown section, found trailing section ${trailingSection[1]}`);
       }
 
+      let previousLabel = null;
+      let previousIndex = -1;
       for (const label of canonMemoRequiredLabels) {
-        if (!canonMemo.includes(`- ${label}:`)) {
+        const labelIndex = canonMemo.indexOf(`- ${label}:`);
+        if (labelIndex < 0) {
           fail(`${rel(episodePath)}: missing Canon Memo field ${label}`);
+          continue;
         }
+        if (labelIndex < previousIndex) {
+          fail(`${rel(episodePath)}: Canon Memo field ${label} appears before ${previousLabel}; expected canonical field order`);
+        }
+        previousLabel = label;
+        previousIndex = labelIndex;
       }
     }
     const placeholders = text.match(manuscriptPlaceholderMarker);
@@ -665,6 +674,7 @@ function checkCompletionDocs() {
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
     "회차 Canon Memo 필수 항목과 말미 배치",
+    "회차 Canon Memo 필수 항목 순서",
     "회차 원고 최소 길이",
     "권별 README 완결 범위와 정확한 30화 목록",
     "회차 파일 셀·링크 target",
@@ -918,6 +928,7 @@ console.log(JSON.stringify({
     "episode title/navigation/canon memo",
     "episode opening scaffold",
     "episode canon memo required fields",
+    "episode canon memo field order",
     "episode canon memo terminal placement",
     "episode placeholder markers",
     "episode manuscript minimum length",
