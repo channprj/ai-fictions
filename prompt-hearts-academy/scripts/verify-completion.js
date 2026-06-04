@@ -474,6 +474,11 @@ function checkVolumeReadmes() {
     const expectedEpisodeNumbers = Array.from({ length: 30 }, (_, index) => {
       return firstEpisodeNumber + index;
     });
+    const expectedEpisodeTableLineCount = expectedEpisodeTableScaffold.length + expectedEpisodeNumbers.length;
+    if (episodeTableLines.length !== expectedEpisodeTableLineCount) {
+      fail(`${volumeName}/README.md: expected episode table header plus 30 episode rows, got ${episodeTableLines.length} table lines`);
+    }
+
     const rows = text.match(/^\| \d+ \| .*$/gm) || [];
     const actualEpisodeNumbers = rows.map((row) => {
       const match = row.match(/^\| (\d+) \|/);
@@ -781,6 +786,7 @@ function checkCompletionDocs() {
     "회차 원고 최소 길이",
     "권별 README 완결 범위와 정확한 30화 목록",
     "권별 README 회차 목록 표 정확한 헤더",
+    "권별 README 회차 목록 표 정확한 헤더와 추가 행 부재",
     "권별 outline 30화 비트 표 정확한 헤더",
     "권별 outline 30화 비트 표 정확한 헤더와 추가 행 부재",
     "회차 파일 셀·링크 target",
@@ -1070,6 +1076,7 @@ console.log(JSON.stringify({
     "volume README completion markers",
     "volume README exact episode tables",
     "volume README episode table exact header",
+    "volume README episode table no extra rows",
     "volume README exact episode file cells",
     "volume README non-empty episode role cells",
     "outline episode tables",
