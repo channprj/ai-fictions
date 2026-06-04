@@ -15,7 +15,7 @@
 | 모드 | 먼저 확인할 파일 | 완료 기준 |
 | ---- | ---------------- | --------- |
 | 회차 개정 | `BIBLE.md`, 대상 회차, 직전/직후 회차, 해당 권 `README.md` | 캐논·말투·결말 상태를 보존하며 수정 이유가 분명하다 |
-| 문서 검산 | 저장소 루트 `README.md`, `README.md`, `PRD.md`, `BIBLE.md`, 권별 `README.md`, `dist/README.md`, `dist/SHA256SUMS`, `scripts/build-dist.js`, `scripts/verify-completion.js` | 7권 30화씩 총 210화, 본편 초고 완결, 자유 접속 결말, PRD/BIBLE 최종 캐논, 작품 홈, 권별 배포본·체크섬·원본 파일 내용·저장소 루트 작품 목록이 서로 같은 상태로 표기되고 자동 검산이 통과한다 |
+| 문서 검산 | 저장소 루트 `README.md`, `README.md`, `PRD.md`, `BIBLE.md`, `TASKS.md`, 권별 `README.md`, `dist/README.md`, `dist/SHA256SUMS`, `scripts/build-dist.js`, `scripts/verify-completion.js` | 7권 30화씩 총 210화, 본편 초고 완결, 자유 접속 결말, PRD/BIBLE 최종 캐논, TASKS의 ep211 금지와 완결 후 작업 지침, 작품 홈, 권별 배포본·체크섬·원본 파일 내용·저장소 루트 작품 목록이 서로 같은 상태로 표기되고 자동 검산이 통과한다 |
 | 외전 후보 | `BIBLE.md`, `vol07/README.md`, `vol07/ep210.md` | 본편 결말을 덮어쓰지 않는 별도 범위와 주제만 제안한다 |
 
 ## 완결 검산 명령
@@ -26,7 +26,7 @@
 node prompt-hearts-academy/scripts/verify-completion.js
 ```
 
-이 명령이 통과하면 `vol01`부터 `vol07`까지 각 30화, 총 210화 구조, 작품 홈 완결 표기, PRD/BIBLE의 최종 캐논 마커, 권별 배포본 7개의 체크섬 및 원본 내용이 현재 파일 기준으로 일치한다.
+이 명령이 통과하면 `vol01`부터 `vol07`까지 각 30화, 총 210화 구조, 작품 홈 완결 표기, PRD/BIBLE의 최종 캐논 마커, TASKS의 ep211 금지 및 완결 후 작업 지침, 권별 배포본 7개의 체크섬 및 원본 내용이 현재 파일 기준으로 일치한다.
 
 원고나 권별 README를 고친 뒤 배포본까지 갱신해야 할 때는 다음 명령을 먼저 실행한다. 이 명령은 권별 zip 7개와 `dist/SHA256SUMS`를 재생성한 뒤 완결 검산까지 이어서 수행한다.
 

@@ -234,6 +234,15 @@ function checkCompletionDocs() {
     "| 자유 접속 규칙 | 7권 졸업식 빈 좌석 빛 | 207~209화의 질문·경계 고지·초대장 | 제210화에서 비독점·철회 가능·거절권 보존 상태로 활성화된다 |",
     "| 오리진 널의 주장 | 2권 암시 | 6권 정체 공개 | 7권에서 호출명 `널`, 보존권, 피해자 거절권, 책임 조건이 묶인 재계약으로 회수된다 |",
   ]);
+
+  checkRequiredSnippets(path.join(projectRoot, "TASKS.md"), "prompt-hearts-academy/TASKS.md", [
+    "본편 초고는 `vol01/ep001.md`부터 `vol07/ep210.md`까지 7권 210화 연속 구조로 완결되어 있다.",
+    "후속 에이전트는 본편 `ep211.md`를 만들지 않는다.",
+    "완결 원고의 검수, 부분 개정, 외전 후보 판단, 문서 동기화 기준으로 사용한다.",
+    "본편 회차를 수정할 때는 제210화의 최종 상태인 공식 오버랩 페어링 종료, 비독점·철회 가능 자유 접속, 거절권 보존 결말을 깨지 않는다.",
+    "node prompt-hearts-academy/scripts/verify-completion.js",
+    "node prompt-hearts-academy/scripts/build-dist.js",
+  ]);
 }
 
 function checkDist() {
@@ -329,6 +338,7 @@ console.log(JSON.stringify({
     "root catalog",
     "series overview",
     "completion doc final markers",
+    "task guidance final markers",
     "doc stale markers",
     "code fences",
     "trailing whitespace",
