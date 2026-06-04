@@ -662,12 +662,29 @@ function checkRootCatalog() {
   }
 }
 
+function checkUniqueFirstLineHeading(file, displayName, expectedHeading) {
+  if (!fs.existsSync(file)) {
+    fail(`${displayName}: missing`);
+    return;
+  }
+
+  const text = read(file);
+  const titleHeadings = [...text.matchAll(/^# .+$/gm)];
+  if (titleHeadings.length !== 1) {
+    fail(`${displayName}: expected exactly one title heading, got ${titleHeadings.length}`);
+  } else if (titleHeadings[0].index !== 0 || titleHeadings[0][0] !== expectedHeading) {
+    fail(`${displayName}: expected first line heading "${expectedHeading}"`);
+  }
+}
+
 function checkSeriesOverview() {
   const seriesReadme = path.join(projectRoot, "README.md");
   if (!fs.existsSync(seriesReadme)) {
     fail("prompt-hearts-academy/README.md: missing series overview");
     return;
   }
+
+  checkUniqueFirstLineHeading(seriesReadme, "prompt-hearts-academy/README.md", "# 프롬프트 하트 아카데미");
 
   const text = read(seriesReadme);
   const requiredOverviewSnippets = [
@@ -803,6 +820,7 @@ function checkCompletionDocs() {
     "SHA256SUMS 정확한 줄 형식",
     "텍스트 파일 LF 줄바꿈과 마지막 개행",
     "제210화 최종 결말 마커",
+    "작품 홈 제목 H1 고유성과 첫 줄 배치",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "작품 홈 권 구성 표 정확한 7행",
     "작품 홈 권 구성 표 정확한 헤더",
@@ -1134,6 +1152,7 @@ console.log(JSON.stringify({
     "root catalog table exact rows",
     "root catalog table exact header",
     "series overview",
+    "series overview unique first-line title heading",
     "series overview volume table",
     "series overview volume table exact rows",
     "series overview volume table exact header",
