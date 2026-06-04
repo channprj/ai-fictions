@@ -245,6 +245,19 @@ function checkCompletionDocs() {
   ]);
 }
 
+function checkDistReadme() {
+  checkRequiredSnippets(path.join(projectRoot, "dist", "README.md"), "prompt-hearts-academy/dist/README.md", [
+    "본편 초고 완결 상태를 권별 압축 파일로 묶은 배포용 디렉터리다.",
+    "각 zip은 권별 `README.md` 1개와 회차 원고 30개를 포함한다.",
+    "각 zip 내부의 권별 `README.md`와 회차 원고는 현재 원본 파일과 동일해야 한다.",
+    "본편 이후 신규 회차 파일은 포함하지 않는다.",
+    "[SHA256SUMS](./SHA256SUMS)",
+    "shasum -a 256 -c SHA256SUMS",
+    "node prompt-hearts-academy/scripts/build-dist.js",
+    "압축본과 원본의 내용 일치까지 포함한 완결 검산 스크립트를 실행한다.",
+  ]);
+}
+
 function checkDist() {
   const distDir = path.join(projectRoot, "dist");
   const checksums = path.join(distDir, "SHA256SUMS");
@@ -319,6 +332,7 @@ checkMarkdown();
 checkRootCatalog();
 checkSeriesOverview();
 checkCompletionDocs();
+checkDistReadme();
 checkDist();
 
 if (failures.length) {
@@ -339,6 +353,7 @@ console.log(JSON.stringify({
     "series overview",
     "completion doc final markers",
     "task guidance final markers",
+    "dist release manifest",
     "doc stale markers",
     "code fences",
     "trailing whitespace",
