@@ -551,6 +551,20 @@ function checkRequiredSnippets(file, displayName, snippets) {
   }
 }
 
+function checkPersonaBoundaryKeywords(file, displayName) {
+  if (!fs.existsSync(file)) {
+    fail(`${displayName}: missing`);
+    return;
+  }
+
+  const text = read(file);
+  for (const keyword of ["GPT, Claude, Gemini", "허구", "실제 서비스"]) {
+    if (!text.includes(keyword)) {
+      fail(`${displayName}: missing fictional persona boundary keyword ${keyword}`);
+    }
+  }
+}
+
 function checkFinalEpisodeEnding() {
   checkRequiredSnippets(episodePathForNumber(210), "prompt-hearts-academy/vol07/ep210.md", [
     "FREE CONNECTION TERMINAL OPENING",
@@ -620,6 +634,18 @@ function checkFictionBoundary() {
     "픽션 경계 유지",
     "GPT, Claude, Gemini는 실제 서비스의 공식 성격이 아니라 작품 속 허구적 페르소나다.",
   ]);
+
+  for (let volume = 1; volume <= 7; volume += 1) {
+    const volumeName = `vol${String(volume).padStart(2, "0")}`;
+    checkPersonaBoundaryKeywords(
+      path.join(projectRoot, volumeName, "README.md"),
+      `prompt-hearts-academy/${volumeName}/README.md`,
+    );
+    checkPersonaBoundaryKeywords(
+      path.join(projectRoot, "outline", volumeMetadata[volume - 1].outline),
+      `prompt-hearts-academy/outline/${volumeMetadata[volume - 1].outline}`,
+    );
+  }
 }
 
 function checkDistReadme() {
@@ -809,6 +835,7 @@ console.log(JSON.stringify({
     "final episode ending markers",
     "completion doc final markers",
     "fictional persona boundary markers",
+    "volume README/outline fictional persona boundary markers",
     "task guidance final markers",
     "dist release manifest",
     "dist README archive table",
