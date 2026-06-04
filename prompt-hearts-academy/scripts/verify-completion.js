@@ -441,8 +441,13 @@ function checkVolumeReadmes() {
 
       const cells = splitMarkdownTableRow(row);
       const episodeTitle = episodeTitleForNumber(episodeNumber);
+      const expectedEpisodeFile = `\`${episode}\``;
+      const expectedEpisodeLink = `[\`${episode}\`](./${episode})`;
       if (cells.length !== 4) {
         fail(`${volumeName}/README.md: malformed episode table row ${row}`);
+      }
+      if (![expectedEpisodeFile, expectedEpisodeLink].includes(cells[1])) {
+        fail(`${volumeName}/README.md: episode ${episodeNumber} file cell "${cells[1]}" differs from expected "${expectedEpisodeFile}" or "${expectedEpisodeLink}"`);
       }
       if (episodeTitle && cells[2] !== episodeTitle) {
         fail(`${volumeName}/README.md: episode ${episodeNumber} subtitle "${cells[2]}" differs from source title "${episodeTitle}"`);
@@ -650,6 +655,7 @@ function checkCompletionDocs() {
     "회차 Canon Memo 필수 항목",
     "회차 Canon Memo 필수 항목과 말미 배치",
     "권별 README 완결 범위와 정확한 30화 목록",
+    "회차 파일 셀·링크 target",
     "SHA256SUMS 정확한 줄 형식",
     "텍스트 파일 마지막 개행",
     "제210화 최종 결말 마커",
@@ -907,6 +913,7 @@ console.log(JSON.stringify({
     "markdown links",
     "volume README completion markers",
     "volume README exact episode tables",
+    "volume README exact episode file cells",
     "outline episode tables",
     "root catalog",
     "root catalog table row",
