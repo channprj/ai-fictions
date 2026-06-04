@@ -278,7 +278,11 @@ function checkVolumes() {
     if (!text.includes("[시리즈 홈](../README.md)") || !text.includes("[목차](./README.md)")) {
       fail(`${rel(episodePath)}: missing standard navigation links`);
     }
-    const navigationLine = text.split(/\n/).find((line) => line.startsWith("[시리즈 홈]"));
+    const navigationLines = lines.filter((line) => line.startsWith("[시리즈 홈]"));
+    if (navigationLines.length !== 1) {
+      fail(`${rel(episodePath)}: expected exactly one navigation line, got ${navigationLines.length}`);
+    }
+    const navigationLine = navigationLines[0];
     const expectedNavigation = expectedEpisodeNavigationLine(number);
     if (navigationLine !== expectedNavigation) {
       fail(`${rel(episodePath)}: expected navigation "${expectedNavigation}", got "${navigationLine || "<missing>"}"`);
@@ -692,6 +696,7 @@ function checkCompletionDocs() {
     "시리즈 루트·outline·scripts·권별 디렉터리 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
     "회차 제목 H1 고유성",
+    "회차 내비게이션 줄 고유성",
     "회차 Canon Memo 필수 항목",
     "회차 Canon Memo 필수 항목과 말미 배치",
     "회차 Canon Memo 필수 항목 순서",
@@ -949,6 +954,7 @@ console.log(JSON.stringify({
     "episode ranges",
     "episode title/navigation/canon memo",
     "episode unique title heading",
+    "episode navigation line uniqueness",
     "episode opening scaffold",
     "episode canon memo required fields",
     "episode canon memo field order",
