@@ -479,6 +479,22 @@ function checkDistReadme() {
   ]);
 }
 
+function checkReleaseScripts() {
+  const buildDistScript = path.join(projectRoot, "scripts", "build-dist.js");
+
+  expectCommand("node", ["--check", path.join("scripts", "build-dist.js")]);
+  expectCommand("node", ["--check", path.join("scripts", "verify-completion.js")]);
+
+  checkRequiredSnippets(buildDistScript, "prompt-hearts-academy/scripts/build-dist.js", [
+    "const expectedVolumes = 7;",
+    "const episodesPerVolume = 30;",
+    "run(\"zip\", [\"-X\", \"-q\", path.join(\"dist\", zipName), ...files]);",
+    "run(\"zip\", [\"-T\", zipName], { cwd: distDir });",
+    "fs.writeFileSync(path.join(distDir, \"SHA256SUMS\"), `${checksumLines.join(\"\\n\")}\\n`);",
+    "run(\"node\", [path.join(\"scripts\", \"verify-completion.js\")]);",
+  ]);
+}
+
 function checkDist() {
   const distDir = path.join(projectRoot, "dist");
   const checksums = path.join(distDir, "SHA256SUMS");
@@ -580,6 +596,7 @@ checkRootCatalog();
 checkSeriesOverview();
 checkCompletionDocs();
 checkDistReadme();
+checkReleaseScripts();
 checkDist();
 
 if (failures.length) {
@@ -606,6 +623,8 @@ console.log(JSON.stringify({
     "completion doc final markers",
     "task guidance final markers",
     "dist release manifest",
+    "release script syntax",
+    "release build script markers",
     "dist exact file set",
     "dist checksum manifest",
     "doc stale markers",
