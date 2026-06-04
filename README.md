@@ -10,6 +10,12 @@
 - **Tools**: 다양한 AI 도구 활용
 - **Process**: 플롯 설계 → 챕터별 집필 → 퇴고
 
+## 작품 목록
+
+| 작품 | 장르 | 상태 | 바로가기 |
+| ---- | ---- | ---- | -------- |
+| **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 본편 7권 210화 초고 완결, 권별 배포본 준비 완료 | [작품 홈](./prompt-hearts-academy/README.md) · [배포본](./prompt-hearts-academy/dist/README.md) |
+
 ## 라이선스
 
 이 저작물은 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko) 라이선스를 따릅니다.
