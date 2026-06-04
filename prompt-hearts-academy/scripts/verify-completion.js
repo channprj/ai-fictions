@@ -446,6 +446,9 @@ function checkVolumeReadmes() {
       if (cells.length !== 4) {
         fail(`${volumeName}/README.md: malformed episode table row ${row}`);
       }
+      if (cells.length === 4 && !cells[3]) {
+        fail(`${volumeName}/README.md: episode ${episodeNumber} role cell is empty`);
+      }
       if (![expectedEpisodeFile, expectedEpisodeLink].includes(cells[1])) {
         fail(`${volumeName}/README.md: episode ${episodeNumber} file cell "${cells[1]}" differs from expected "${expectedEpisodeFile}" or "${expectedEpisodeLink}"`);
       }
@@ -656,6 +659,7 @@ function checkCompletionDocs() {
     "회차 Canon Memo 필수 항목과 말미 배치",
     "권별 README 완결 범위와 정확한 30화 목록",
     "회차 파일 셀·링크 target",
+    "회차 역할 칸 비어 있지 않음",
     "SHA256SUMS 정확한 줄 형식",
     "텍스트 파일 마지막 개행",
     "제210화 최종 결말 마커",
@@ -914,6 +918,7 @@ console.log(JSON.stringify({
     "volume README completion markers",
     "volume README exact episode tables",
     "volume README exact episode file cells",
+    "volume README non-empty episode role cells",
     "outline episode tables",
     "root catalog",
     "root catalog table row",
