@@ -38,6 +38,7 @@
 
 - 본편 회차: [1화](./vol01/ep001.md)부터 [210화](./vol07/ep210.md)까지 연속 작성 완료.
 - 권별 색인: [vol01](./vol01/README.md), [vol02](./vol02/README.md), [vol03](./vol03/README.md), [vol04](./vol04/README.md), [vol05](./vol05/README.md), [vol06](./vol06/README.md), [vol07](./vol07/README.md) 모두 정리 완료.
+- 배포본: [dist](./dist/README.md)에 권별 압축 파일 7개로 정리.
 - 최종 상태: 공식 오버랩 페어링은 종료되고, 자유 접속은 비독점·철회 가능·거절권 보존 상태로 열린다.
 
 ## 주요 인물
