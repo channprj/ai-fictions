@@ -263,6 +263,12 @@ function checkVolumes() {
     const text = read(episodePath);
     const lines = text.split(/\n/);
     const episodeTitle = episodeTitleForNumber(number);
+    const titleHeadings = [...text.matchAll(/^# .+$/gm)];
+    if (titleHeadings.length !== 1) {
+      fail(`${rel(episodePath)}: expected exactly one episode title heading, got ${titleHeadings.length}`);
+    } else if (titleHeadings[0].index !== 0) {
+      fail(`${rel(episodePath)}: episode title heading must be the first line`);
+    }
     if (!text.startsWith(`# 제 ${number}화:`)) {
       fail(`${rel(episodePath)}: title does not start with "# 제 ${number}화:"`);
     }
@@ -685,6 +691,7 @@ function checkCompletionDocs() {
     "본편 회차를 수정할 때는 제210화의 최종 상태인 공식 오버랩 페어링 종료, 비독점·철회 가능 자유 접속, 거절권 보존 결말을 깨지 않는다.",
     "시리즈 루트·outline·scripts·권별 디렉터리 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
+    "회차 제목 H1 고유성",
     "회차 Canon Memo 필수 항목",
     "회차 Canon Memo 필수 항목과 말미 배치",
     "회차 Canon Memo 필수 항목 순서",
@@ -941,6 +948,7 @@ console.log(JSON.stringify({
     "volume directory exact file set",
     "episode ranges",
     "episode title/navigation/canon memo",
+    "episode unique title heading",
     "episode opening scaffold",
     "episode canon memo required fields",
     "episode canon memo field order",
