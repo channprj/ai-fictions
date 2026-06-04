@@ -592,6 +592,20 @@ function checkRootCatalog() {
   if (!text.includes(expectedCatalogRow)) {
     fail(`README.md: missing exact catalog row ${expectedCatalogRow}`);
   }
+
+  const catalogSectionStart = text.indexOf("## 작품 목록");
+  const catalogSectionEnd = catalogSectionStart === -1 ? -1 : text.indexOf("\n## ", catalogSectionStart + 1);
+  const catalogSection = catalogSectionStart === -1
+    ? ""
+    : text.slice(catalogSectionStart, catalogSectionEnd === -1 ? undefined : catalogSectionEnd);
+  const catalogRows = catalogSection.split(/\n/).filter((line) => {
+    return line.startsWith("| ")
+      && !line.startsWith("| 작품 ")
+      && !line.startsWith("| ---- ");
+  });
+  if (catalogRows.join("\n") !== expectedCatalogRow) {
+    fail(`README.md: expected exact 1-row catalog table, got ${catalogRows.length} rows`);
+  }
 }
 
 function checkSeriesOverview() {
@@ -723,6 +737,7 @@ function checkCompletionDocs() {
     "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "작품 홈 권 구성 표 정확한 7행",
+    "저장소 루트 작품 목록 표 정확한 1행",
     "`dist/README.md` 권별 배포 표 정확한 7행",
     "저장소 루트 README의 픽션·AI 제작 안내",
     "기존 zip 삭제",
@@ -995,6 +1010,7 @@ console.log(JSON.stringify({
     "outline episode tables",
     "root catalog",
     "root catalog table row",
+    "root catalog table exact rows",
     "series overview",
     "series overview volume table",
     "series overview volume table exact rows",
