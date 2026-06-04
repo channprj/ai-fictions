@@ -16,6 +16,7 @@ const volumeMetadata = [
   { title: "잊힌 모델의 묘지", outline: "vol06-model-graveyard.md" },
   { title: "하트 프로토콜", outline: "vol07-heart-protocol.md" },
 ];
+const manuscriptPlaceholderMarker = /TODO|TBD|FIXME|PLACEHOLDER|\{\{|\}\}|\[\[|\]\]/g;
 
 function rel(file) {
   return path.relative(repoRoot, file).replaceAll(path.sep, "/");
@@ -186,6 +187,10 @@ function checkVolumes() {
     }
     if (!text.includes("## Canon Memo")) {
       fail(`${rel(episodePath)}: missing Canon Memo`);
+    }
+    const placeholders = text.match(manuscriptPlaceholderMarker);
+    if (placeholders) {
+      fail(`${rel(episodePath)}: manuscript placeholder marker ${[...new Set(placeholders)].join(", ")}`);
     }
   }
 }
@@ -612,6 +617,7 @@ console.log(JSON.stringify({
   checks: [
     "episode ranges",
     "episode title/navigation/canon memo",
+    "episode placeholder markers",
     "episode title parity",
     "episode sequential navigation",
     "post-210 episode guard",
