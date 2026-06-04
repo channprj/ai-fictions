@@ -773,7 +773,7 @@ function checkCompletionDocs() {
     "작품 홈 권 구성 표 정확한 헤더",
     "저장소 루트 작품 목록 표 정확한 1행",
     "저장소 루트 작품 목록 표 정확한 헤더",
-    "`dist/README.md` 권별 배포 표 정확한 7행",
+    "`dist/README.md` 권별 배포 표 정확한 헤더와 7행",
     "저장소 루트 README의 픽션·AI 제작 안내",
     "기존 zip 삭제",
     "7권 빌드 루프",
@@ -860,6 +860,15 @@ function checkDistReadme() {
   const archiveTableRows = text.match(/^\| \d+권 \| .*$/gm) || [];
   if (archiveTableRows.join("\n") !== expectedRows.join("\n")) {
     fail(`prompt-hearts-academy/dist/README.md: expected exact 7-row archive table, got ${archiveTableRows.length} rows`);
+  }
+  const expectedArchiveTable = [
+    "| 권 | 압축 파일 | 포함 범위 |",
+    "| -- | --------- | --------- |",
+    ...expectedRows,
+  ];
+  const archiveTableLines = text.split(/\n/).filter((line) => line.startsWith("| "));
+  if (archiveTableLines.join("\n") !== expectedArchiveTable.join("\n")) {
+    fail(`prompt-hearts-academy/dist/README.md: expected exact archive table header and 7 rows, got ${archiveTableLines.length} table lines`);
   }
 }
 
@@ -1061,6 +1070,7 @@ console.log(JSON.stringify({
     "dist release manifest",
     "dist README archive table",
     "dist README archive table exact rows",
+    "dist README archive table exact header",
     "release script syntax",
     "release build script markers",
     "release build source selection",
