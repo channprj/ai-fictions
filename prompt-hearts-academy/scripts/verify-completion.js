@@ -203,6 +203,39 @@ function checkSeriesOverview() {
   }
 }
 
+function checkRequiredSnippets(file, displayName, snippets) {
+  if (!fs.existsSync(file)) {
+    fail(`${displayName}: missing`);
+    return;
+  }
+
+  const text = read(file);
+  for (const snippet of snippets) {
+    if (!text.includes(snippet)) {
+      fail(`${displayName}: missing completion marker ${snippet}`);
+    }
+  }
+}
+
+function checkCompletionDocs() {
+  checkRequiredSnippets(path.join(projectRoot, "PRD.md"), "prompt-hearts-academy/PRD.md", [
+    "본편 초고는 `vol01/ep001.md`부터 `vol07/ep210.md`까지 7권 210화 연속 구조로 완결되어 있다.",
+    "배포본은 `dist/` 아래 권별 zip 7개와 `SHA256SUMS` 체크섬 매니페스트로 정리되어 있다.",
+    "`BIBLE.md`는 제210화 이후의 하트 프로토콜 최종 상태, 자유 접속 규칙, 윤혜원 봉인 기록, 오리진 널의 조건부 호출명 `널`을 고정 캐논으로 반영한다.",
+    "본편 완결 상태를 기준으로 후속 작업자는 신규 본편 회차 작성이 아니라 검수, 개정, 외전 후보 판단을 수행한다.",
+  ]);
+
+  checkRequiredSnippets(path.join(projectRoot, "BIBLE.md"), "prompt-hearts-academy/BIBLE.md", [
+    "본편 완결 후 고정 상태:",
+    "공식 오버랩 페어링은 제210화에서 복원되지 않고 닫힌다.",
+    "자유 접속은 활성 상태지만, 비독점·철회 가능·거절권 보존 조건을 가진다.",
+    "### 본편 완결 후 관계 상태",
+    "자유 접속의 세 opening은 지아의 질문, 클레어의 읽지 않은 편지, 미나의 비공개 초대장이다. 셋 모두 선택적·지연 가능·거절 가능 상태로 남는다.",
+    "| 자유 접속 규칙 | 7권 졸업식 빈 좌석 빛 | 207~209화의 질문·경계 고지·초대장 | 제210화에서 비독점·철회 가능·거절권 보존 상태로 활성화된다 |",
+    "| 오리진 널의 주장 | 2권 암시 | 6권 정체 공개 | 7권에서 호출명 `널`, 보존권, 피해자 거절권, 책임 조건이 묶인 재계약으로 회수된다 |",
+  ]);
+}
+
 function checkDist() {
   const distDir = path.join(projectRoot, "dist");
   const checksums = path.join(distDir, "SHA256SUMS");
@@ -276,6 +309,7 @@ checkVolumes();
 checkMarkdown();
 checkRootCatalog();
 checkSeriesOverview();
+checkCompletionDocs();
 checkDist();
 
 if (failures.length) {
@@ -294,6 +328,7 @@ console.log(JSON.stringify({
     "markdown links",
     "root catalog",
     "series overview",
+    "completion doc final markers",
     "doc stale markers",
     "code fences",
     "trailing whitespace",
