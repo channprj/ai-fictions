@@ -124,6 +124,44 @@ function splitMarkdownTableRow(row) {
   return row.split("|").slice(1, -1).map((cell) => cell.trim());
 }
 
+function checkExactDirectoryEntries(dir, displayName, expectedEntries) {
+  if (!fs.existsSync(dir)) {
+    fail(`${displayName}: missing directory`);
+    return;
+  }
+
+  const expected = [...expectedEntries].sort();
+  const actual = fs.readdirSync(dir, { withFileTypes: true })
+    .map((entry) => entry.name)
+    .sort();
+
+  if (actual.join("\n") !== expected.join("\n")) {
+    fail(`${displayName}: expected only ${expected.join(", ")}, got ${actual.join(", ")}`);
+  }
+}
+
+function checkProjectLayout() {
+  checkExactDirectoryEntries(projectRoot, "prompt-hearts-academy", [
+    "BIBLE.md",
+    "PRD.md",
+    "README.md",
+    "TASKS.md",
+    "dist",
+    "outline",
+    "scripts",
+    ...volumeMetadata.map((_, index) => `vol${String(index + 1).padStart(2, "0")}`),
+  ]);
+
+  checkExactDirectoryEntries(path.join(projectRoot, "outline"), "prompt-hearts-academy/outline", [
+    ...volumeMetadata.map((metadata) => metadata.outline),
+  ]);
+
+  checkExactDirectoryEntries(path.join(projectRoot, "scripts"), "prompt-hearts-academy/scripts", [
+    "build-dist.js",
+    "verify-completion.js",
+  ]);
+}
+
 function checkVolumes() {
   const episodeFiles = [];
 
@@ -463,6 +501,7 @@ function checkCompletionDocs() {
     "후속 에이전트는 본편 `ep211.md`나 `vol08` 같은 추가 권 디렉터리를 만들지 않는다.",
     "완결 원고의 검수, 부분 개정, 외전 후보 판단, 문서 동기화 기준으로 사용한다.",
     "본편 회차를 수정할 때는 제210화의 최종 상태인 공식 오버랩 페어링 종료, 비독점·철회 가능 자유 접속, 거절권 보존 결말을 깨지 않는다.",
+    "시리즈 루트·outline·scripts 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
     "node prompt-hearts-academy/scripts/verify-completion.js",
     "node prompt-hearts-academy/scripts/build-dist.js",
@@ -592,6 +631,7 @@ function checkDist() {
   }
 }
 
+checkProjectLayout();
 checkVolumes();
 checkNoExtraMainStoryFiles();
 checkMarkdown();
@@ -615,6 +655,7 @@ console.log(JSON.stringify({
   volumes: 7,
   distributionArchives: 7,
   checks: [
+    "project layout exact file set",
     "episode ranges",
     "episode title/navigation/canon memo",
     "episode placeholder markers",
