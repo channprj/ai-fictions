@@ -568,6 +568,10 @@ function checkOutlines() {
     if (bitTableLines.slice(0, 2).join("\n") !== expectedBitTableScaffold.join("\n")) {
       fail(`outline/${outline}: expected exact 30-episode beat table header and separator`);
     }
+    const expectedBitTableLineCount = expectedBitTableScaffold.length + expectedEpisodeNumbers.length;
+    if (bitTableLines.length !== expectedBitTableLineCount) {
+      fail(`outline/${outline}: expected beat table header plus 30 episode rows, got ${bitTableLines.length} table lines`);
+    }
 
     const rows = text.match(/^\| \d+ \| .*$/gm) || [];
     const actualEpisodeNumbers = rows.map((row) => {
@@ -778,6 +782,7 @@ function checkCompletionDocs() {
     "권별 README 완결 범위와 정확한 30화 목록",
     "권별 README 회차 목록 표 정확한 헤더",
     "권별 outline 30화 비트 표 정확한 헤더",
+    "권별 outline 30화 비트 표 정확한 헤더와 추가 행 부재",
     "회차 파일 셀·링크 target",
     "회차 역할 칸 비어 있지 않음",
     "SHA256SUMS 정확한 줄 형식",
@@ -1069,6 +1074,7 @@ console.log(JSON.stringify({
     "volume README non-empty episode role cells",
     "outline episode tables",
     "outline episode table exact header",
+    "outline episode table no extra rows",
     "root catalog",
     "root catalog table row",
     "root catalog table exact rows",
