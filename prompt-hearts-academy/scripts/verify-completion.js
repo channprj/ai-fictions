@@ -186,6 +186,11 @@ function checkVolumes() {
       continue;
     }
 
+    checkExactDirectoryEntries(volumeDir, `prompt-hearts-academy/${volumeName}`, [
+      "README.md",
+      ...expectedEpisodes,
+    ]);
+
     const readme = path.join(volumeDir, "README.md");
     if (!fs.existsSync(readme)) {
       fail(`${volumeName}: missing README.md`);
@@ -517,7 +522,7 @@ function checkCompletionDocs() {
     "후속 에이전트는 본편 `ep211.md`나 `vol08` 같은 추가 권 디렉터리를 만들지 않는다.",
     "완결 원고의 검수, 부분 개정, 외전 후보 판단, 문서 동기화 기준으로 사용한다.",
     "본편 회차를 수정할 때는 제210화의 최종 상태인 공식 오버랩 페어링 종료, 비독점·철회 가능 자유 접속, 거절권 보존 결말을 깨지 않는다.",
-    "시리즈 루트·outline·scripts 허용 파일 집합",
+    "시리즈 루트·outline·scripts·권별 디렉터리 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
     "node prompt-hearts-academy/scripts/verify-completion.js",
@@ -673,6 +678,7 @@ console.log(JSON.stringify({
   distributionArchives: 7,
   checks: [
     "project layout exact file set",
+    "volume directory exact file set",
     "episode ranges",
     "episode title/navigation/canon memo",
     "episode canon memo required fields",
