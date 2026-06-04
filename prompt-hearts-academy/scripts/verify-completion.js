@@ -551,6 +551,22 @@ function checkRequiredSnippets(file, displayName, snippets) {
   }
 }
 
+function checkFinalEpisodeEnding() {
+  checkRequiredSnippets(episodePathForNumber(210), "prompt-hearts-academy/vol07/ep210.md", [
+    "FREE CONNECTION TERMINAL OPENING",
+    "official pairing: terminated",
+    "reply mode: optional / delayed / refusal-valid",
+    "HEART PROTOCOL FINAL STATE",
+    "official overlap pairing: closed",
+    "free connection: active / non-exclusive / revocable",
+    "departure right: preserved",
+    "love is a mutual prompt with refusal rights",
+    "완결은 책 바깥의 말이고, 우리는 아직 문장 안에 있었다.",
+    "다음 문장은, 우리가 함께 선택한다.",
+    "본편 후속 회차 없음.",
+  ]);
+}
+
 function checkCompletionDocs() {
   checkRequiredSnippets(path.join(projectRoot, "PRD.md"), "prompt-hearts-academy/PRD.md", [
     "본편 초고는 `vol01/ep001.md`부터 `vol07/ep210.md`까지 7권 210화 연속 구조로 완결되어 있다.",
@@ -577,6 +593,7 @@ function checkCompletionDocs() {
     "시리즈 루트·outline·scripts·권별 디렉터리 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
+    "제210화 최종 결말 마커",
     "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
     "node prompt-hearts-academy/scripts/verify-completion.js",
     "node prompt-hearts-academy/scripts/build-dist.js",
@@ -732,6 +749,7 @@ checkVolumeReadmes();
 checkOutlines();
 checkRootCatalog();
 checkSeriesOverview();
+checkFinalEpisodeEnding();
 checkCompletionDocs();
 checkDistReadme();
 checkReleaseScripts();
@@ -765,6 +783,7 @@ console.log(JSON.stringify({
     "root catalog table row",
     "series overview",
     "series overview volume table",
+    "final episode ending markers",
     "completion doc final markers",
     "task guidance final markers",
     "dist release manifest",
