@@ -256,6 +256,7 @@ function checkVolumes() {
     }
 
     const text = read(episodePath);
+    const lines = text.split(/\n/);
     const episodeTitle = episodeTitleForNumber(number);
     if (!text.startsWith(`# 제 ${number}화:`)) {
       fail(`${rel(episodePath)}: title does not start with "# 제 ${number}화:"`);
@@ -270,6 +271,9 @@ function checkVolumes() {
     const expectedNavigation = expectedEpisodeNavigationLine(number);
     if (navigationLine !== expectedNavigation) {
       fail(`${rel(episodePath)}: expected navigation "${expectedNavigation}", got "${navigationLine || "<missing>"}"`);
+    }
+    if (lines[1] !== "" || lines[2] !== expectedNavigation || lines[3] !== "") {
+      fail(`${rel(episodePath)}: expected opening scaffold title, blank line, navigation, blank line`);
     }
     const canonMemoStart = text.indexOf("## Canon Memo");
     if (canonMemoStart === -1) {
@@ -748,6 +752,7 @@ console.log(JSON.stringify({
     "volume directory exact file set",
     "episode ranges",
     "episode title/navigation/canon memo",
+    "episode opening scaffold",
     "episode canon memo required fields",
     "episode placeholder markers",
     "episode title parity",
