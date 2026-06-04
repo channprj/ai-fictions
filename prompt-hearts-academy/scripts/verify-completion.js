@@ -180,6 +180,7 @@ function checkDist() {
 
   for (let volume = 1; volume <= 7; volume += 1) {
     const volumeName = `vol${String(volume).padStart(2, "0")}`;
+    const firstEpisode = (volume - 1) * 30 + 1;
     const zipName = `prompt-hearts-academy-${volumeName}.zip`;
     const zipPath = path.join(distDir, zipName);
     if (!fs.existsSync(zipPath)) {
@@ -192,17 +193,31 @@ function checkDist() {
       .split(/\n/)
       .filter(Boolean);
     const expectedReadme = `${volumeName}/README.md`;
-    const expectedEpisodeCount = 30;
+    const expectedEntries = [
+      expectedReadme,
+      ...Array.from({ length: 30 }, (_, index) => {
+        return `${volumeName}/ep${String(firstEpisode + index).padStart(3, "0")}.md`;
+      }),
+    ];
     const episodeEntries = entries.filter((entry) => new RegExp(`^${volumeName}/ep\\d{3}\\.md$`).test(entry));
 
-    if (entries.length !== 31) {
-      fail(`${zipName}: expected 31 entries, got ${entries.length}`);
+    if (entries.join("\n") !== expectedEntries.join("\n")) {
+      fail(`${zipName}: expected entries ${expectedEntries.join(", ")}, got ${entries.join(", ")}`);
     }
-    if (!entries.includes(expectedReadme)) {
-      fail(`${zipName}: missing ${expectedReadme}`);
+    if (episodeEntries.length !== 30) {
+      fail(`${zipName}: expected 30 episodes, got ${episodeEntries.length}`);
     }
-    if (episodeEntries.length !== expectedEpisodeCount) {
-      fail(`${zipName}: expected ${expectedEpisodeCount} episodes, got ${episodeEntries.length}`);
+
+    for (const entry of expectedEntries) {
+      if (!entries.includes(entry)) {
+        continue;
+      }
+
+      const archiveText = expectCommand("unzip", ["-p", zipName, entry], { cwd: distDir });
+      const sourceText = read(path.join(projectRoot, entry));
+      if (archiveText !== sourceText) {
+        fail(`${zipName}: archive entry ${entry} differs from source file`);
+      }
     }
   }
 }
@@ -230,5 +245,6 @@ console.log(JSON.stringify({
     "trailing whitespace",
     "archive checksums",
     "archive contents",
+    "archive source parity",
   ],
 }, null, 2));

@@ -16,6 +16,7 @@
 
 - 각 zip은 해당 권 디렉터리를 보존한다.
 - 각 zip은 권별 `README.md` 1개와 회차 원고 30개를 포함한다.
+- 각 zip 내부의 권별 `README.md`와 회차 원고는 현재 원본 파일과 동일해야 한다.
 - 본편 이후 신규 회차 파일은 포함하지 않는다.
 
 ## 무결성 검증
@@ -36,4 +37,4 @@ shasum -a 256 -c SHA256SUMS
 node prompt-hearts-academy/scripts/build-dist.js
 ```
 
-이 스크립트는 권별 `README.md` 1개와 회차 원고 30개만 `zip -X`로 묶고, `SHA256SUMS`를 갱신한 뒤 완결 검산 스크립트를 실행한다.
+이 스크립트는 권별 `README.md` 1개와 회차 원고 30개만 `zip -X`로 묶고, `SHA256SUMS`를 갱신한 뒤 압축본과 원본의 내용 일치까지 포함한 완결 검산 스크립트를 실행한다.
