@@ -457,6 +457,20 @@ function checkVolumeReadmes() {
       }
     }
 
+    const episodeTableSectionStart = text.indexOf("## 회차 목록");
+    const episodeTableSectionEnd = episodeTableSectionStart === -1 ? -1 : text.indexOf("\n## ", episodeTableSectionStart + 1);
+    const episodeTableSection = episodeTableSectionStart === -1
+      ? ""
+      : text.slice(episodeTableSectionStart, episodeTableSectionEnd === -1 ? undefined : episodeTableSectionEnd);
+    const expectedEpisodeTableScaffold = [
+      "| 회차 | 파일 | 부제 | 회차 역할 |",
+      "| ---- | ---- | ---- | --------- |",
+    ];
+    const episodeTableLines = episodeTableSection.split(/\n/).filter((line) => line.startsWith("| "));
+    if (episodeTableLines.slice(0, 2).join("\n") !== expectedEpisodeTableScaffold.join("\n")) {
+      fail(`${volumeName}/README.md: expected exact episode table header and separator`);
+    }
+
     const expectedEpisodeNumbers = Array.from({ length: 30 }, (_, index) => {
       return firstEpisodeNumber + index;
     });
@@ -748,6 +762,7 @@ function checkCompletionDocs() {
     "회차 Canon Memo 필수 항목 값 비어 있지 않음",
     "회차 원고 최소 길이",
     "권별 README 완결 범위와 정확한 30화 목록",
+    "권별 README 회차 목록 표 정확한 헤더",
     "회차 파일 셀·링크 target",
     "회차 역할 칸 비어 있지 않음",
     "SHA256SUMS 정확한 줄 형식",
@@ -1025,6 +1040,7 @@ console.log(JSON.stringify({
     "markdown links",
     "volume README completion markers",
     "volume README exact episode tables",
+    "volume README episode table exact header",
     "volume README exact episode file cells",
     "volume README non-empty episode role cells",
     "outline episode tables",
