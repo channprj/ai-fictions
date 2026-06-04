@@ -7,6 +7,15 @@ const { spawnSync } = require("child_process");
 const projectRoot = path.resolve(__dirname, "..");
 const repoRoot = path.resolve(projectRoot, "..");
 const failures = [];
+const volumeMetadata = [
+  { title: "첫 번째 프롬프트", outline: "vol01-first-prompt.md" },
+  { title: "메모리 페스티벌", outline: "vol02-memory-festival.md" },
+  { title: "가드레일의 겨울", outline: "vol03-guardrail-winter.md" },
+  { title: "쌍둥이 별의 무대", outline: "vol04-twin-star-stage.md" },
+  { title: "컨텍스트 전쟁", outline: "vol05-context-war.md" },
+  { title: "잊힌 모델의 묘지", outline: "vol06-model-graveyard.md" },
+  { title: "하트 프로토콜", outline: "vol07-heart-protocol.md" },
+];
 
 function rel(file) {
   return path.relative(repoRoot, file).replaceAll(path.sep, "/");
@@ -158,16 +167,6 @@ function checkMarkdown() {
 }
 
 function checkVolumeReadmes() {
-  const volumeTitles = [
-    "첫 번째 프롬프트",
-    "메모리 페스티벌",
-    "가드레일의 겨울",
-    "쌍둥이 별의 무대",
-    "컨텍스트 전쟁",
-    "잊힌 모델의 묘지",
-    "하트 프로토콜",
-  ];
-
   for (let volume = 1; volume <= 7; volume += 1) {
     const volumeName = `vol${String(volume).padStart(2, "0")}`;
     const firstEpisodeNumber = (volume - 1) * 30 + 1;
@@ -183,7 +182,7 @@ function checkVolumeReadmes() {
 
     const text = read(readme);
     const requiredSnippets = [
-      `# ${volume}권: ${volumeTitles[volume - 1]}`,
+      `# ${volume}권: ${volumeMetadata[volume - 1].title}`,
       `실제 회차 원고는 \`${firstEpisode}\`부터 \`${lastEpisode}\`까지 작성되어 있다.`,
       "## 권 줄거리",
       "## 등장인물 변화",
@@ -202,6 +201,67 @@ function checkVolumeReadmes() {
       const episodePattern = new RegExp(`\\| ${episodeNumber} \\| [^\\n]*\`${episode}\``, "m");
       if (!episodePattern.test(text)) {
         fail(`${volumeName}/README.md: missing episode table entry for ${episode}`);
+      }
+    }
+  }
+}
+
+function checkOutlines() {
+  const outlineDir = path.join(projectRoot, "outline");
+
+  if (!fs.existsSync(outlineDir)) {
+    fail("outline: missing outline directory");
+    return;
+  }
+
+  const expectedOutlines = volumeMetadata.map((metadata) => metadata.outline);
+  const actualOutlines = list(outlineDir).filter((file) => /^vol\d{2}-.*\.md$/.test(file));
+  if (actualOutlines.join("\n") !== expectedOutlines.join("\n")) {
+    fail(`outline: expected ${expectedOutlines.join(", ")}, got ${actualOutlines.join(", ")}`);
+  }
+
+  for (let volume = 1; volume <= 7; volume += 1) {
+    const { title, outline } = volumeMetadata[volume - 1];
+    const outlinePath = path.join(outlineDir, outline);
+    const firstEpisodeNumber = (volume - 1) * 30 + 1;
+    const expectedEpisodeNumbers = Array.from({ length: 30 }, (_, index) => firstEpisodeNumber + index);
+
+    if (!fs.existsSync(outlinePath)) {
+      fail(`outline/${outline}: missing volume outline`);
+      continue;
+    }
+
+    const text = read(outlinePath);
+    const requiredSnippets = [
+      `# ${volume}권: ${title}`,
+      "## 권 목표",
+      "## 권 로그라인",
+      "## 주요 감정선",
+      "## 권별 주의사항",
+      "## 30화 비트",
+      "| 화 | 부제 | 목적 | 중심 갈등 | 핵심 사건 | 엔딩 훅 |",
+    ];
+
+    for (const snippet of requiredSnippets) {
+      if (!text.includes(snippet)) {
+        fail(`outline/${outline}: missing outline marker ${snippet}`);
+      }
+    }
+
+    const rows = text.match(/^\| \d+ \| .*$/gm) || [];
+    const actualEpisodeNumbers = rows.map((row) => {
+      const match = row.match(/^\| (\d+) \|/);
+      return match ? Number(match[1]) : NaN;
+    });
+
+    if (actualEpisodeNumbers.join("\n") !== expectedEpisodeNumbers.join("\n")) {
+      fail(`outline/${outline}: expected episode rows ${expectedEpisodeNumbers[0]}-${expectedEpisodeNumbers.at(-1)}, got ${actualEpisodeNumbers.join(", ")}`);
+    }
+
+    for (const row of rows) {
+      const cells = row.split("|").slice(1, -1).map((cell) => cell.trim());
+      if (cells.length !== 6 || cells.some((cell) => cell.length === 0)) {
+        fail(`outline/${outline}: malformed outline row ${row}`);
       }
     }
   }
@@ -380,6 +440,7 @@ function checkDist() {
 checkVolumes();
 checkMarkdown();
 checkVolumeReadmes();
+checkOutlines();
 checkRootCatalog();
 checkSeriesOverview();
 checkCompletionDocs();
@@ -401,6 +462,7 @@ console.log(JSON.stringify({
     "episode title/navigation/canon memo",
     "markdown links",
     "volume README completion markers",
+    "outline episode tables",
     "root catalog",
     "series overview",
     "completion doc final markers",
