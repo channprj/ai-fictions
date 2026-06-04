@@ -417,6 +417,19 @@ function checkVolumeReadmes() {
       }
     }
 
+    const expectedEpisodeNumbers = Array.from({ length: 30 }, (_, index) => {
+      return firstEpisodeNumber + index;
+    });
+    const rows = text.match(/^\| \d+ \| .*$/gm) || [];
+    const actualEpisodeNumbers = rows.map((row) => {
+      const match = row.match(/^\| (\d+) \|/);
+      return match ? Number(match[1]) : NaN;
+    });
+
+    if (actualEpisodeNumbers.join("\n") !== expectedEpisodeNumbers.join("\n")) {
+      fail(`${volumeName}/README.md: expected episode table rows ${firstEpisodeNumber}-${lastEpisodeNumber}, got ${actualEpisodeNumbers.join(", ")}`);
+    }
+
     for (let episodeNumber = firstEpisodeNumber; episodeNumber <= lastEpisodeNumber; episodeNumber += 1) {
       const episode = `ep${String(episodeNumber).padStart(3, "0")}.md`;
       const episodePattern = new RegExp(`\\| ${episodeNumber} \\| [^\\n]*\`${episode}\``, "m");
@@ -636,6 +649,7 @@ function checkCompletionDocs() {
     "회차별 이전/다음 내비게이션",
     "회차 Canon Memo 필수 항목",
     "회차 Canon Memo 필수 항목과 말미 배치",
+    "권별 README 완결 범위와 정확한 30화 목록",
     "SHA256SUMS 정확한 줄 형식",
     "텍스트 파일 마지막 개행",
     "제210화 최종 결말 마커",
@@ -892,6 +906,7 @@ console.log(JSON.stringify({
     "post-210 episode guard",
     "markdown links",
     "volume README completion markers",
+    "volume README exact episode tables",
     "outline episode tables",
     "root catalog",
     "root catalog table row",
