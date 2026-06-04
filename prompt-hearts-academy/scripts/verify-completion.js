@@ -467,10 +467,12 @@ function checkCompletionDocs() {
 function checkDistReadme() {
   checkRequiredSnippets(path.join(projectRoot, "dist", "README.md"), "prompt-hearts-academy/dist/README.md", [
     "본편 초고 완결 상태를 권별 압축 파일로 묶은 배포용 디렉터리다.",
+    "`dist/`에는 이 `README.md`, `SHA256SUMS`, 권별 zip 7개만 둔다.",
     "각 zip은 권별 `README.md` 1개와 회차 원고 30개를 포함한다.",
     "각 zip 내부의 권별 `README.md`와 회차 원고는 현재 원본 파일과 동일해야 한다.",
     "본편 이후 신규 회차 파일은 포함하지 않는다.",
     "[SHA256SUMS](./SHA256SUMS)",
+    "`SHA256SUMS`는 권별 zip 7개에 대한 행만 포함한다.",
     "shasum -a 256 -c SHA256SUMS",
     "node prompt-hearts-academy/scripts/build-dist.js",
     "압축본과 원본의 내용 일치까지 포함한 완결 검산 스크립트를 실행한다.",
@@ -494,10 +496,33 @@ function checkDist() {
   const expectedZips = Array.from({ length: 7 }, (_, index) => {
     return `prompt-hearts-academy-vol${String(index + 1).padStart(2, "0")}.zip`;
   });
+  const expectedDistEntries = ["README.md", "SHA256SUMS", ...expectedZips].sort();
+  const actualDistEntries = fs.readdirSync(distDir, { withFileTypes: true })
+    .map((entry) => entry.name)
+    .sort();
+  if (actualDistEntries.join("\n") !== expectedDistEntries.join("\n")) {
+    fail(`dist: expected only ${expectedDistEntries.join(", ")}, got ${actualDistEntries.join(", ")}`);
+  }
+
   const actualZips = list(distDir).filter((file) => /^prompt-hearts-academy-vol\d{2}\.zip$/.test(file));
 
   if (actualZips.join("\n") !== expectedZips.join("\n")) {
     fail(`dist: expected ${expectedZips.join(", ")}, got ${actualZips.join(", ")}`);
+  }
+
+  const checksumText = read(checksums).trimEnd();
+  const checksumLines = checksumText ? checksumText.split(/\n/) : [];
+  const checksumTargets = [];
+  checksumLines.forEach((line, index) => {
+    const match = line.match(/^[a-f0-9]{64}  (.+)$/);
+    if (!match) {
+      fail(`dist/SHA256SUMS:${index + 1}: malformed checksum line`);
+      return;
+    }
+    checksumTargets.push(match[1]);
+  });
+  if (checksumTargets.join("\n") !== expectedZips.join("\n")) {
+    fail(`dist/SHA256SUMS: expected checksum targets ${expectedZips.join(", ")}, got ${checksumTargets.join(", ")}`);
   }
 
   expectCommand("shasum", ["-a", "256", "-c", "SHA256SUMS"], { cwd: distDir });
@@ -581,6 +606,8 @@ console.log(JSON.stringify({
     "completion doc final markers",
     "task guidance final markers",
     "dist release manifest",
+    "dist exact file set",
+    "dist checksum manifest",
     "doc stale markers",
     "code fences",
     "trailing whitespace",
