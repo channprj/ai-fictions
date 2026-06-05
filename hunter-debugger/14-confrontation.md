@@ -1,4 +1,4 @@
-[← 이전: 연합](./13-alliance.md) | [목차](./README.md) | [다음: 결전 →](./15-final-battle.md)
+[← 이전: 13화: 연합](./13-alliance.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 15화: 결전 →](./15-final-battle.md)
 
 ---
 
@@ -2048,4 +2048,4 @@ E급이라서 무시당하고, 차별받고, 고통받았다.
 
 ---
 
-[← 이전: 연합](./13-alliance.md) | [목차](./README.md) | [다음: 결전 →](./15-final-battle.md)
+[← 이전: 13화: 연합](./13-alliance.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 15화: 결전 →](./15-final-battle.md)

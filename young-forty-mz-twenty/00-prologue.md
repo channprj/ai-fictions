@@ -1,4 +1,4 @@
-[목차](./README.md) | [다음: 꼰대의 탄생 →](./01-part1-legacy.md)
+[시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 2화: 꼰대의 탄생 →](./01-part1-legacy.md)
 
 ---
 
@@ -391,6 +391,4 @@
 
 ---
 
-[목차](./README.md) | [다음: 꼰대의 탄생 →](./01-part1-legacy.md)
-
----
+[시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 2화: 꼰대의 탄생 →](./01-part1-legacy.md)

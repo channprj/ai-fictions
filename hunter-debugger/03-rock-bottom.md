@@ -1,4 +1,4 @@
-[← 이전: 자격](./02-qualification.md) | [목차](./README.md) | [다음: 만남 →](./04-encounter.md)
+[← 이전: 2화: 자격](./02-qualification.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 4화: 만남 →](./04-encounter.md)
 
 ---
 
@@ -1185,4 +1185,4 @@ _'강해질 수 있을 것 같아. 아직 모르겠지만... 희망이 보여.'_
 
 ---
 
-[← 이전: 자격](./02-qualification.md) | [목차](./README.md) | [다음: 만남 →](./04-encounter.md)
+[← 이전: 2화: 자격](./02-qualification.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 4화: 만남 →](./04-encounter.md)

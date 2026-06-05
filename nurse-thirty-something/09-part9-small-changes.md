@@ -1,4 +1,4 @@
-[← 이전: 의미 찾기](./08-part8-finding-meaning.md) | [목차](./README.md) | [다음: 새로운 시작 →](./10-part10-new-beginning.md)
+[← 이전: 9화: 의미 찾기](./08-part8-finding-meaning.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 11화: 새로운 시작 →](./10-part10-new-beginning.md)
 
 ---
 
@@ -1218,7 +1218,4 @@ OR 5번
 
 ---
 
-[← 이전: 의미 찾기](./08-part8-finding-meaning.md) | [목차](./README.md) | [다음: 새로운 시작 →](./10-part10-new-beginning.md)
-
----
-
+[← 이전: 9화: 의미 찾기](./08-part8-finding-meaning.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 11화: 새로운 시작 →](./10-part10-new-beginning.md)

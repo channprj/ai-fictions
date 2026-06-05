@@ -1,4 +1,4 @@
-[← 이전: 꼰대의 탄생](./01-part1-legacy.md) | [목차](./README.md) | [다음: 충돌 →](./03-part3-chaos-begins.md)
+[← 이전: 2화: 꼰대의 탄생](./01-part1-legacy.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 4화: 충돌 →](./03-part3-chaos-begins.md)
 
 ---
 
@@ -1614,6 +1614,4 @@ Pinned Repositories:
 
 ---
 
-[← 이전: 꼰대의 탄생](./01-part1-legacy.md) | [목차](./README.md) | [다음: 충돌 →](./03-part3-chaos-begins.md)
-
----
+[← 이전: 2화: 꼰대의 탄생](./01-part1-legacy.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 4화: 충돌 →](./03-part3-chaos-begins.md)

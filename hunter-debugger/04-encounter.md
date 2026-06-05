@@ -1,4 +1,4 @@
-[← 이전: 바닥](./03-rock-bottom.md) | [목차](./README.md) | [다음: 깨달음 →](./05-enlightenment.md)
+[← 이전: 3화: 바닥](./03-rock-bottom.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 5화: 깨달음 →](./05-enlightenment.md)
 
 ---
 
@@ -960,4 +960,4 @@ _'아직 멀었지만, 조금씩 나아가고 있어. 다시는 잃지 않겠다
 
 ---
 
-[← 이전: 바닥](./03-rock-bottom.md) | [목차](./README.md) | [다음: 깨달음 →](./05-enlightenment.md)
+[← 이전: 3화: 바닥](./03-rock-bottom.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 5화: 깨달음 →](./05-enlightenment.md)

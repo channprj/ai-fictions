@@ -1,4 +1,4 @@
-[← 이전: 워라밸 선언](./02-part2-mz-freedom.md) | [목차](./README.md) | [다음: 네 탓 →](./04-part4-blame-game.md)
+[← 이전: 3화: 워라밸 선언](./02-part2-mz-freedom.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 5화: 네 탓 →](./04-part4-blame-game.md)
 
 ---
 
@@ -1614,6 +1614,4 @@ if (!password.matches(".*[!@#$%].*")) {
 
 ---
 
-[← 이전: 워라밸 선언](./02-part2-mz-freedom.md) | [목차](./README.md) | [다음: 네 탓 →](./04-part4-blame-game.md)
-
----
+[← 이전: 3화: 워라밸 선언](./02-part2-mz-freedom.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 5화: 네 탓 →](./04-part4-blame-game.md)

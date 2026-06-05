@@ -1,4 +1,4 @@
-[목차](./README.md) | [다음: 수술실의 법칙 →](./01-part1-operating-room.md)
+[시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 2화: 수술실의 법칙 →](./01-part1-operating-room.md)
 
 ---
 
@@ -559,6 +559,4 @@ _'신규 교육까지...'_
 
 ---
 
-[목차](./README.md) | [다음: 수술실의 법칙 →](./01-part1-operating-room.md)
-
----
+[시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 2화: 수술실의 법칙 →](./01-part1-operating-room.md)

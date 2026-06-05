@@ -1,4 +1,4 @@
-[← 이전: 새로운 시작](./10-part10-new-beginning.md) | [목차](./README.md)
+[← 이전: 11화: 새로운 시작](./10-part10-new-beginning.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
 
 ---
 
@@ -685,7 +685,6 @@ OR 5번. 서연이 12년 동안 일해온 곳.
 
 ---
 
-[← 이전: 새로운 시작](./10-part10-new-beginning.md) | [목차](./README.md)
 
 ---
 
@@ -713,3 +712,4 @@ OR 5번. 서연이 12년 동안 일해온 곳.
 
 ---
 
+[← 이전: 11화: 새로운 시작](./10-part10-new-beginning.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)

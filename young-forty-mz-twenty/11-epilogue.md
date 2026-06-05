@@ -1,4 +1,4 @@
-[← 이전: 머지](./10-part10-real-collaboration.md) | [목차](./README.md)
+[← 이전: 11화: 머지](./10-part10-real-collaboration.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
 
 ---
 
@@ -639,5 +639,5 @@ $ git push origin human-v2.0
 *— 완 —*
 
 ---
-[← 이전: 머지](./10-part10-real-collaboration.md) | [목차](./README.md)
----
+
+[← 이전: 11화: 머지](./10-part10-real-collaboration.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)

@@ -1,4 +1,4 @@
-[← 이전: 균열](./12-fracture.md) | [목차](./README.md) | [다음: 대치 →](./14-confrontation.md)
+[← 이전: 12화: 균열](./12-fracture.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 14화: 대치 →](./14-confrontation.md)
 
 ---
 
@@ -1777,4 +1777,4 @@ SSS급에 필적하는 힘.
 
 ---
 
-[← 이전: 균열](./12-fracture.md) | [목차](./README.md) | [다음: 대치 →](./14-confrontation.md)
+[← 이전: 12화: 균열](./12-fracture.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 14화: 대치 →](./14-confrontation.md)

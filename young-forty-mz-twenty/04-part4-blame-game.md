@@ -1,4 +1,4 @@
-[← 이전: 충돌](./03-part3-chaos-begins.md) | [목차](./README.md) | [다음: 폭망 →](./05-part5-failing-project.md)
+[← 이전: 4화: 충돌](./03-part3-chaos-begins.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 6화: 폭망 →](./05-part5-failing-project.md)
 
 ---
 
@@ -251,5 +251,5 @@ CEO가 회의실을 나갔다.
 *계속...*
 
 ---
-[← 이전: 충돌](./03-part3-chaos-begins.md) | [목차](./README.md) | [다음: 폭망 →](./05-part5-failing-project.md)
----
+
+[← 이전: 4화: 충돌](./03-part3-chaos-begins.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 6화: 폭망 →](./05-part5-failing-project.md)

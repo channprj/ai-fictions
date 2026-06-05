@@ -1,4 +1,4 @@
-[← 이전: 선배와 후배 사이](./02-part2-generation-gap.md) | [목차](./README.md) | [다음: 32살의 무게 →](./04-part4-thirty-something.md)
+[← 이전: 3화: 선배와 후배 사이](./02-part2-generation-gap.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 5화: 32살의 무게 →](./04-part4-thirty-something.md)
 
 ---
 
@@ -702,6 +702,4 @@ OR 1번.
 
 ---
 
-[← 이전: 선배와 후배 사이](./02-part2-generation-gap.md) | [목차](./README.md) | [다음: 32살의 무게 →](./04-part4-thirty-something.md)
-
----
+[← 이전: 3화: 선배와 후배 사이](./02-part2-generation-gap.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 5화: 32살의 무게 →](./04-part4-thirty-something.md)

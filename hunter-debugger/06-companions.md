@@ -1,4 +1,4 @@
-[← 이전: 깨달음](./05-enlightenment.md) | [목차](./README.md) | [다음: 도약 →](./07-leap.md)
+[← 이전: 5화: 깨달음](./05-enlightenment.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 7화: 도약 →](./07-leap.md)
 
 ---
 
@@ -786,4 +786,4 @@ _'이게 준혁 형이 지키려는 것이구나.'_
 
 ---
 
-[← 이전: 깨달음](./05-enlightenment.md) | [목차](./README.md) | [다음: 도약 →](./07-leap.md)
+[← 이전: 5화: 깨달음](./05-enlightenment.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 7화: 도약 →](./07-leap.md)

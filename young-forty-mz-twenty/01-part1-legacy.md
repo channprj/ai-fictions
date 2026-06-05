@@ -1,4 +1,4 @@
-[← 이전: 프롤로그](./00-prologue.md) | [목차](./README.md) | [다음: 워라밸 선언 →](./02-part2-mz-freedom.md)
+[← 이전: 1화: 사표](./00-prologue.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 3화: 워라밸 선언 →](./02-part2-mz-freedom.md)
 
 ---
 
@@ -1103,6 +1103,4 @@ SQL 인젝션 취약점. 비밀번호 평문 저장. mysql_* 함수(deprecated).
 
 ---
 
-[← 이전: 프롤로그](./00-prologue.md) | [목차](./README.md) | [다음: 워라밸 선언 →](./02-part2-mz-freedom.md)
-
----
+[← 이전: 1화: 사표](./00-prologue.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 3화: 워라밸 선언 →](./02-part2-mz-freedom.md)

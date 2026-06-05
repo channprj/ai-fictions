@@ -1,4 +1,4 @@
-[← 이전: 시련](./09-ordeal.md) | [목차](./README.md) | [다음: 폭풍 전야 →](./11-calm-before-storm.md)
+[← 이전: 9화: 시련](./09-ordeal.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 11화: 폭풍 전야 →](./11-calm-before-storm.md)
 
 ---
 
@@ -914,4 +914,4 @@ _'기다려, 지유야. 내가 더 강해지면, 네 곁에 갈게. 그때까지
 
 ---
 
-[← 이전: 시련](./09-ordeal.md) | [목차](./README.md) | [다음: 폭풍 전야 →](./11-calm-before-storm.md)
+[← 이전: 9화: 시련](./09-ordeal.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 11화: 폭풍 전야 →](./11-calm-before-storm.md)

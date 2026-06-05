@@ -1,4 +1,4 @@
-[← 이전: 동료](./06-companions.md) | [목차](./README.md) | [다음: 음모 →](./08-conspiracy.md)
+[← 이전: 6화: 동료](./06-companions.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 8화: 음모 →](./08-conspiracy.md)
 
 ---
 
@@ -1304,4 +1304,4 @@ E급 헌터 최수종.
 
 ---
 
-[← 이전: 동료](./06-companions.md) | [목차](./README.md) | [다음: 음모 →](./08-conspiracy.md)
+[← 이전: 6화: 동료](./06-companions.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 8화: 음모 →](./08-conspiracy.md)

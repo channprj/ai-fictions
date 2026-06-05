@@ -1,4 +1,4 @@
-[목차](./README.md) | [다음: 자격 →](./02-qualification.md)
+[시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 2화: 자격 →](./02-qualification.md)
 
 ---
 
@@ -1219,4 +1219,4 @@ E급 헌터의 첫걸음이 시작됐다.
 
 ---
 
-[목차](./README.md) | [다음: 자격 →](./02-qualification.md)
+[시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 2화: 자격 →](./02-qualification.md)

@@ -1,4 +1,4 @@
-[← 이전: 작은 변화들](./09-part9-small-changes.md) | [목차](./README.md) | [다음: 에필로그 →](./11-epilogue.md)
+[← 이전: 10화: 작은 변화들](./09-part9-small-changes.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 12화: 루프 →](./11-epilogue.md)
 
 ---
 
@@ -874,4 +874,4 @@ _'오늘도 무사히.'_
 
 ---
 
-[← 이전: 작은 변화들](./09-part9-small-changes.md) | [목차](./README.md) | [다음: 에필로그 →](./11-epilogue.md)
+[← 이전: 10화: 작은 변화들](./09-part9-small-changes.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 12화: 루프 →](./11-epilogue.md)
