@@ -1,4 +1,4 @@
-[← 이전: 각오](./10-resolve.md) | [목차](./README.md) | [다음: 균열 →](./12-fracture.md)
+[← 이전: 10화: 각오](./10-resolve.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 12화: 균열 →](./12-fracture.md)
 
 ---
 
@@ -1333,4 +1333,4 @@ SSS급 던전. 12명의 S급 헌터 중 9명을 죽인 존재. 인류 역사상 
 
 ---
 
-[← 이전: 각오](./10-resolve.md) | [목차](./README.md) | [다음: 균열 →](./12-fracture.md)
+[← 이전: 10화: 각오](./10-resolve.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 12화: 균열 →](./12-fracture.md)

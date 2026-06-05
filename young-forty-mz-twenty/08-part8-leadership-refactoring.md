@@ -1,4 +1,4 @@
-[← 이전: 커피 한 잔](./07-part7-human-debugging.md) | [목차](./README.md) | [다음: 첫 걸음 →](./09-part9-awkward-harmony.md)
+[← 이전: 8화: 커피 한 잔](./07-part7-human-debugging.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 10화: 첫 걸음 →](./09-part9-awkward-harmony.md)
 
 ---
 
@@ -579,5 +579,5 @@ async function fetchUserOrders() {
 *계속...*
 
 ---
-[← 이전: 커피 한 잔](./07-part7-human-debugging.md) | [목차](./README.md) | [다음: 첫 걸음 →](./09-part9-awkward-harmony.md)
----
+
+[← 이전: 8화: 커피 한 잔](./07-part7-human-debugging.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 10화: 첫 걸음 →](./09-part9-awkward-harmony.md)

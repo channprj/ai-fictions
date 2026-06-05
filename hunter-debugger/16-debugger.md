@@ -1,4 +1,4 @@
-[← 이전: 결전](./15-final-battle.md) | [목차](./README.md)
+[← 이전: 15화: 결전](./15-final-battle.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
 
 ---
 
@@ -1573,4 +1573,4 @@ E급 헌터가 세상을 구하고, 영웅이 되고, 행복하게 살고 있다
 
 ---
 
-[← 이전: 결전](./15-final-battle.md) | [목차](./README.md)
+[← 이전: 15화: 결전](./15-final-battle.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)

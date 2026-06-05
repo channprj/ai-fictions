@@ -1,4 +1,4 @@
-[← 이전: 첫 걸음](./09-part9-awkward-harmony.md) | [목차](./README.md) | [다음: 루프 →](./11-epilogue.md)
+[← 이전: 10화: 첫 걸음](./09-part9-awkward-harmony.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 12화: 루프 →](./11-epilogue.md)
 
 ---
 
@@ -409,5 +409,5 @@ git merge legacy modern.
 _에필로그에서 계속..._
 
 ---
-[← 이전: 첫 걸음](./09-part9-awkward-harmony.md) | [목차](./README.md) | [다음: 루프 →](./11-epilogue.md)
----
+
+[← 이전: 10화: 첫 걸음](./09-part9-awkward-harmony.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 12화: 루프 →](./11-epilogue.md)

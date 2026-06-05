@@ -1,4 +1,4 @@
-[← 이전: 커피 한 잔](./07-part7-coffee-break.md) | [목차](./README.md) | [다음: 작은 변화들 →](./09-part9-small-changes.md)
+[← 이전: 8화: 커피 한 잔](./07-part7-coffee-break.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 10화: 작은 변화들 →](./09-part9-small-changes.md)
 
 ---
 
@@ -709,7 +709,4 @@
 
 ---
 
-[← 이전: 커피 한 잔](./07-part7-coffee-break.md) | [목차](./README.md) | [다음: 작은 변화들 →](./09-part9-small-changes.md)
-
----
-
+[← 이전: 8화: 커피 한 잔](./07-part7-coffee-break.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 10화: 작은 변화들 →](./09-part9-small-changes.md)

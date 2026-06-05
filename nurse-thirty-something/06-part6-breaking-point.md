@@ -1,4 +1,4 @@
-[← 이전: 응급 상황](./05-part5-crisis.md) | [목차](./README.md) | [다음: 커피 한 잔 →](./07-part7-coffee-break.md)
+[← 이전: 6화: 응급 상황](./05-part5-crisis.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 8화: 커피 한 잔 →](./07-part7-coffee-break.md)
 
 ---
 
@@ -567,6 +567,4 @@
 
 ---
 
-[← 이전: 응급 상황](./05-part5-crisis.md) | [목차](./README.md) | [다음: 커피 한 잔 →](./07-part7-coffee-break.md)
-
----
+[← 이전: 6화: 응급 상황](./05-part5-crisis.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 8화: 커피 한 잔 →](./07-part7-coffee-break.md)

@@ -1,4 +1,4 @@
-[← 이전: 프롤로그](./00-prologue.md) | [목차](./README.md) | [다음: 선배와 후배 사이 →](./02-part2-generation-gap.md)
+[← 이전: 1화: 오늘도 무사히](./00-prologue.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 3화: 선배와 후배 사이 →](./02-part2-generation-gap.md)
 
 ---
 
@@ -781,6 +781,4 @@ OR 7번 준비 완료.
 
 ---
 
-[← 이전: 프롤로그](./00-prologue.md) | [목차](./README.md) | [다음: 선배와 후배 사이 →](./02-part2-generation-gap.md)
-
----
+[← 이전: 1화: 오늘도 무사히](./00-prologue.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 3화: 선배와 후배 사이 →](./02-part2-generation-gap.md)

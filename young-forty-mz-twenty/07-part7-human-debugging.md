@@ -1,4 +1,4 @@
-[← 이전: 바닥](./06-part6-rock-bottom.md) | [목차](./README.md) | [다음: 변화 →](./08-part8-leadership-refactoring.md)
+[← 이전: 7화: 바닥](./06-part6-rock-bottom.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 9화: 변화 →](./08-part8-leadership-refactoring.md)
 
 ---
 
@@ -528,5 +528,5 @@ function 반응_v2(input) {
 *계속...*
 
 ---
-[← 이전: 바닥](./06-part6-rock-bottom.md) | [목차](./README.md) | [다음: 변화 →](./08-part8-leadership-refactoring.md)
----
+
+[← 이전: 7화: 바닥](./06-part6-rock-bottom.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 9화: 변화 →](./08-part8-leadership-refactoring.md)

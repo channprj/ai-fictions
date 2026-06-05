@@ -1,4 +1,4 @@
-[← 이전: 변화](./08-part8-leadership-refactoring.md) | [목차](./README.md) | [다음: 머지 →](./10-part10-real-collaboration.md)
+[← 이전: 9화: 변화](./08-part8-leadership-refactoring.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 11화: 머지 →](./10-part10-real-collaboration.md)
 
 ---
 
@@ -607,5 +607,5 @@ function processValue(value: unknown) {
 *계속...*
 
 ---
-[← 이전: 변화](./08-part8-leadership-refactoring.md) | [목차](./README.md) | [다음: 머지 →](./10-part10-real-collaboration.md)
----
+
+[← 이전: 9화: 변화](./08-part8-leadership-refactoring.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 11화: 머지 →](./10-part10-real-collaboration.md)

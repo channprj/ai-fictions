@@ -1,4 +1,4 @@
-[← 이전: 나이트의 밤](./03-part3-night-shift.md) | [목차](./README.md) | [다음: 응급 상황 →](./05-part5-crisis.md)
+[← 이전: 4화: 나이트의 밤](./03-part3-night-shift.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 6화: 응급 상황 →](./05-part5-crisis.md)
 
 ---
 
@@ -726,6 +726,4 @@ OR 5번에서 대장암 절제술이 시작됐다.
 
 ---
 
-[← 이전: 나이트의 밤](./03-part3-night-shift.md) | [목차](./README.md) | [다음: 응급 상황 →](./05-part5-crisis.md)
-
----
+[← 이전: 4화: 나이트의 밤](./03-part3-night-shift.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 6화: 응급 상황 →](./05-part5-crisis.md)

@@ -1,4 +1,4 @@
-[← 이전: 만남](./04-encounter.md) | [목차](./README.md) | [다음: 동료 →](./06-companions.md)
+[← 이전: 4화: 만남](./04-encounter.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 6화: 동료 →](./06-companions.md)
 
 ---
 
@@ -1075,4 +1075,4 @@ _'너한테 부끄럽지 않은 사람이 될게. 약속해.'_
 
 ---
 
-[← 이전: 만남](./04-encounter.md) | [목차](./README.md) | [다음: 동료 →](./06-companions.md)
+[← 이전: 4화: 만남](./04-encounter.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 6화: 동료 →](./06-companions.md)

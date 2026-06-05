@@ -1,4 +1,4 @@
-[← 이전: 네 탓](./04-part4-blame-game.md) | [목차](./README.md) | [다음: 바닥 →](./06-part6-rock-bottom.md)
+[← 이전: 5화: 네 탓](./04-part4-blame-game.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 7화: 바닥 →](./06-part6-rock-bottom.md)
 
 ---
 
@@ -1076,5 +1076,5 @@ function legacyFunction() {
 *계속...*
 
 ---
-[← 이전: 네 탓](./04-part4-blame-game.md) | [목차](./README.md) | [다음: 바닥 →](./06-part6-rock-bottom.md)
----
+
+[← 이전: 5화: 네 탓](./04-part4-blame-game.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 7화: 바닥 →](./06-part6-rock-bottom.md)

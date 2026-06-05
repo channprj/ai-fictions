@@ -1,4 +1,4 @@
-[← 이전: 폭망](./05-part5-failing-project.md) | [목차](./README.md) | [다음: 커피 한 잔 →](./07-part7-human-debugging.md)
+[← 이전: 6화: 폭망](./05-part5-failing-project.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 8화: 커피 한 잔 →](./07-part7-human-debugging.md)
 
 ---
 
@@ -582,5 +582,5 @@ CEO가 자리에서 일어났다.
 *계속...*
 
 ---
-[← 이전: 폭망](./05-part5-failing-project.md) | [목차](./README.md) | [다음: 커피 한 잔 →](./07-part7-human-debugging.md)
----
+
+[← 이전: 6화: 폭망](./05-part5-failing-project.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 8화: 커피 한 잔 →](./07-part7-human-debugging.md)
