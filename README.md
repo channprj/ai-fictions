@@ -2,16 +2,17 @@
 
 ![Made with AI](https://img.shields.io/badge/Made%20with-AI-blueviolet)
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
-![Works](https://img.shields.io/badge/작품-5편-informational)
-![Status](https://img.shields.io/badge/상태-전편%20완결-success)
+![Works](https://img.shields.io/badge/작품-6편-informational)
+![Status](https://img.shields.io/badge/상태-5편%20완결%20%2B%201편%20연재중-success)
 
 장르 불문, 설계자의 자세로 쓴 장편 소설 모음입니다.
-AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물, 직장 블랙코미디까지 — **5개 작품, 도합 500여 화, 약 287만 자**가 모두 완결 상태입니다.
+AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물, 직장 블랙코미디, 현대 무협까지 — **5개 완결작과 1개 신규 연재작**을 담고 있습니다.
 
 ## 작품 목록
 
 | 작품 | 장르 | 분량 | 상태 | 바로가기 |
 | ---- | ---- | ---- | :--: | -------- |
+| **에이전트 무림** | 현대 무협 / AI 에이전트 / 테크노 로맨스 | 프롤로그 + 1화 | ✍️ 연재 시작 | [작품 홈](./agent-murim/README.md) |
 | **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 7권 210화 | ✅ 완결 | [작품 홈](./prompt-hearts-academy/README.md) · [배포본](./prompt-hearts-academy/dist/README.md) |
 | **너드 개발자, 시스템 관리자 권한으로 이세계를 제패합니다** | 이세계 전생 / 사이다 판타지 / IT밈 | 10권 250화 | ✅ 완결 | [작품 홈](./nerd-sysadmin/README.md) · [배포본](./nerd-sysadmin/dist/README.md) |
 | **디버거** | 현대 판타지 / 헌터물 / 성장 서사 | 16부작 | ✅ 완결 | [작품 홈](./hunter-debugger/README.md) · [배포본](./hunter-debugger/dist/README.md) |
@@ -22,6 +23,7 @@ AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물,
 
 ## 한 줄 소개
 
+- **에이전트 무림** — AI 코딩 에이전트 가문들이 LLM Arena의 성능·비용·지연시간·vibe 리더보드를 두고 겨루는 현대 무협.
 - **프롬프트 하트 아카데미** — 세 개의 모델, 하나의 심장. AI 페르소나(GPT·Claude·Gemini)와 페어링된 소년의 캠퍼스 연애담.
 - **너드 개발자, 시스템 관리자 권한으로 이세계를 제패합니다** — 마법이 코드인 이세계에서 `root` 권한을 쥔 판교 개발자의 리팩토링 사이다.
 - **디버거** — 세계의 소스코드가 보이는 E급 헌터가 던전을 디버깅하며 SSS급에 맞서는 현대 판타지.
