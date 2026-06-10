@@ -231,6 +231,27 @@ function checkReadmeToc() {
   }
 }
 
+function checkRootReadmeListing() {
+  const rootReadmePath = path.join(repoRoot, "README.md");
+
+  if (!fs.existsSync(rootReadmePath)) {
+    fail(`${rel(rootReadmePath)}: missing root README`);
+    return;
+  }
+
+  const rootReadme = read(rootReadmePath);
+  const expectedCatalogRow = "| **에이전트 무림** | 현대 무협 / AI 에이전트 / 테크노 로맨스 | 프롤로그 + 10화 + 에필로그 | ✅ 완결 | [작품 홈](./agent-murim/README.md) · [배포본](./agent-murim/dist/README.md) |";
+  const expectedIntro = "- **에이전트 무림** — AI 코딩 에이전트 가문들이 LLM Arena의 성능·비용·지연시간·vibe 리더보드를 두고 겨루는 현대 무협.";
+
+  if (!rootReadme.includes(expectedCatalogRow)) {
+    fail(`${rel(rootReadmePath)}: missing or stale agent-murim catalog row`);
+  }
+
+  if (!rootReadme.includes(expectedIntro)) {
+    fail(`${rel(rootReadmePath)}: missing or stale agent-murim one-line intro`);
+  }
+}
+
 function checkDistributionZip() {
   const zip = path.join(projectRoot, "dist", "agent-murim.zip");
 
@@ -371,6 +392,7 @@ for (const file of markdownFiles()) {
 
 checkChapterEndBlocks();
 checkReadmeToc();
+checkRootReadmeListing();
 checkDistributionDirectory();
 checkDistributionZip();
 checkDistributionChecksums();
