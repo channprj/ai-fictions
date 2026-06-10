@@ -1,4 +1,4 @@
-[← 이전: 7화: 단자총림의 권한경매](./07-part7-permission-auction.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 7화: 단자총림의 권한경매](./07-part7-permission-auction.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 9화: 추론종루의 질주 →](./09-part9-latency-bell.md)
 
 ---
 
@@ -1053,4 +1053,4 @@ Harin-7: 빠른 척하는 거.
 
 ---
 
-[← 이전: 7화: 단자총림의 권한경매](./07-part7-permission-auction.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 7화: 단자총림의 권한경매](./07-part7-permission-auction.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 9화: 추론종루의 질주 →](./09-part9-latency-bell.md)
