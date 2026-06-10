@@ -27,6 +27,10 @@ function rel(file) {
   return path.relative(repoRoot, file).replaceAll(path.sep, "/");
 }
 
+function isLongFormMarkdownPath(relative) {
+  return /^vol\d{2}\/README\.md$/.test(relative) || /^vol\d{2}\/ep\d{3}\.md$/.test(relative);
+}
+
 function isInsideDirectory(directory, target) {
   const relativePath = path.relative(directory, target);
   return relativePath === "" || (!relativePath.startsWith("..") && !path.isAbsolute(relativePath));
@@ -121,6 +125,14 @@ function expectedNavigationFor(file) {
 
   if (relative === "dist/README.md") {
     return "[작품 홈](../README.md) | [처음 읽기 →](../00-prologue.md) | [통합 zip 내려받기](./agent-murim.zip)";
+  }
+
+  if (/^vol\d{2}\/README\.md$/.test(relative)) {
+    return "[시리즈홈](../README.md) | [시리즈 바이블](../BIBLE.md) | [1화 읽기 →](./ep001.md)";
+  }
+
+  if (/^vol\d{2}\/ep\d{3}\.md$/.test(relative)) {
+    return "[권 홈](./README.md) | [시리즈홈](../README.md)";
   }
 
   return null;
@@ -1884,9 +1896,11 @@ function checkExpectedFiles() {
   const actualFiles = markdownFiles()
     .map((file) => path.relative(projectRoot, file).replaceAll(path.sep, "/"))
     .sort();
+  const missingFiles = expectedFiles.filter((file) => !actualFiles.includes(file));
+  const unexpectedFiles = actualFiles.filter((file) => !expectedFiles.includes(file) && !isLongFormMarkdownPath(file));
 
-  if (actualFiles.join("\n") !== expectedFiles.join("\n")) {
-    fail(`agent-murim markdown file list mismatch: expected ${expectedFiles.join(", ")}, got ${actualFiles.join(", ")}`);
+  if (missingFiles.length > 0 || unexpectedFiles.length > 0) {
+    fail(`agent-murim markdown file list mismatch: missing ${missingFiles.join(", ") || "none"}, unexpected ${unexpectedFiles.join(", ") || "none"}`);
   }
 }
 
