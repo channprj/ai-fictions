@@ -480,6 +480,7 @@ function checkLayoutDocumentation() {
     "- 페이지네이션 줄은 각 파일의 첫 줄과 마지막 비어 있지 않은 줄에만 둔다.",
     "- 작품 홈 목차는 정해진 순서의 표를 중복 없이 유지한다.",
     "- 루트 README 작품 목록도 정해진 순서의 표를 중복 없이 유지한다.",
+    "- 루트 README 한 줄 소개 목록도 정해진 순서의 bullet list를 중복 없이 유지한다.",
     "- 본문 파일은 페이지네이션 다음에 `# 장 제목`, `## 장 부제`, `---` 순서의 제목 블록을 둔다.",
     "- 각 본문 파일에는 장 종료 안내 블록을 정확히 1개만 두고, 하단 페이지네이션 직전 `---` 바로 위에 배치한다.",
     "- 장 종료 안내 제목은 `프롤로그 종료`, `1화 종료`, `에필로그 종료`처럼 해당 장 번호/구분과 정확히 일치해야 한다.",
@@ -487,7 +488,7 @@ function checkLayoutDocumentation() {
     "- 모든 관리 대상 마크다운 파일은 trailing whitespace 없이, LF line endings와 final newline으로 끝나도록 관리한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록 순서/중복과 한 줄 소개, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록 순서/중복, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
@@ -528,7 +529,15 @@ function checkRootReadmeListing() {
     "| **개발팀의 기쁨과 슬픔** | 블랙코미디 / 직장 소설 | 전 12부 | ✅ 완결 | [작품 홈](./young-forty-mz-twenty/README.md) · [배포본](./young-forty-mz-twenty/dist/README.md) |",
   ];
   const expectedCatalogRow = expectedRootCatalogRows[2];
-  const expectedIntro = "- **에이전트 무림** — AI 코딩 에이전트 가문들이 LLM Arena의 성능·비용·지연시간·vibe 리더보드를 두고 겨루는 현대 무협.";
+  const expectedRootIntroLines = [
+    "- **에이전트 무림** — AI 코딩 에이전트 가문들이 LLM Arena의 성능·비용·지연시간·vibe 리더보드를 두고 겨루는 현대 무협.",
+    "- **프롬프트 하트 아카데미** — 세 개의 모델, 하나의 심장. AI 페르소나(GPT·Claude·Gemini)와 페어링된 소년의 캠퍼스 연애담.",
+    "- **너드 개발자, 시스템 관리자 권한으로 이세계를 제패합니다** — 마법이 코드인 이세계에서 `root` 권한을 쥔 판교 개발자의 리팩토링 사이다.",
+    "- **디버거** — 세계의 소스코드가 보이는 E급 헌터가 던전을 디버깅하며 SSS급에 맞서는 현대 판타지.",
+    "- **마취과 간호사의 기쁨과 슬픔** — 수술실의 위계와 번아웃 사이에서 생존을 모색하는 32세 간호사의 블랙코미디.",
+    "- **개발팀의 기쁨과 슬픔** — 영포티 개발실장과 MZ 주니어가 '피닉스 프로젝트' 속에서 서로를 이해해 가는 직장 소설.",
+  ];
+  const expectedIntro = expectedRootIntroLines[0];
 
   for (const expected of expectedRootMetadata) {
     if (!rootReadme.includes(expected)) {
@@ -557,6 +566,25 @@ function checkRootReadmeListing() {
 
   if (!rootReadme.includes(expectedCatalogRow)) {
     fail(`${rel(rootReadmePath)}: missing or stale agent-murim catalog row`);
+  }
+
+  const introHeading = "## 한 줄 소개\n\n";
+  const introStart = rootReadme.indexOf(introHeading);
+  const nextIntroHeadingStart = introStart === -1 ? -1 : rootReadme.indexOf("\n## ", introStart + introHeading.length);
+
+  if (introStart === -1 || nextIntroHeadingStart === -1) {
+    fail(`${rel(rootReadmePath)}: missing root one-line intro section`);
+  } else {
+    const introSection = rootReadme.slice(introStart + introHeading.length, nextIntroHeadingStart);
+    const actualIntroLines = introSection
+      .split(/\r?\n/)
+      .filter((line) => line.startsWith("- "))
+      .join("\n");
+    const expectedIntroLines = expectedRootIntroLines.join("\n");
+
+    if (actualIntroLines !== expectedIntroLines) {
+      fail(`${rel(rootReadmePath)}: root one-line intro list should match canonical work order without missing, duplicate, or extra bullets`);
+    }
   }
 
   if (!rootReadme.includes(expectedIntro)) {
