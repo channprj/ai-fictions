@@ -910,7 +910,7 @@ function checkLayoutCommonPrinciplesSection() {
     "- 루트 README 제목/소개 구획도 정해진 문장만 중복 없이 유지한다.",
     "- 루트 README 작품 목록도 정해진 순서의 표를 중복 없이 유지한다.",
     "- 루트 README 작품 목록 안내문도 정해진 문장만 중복 없이 유지한다.",
-    "- 루트 README 한 줄 소개 목록도 정해진 순서의 bullet list를 중복 없이 유지한다.",
+    "- 루트 README 한 줄 소개 섹션도 정해진 목록만 중복 없이 유지한다.",
     "- 루트 README 작성 도구 섹션도 정해진 문장과 bullet list만 중복 없이 유지한다.",
     "- 루트 README 라이선스 섹션도 정해진 문장과 bullet list만 중복 없이 유지한다.",
     "- 루트 README 안내 섹션도 정해진 문장과 bullet list만 중복 없이 유지한다.",
@@ -1100,7 +1100,7 @@ function checkLayoutVerificationSection() {
     "node agent-murim/scripts/verify-layout.js",
     "```",
     "",
-    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, LAYOUT 섹션 순서/중복, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 제목/부제 구획, 작품 홈 작품 정보 섹션, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 섹션, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 압축 파일 표 섹션, 배포본 README 구성 기준 섹션, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 순서/중복, 루트 작성 도구 섹션, 루트 라이선스 섹션, 루트 안내 섹션, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, LAYOUT 섹션 순서/중복, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 제목/부제 구획, 작품 홈 작품 정보 섹션, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 섹션, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 압축 파일 표 섹션, 배포본 README 구성 기준 섹션, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 섹션, 루트 작성 도구 섹션, 루트 라이선스 섹션, 루트 안내 섹션, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
   ].join("\n");
   const actualSection = layout.slice(sectionStart + sectionHeading.length, sectionEnd).trimEnd();
 
@@ -1278,7 +1278,7 @@ function checkLayoutDocumentation() {
     "- 루트 README 제목/소개 구획도 정해진 문장만 중복 없이 유지한다.",
     "- 루트 README 작품 목록도 정해진 순서의 표를 중복 없이 유지한다.",
     "- 루트 README 작품 목록 안내문도 정해진 문장만 중복 없이 유지한다.",
-    "- 루트 README 한 줄 소개 목록도 정해진 순서의 bullet list를 중복 없이 유지한다.",
+    "- 루트 README 한 줄 소개 섹션도 정해진 목록만 중복 없이 유지한다.",
     "- 루트 README 작성 도구 섹션도 정해진 문장과 bullet list만 중복 없이 유지한다.",
     "- 루트 README 라이선스 섹션도 정해진 문장과 bullet list만 중복 없이 유지한다.",
     "- 루트 README 안내 섹션도 정해진 문장과 bullet list만 중복 없이 유지한다.",
@@ -1294,7 +1294,7 @@ function checkLayoutDocumentation() {
     "- 모든 관리 대상 마크다운 파일은 trailing whitespace 없이, LF line endings와 final newline으로 끝나도록 관리한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, LAYOUT 섹션 순서/중복, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 제목/부제 구획, 작품 홈 작품 정보 섹션, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 섹션, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 압축 파일 표 섹션, 배포본 README 구성 기준 섹션, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 순서/중복, 루트 작성 도구 섹션, 루트 라이선스 섹션, 루트 안내 섹션, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, LAYOUT 섹션 순서/중복, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 제목/부제 구획, 작품 홈 작품 정보 섹션, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 섹션, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 압축 파일 표 섹션, 배포본 README 구성 기준 섹션, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 섹션, 루트 작성 도구 섹션, 루트 라이선스 섹션, 루트 안내 섹션, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
@@ -1466,6 +1466,38 @@ function checkRootReadmeCatalogSection() {
 
   if (actualSection !== expectedSection) {
     fail(`${rel(rootReadmePath)}: root catalog section should match canonical table and explanatory note without missing, duplicate, or extra lines`);
+  }
+}
+
+function checkRootReadmeOneLineIntroSection() {
+  const rootReadmePath = path.join(repoRoot, "README.md");
+
+  if (!fs.existsSync(rootReadmePath)) {
+    return;
+  }
+
+  const rootReadme = read(rootReadmePath);
+  const sectionHeading = "## 한 줄 소개\n\n";
+  const sectionStart = rootReadme.indexOf(sectionHeading);
+  const nextHeadingStart = sectionStart === -1 ? -1 : rootReadme.indexOf("\n## ", sectionStart + sectionHeading.length);
+
+  if (sectionStart === -1 || nextHeadingStart === -1) {
+    fail(`${rel(rootReadmePath)}: missing root one-line intro section`);
+    return;
+  }
+
+  const expectedSection = [
+    "- **에이전트 무림** — AI 코딩 에이전트 가문들이 LLM Arena의 성능·비용·지연시간·vibe 리더보드를 두고 겨루는 현대 무협.",
+    "- **프롬프트 하트 아카데미** — 세 개의 모델, 하나의 심장. AI 페르소나(GPT·Claude·Gemini)와 페어링된 소년의 캠퍼스 연애담.",
+    "- **너드 개발자, 시스템 관리자 권한으로 이세계를 제패합니다** — 마법이 코드인 이세계에서 `root` 권한을 쥔 판교 개발자의 리팩토링 사이다.",
+    "- **디버거** — 세계의 소스코드가 보이는 E급 헌터가 던전을 디버깅하며 SSS급에 맞서는 현대 판타지.",
+    "- **마취과 간호사의 기쁨과 슬픔** — 수술실의 위계와 번아웃 사이에서 생존을 모색하는 32세 간호사의 블랙코미디.",
+    "- **개발팀의 기쁨과 슬픔** — 영포티 개발실장과 MZ 주니어가 '피닉스 프로젝트' 속에서 서로를 이해해 가는 직장 소설.",
+  ].join("\n");
+  const actualSection = rootReadme.slice(sectionStart + sectionHeading.length, nextHeadingStart).trimEnd();
+
+  if (actualSection !== expectedSection) {
+    fail(`${rel(rootReadmePath)}: root one-line intro section should match canonical work summaries without missing, duplicate, or extra lines`);
   }
 }
 
@@ -1728,6 +1760,7 @@ checkLayoutDocumentation();
 checkReadmeToc();
 checkRootReadmeIntroSection();
 checkRootReadmeCatalogSection();
+checkRootReadmeOneLineIntroSection();
 checkRootReadmeWritingToolsSection();
 checkRootReadmeLicenseSection();
 checkRootReadmeNoticeSection();
