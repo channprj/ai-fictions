@@ -822,6 +822,7 @@ function checkLayoutCommonPrinciplesSection() {
     "- LAYOUT 작품 홈 레이아웃 예시도 정해진 코드 블록을 중복 없이 유지한다.",
     "- LAYOUT 배포본 README 레이아웃 예시도 정해진 코드 블록을 중복 없이 유지한다.",
     "- LAYOUT 본문 파일 레이아웃 예시도 정해진 코드 블록을 중복 없이 유지한다.",
+    "- LAYOUT 검증 섹션도 정해진 명령과 범위 설명만 중복 없이 유지한다.",
     "- 작품 홈 작품 정보 bullet list도 정해진 순서의 목록을 중복 없이 유지한다.",
     "- 작품 홈 한 줄 소개 섹션도 정해진 문장만 중복 없이 유지한다.",
     "- 작품 홈 줄거리 섹션도 정해진 문단만 중복 없이 유지한다.",
@@ -991,6 +992,40 @@ function checkLayoutManuscriptFileLayoutSection() {
   }
 }
 
+function checkLayoutVerificationSection() {
+  const layoutPath = path.join(projectRoot, "LAYOUT.md");
+
+  if (!fs.existsSync(layoutPath)) {
+    return;
+  }
+
+  const layout = read(layoutPath);
+  const sectionHeading = "## 검증\n\n";
+  const sectionStart = layout.indexOf(sectionHeading);
+  const sectionEndMarker = "\n## 파일명 규칙";
+  const sectionEnd = sectionStart === -1 ? -1 : layout.indexOf(sectionEndMarker, sectionStart + sectionHeading.length);
+
+  if (sectionStart === -1 || sectionEnd === -1) {
+    fail(`${rel(layoutPath)}: missing layout verification section`);
+    return;
+  }
+
+  const expectedSection = [
+    "레이아웃을 수정하거나 배포본을 다시 묶은 뒤에는 repo root에서 다음 명령을 실행한다.",
+    "",
+    "```sh",
+    "node agent-murim/scripts/verify-layout.js",
+    "```",
+    "",
+    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 작품 목록 순서/중복, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+  ].join("\n");
+  const actualSection = layout.slice(sectionStart + sectionHeading.length, sectionEnd).trimEnd();
+
+  if (actualSection !== expectedSection) {
+    fail(`${rel(layoutPath)}: verification section should match canonical command and scope text without missing, duplicate, or extra lines`);
+  }
+}
+
 function checkLayoutFilenameRulesSection() {
   const layoutPath = path.join(projectRoot, "LAYOUT.md");
 
@@ -1119,6 +1154,7 @@ function checkLayoutDocumentation() {
     "- LAYOUT 작품 홈 레이아웃 예시도 정해진 코드 블록을 중복 없이 유지한다.",
     "- LAYOUT 배포본 README 레이아웃 예시도 정해진 코드 블록을 중복 없이 유지한다.",
     "- LAYOUT 본문 파일 레이아웃 예시도 정해진 코드 블록을 중복 없이 유지한다.",
+    "- LAYOUT 검증 섹션도 정해진 명령과 범위 설명만 중복 없이 유지한다.",
     "- 작품 홈 작품 정보 bullet list도 정해진 순서의 목록을 중복 없이 유지한다.",
     "- 작품 홈 한 줄 소개 섹션도 정해진 문장만 중복 없이 유지한다.",
     "- 작품 홈 줄거리 섹션도 정해진 문단만 중복 없이 유지한다.",
@@ -1139,7 +1175,7 @@ function checkLayoutDocumentation() {
     "- 모든 관리 대상 마크다운 파일은 trailing whitespace 없이, LF line endings와 final newline으로 끝나도록 관리한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 작품 목록 순서/중복, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 작품 목록 순서/중복, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
@@ -1400,6 +1436,7 @@ checkLayoutCommonPrinciplesSection();
 checkLayoutSeriesHomeLayoutSection();
 checkLayoutDistributionReadmeLayoutSection();
 checkLayoutManuscriptFileLayoutSection();
+checkLayoutVerificationSection();
 checkLayoutFilenameRulesSection();
 checkLayoutFirstAndLatestRulesSection();
 checkLayoutTerminologySection();
