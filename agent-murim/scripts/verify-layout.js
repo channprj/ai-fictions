@@ -115,6 +115,10 @@ function expectedNavigationFor(file) {
     return "[시리즈홈](./README.md) | [목차](./README.md#목차) | [처음 읽기 →](./00-prologue.md)";
   }
 
+  if (relative === "BIBLE.md") {
+    return "[시리즈홈](./README.md) | [목차](./README.md#목차) | [처음 읽기 →](./00-prologue.md)";
+  }
+
   if (relative === "dist/README.md") {
     return "[작품 홈](../README.md) | [처음 읽기 →](../00-prologue.md) | [통합 zip 내려받기](./agent-murim.zip)";
   }
@@ -1872,6 +1876,7 @@ function checkDistributionChecksums() {
 function checkExpectedFiles() {
   const expectedFiles = [
     "README.md",
+    "BIBLE.md",
     "LAYOUT.md",
     "dist/README.md",
     ...chapters.map((chapter) => chapter.file),
