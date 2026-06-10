@@ -1,4 +1,4 @@
-[← 이전: 6화: 홍련객잔의 심상시장](./06-part6-vibe-market.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 6화: 홍련객잔의 심상시장](./06-part6-vibe-market.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 8화: 증거법정의 환각심문 →](./08-part8-evidence-tribunal.md)
 
 ---
 
@@ -898,4 +898,4 @@ shared context:
 
 ---
 
-[← 이전: 6화: 홍련객잔의 심상시장](./06-part6-vibe-market.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 6화: 홍련객잔의 심상시장](./06-part6-vibe-market.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 8화: 증거법정의 환각심문 →](./08-part8-evidence-tribunal.md)
