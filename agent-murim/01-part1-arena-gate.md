@@ -1,4 +1,4 @@
-[← 이전: 프롤로그](./00-prologue.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 프롤로그](./00-prologue.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 2화: 비용 내공 →](./02-part2-cost-neigong.md)
 
 ---
 
@@ -279,5 +279,4 @@ vibe: 99.9
 
 ---
 
-[← 이전: 프롤로그](./00-prologue.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
-
+[← 이전: 프롤로그](./00-prologue.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 2화: 비용 내공 →](./02-part2-cost-neigong.md)

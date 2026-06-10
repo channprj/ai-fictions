@@ -12,7 +12,7 @@ AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물,
 
 | 작품 | 장르 | 분량 | 상태 | 바로가기 |
 | ---- | ---- | ---- | :--: | -------- |
-| **에이전트 무림** | 현대 무협 / AI 에이전트 / 테크노 로맨스 | 프롤로그 + 1화 | ✍️ 연재 시작 | [작품 홈](./agent-murim/README.md) |
+| **에이전트 무림** | 현대 무협 / AI 에이전트 / 테크노 로맨스 | 프롤로그 + 2화 | ✍️ 연재 시작 | [작품 홈](./agent-murim/README.md) |
 | **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 7권 210화 | ✅ 완결 | [작품 홈](./prompt-hearts-academy/README.md) · [배포본](./prompt-hearts-academy/dist/README.md) |
 | **너드 개발자, 시스템 관리자 권한으로 이세계를 제패합니다** | 이세계 전생 / 사이다 판타지 / IT밈 | 10권 250화 | ✅ 완결 | [작품 홈](./nerd-sysadmin/README.md) · [배포본](./nerd-sysadmin/dist/README.md) |
 | **디버거** | 현대 판타지 / 헌터물 / 성장 서사 | 16부작 | ✅ 완결 | [작품 홈](./hunter-debugger/README.md) · [배포본](./hunter-debugger/dist/README.md) |
