@@ -1,4 +1,4 @@
-[← 이전: 2화: 비용 내공](./02-part2-cost-neigong.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 2화: 비용 내공](./02-part2-cost-neigong.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 4화: 문맥당의 장강 →](./04-part4-context-river.md)
 
 ---
 
@@ -327,4 +327,4 @@ condition: survive next arena
 
 ---
 
-[← 이전: 2화: 비용 내공](./02-part2-cost-neigong.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 2화: 비용 내공](./02-part2-cost-neigong.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 4화: 문맥당의 장강 →](./04-part4-context-river.md)
