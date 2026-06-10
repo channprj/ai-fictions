@@ -924,6 +924,7 @@ function checkLayoutCommonPrinciplesSection() {
     "- 작품 홈 목차는 정해진 순서의 표를 중복 없이 유지한다.",
     "- 루트 README 제목/소개 구획도 정해진 문장만 중복 없이 유지한다.",
     "- 루트 README 작품 목록도 정해진 순서의 표를 중복 없이 유지한다.",
+    "- 루트 README 작품 목록 안내문도 정해진 문장만 중복 없이 유지한다.",
     "- 루트 README 한 줄 소개 목록도 정해진 순서의 bullet list를 중복 없이 유지한다.",
     "- 배포본 README 제목/소개 구획도 정해진 문장만 중복 없이 유지한다.",
     "- 배포본 README 압축 파일 표도 정해진 순서의 표를 중복 없이 유지한다.",
@@ -1111,7 +1112,7 @@ function checkLayoutVerificationSection() {
     "node agent-murim/scripts/verify-layout.js",
     "```",
     "",
-    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 제목/부제 구획, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 작품 목록 순서/중복, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 제목/부제 구획, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
   ].join("\n");
   const actualSection = layout.slice(sectionStart + sectionHeading.length, sectionEnd).trimEnd();
 
@@ -1260,6 +1261,7 @@ function checkLayoutDocumentation() {
     "- 작품 홈 목차는 정해진 순서의 표를 중복 없이 유지한다.",
     "- 루트 README 제목/소개 구획도 정해진 문장만 중복 없이 유지한다.",
     "- 루트 README 작품 목록도 정해진 순서의 표를 중복 없이 유지한다.",
+    "- 루트 README 작품 목록 안내문도 정해진 문장만 중복 없이 유지한다.",
     "- 루트 README 한 줄 소개 목록도 정해진 순서의 bullet list를 중복 없이 유지한다.",
     "- 배포본 README 제목/소개 구획도 정해진 문장만 중복 없이 유지한다.",
     "- 배포본 README 압축 파일 표도 정해진 순서의 표를 중복 없이 유지한다.",
@@ -1273,7 +1275,7 @@ function checkLayoutDocumentation() {
     "- 모든 관리 대상 마크다운 파일은 trailing whitespace 없이, LF line endings와 final newline으로 끝나도록 관리한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 제목/부제 구획, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 작품 목록 순서/중복, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 목록 순서/중복, LAYOUT 파일명 규칙 목록 순서/중복, LAYOUT 첫 장과 최신 장 규칙 목록 순서/중복, LAYOUT 용어 표기 표 순서/중복, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 제목/부제 구획, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
@@ -1408,6 +1410,43 @@ function checkRootReadmeIntroSection() {
 
   if (actualSection !== expectedSection) {
     fail(`${rel(rootReadmePath)}: intro section should match canonical root title, badges, and description without missing, duplicate, or extra lines`);
+  }
+}
+
+function checkRootReadmeCatalogSection() {
+  const rootReadmePath = path.join(repoRoot, "README.md");
+
+  if (!fs.existsSync(rootReadmePath)) {
+    return;
+  }
+
+  const rootReadme = read(rootReadmePath);
+  const sectionHeading = "## 작품 목록\n\n";
+  const sectionStart = rootReadme.indexOf(sectionHeading);
+  const sectionEndMarker = "\n\n## 한 줄 소개";
+  const sectionEnd = sectionStart === -1 ? -1 : rootReadme.indexOf(sectionEndMarker, sectionStart + sectionHeading.length);
+
+  if (sectionStart === -1 || sectionEnd === -1) {
+    fail(`${rel(rootReadmePath)}: missing root catalog section`);
+    return;
+  }
+
+  const expectedSection = [
+    "| 작품 | 장르 | 분량 | 상태 | 바로가기 |",
+    "| ---- | ---- | ---- | :--: | -------- |",
+    "| **에이전트 무림** | 현대 무협 / AI 에이전트 / 테크노 로맨스 | 프롤로그 + 10화 + 에필로그 | ✅ 완결 | [작품 홈](./agent-murim/README.md) · [배포본](./agent-murim/dist/README.md) |",
+    "| **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 7권 210화 | ✅ 완결 | [작품 홈](./prompt-hearts-academy/README.md) · [배포본](./prompt-hearts-academy/dist/README.md) |",
+    "| **너드 개발자, 시스템 관리자 권한으로 이세계를 제패합니다** | 이세계 전생 / 사이다 판타지 / IT밈 | 10권 250화 | ✅ 완결 | [작품 홈](./nerd-sysadmin/README.md) · [배포본](./nerd-sysadmin/dist/README.md) |",
+    "| **디버거** | 현대 판타지 / 헌터물 / 성장 서사 | 16부작 | ✅ 완결 | [작품 홈](./hunter-debugger/README.md) · [배포본](./hunter-debugger/dist/README.md) |",
+    "| **마취과 간호사의 기쁨과 슬픔** | 블랙코미디 / 직장 소설 | 전 12부 | ✅ 완결 | [작품 홈](./nurse-thirty-something/README.md) · [배포본](./nurse-thirty-something/dist/README.md) |",
+    "| **개발팀의 기쁨과 슬픔** | 블랙코미디 / 직장 소설 | 전 12부 | ✅ 완결 | [작품 홈](./young-forty-mz-twenty/README.md) · [배포본](./young-forty-mz-twenty/dist/README.md) |",
+    "",
+    "> **작품 홈**은 줄거리·등장인물·목차·설정을 담은 README이고, **배포본**은 바로 읽을 수 있도록 묶은 zip 모음입니다.",
+  ].join("\n");
+  const actualSection = rootReadme.slice(sectionStart + sectionHeading.length, sectionEnd).trimEnd();
+
+  if (actualSection !== expectedSection) {
+    fail(`${rel(rootReadmePath)}: root catalog section should match canonical table and explanatory note without missing, duplicate, or extra lines`);
   }
 }
 
@@ -1578,6 +1617,7 @@ checkLayoutTerminologySection();
 checkLayoutDocumentation();
 checkReadmeToc();
 checkRootReadmeIntroSection();
+checkRootReadmeCatalogSection();
 checkRootReadmeListing();
 checkDistributionDirectory();
 checkDistributionZip();
