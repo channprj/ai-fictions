@@ -261,6 +261,25 @@ function checkDistributionZip() {
     fail(`${rel(zip)}: zip manifest mismatch`);
   }
 
+  for (const entry of expectedEntries) {
+    const source = path.join(projectRoot, entry);
+    const archived = spawnSync("unzip", ["-p", zip, entry]);
+
+    if (archived.error) {
+      fail(`unzip: ${archived.error.message}`);
+      continue;
+    }
+
+    if (archived.status !== 0) {
+      fail(`unzip -p ${rel(zip)} ${entry} failed: ${archived.stderr.toString().trim()}`);
+      continue;
+    }
+
+    if (!archived.stdout.equals(fs.readFileSync(source))) {
+      fail(`${rel(zip)}: archived ${entry} does not match source`);
+    }
+  }
+
   const test = spawnSync("unzip", ["-tqq", zip], { encoding: "utf8" });
 
   if (test.error) {
