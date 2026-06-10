@@ -346,7 +346,7 @@ function checkLayoutDocumentation() {
     "- 각 파일의 마지막에는 해당 장의 종료 안내 블록을 둔 뒤, 다시 `---`와 동일한 페이지네이션을 배치한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 로컬 링크, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 루트 작품 수/완결 상태, 로컬 링크, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
@@ -371,8 +371,19 @@ function checkRootReadmeListing() {
   }
 
   const rootReadme = read(rootReadmePath);
+  const expectedRootMetadata = [
+    "![Works](https://img.shields.io/badge/작품-6편-informational)",
+    "![Status](https://img.shields.io/badge/상태-6편%20완결-success)",
+    "AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물, 직장 블랙코미디, 현대 무협까지 — **6개 완결작**을 담고 있습니다.",
+  ];
   const expectedCatalogRow = "| **에이전트 무림** | 현대 무협 / AI 에이전트 / 테크노 로맨스 | 프롤로그 + 10화 + 에필로그 | ✅ 완결 | [작품 홈](./agent-murim/README.md) · [배포본](./agent-murim/dist/README.md) |";
   const expectedIntro = "- **에이전트 무림** — AI 코딩 에이전트 가문들이 LLM Arena의 성능·비용·지연시간·vibe 리더보드를 두고 겨루는 현대 무협.";
+
+  for (const expected of expectedRootMetadata) {
+    if (!rootReadme.includes(expected)) {
+      fail(`${rel(rootReadmePath)}: missing or stale root catalog metadata line: ${expected}`);
+    }
+  }
 
   if (!rootReadme.includes(expectedCatalogRow)) {
     fail(`${rel(rootReadmePath)}: missing or stale agent-murim catalog row`);
