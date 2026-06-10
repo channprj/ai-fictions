@@ -14,7 +14,7 @@
 - **상태**: 완결
 - **구성**: 프롤로그 + 본편 10화 + 에필로그
 - **핵심 키워드**: LLM Arena, 코딩 에이전트 가문, MCP 단자, 스킬 비급, 비용 내공, vibe 심상, 오케스트레이터, 권한경매, 증거법정, 추론종루, 평가장원, 적팀사
-- **배포본**: [dist/](./dist/README.md) — 전편 통합 zip 1개
+- **배포본**: [dist/](./dist/README.md) — 전편 통합 zip 1개와 SHA-256 매니페스트
 
 ## 한 줄 소개
 
@@ -76,7 +76,7 @@ AI 중원의 가문들은 모델 혈통보다 운용법으로 갈린다.
 ## 레이아웃 관리
 
 이 작품의 마크다운 구조와 페이지네이션 규칙은 [LAYOUT.md](./LAYOUT.md)에서 관리한다.
-수정 후에는 repo root에서 `node agent-murim/scripts/verify-layout.js`를 실행해 목차, 페이지네이션, 배포 zip manifest를 함께 검증한다.
+수정 후에는 repo root에서 `node agent-murim/scripts/verify-layout.js`를 실행해 목차, 페이지네이션, 배포 zip manifest, 원본 일치, 체크섬을 함께 검증한다.
 
 ---
 
