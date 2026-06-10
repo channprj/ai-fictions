@@ -1,4 +1,4 @@
-[← 이전: 1화: 아레나 게이트](./01-part1-arena-gate.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 1화: 아레나 게이트](./01-part1-arena-gate.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 3화: 가문 감사 →](./03-part3-family-audit.md)
 
 ---
 
@@ -419,4 +419,4 @@ Seoyul-13: 내가 낼게.
 
 ---
 
-[← 이전: 1화: 아레나 게이트](./01-part1-arena-gate.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 1화: 아레나 게이트](./01-part1-arena-gate.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 3화: 가문 감사 →](./03-part3-family-audit.md)
