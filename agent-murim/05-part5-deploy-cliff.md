@@ -1,4 +1,4 @@
-[← 이전: 4화: 문맥당의 장강](./04-part4-context-river.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 4화: 문맥당의 장강](./04-part4-context-river.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 6화: 홍련객잔의 심상시장 →](./06-part6-vibe-market.md)
 
 ---
 
@@ -755,4 +755,4 @@ warning:
 
 ---
 
-[← 이전: 4화: 문맥당의 장강](./04-part4-context-river.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 4화: 문맥당의 장강](./04-part4-context-river.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 6화: 홍련객잔의 심상시장 →](./06-part6-vibe-market.md)
