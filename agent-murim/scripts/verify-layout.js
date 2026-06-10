@@ -156,8 +156,15 @@ function checkChapterEndBlocks() {
       continue;
     }
 
-    if (!/> \*\*.+ 종료\*\*/.test(read(file))) {
+    const endingBlock = read(file).match(/> \*\*.+ 종료\*\*[\s\S]*?\n\n---/);
+
+    if (!endingBlock) {
       fail(`${rel(file)}: missing chapter ending block`);
+      continue;
+    }
+
+    if (!endingBlock[0].includes("서율-13") || !endingBlock[0].includes("하린-7")) {
+      fail(`${rel(file)}: chapter ending summary should mention both protagonists`);
     }
   }
 }
@@ -344,9 +351,10 @@ function checkLayoutDocumentation() {
     "- 모든 본문 파일은 상단과 하단에 동일한 페이지네이션 줄을 둔다.",
     "- 본문 파일은 페이지네이션 다음에 `# 장 제목`, `## 장 부제`, `---` 순서의 제목 블록을 둔다.",
     "- 각 파일의 마지막에는 해당 장의 종료 안내 블록을 둔 뒤, 다시 `---`와 동일한 페이지네이션을 배치한다.",
+    "- 장 종료 안내 블록은 `서율-13`과 `하린-7`을 함께 언급해 두 주인공의 동행 축을 보존한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 루트 작품 수/완결 상태, 로컬 링크, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 루트 작품 수/완결 상태, 로컬 링크, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
