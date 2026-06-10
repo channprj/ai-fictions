@@ -70,6 +70,7 @@
 - `00-prologue.md` — 프롤로그
 - `01-part1-arena-gate.md` — 본편 1화
 - 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`
+- `11-epilogue.md` — 에필로그
 - 슬러그는 장면의 핵심 사건을 영문 소문자와 하이픈으로 적는다.
 
 ## 용어 표기
