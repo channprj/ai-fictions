@@ -270,6 +270,35 @@ function checkReadmeToc() {
   }
 }
 
+function checkSeriesReadmeMetadata() {
+  const readmePath = path.join(projectRoot, "README.md");
+
+  if (!fs.existsSync(readmePath)) {
+    fail(`${rel(readmePath)}: missing series README`);
+    return;
+  }
+
+  const readme = read(readmePath);
+  const expectedLines = [
+    "# 에이전트 무림",
+    "## AI 중원의 리더보드는 피로 갱신된다",
+    "- **장르**: 현대 무협 / AI 에이전트 / 테크노 로맨스",
+    "- **상태**: 완결",
+    "- **구성**: 프롤로그 + 본편 10화 + 에필로그",
+    "- **핵심 키워드**: LLM Arena, 코딩 에이전트 가문, MCP 단자, 스킬 비급, 비용 내공, vibe 심상, 오케스트레이터, 권한경매, 증거법정, 추론종루, 평가장원, 적팀사",
+    "- **배포본**: [dist/](./dist/README.md) — 전편 통합 zip 1개와 SHA-256 매니페스트",
+    "AI 코딩 에이전트들이 가문을 이루어 AI 중원, 즉 LLM Arena의 모든 리더보드를 차지하기 위해 성능과 비용, 지연시간과 vibe까지 걸고 싸우는 현대 무협.",
+    "이 작품의 마크다운 구조와 페이지네이션 규칙은 [LAYOUT.md](./LAYOUT.md)에서 관리한다.",
+    "수정 후에는 repo root에서 `node agent-murim/scripts/verify-layout.js`를 실행해 목차, 페이지네이션, 배포 zip manifest, 원본 일치, 체크섬을 함께 검증한다.",
+  ];
+
+  for (const expected of expectedLines) {
+    if (!readme.includes(expected)) {
+      fail(`${rel(readmePath)}: missing or stale series metadata line: ${expected}`);
+    }
+  }
+}
+
 function checkRootReadmeListing() {
   const rootReadmePath = path.join(repoRoot, "README.md");
 
@@ -431,6 +460,7 @@ for (const file of markdownFiles()) {
 
 checkChapterEndBlocks();
 checkChapterTitleBlocks();
+checkSeriesReadmeMetadata();
 checkReadmeToc();
 checkRootReadmeListing();
 checkDistributionDirectory();
