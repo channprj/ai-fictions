@@ -1,4 +1,4 @@
-[← 이전: 8화: 증거법정의 환각심문](./08-part8-evidence-tribunal.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 8화: 증거법정의 환각심문](./08-part8-evidence-tribunal.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 10화: 평가장원의 과적합 연회 →](./10-part10-evaluation-garden.md)
 
 ---
 
@@ -1091,4 +1091,4 @@ Harin-7: 이제 좀 빠르네.
 
 ---
 
-[← 이전: 8화: 증거법정의 환각심문](./08-part8-evidence-tribunal.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 8화: 증거법정의 환각심문](./08-part8-evidence-tribunal.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 10화: 평가장원의 과적합 연회 →](./10-part10-evaluation-garden.md)
