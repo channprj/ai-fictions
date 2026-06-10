@@ -299,6 +299,36 @@ function checkSeriesReadmeMetadata() {
   }
 }
 
+function checkDistributionReadmeMetadata() {
+  const distReadmePath = path.join(projectRoot, "dist", "README.md");
+
+  if (!fs.existsSync(distReadmePath)) {
+    fail(`${rel(distReadmePath)}: missing distribution README`);
+    return;
+  }
+
+  const readme = read(distReadmePath);
+  const expectedLines = [
+    "# 에이전트 무림 배포본",
+    "프롤로그 + 10화 + 에필로그 완결 원고를 **전편 통합 압축 파일** 하나로 묶은 배포용 디렉터리다.",
+    "| [agent-murim.zip](./agent-murim.zip) | `README.md`, `00-prologue.md`~`11-epilogue.md` (프롤로그 + 10화 + 에필로그) | [SHA256SUMS](./SHA256SUMS) |",
+    "- `dist/`에는 이 `README.md`, `SHA256SUMS`, 전편 통합 zip 1개만 둔다.",
+    "- zip은 작품 `README.md` 1개와 12개 원고(프롤로그·10화·에필로그)를 포함한다.",
+    "- zip 내부 원고는 현재 원본 파일과 동일하며, 편집용 규칙 문서인 `LAYOUT.md`는 포함하지 않는다.",
+    "- `SHA256SUMS`는 `agent-murim.zip`에 대한 행 1개만 포함하고 마지막 개행으로 끝난다.",
+    "unzip agent-murim.zip",
+    "cd agent-murim/dist",
+    "shasum -a 256 -c SHA256SUMS",
+    "> 줄거리·등장인물·세계관은 상위 [작품 홈](../README.md)을 참고한다.",
+  ];
+
+  for (const expected of expectedLines) {
+    if (!readme.includes(expected)) {
+      fail(`${rel(distReadmePath)}: missing or stale distribution metadata line: ${expected}`);
+    }
+  }
+}
+
 function checkLayoutDocumentation() {
   const layoutPath = path.join(projectRoot, "LAYOUT.md");
 
@@ -316,7 +346,7 @@ function checkLayoutDocumentation() {
     "- 각 파일의 마지막에는 해당 장의 종료 안내 블록을 둔 뒤, 다시 `---`와 동일한 페이지네이션을 배치한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록, 작품 홈 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 로컬 링크, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 로컬 링크, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
@@ -494,6 +524,7 @@ for (const file of markdownFiles()) {
 checkChapterEndBlocks();
 checkChapterTitleBlocks();
 checkSeriesReadmeMetadata();
+checkDistributionReadmeMetadata();
 checkLayoutDocumentation();
 checkReadmeToc();
 checkRootReadmeListing();
