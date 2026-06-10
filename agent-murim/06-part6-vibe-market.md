@@ -1,4 +1,4 @@
-[← 이전: 5화: 배포 절벽](./05-part5-deploy-cliff.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 5화: 배포 절벽](./05-part5-deploy-cliff.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 7화: 단자총림의 권한경매 →](./07-part7-permission-auction.md)
 
 ---
 
@@ -742,4 +742,4 @@ shared context:
 
 ---
 
-[← 이전: 5화: 배포 절벽](./05-part5-deploy-cliff.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 5화: 배포 절벽](./05-part5-deploy-cliff.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 7화: 단자총림의 권한경매 →](./07-part7-permission-auction.md)
