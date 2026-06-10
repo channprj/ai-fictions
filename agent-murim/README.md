@@ -76,6 +76,7 @@ AI 중원의 가문들은 모델 혈통보다 운용법으로 갈린다.
 ## 레이아웃 관리
 
 이 작품의 마크다운 구조와 페이지네이션 규칙은 [LAYOUT.md](./LAYOUT.md)에서 관리한다.
+수정 후에는 repo root에서 `node agent-murim/scripts/verify-layout.js`를 실행해 목차, 페이지네이션, 배포 zip manifest를 함께 검증한다.
 
 ---
 
