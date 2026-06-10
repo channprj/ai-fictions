@@ -267,6 +267,41 @@ function stripFencedBlocks(markdown) {
   return output.join("\n");
 }
 
+function slugifyHeading(heading) {
+  return heading
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[`*_~]/g, "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s_-]/gu, "")
+    .replace(/\s+/g, "-");
+}
+
+function markdownHeadingAnchors(file) {
+  const anchors = new Set();
+  const counts = new Map();
+
+  for (const line of stripFencedBlocks(read(file)).split(/\r?\n/)) {
+    const match = /^(#{1,6})\s+(.+?)\s*#*\s*$/.exec(line);
+
+    if (!match) {
+      continue;
+    }
+
+    const base = slugifyHeading(match[2]);
+
+    if (!base) {
+      continue;
+    }
+
+    const count = counts.get(base) || 0;
+    anchors.add(count === 0 ? base : `${base}-${count}`);
+    counts.set(base, count + 1);
+  }
+
+  return anchors;
+}
+
 function checkLocalLinks(file) {
   const text = stripFencedBlocks(read(file));
   const linkPattern = /\[[^\]]+\]\(([^)]+)\)/g;
@@ -275,20 +310,44 @@ function checkLocalLinks(file) {
   while ((match = linkPattern.exec(text)) !== null) {
     const target = match[1];
 
-    if (/^[a-z][a-z0-9+.-]*:/i.test(target) || target.startsWith("#")) {
+    if (/^[a-z][a-z0-9+.-]*:/i.test(target)) {
       continue;
     }
 
-    const [targetPath] = target.split("#");
+    const fragmentIndex = target.indexOf("#");
+    const targetPath = fragmentIndex === -1 ? target : target.slice(0, fragmentIndex);
+    const rawFragment = fragmentIndex === -1 ? null : target.slice(fragmentIndex + 1);
 
-    if (targetPath === "") {
-      continue;
-    }
-
-    const resolved = path.resolve(path.dirname(file), targetPath);
+    const resolved = targetPath === "" ? file : path.resolve(path.dirname(file), targetPath);
 
     if (!fs.existsSync(resolved)) {
       fail(`${rel(file)}: broken local link ${target}`);
+      continue;
+    }
+
+    if (rawFragment !== null) {
+      let fragment;
+
+      try {
+        fragment = decodeURIComponent(rawFragment);
+      } catch {
+        fail(`${rel(file)}: malformed local link fragment ${target}`);
+        continue;
+      }
+
+      if (fragment === "") {
+        fail(`${rel(file)}: empty local link fragment ${target}`);
+        continue;
+      }
+
+      if (path.extname(resolved) !== ".md") {
+        fail(`${rel(file)}: local link fragment points to non-markdown file ${target}`);
+        continue;
+      }
+
+      if (!markdownHeadingAnchors(resolved).has(fragment)) {
+        fail(`${rel(file)}: broken local link anchor ${target}`);
+      }
     }
   }
 }
@@ -385,7 +444,7 @@ function checkLayoutDocumentation() {
     "- 장 종료 안내 블록은 `서율-13`과 `하린-7`을 함께 언급해 두 주인공의 동행 축을 보존한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 루트 작품 수/완결 상태, 로컬 링크, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
