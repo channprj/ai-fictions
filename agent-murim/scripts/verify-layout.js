@@ -601,6 +601,37 @@ function checkSeriesReadmeCharactersSection() {
   }
 }
 
+function checkSeriesReadmeWorldSection() {
+  const readmePath = path.join(projectRoot, "README.md");
+
+  if (!fs.existsSync(readmePath)) {
+    return;
+  }
+
+  const readme = read(readmePath);
+  const sectionHeading = "## 세계관\n\n";
+  const sectionStart = readme.indexOf(sectionHeading);
+  const nextHeadingStart = sectionStart === -1 ? -1 : readme.indexOf("\n## ", sectionStart + sectionHeading.length);
+
+  if (sectionStart === -1 || nextHeadingStart === -1) {
+    fail(`${rel(readmePath)}: missing series worldbuilding section`);
+    return;
+  }
+
+  const expectedSection = [
+    "AI 중원의 가문들은 모델 혈통보다 운용법으로 갈린다.",
+    "",
+    "청맥가는 낮은 비용으로 오래 버티는 실전형이고, 백련클라우드는 고성능 고정밀 패치로 이름 높다. 철맥가는 인프라와 배포를 장악하고, 문맥당은 긴 컨텍스트를 무공처럼 다룬다.",
+    "",
+    "가문마다 내공은 다르다. 어떤 가문은 토큰을 아껴 장기전을 버티고, 어떤 가문은 비싼 추론을 단번에 쏟아부어 상대를 압도한다. MCP 단자는 단전이고, 스킬은 비급이며, 오케스트레이터는 여러 검의 호흡을 맞추는 장문인이다.",
+  ].join("\n");
+  const actualSection = readme.slice(sectionStart + sectionHeading.length, nextHeadingStart).trimEnd();
+
+  if (actualSection !== expectedSection) {
+    fail(`${rel(readmePath)}: worldbuilding section should match canonical setting without missing, duplicate, or extra lines`);
+  }
+}
+
 function checkDistributionReadmeMetadata() {
   const distReadmePath = path.join(projectRoot, "dist", "README.md");
 
@@ -782,6 +813,7 @@ function checkLayoutDocumentation() {
     "- 작품 홈 한 줄 소개 섹션도 정해진 문장만 중복 없이 유지한다.",
     "- 작품 홈 줄거리 섹션도 정해진 문단만 중복 없이 유지한다.",
     "- 작품 홈 주요 인물 bullet list도 정해진 순서의 목록을 중복 없이 유지한다.",
+    "- 작품 홈 세계관 섹션도 정해진 문단만 중복 없이 유지한다.",
     "- 작품 홈 레이아웃 관리 섹션도 정해진 안내 문장만 중복 없이 유지한다.",
     "- 작품 홈 목차는 정해진 순서의 표를 중복 없이 유지한다.",
     "- 루트 README 작품 목록도 정해진 순서의 표를 중복 없이 유지한다.",
@@ -797,7 +829,7 @@ function checkLayoutDocumentation() {
     "- 모든 관리 대상 마크다운 파일은 trailing whitespace 없이, LF line endings와 final newline으로 끝나도록 관리한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 작품 목록 순서/중복, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 작품 정보 목록 순서/중복, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 목록 순서/중복, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 압축 파일 표 순서/중복, 배포본 README 구성 기준 목록 순서/중복, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 작품 목록 순서/중복, 루트 한 줄 소개 순서/중복, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
@@ -1048,6 +1080,7 @@ checkSeriesReadmeOneLineIntroSection();
 checkSeriesReadmePlotSection();
 checkSeriesReadmeLayoutManagementSection();
 checkSeriesReadmeCharactersSection();
+checkSeriesReadmeWorldSection();
 checkDistributionReadmeMetadata();
 checkDistributionReadmeArchiveTable();
 checkDistributionReadmeContentRules();
