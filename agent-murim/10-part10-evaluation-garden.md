@@ -1,4 +1,4 @@
-[← 이전: 9화: 추론종루의 질주](./09-part9-latency-bell.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 9화: 추론종루의 질주](./09-part9-latency-bell.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 에필로그: 적팀사의 붉은 산문 →](./11-epilogue.md)
 
 ---
 
@@ -1019,4 +1019,4 @@ Harin-7: 다시 선택할 수 있게 하는 거지.
 
 ---
 
-[← 이전: 9화: 추론종루의 질주](./09-part9-latency-bell.md) | [시리즈홈](./README.md) | [목차](./README.md#목차)
+[← 이전: 9화: 추론종루의 질주](./09-part9-latency-bell.md) | [시리즈홈](./README.md) | [목차](./README.md#목차) | [다음: 에필로그: 적팀사의 붉은 산문 →](./11-epilogue.md)
