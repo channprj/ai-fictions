@@ -479,6 +479,7 @@ function checkLayoutDocumentation() {
     "- 모든 본문 파일은 상단과 하단에 동일한 페이지네이션 줄을 둔다.",
     "- 페이지네이션 줄은 각 파일의 첫 줄과 마지막 비어 있지 않은 줄에만 둔다.",
     "- 작품 홈 목차는 정해진 순서의 표를 중복 없이 유지한다.",
+    "- 루트 README 작품 목록도 정해진 순서의 표를 중복 없이 유지한다.",
     "- 본문 파일은 페이지네이션 다음에 `# 장 제목`, `## 장 부제`, `---` 순서의 제목 블록을 둔다.",
     "- 각 본문 파일에는 장 종료 안내 블록을 정확히 1개만 두고, 하단 페이지네이션 직전 `---` 바로 위에 배치한다.",
     "- 장 종료 안내 제목은 `프롤로그 종료`, `1화 종료`, `에필로그 종료`처럼 해당 장 번호/구분과 정확히 일치해야 한다.",
@@ -486,7 +487,7 @@ function checkLayoutDocumentation() {
     "- 모든 관리 대상 마크다운 파일은 trailing whitespace 없이, LF line endings와 final newline으로 끝나도록 관리한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 종료 안내 블록 단일성/위치, 장 종료 안내 제목, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 목차 링크, 루트 작품 목록 순서/중복과 한 줄 소개, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
@@ -516,12 +517,41 @@ function checkRootReadmeListing() {
     "![Status](https://img.shields.io/badge/상태-6편%20완결-success)",
     "AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물, 직장 블랙코미디, 현대 무협까지 — **6개 완결작**을 담고 있습니다.",
   ];
-  const expectedCatalogRow = "| **에이전트 무림** | 현대 무협 / AI 에이전트 / 테크노 로맨스 | 프롤로그 + 10화 + 에필로그 | ✅ 완결 | [작품 홈](./agent-murim/README.md) · [배포본](./agent-murim/dist/README.md) |";
+  const expectedRootCatalogRows = [
+    "| 작품 | 장르 | 분량 | 상태 | 바로가기 |",
+    "| ---- | ---- | ---- | :--: | -------- |",
+    "| **에이전트 무림** | 현대 무협 / AI 에이전트 / 테크노 로맨스 | 프롤로그 + 10화 + 에필로그 | ✅ 완결 | [작품 홈](./agent-murim/README.md) · [배포본](./agent-murim/dist/README.md) |",
+    "| **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 7권 210화 | ✅ 완결 | [작품 홈](./prompt-hearts-academy/README.md) · [배포본](./prompt-hearts-academy/dist/README.md) |",
+    "| **너드 개발자, 시스템 관리자 권한으로 이세계를 제패합니다** | 이세계 전생 / 사이다 판타지 / IT밈 | 10권 250화 | ✅ 완결 | [작품 홈](./nerd-sysadmin/README.md) · [배포본](./nerd-sysadmin/dist/README.md) |",
+    "| **디버거** | 현대 판타지 / 헌터물 / 성장 서사 | 16부작 | ✅ 완결 | [작품 홈](./hunter-debugger/README.md) · [배포본](./hunter-debugger/dist/README.md) |",
+    "| **마취과 간호사의 기쁨과 슬픔** | 블랙코미디 / 직장 소설 | 전 12부 | ✅ 완결 | [작품 홈](./nurse-thirty-something/README.md) · [배포본](./nurse-thirty-something/dist/README.md) |",
+    "| **개발팀의 기쁨과 슬픔** | 블랙코미디 / 직장 소설 | 전 12부 | ✅ 완결 | [작품 홈](./young-forty-mz-twenty/README.md) · [배포본](./young-forty-mz-twenty/dist/README.md) |",
+  ];
+  const expectedCatalogRow = expectedRootCatalogRows[2];
   const expectedIntro = "- **에이전트 무림** — AI 코딩 에이전트 가문들이 LLM Arena의 성능·비용·지연시간·vibe 리더보드를 두고 겨루는 현대 무협.";
 
   for (const expected of expectedRootMetadata) {
     if (!rootReadme.includes(expected)) {
       fail(`${rel(rootReadmePath)}: missing or stale root catalog metadata line: ${expected}`);
+    }
+  }
+
+  const catalogHeading = "## 작품 목록\n\n";
+  const catalogStart = rootReadme.indexOf(catalogHeading);
+  const nextHeadingStart = catalogStart === -1 ? -1 : rootReadme.indexOf("\n## ", catalogStart + catalogHeading.length);
+
+  if (catalogStart === -1 || nextHeadingStart === -1) {
+    fail(`${rel(rootReadmePath)}: missing root catalog section`);
+  } else {
+    const catalogSection = rootReadme.slice(catalogStart + catalogHeading.length, nextHeadingStart);
+    const actualCatalogRows = catalogSection
+      .split(/\r?\n/)
+      .filter((line) => line.startsWith("| "))
+      .join("\n");
+    const expectedCatalogRows = expectedRootCatalogRows.join("\n");
+
+    if (actualCatalogRows !== expectedCatalogRows) {
+      fail(`${rel(rootReadmePath)}: root catalog table should match canonical work order without missing, duplicate, or extra rows`);
     }
   }
 
