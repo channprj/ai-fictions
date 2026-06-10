@@ -299,6 +299,39 @@ function checkSeriesReadmeMetadata() {
   }
 }
 
+function checkLayoutDocumentation() {
+  const layoutPath = path.join(projectRoot, "LAYOUT.md");
+
+  if (!fs.existsSync(layoutPath)) {
+    fail(`${rel(layoutPath)}: missing layout guide`);
+    return;
+  }
+
+  const layout = read(layoutPath);
+  const expectedLines = [
+    "# 에이전트 무림 LAYOUT",
+    "이 문서는 `agent-murim` 시리즈의 모든 마크다운 파일이 같은 읽기 구조와 페이지네이션 UI를 유지하도록 관리하는 기준이다.",
+    "- 모든 본문 파일은 상단과 하단에 동일한 페이지네이션 줄을 둔다.",
+    "- 본문 파일은 페이지네이션 다음에 `# 장 제목`, `## 장 부제`, `---` 순서의 제목 블록을 둔다.",
+    "- 각 파일의 마지막에는 해당 장의 종료 안내 블록을 둔 뒤, 다시 `---`와 동일한 페이지네이션을 배치한다.",
+    "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
+    "node agent-murim/scripts/verify-layout.js",
+    "이 스크립트는 LAYOUT 핵심 규칙, 상하단 페이지네이션 문자열, 장 제목/부제 블록, 종료 안내 블록, 작품 홈 핵심 메타데이터, 목차 링크, 루트 작품 목록/한 줄 소개, 로컬 링크, 코드펜스 균형, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "- `00-prologue.md` — 프롤로그",
+    "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
+    "- `11-epilogue.md` — 에필로그",
+    "| MCP | MCP 단자 | 외부 도구와 문맥을 잇는 현대식 단전 |",
+    "| orchestrator | 오케스트레이터 | 여러 에이전트의 호흡과 비용을 조율하는 지휘자 |",
+    "| vibe | vibe / 심상 | 사용자가 체감하는 흐름, 말투, 판단의 결 |",
+  ];
+
+  for (const expected of expectedLines) {
+    if (!layout.includes(expected)) {
+      fail(`${rel(layoutPath)}: missing or stale layout documentation line: ${expected}`);
+    }
+  }
+}
+
 function checkRootReadmeListing() {
   const rootReadmePath = path.join(repoRoot, "README.md");
 
@@ -461,6 +494,7 @@ for (const file of markdownFiles()) {
 checkChapterEndBlocks();
 checkChapterTitleBlocks();
 checkSeriesReadmeMetadata();
+checkLayoutDocumentation();
 checkReadmeToc();
 checkRootReadmeListing();
 checkDistributionDirectory();
