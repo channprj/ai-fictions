@@ -162,6 +162,45 @@ function checkChapterEndBlocks() {
   }
 }
 
+function expectedChapterTitleBlock(chapter) {
+  const title = chapter.tocLabel || chapter.label;
+  const separator = title.indexOf(": ");
+
+  if (separator === -1) {
+    return { heading: title, subtitle: null };
+  }
+
+  return {
+    heading: title.slice(0, separator),
+    subtitle: title.slice(separator + 2),
+  };
+}
+
+function checkChapterTitleBlocks() {
+  for (const chapter of chapters) {
+    const file = path.join(projectRoot, chapter.file);
+
+    if (!fs.existsSync(file)) {
+      continue;
+    }
+
+    const { heading, subtitle } = expectedChapterTitleBlock(chapter);
+
+    if (!subtitle) {
+      fail(`${rel(file)}: missing expected chapter subtitle metadata`);
+      continue;
+    }
+
+    const lines = read(file).split(/\r?\n/);
+    const expectedBlock = ["", `# ${heading}`, "", `## ${subtitle}`, "", "---"].join("\n");
+    const actualBlock = lines.slice(3, 9).join("\n");
+
+    if (actualBlock !== expectedBlock) {
+      fail(`${rel(file)}: chapter title block should be "# ${heading}" then "## ${subtitle}"`);
+    }
+  }
+}
+
 function checkCodeFences(file) {
   const fenceCount = read(file)
     .split(/\r?\n/)
@@ -391,6 +430,7 @@ for (const file of markdownFiles()) {
 }
 
 checkChapterEndBlocks();
+checkChapterTitleBlocks();
 checkReadmeToc();
 checkRootReadmeListing();
 checkDistributionDirectory();
