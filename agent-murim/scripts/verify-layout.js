@@ -27,6 +27,11 @@ function rel(file) {
   return path.relative(repoRoot, file).replaceAll(path.sep, "/");
 }
 
+function isInsideDirectory(directory, target) {
+  const relativePath = path.relative(directory, target);
+  return relativePath === "" || (!relativePath.startsWith("..") && !path.isAbsolute(relativePath));
+}
+
 function read(file) {
   return fs.readFileSync(file, "utf8");
 }
@@ -368,6 +373,7 @@ function markdownHeadingAnchors(file) {
 function checkLocalLinks(file) {
   const text = stripFencedBlocks(read(file));
   const linkPattern = /\[[^\]]+\]\(([^)]+)\)/g;
+  const sourceIsManagedMarkdown = isInsideDirectory(projectRoot, file);
   let match;
 
   while ((match = linkPattern.exec(text)) !== null) {
@@ -390,6 +396,11 @@ function checkLocalLinks(file) {
 
     if (!fs.statSync(resolved).isFile()) {
       fail(`${rel(file)}: local link target should be a file, not a directory ${target}`);
+      continue;
+    }
+
+    if (sourceIsManagedMarkdown && !isInsideDirectory(projectRoot, resolved)) {
+      fail(`${rel(file)}: local link target should stay inside agent-murim ${target}`);
       continue;
     }
 
@@ -1006,6 +1017,7 @@ function checkLayoutCommonPrinciplesSection() {
     "- 루트 README 섹션 순서도 정해진 heading 목록을 중복 없이 유지한다.",
     "- 루트 README 로컬 링크도 실제 파일과 앵커를 가리키도록 유지한다.",
     "- 모든 로컬 링크는 실제 파일 또는 파일 내 앵커를 가리키며 디렉터리를 직접 가리키지 않는다.",
+    "- `agent-murim` 관리 마크다운의 로컬 링크는 `agent-murim/` 안의 파일만 가리킨다.",
     "- 루트 README도 코드펜스 균형, trailing whitespace, LF line endings, final newline을 유지한다.",
     "- 루트 README 작품 목록도 정해진 순서의 표를 중복 없이 유지한다.",
     "- 루트 README 작품 목록 안내문도 정해진 문장만 중복 없이 유지한다.",
@@ -1202,7 +1214,7 @@ function checkLayoutVerificationSection() {
     "node agent-murim/scripts/verify-layout.js",
     "```",
     "",
-    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 섹션, LAYOUT 파일명 규칙 섹션, LAYOUT 첫 장과 최신 장 규칙 섹션, LAYOUT 용어 표기 섹션, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, LAYOUT 섹션 순서/중복, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 상단 페이지네이션/분리선 간격, 하단 분리선/페이지네이션 간격, 작품 홈 제목/부제 구획, 작품 홈 섹션 순서/중복, 작품 홈 작품 정보 섹션, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 섹션, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 장 제목/부제 중복 여부, 종료 안내 블록 단일성/위치, 종료 안내 블록 전 분리선, 종료 안내 blockquote 형식, 장 종료 안내 제목, 장 종료 제목 뒤 빈 인용문 줄, 장 종료 안내 blockquote 3줄 구조, 장 종료 안내 뒤 빈 줄, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 섹션 순서/중복, 배포본 README 압축 파일 표 섹션, 배포본 README 구성 기준 섹션, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 섹션 순서/중복, 루트 로컬 링크 파일/앵커/디렉터리 금지, 루트 코드펜스/마크다운 hygiene, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 섹션, 루트 작성 도구 섹션, 루트 라이선스 섹션, 루트 안내 섹션, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커/디렉터리 금지, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 섹션, LAYOUT 파일명 규칙 섹션, LAYOUT 첫 장과 최신 장 규칙 섹션, LAYOUT 용어 표기 섹션, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, LAYOUT 섹션 순서/중복, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 상단 페이지네이션/분리선 간격, 하단 분리선/페이지네이션 간격, 작품 홈 제목/부제 구획, 작품 홈 섹션 순서/중복, 작품 홈 작품 정보 섹션, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 섹션, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 장 제목/부제 중복 여부, 종료 안내 블록 단일성/위치, 종료 안내 블록 전 분리선, 종료 안내 blockquote 형식, 장 종료 안내 제목, 장 종료 제목 뒤 빈 인용문 줄, 장 종료 안내 blockquote 3줄 구조, 장 종료 안내 뒤 빈 줄, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 섹션 순서/중복, 배포본 README 압축 파일 표 섹션, 배포본 README 구성 기준 섹션, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 섹션 순서/중복, 루트 로컬 링크 파일/앵커/디렉터리 금지, 루트 코드펜스/마크다운 hygiene, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 섹션, 루트 작성 도구 섹션, 루트 라이선스 섹션, 루트 안내 섹션, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커/디렉터리 금지, agent-murim 로컬 링크 범위, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
   ].join("\n");
   const actualSection = layout.slice(sectionStart + sectionHeading.length, sectionEnd).trimEnd();
 
@@ -1375,6 +1387,7 @@ function checkLayoutDocumentation() {
     "- 루트 README 섹션 순서도 정해진 heading 목록을 중복 없이 유지한다.",
     "- 루트 README 로컬 링크도 실제 파일과 앵커를 가리키도록 유지한다.",
     "- 모든 로컬 링크는 실제 파일 또는 파일 내 앵커를 가리키며 디렉터리를 직접 가리키지 않는다.",
+    "- `agent-murim` 관리 마크다운의 로컬 링크는 `agent-murim/` 안의 파일만 가리킨다.",
     "- 루트 README도 코드펜스 균형, trailing whitespace, LF line endings, final newline을 유지한다.",
     "- 루트 README 작성 도구 섹션도 정해진 문장과 bullet list만 중복 없이 유지한다.",
     "- 루트 README 라이선스 섹션도 정해진 문장과 bullet list만 중복 없이 유지한다.",
@@ -1398,7 +1411,7 @@ function checkLayoutDocumentation() {
     "- 모든 관리 대상 마크다운 파일은 trailing whitespace 없이, LF line endings와 final newline으로 끝나도록 관리한다.",
     "- 배포본 안내인 `dist/README.md`도 상단과 하단에 동일한 내비게이션 줄을 둔다.",
     "node agent-murim/scripts/verify-layout.js",
-    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 섹션, LAYOUT 파일명 규칙 섹션, LAYOUT 첫 장과 최신 장 규칙 섹션, LAYOUT 용어 표기 섹션, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, LAYOUT 섹션 순서/중복, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 상단 페이지네이션/분리선 간격, 하단 분리선/페이지네이션 간격, 작품 홈 제목/부제 구획, 작품 홈 섹션 순서/중복, 작품 홈 작품 정보 섹션, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 섹션, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 장 제목/부제 중복 여부, 종료 안내 블록 단일성/위치, 종료 안내 블록 전 분리선, 종료 안내 blockquote 형식, 장 종료 안내 제목, 장 종료 제목 뒤 빈 인용문 줄, 장 종료 안내 blockquote 3줄 구조, 장 종료 안내 뒤 빈 줄, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 섹션 순서/중복, 배포본 README 압축 파일 표 섹션, 배포본 README 구성 기준 섹션, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 섹션 순서/중복, 루트 로컬 링크 파일/앵커/디렉터리 금지, 루트 코드펜스/마크다운 hygiene, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 섹션, 루트 작성 도구 섹션, 루트 라이선스 섹션, 루트 안내 섹션, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커/디렉터리 금지, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
+    "이 스크립트는 LAYOUT 핵심 규칙, LAYOUT 제목/소개 구획, LAYOUT 공통 원칙 섹션, LAYOUT 파일명 규칙 섹션, LAYOUT 첫 장과 최신 장 규칙 섹션, LAYOUT 용어 표기 섹션, LAYOUT 작품 홈 레이아웃 예시, LAYOUT 배포본 README 레이아웃 예시, LAYOUT 본문 파일 레이아웃 예시, LAYOUT 검증 섹션, LAYOUT 섹션 순서/중복, 상하단 페이지네이션 문자열, 페이지네이션 중복 여부, 상단 페이지네이션/분리선 간격, 하단 분리선/페이지네이션 간격, 작품 홈 제목/부제 구획, 작품 홈 섹션 순서/중복, 작품 홈 작품 정보 섹션, 작품 홈 한 줄 소개 섹션, 작품 홈 줄거리 섹션, 작품 홈 주요 인물 섹션, 작품 홈 세계관 섹션, 작품 홈 레이아웃 관리 섹션, 작품 홈 목차 순서/중복, 장 제목/부제 블록, 장 제목/부제 중복 여부, 종료 안내 블록 단일성/위치, 종료 안내 블록 전 분리선, 종료 안내 blockquote 형식, 장 종료 안내 제목, 장 종료 제목 뒤 빈 인용문 줄, 장 종료 안내 blockquote 3줄 구조, 장 종료 안내 뒤 빈 줄, 장 종료 안내 주인공 언급, 작품 홈 핵심 메타데이터, 배포본 README 핵심 메타데이터, 배포본 README 제목/소개 구획, 배포본 README 섹션 순서/중복, 배포본 README 압축 파일 표 섹션, 배포본 README 구성 기준 섹션, 배포본 README 사용법 섹션, 배포본 README 무결성 확인 섹션, 목차 링크, 루트 제목/소개 구획, 루트 섹션 순서/중복, 루트 로컬 링크 파일/앵커/디렉터리 금지, 루트 코드펜스/마크다운 hygiene, 루트 작품 목록 순서/중복, 루트 작품 목록 안내문, 루트 한 줄 소개 섹션, 루트 작성 도구 섹션, 루트 라이선스 섹션, 루트 안내 섹션, 루트 작품 수/완결 상태, 로컬 링크 파일/앵커/디렉터리 금지, agent-murim 로컬 링크 범위, 코드펜스 균형, trailing whitespace, LF line endings, final newline, 배포 zip manifest, zip 내부 원고와 원본의 내용 일치, SHA-256 체크섬을 함께 검사한다.",
     "- `00-prologue.md` — 프롤로그",
     "- 이후 본편은 `NN-partN-{slug}.md` 형식으로 추가한다. 예: `03-part3-family-audit.md`",
     "- `11-epilogue.md` — 에필로그",
