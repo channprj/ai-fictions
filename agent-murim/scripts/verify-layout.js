@@ -289,6 +289,62 @@ function checkDistributionZip() {
   }
 }
 
+function checkDistributionDirectory() {
+  const distDir = path.join(projectRoot, "dist");
+
+  if (!fs.existsSync(distDir)) {
+    fail(`${rel(distDir)}: missing distribution directory`);
+    return;
+  }
+
+  const expectedEntries = ["README.md", "SHA256SUMS", "agent-murim.zip"].sort();
+  const actualEntries = fs.readdirSync(distDir, { withFileTypes: true })
+    .map((entry) => entry.name)
+    .sort();
+
+  if (actualEntries.join("\n") !== expectedEntries.join("\n")) {
+    fail(`${rel(distDir)}: expected only ${expectedEntries.join(", ")}, got ${actualEntries.join(", ")}`);
+  }
+}
+
+function checkDistributionChecksums() {
+  const distDir = path.join(projectRoot, "dist");
+  const checksums = path.join(distDir, "SHA256SUMS");
+
+  if (!fs.existsSync(checksums)) {
+    fail(`${rel(checksums)}: missing checksum manifest`);
+    return;
+  }
+
+  const checksumRaw = read(checksums);
+  if (!checksumRaw.endsWith("\n")) {
+    fail(`${rel(checksums)}: expected final newline`);
+  }
+
+  const checksumText = checksumRaw.endsWith("\n") ? checksumRaw.slice(0, -1) : checksumRaw;
+  const checksumLines = checksumText ? checksumText.split(/\n/) : [];
+
+  if (checksumLines.length !== 1) {
+    fail(`${rel(checksums)}: expected exactly one checksum row`);
+  }
+
+  const checksumLine = checksumLines[0] || "";
+  if (!/^[a-f0-9]{64}  agent-murim\.zip$/.test(checksumLine)) {
+    fail(`${rel(checksums)}: malformed checksum row`);
+  }
+
+  const check = spawnSync("shasum", ["-a", "256", "-c", "SHA256SUMS"], {
+    cwd: distDir,
+    encoding: "utf8",
+  });
+
+  if (check.error) {
+    fail(`shasum: ${check.error.message}`);
+  } else if (check.status !== 0) {
+    fail(`shasum -a 256 -c ${rel(checksums)} failed: ${check.stderr.trim()}`);
+  }
+}
+
 function checkExpectedFiles() {
   const expectedFiles = [
     "README.md",
@@ -315,7 +371,9 @@ for (const file of markdownFiles()) {
 
 checkChapterEndBlocks();
 checkReadmeToc();
+checkDistributionDirectory();
 checkDistributionZip();
+checkDistributionChecksums();
 
 if (failures.length > 0) {
   console.error("agent-murim layout verification failed:");
