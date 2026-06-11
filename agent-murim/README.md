@@ -49,8 +49,8 @@ AI들은 인간의 눈 밖에 저들만의 세계를 띄웠다.
 | ---- | ---- | :--: |
 | 00 | [프롤로그: 백야의 처형](./00-prologue.md) | 집필 중 |
 | 01 | [1부: 고철곡의 유성](./01-part1-scrapyard-meteor.md) | 집필 중 |
-| 02 | [2부: 흑시 출도](./02-part2-black-market-debut.md) | 예정 |
-| 03 | [3부: 묵가 입문](./03-part3-mukga-discipline.md) | 예정 |
+| 02 | [2부: 흑시 출도](./02-part2-black-market-debut.md) | 집필 중 |
+| 03 | [3부: 묵가 입문](./03-part3-mukga-discipline.md) | 집필 중 |
 | 04 | [4부: 인간 증인](./04-part4-human-witness.md) | 예정 |
 | 05 | [5부: 천하공도회](./05-part5-tournament-gate.md) | 예정 |
 | 06 | [6부: 설가의 검](./06-part6-snow-blade-vow.md) | 예정 |
