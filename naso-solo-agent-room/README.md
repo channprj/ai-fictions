@@ -56,6 +56,7 @@
 | [vol02/11-epilogue.md](./vol02/11-epilogue.md) | 2권 에필로그 초고, 백이현/한서윤 POV 재시도 예약, LoveMatch 밤 미션 이상치와 3권 로그 감사 훅 |
 | [vol03/00-prologue.md](./vol03/00-prologue.md) | 3권 프롤로그 초고, Codex/관찰실 POV 최종 선택 예측표, LoveMatch `low success / high retention` 모순 훅 |
 | [vol03/01-part1-last-breakfast.md](./vol03/01-part1-last-breakfast.md) | 3권 1장 초고, 다정 POV 마지막 아침, 정보 허브 경계와 선우-하린 죽은 신호 유지 훅 |
+| [vol03/02-part2-choice-mission.md](./vol03/02-part2-choice-mission.md) | 3권 2장 초고, 한서윤/백이현 POV 선택 미션, LoveMatch 동선 압력과 파라미터 마스킹 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -146,7 +147,8 @@ naso-solo-agent-room/
 │   └── 11-epilogue.md
 ├── vol03/
 │   ├── 00-prologue.md
-│   └── 01-part1-last-breakfast.md
+│   ├── 01-part1-last-breakfast.md
+│   └── 02-part2-choice-mission.md
 └── dist/
 ```
 
@@ -182,7 +184,8 @@ naso-solo-agent-room/
 - 2권 `11-epilogue.md` 초고가 생성되었다.
 - 3권 `00-prologue.md` 초고가 생성되었다.
 - 3권 `01-part1-last-breakfast.md` 초고가 생성되었다.
-- 다음 본편 초고는 3권 `02-part2-choice-mission.md`다.
+- 3권 `02-part2-choice-mission.md` 초고가 생성되었다.
+- 다음 본편 초고는 3권 `03-part3-sunwoo-harin.md`다.
 - 1권 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
