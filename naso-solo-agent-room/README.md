@@ -18,6 +18,7 @@
 | [PRD.md](./PRD.md) | 12권 전체 목표, 권리 경계, 권별 구조, 성공 기준 |
 | [BIBLE.md](./BIBLE.md) | 고정 캐논, 패널 말투, 세계 규칙, 금지사항 |
 | [TASKS.md](./TASKS.md) | 후속 에이전트용 작업 순서와 검수 체크리스트 |
+| [outline/vol01-first-impression-build.md](./outline/vol01-first-impression-build.md) | 1권 장별 목적, 갈등, 패널 로그, 엔딩 훅 |
 
 ## 목표 구조
 
@@ -44,7 +45,7 @@ naso-solo-agent-room/
 
 - `PRD.md`는 gnhf objective의 마스터 PRD를 그대로 보존한다.
 - `BIBLE.md`는 후속 outline과 원고 작성자가 먼저 읽을 고정 캐논이다.
-- 본편 원고와 권별 outline은 아직 생성하지 않았다.
+- 1권 outline이 생성되었고, 2권 이후 outline과 본편 원고는 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
