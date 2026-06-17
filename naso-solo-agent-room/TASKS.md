@@ -40,7 +40,8 @@
 - 1권 `07-part7-date-ticket.md` 초고는 생성되었다.
 - 1권 `08-part8-silent-commit.md` 초고는 생성되었다.
 - 1권 `09-part9-wrong-branch.md` 초고는 생성되었다.
-- 1권 `10-part10-first-crack.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
+- 1권 `10-part10-first-crack.md` 초고는 생성되었다.
+- 1권 `11-epilogue.md`와 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙

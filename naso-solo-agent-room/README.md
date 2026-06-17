@@ -40,6 +40,7 @@
 | [vol01/07-part7-date-ticket.md](./vol01/07-part7-date-ticket.md) | 1권 7장 초고, 민재 POV 데이트권 미션, 다정의 전달자 경계, M-01-03 비용 확정과 선우 데이트권 훅 |
 | [vol01/08-part8-silent-commit.md](./vol01/08-part8-silent-commit.md) | 1권 8장 초고, 선우 POV 침묵의 커밋, 데이트권 공개 지연, 머리끈 회수와 M-01-01 해소 지연 훅 |
 | [vol01/09-part9-wrong-branch.md](./vol01/09-part9-wrong-branch.md) | 1권 9장 초고, 소연 POV 잘못 탄 브랜치, 도윤의 관리형 친절과 M-01-02 비교 기준 질문 훅 |
+| [vol01/10-part10-first-crack.md](./vol01/10-part10-first-crack.md) | 1권 10장 초고, Codex/관찰실 POV 첫 균열, 데이트권 미사용과 숨은 배려 로그 충돌, LoveMatch 추천 제외 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -113,7 +114,7 @@ naso-solo-agent-room/
 │   ├── 07-part7-date-ticket.md
 │   ├── 08-part8-silent-commit.md
 │   ├── 09-part9-wrong-branch.md
-│   ├── ...
+│   ├── 10-part10-first-crack.md
 │   └── 11-epilogue.md
 └── dist/
 ```
@@ -134,7 +135,8 @@ naso-solo-agent-room/
 - 1권 `07-part7-date-ticket.md` 초고가 생성되었다.
 - 1권 `08-part8-silent-commit.md` 초고가 생성되었다.
 - 1권 `09-part9-wrong-branch.md` 초고가 생성되었다.
-- 1권 `10-part10-first-crack.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
+- 1권 `10-part10-first-crack.md` 초고가 생성되었다.
+- 1권 `11-epilogue.md`와 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
