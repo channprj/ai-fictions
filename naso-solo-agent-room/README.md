@@ -23,6 +23,7 @@
 | [outline/vol03-final-selection-crash.md](./outline/vol03-final-selection-crash.md) | 3권 장별 목적, 최종 선택 결산, 예측 실패, LoveMatch 이상치 훅 |
 | [outline/vol04-legacy-heart-migration.md](./outline/vol04-legacy-heart-migration.md) | 4권 장별 목적, 두 번째 사랑의 조건, Claude 과보호 붕괴, LoveMatch 위험 변수 훅 |
 | [outline/vol05-dependency-graph.md](./outline/vol05-dependency-graph.md) | 5권 장별 목적, 조건표와 거리표 압력, GLM 구조 업데이트, LoveMatch 안정성 보정 훅 |
+| [outline/vol06-refactor-your-name.md](./outline/vol06-refactor-your-name.md) | 6권 장별 목적, Act 2 최종 선택 결산, Grok 사과, 사후 케어와 LoveMatch 조작 씨앗 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -48,6 +49,7 @@ naso-solo-agent-room/
 │   ├── vol03-final-selection-crash.md
 │   ├── vol04-legacy-heart-migration.md
 │   ├── vol05-dependency-graph.md
+│   ├── vol06-refactor-your-name.md
 │   └── ...
 ├── state/
 │   ├── affection-graph-vol01.md
@@ -68,7 +70,8 @@ naso-solo-agent-room/
 - `PRD.md`는 gnhf objective의 마스터 PRD를 그대로 보존한다.
 - `BIBLE.md`는 후속 outline과 원고 작성자가 먼저 읽을 고정 캐논이다.
 - 1권부터 5권까지 outline과 state 파일이 생성되었다.
-- 6권 이후 outline, 본편 원고, 배포본은 아직 생성하지 않았다.
+- 6권 outline이 생성되었다.
+- 6권 state 파일, 7권 이후 outline, 본편 원고, 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
