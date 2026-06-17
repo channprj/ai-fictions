@@ -31,6 +31,7 @@
 | [outline/vol11-human-in-the-loop.md](./outline/vol11-human-in-the-loop.md) | 11권 장별 목적, 이전 참가자 human review, 패널 락아웃, Codex 예측 제거 패치와 12권 무예측 촬영 훅 |
 | [outline/vol12-no-final-algorithm.md](./outline/vol12-no-final-algorithm.md) | 12권 장별 목적, 마지막 기수, 최종 대시보드 중단, 패널 공동 커밋과 선택권 보존 결말 |
 | [vol01/00-prologue.md](./vol01/00-prologue.md) | 1권 프롤로그 초고, 관찰실 부팅, LoveMatch 중립 도구 소개, 선우-하린 낮은 성공률 씨앗 |
+| [vol01/01-part1-arrival-log.md](./vol01/01-part1-arrival-log.md) | 1권 1장 초고, 하린 POV 입소, 첫 시선 로그, 선우와 도윤의 대비, 첫인상 기록지 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -107,7 +108,8 @@ naso-solo-agent-room/
 - 1권부터 12권까지 outline이 생성되었다.
 - 1권부터 12권까지 state 파일이 생성되었다.
 - 1권 `00-prologue.md` 초고가 생성되었다.
-- 1권 `01-part1-arrival-log.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
+- 1권 `01-part1-arrival-log.md` 초고가 생성되었다.
+- 1권 `02-part2-first-choice.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
