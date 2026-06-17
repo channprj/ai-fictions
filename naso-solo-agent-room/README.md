@@ -52,6 +52,8 @@
 | [state/misunderstanding-queue-vol10.md](./state/misunderstanding-queue-vol10.md) | 10권 오해 큐, 빈 예측 칸, 처음 질투, 경계 학습, 예측 기능 제거 이월 메모 |
 | [state/affection-graph-vol11.md](./state/affection-graph-vol11.md) | 11권 장별 사후 관계 상태, 돌아온 참가자 리뷰, 패널 수동 관찰, 12권 무예측 촬영 핸드오프 |
 | [state/misunderstanding-queue-vol11.md](./state/misunderstanding-queue-vol11.md) | 11권 오해 큐, 재등장 목적, 실패/비선택 재분류, 패널 락아웃과 최종 대시보드 이월 메모 |
+| [state/affection-graph-vol12.md](./state/affection-graph-vol12.md) | 12권 장별 관계 상태, 마지막 기수, 무예측 선택, 패널 공동 커밋과 보호 기능 결말 |
+| [state/misunderstanding-queue-vol12.md](./state/misunderstanding-queue-vol12.md) | 12권 오해 큐, 대시보드 없음, 자유 데이트 압력, 침묵 권리, 최종 대시보드 중단 결말 |
 
 ## 목표 구조
 
@@ -86,7 +88,10 @@ naso-solo-agent-room/
 │   ├── affection-graph-vol09.md
 │   ├── affection-graph-vol10.md
 │   ├── affection-graph-vol11.md
-│   └── ...
+│   ├── affection-graph-vol12.md
+│   ├── misunderstanding-queue-vol01.md
+│   ├── ...
+│   └── misunderstanding-queue-vol12.md
 ├── vol01/
 │   ├── 00-prologue.md
 │   ├── 01-part1-arrival-log.md
@@ -99,8 +104,8 @@ naso-solo-agent-room/
 - `PRD.md`는 gnhf objective의 마스터 PRD를 그대로 보존한다.
 - `BIBLE.md`는 후속 outline과 원고 작성자가 먼저 읽을 고정 캐논이다.
 - 1권부터 12권까지 outline이 생성되었다.
-- 1권부터 11권까지 state 파일이 생성되었다.
-- 12권 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
+- 1권부터 12권까지 state 파일이 생성되었다.
+- 본편 원고와 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
