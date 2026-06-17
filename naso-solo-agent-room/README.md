@@ -33,6 +33,7 @@
 | [vol01/00-prologue.md](./vol01/00-prologue.md) | 1권 프롤로그 초고, 관찰실 부팅, LoveMatch 중립 도구 소개, 선우-하린 낮은 성공률 씨앗 |
 | [vol01/01-part1-arrival-log.md](./vol01/01-part1-arrival-log.md) | 1권 1장 초고, 하린 POV 입소, 첫 시선 로그, 선우와 도윤의 대비, 첫인상 기록지 훅 |
 | [vol01/02-part2-first-choice.md](./vol01/02-part2-first-choice.md) | 1권 2장 초고, 선우 POV 첫인상 선택 실패, 도윤의 공개 선택, Codex 첫 오분류 훅 |
+| [vol01/03-part3-dinner-build.md](./vol01/03-part3-dinner-build.md) | 1권 3장 초고, 다정 POV 저녁 준비, 식탁 관계 그래프, M-01-03 정보 허브 오해 씨앗 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -99,6 +100,7 @@ naso-solo-agent-room/
 │   ├── 00-prologue.md
 │   ├── 01-part1-arrival-log.md
 │   ├── 02-part2-first-choice.md
+│   ├── 03-part3-dinner-build.md
 │   └── 11-epilogue.md
 └── dist/
 ```
@@ -112,7 +114,8 @@ naso-solo-agent-room/
 - 1권 `00-prologue.md` 초고가 생성되었다.
 - 1권 `01-part1-arrival-log.md` 초고가 생성되었다.
 - 1권 `02-part2-first-choice.md` 초고가 생성되었다.
-- 1권 `03-part3-dinner-build.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
+- 1권 `03-part3-dinner-build.md` 초고가 생성되었다.
+- 1권 `04-part4-introduction-patch.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
