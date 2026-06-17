@@ -13,6 +13,7 @@
 - `outline/vol05-dependency-graph.md`는 생성되었다.
 - `outline/vol06-refactor-your-name.md`는 생성되었다.
 - `outline/vol07-spec-sheet-lovers.md`는 생성되었다.
+- `outline/vol08-deadlock-paradise.md`는 생성되었다.
 - `state/affection-graph-vol01.md`와 `state/misunderstanding-queue-vol01.md`는 생성되었다.
 - `state/affection-graph-vol02.md`와 `state/misunderstanding-queue-vol02.md`는 생성되었다.
 - `state/affection-graph-vol03.md`와 `state/misunderstanding-queue-vol03.md`는 생성되었다.
@@ -20,7 +21,7 @@
 - `state/affection-graph-vol05.md`와 `state/misunderstanding-queue-vol05.md`는 생성되었다.
 - `state/affection-graph-vol06.md`와 `state/misunderstanding-queue-vol06.md`는 생성되었다.
 - `state/affection-graph-vol07.md`와 `state/misunderstanding-queue-vol07.md`는 생성되었다.
-- 8권 이후 outline, 8권 이후 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
+- 8권 state 파일, 9권 이후 outline, 9권 이후 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙

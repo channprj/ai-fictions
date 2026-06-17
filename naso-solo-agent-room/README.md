@@ -25,6 +25,7 @@
 | [outline/vol05-dependency-graph.md](./outline/vol05-dependency-graph.md) | 5권 장별 목적, 조건표와 거리표 압력, GLM 구조 업데이트, LoveMatch 안정성 보정 훅 |
 | [outline/vol06-refactor-your-name.md](./outline/vol06-refactor-your-name.md) | 6권 장별 목적, Act 2 최종 선택 결산, Grok 사과, 사후 케어와 LoveMatch 조작 씨앗 훅 |
 | [outline/vol07-spec-sheet-lovers.md](./outline/vol07-spec-sheet-lovers.md) | 7권 장별 목적, 고스펙 기수, Codex 조건표 붕괴, LoveMatch 자동 개입 승인 훅 |
+| [outline/vol08-deadlock-paradise.md](./outline/vol08-deadlock-paradise.md) | 8권 장별 목적, 다자 교착, Gemini 과적합 붕괴, LoveMatch 자동 미션과 윤아 증거 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -56,6 +57,7 @@ naso-solo-agent-room/
 │   ├── vol05-dependency-graph.md
 │   ├── vol06-refactor-your-name.md
 │   ├── vol07-spec-sheet-lovers.md
+│   ├── vol08-deadlock-paradise.md
 │   └── ...
 ├── state/
 │   ├── affection-graph-vol01.md
@@ -77,8 +79,8 @@ naso-solo-agent-room/
 
 - `PRD.md`는 gnhf objective의 마스터 PRD를 그대로 보존한다.
 - `BIBLE.md`는 후속 outline과 원고 작성자가 먼저 읽을 고정 캐논이다.
-- 1권부터 7권까지 outline이 생성되었고, 1권부터 7권까지 state 파일이 생성되었다.
-- 8권 이후 outline, 8권 이후 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
+- 1권부터 8권까지 outline이 생성되었고, 1권부터 7권까지 state 파일이 생성되었다.
+- 8권 state 파일, 9권 이후 outline, 9권 이후 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
