@@ -58,6 +58,7 @@
 | [vol03/01-part1-last-breakfast.md](./vol03/01-part1-last-breakfast.md) | 3권 1장 초고, 다정 POV 마지막 아침, 정보 허브 경계와 선우-하린 죽은 신호 유지 훅 |
 | [vol03/02-part2-choice-mission.md](./vol03/02-part2-choice-mission.md) | 3권 2장 초고, 한서윤/백이현 POV 선택 미션, LoveMatch 동선 압력과 파라미터 마스킹 훅 |
 | [vol03/03-part3-sunwoo-harin.md](./vol03/03-part3-sunwoo-harin.md) | 3권 3장 초고, 선우 POV 늦은 사람들, M-03-01 사과 수신과 검증 유예 훅 |
+| [vol03/04-part4-doyoon-soyeon.md](./vol03/04-part4-doyoon-soyeon.md) | 3권 4장 초고, 소연 POV 조건의 끝, M-03-03 호감 인정과 자기증명용 비선택 준비 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
