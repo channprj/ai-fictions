@@ -51,7 +51,8 @@
 - 2권 `06-part6-night-callback.md` 초고는 생성되었다.
 - 2권 `07-part7-debug-table.md` 초고는 생성되었다.
 - 2권 `08-part8-question-first.md` 초고는 생성되었다.
-- 다음 본편 초고는 2권 `09-part9-defensive-date.md`다.
+- 2권 `09-part9-defensive-date.md` 초고는 생성되었다.
+- 다음 본편 초고는 2권 `10-part10-dead-signal.md`다.
 - 1권 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
