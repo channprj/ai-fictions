@@ -43,6 +43,7 @@
 | [vol01/10-part10-first-crack.md](./vol01/10-part10-first-crack.md) | 1권 10장 초고, Codex/관찰실 POV 첫 균열, 데이트권 미사용과 숨은 배려 로그 충돌, LoveMatch 추천 제외 훅 |
 | [vol01/11-epilogue.md](./vol01/11-epilogue.md) | 1권 에필로그 초고, 선우의 머리끈/메모 콜백, 하린의 직접 질문 전환, LoveMatch 밤 미션 자동 추천 훅 |
 | [vol02/00-prologue.md](./vol02/00-prologue.md) | 2권 프롤로그 초고, 하린의 메모 수신 이후 질문권 회수, LoveMatch 밤 미션 추천 재정렬 훅 |
+| [vol02/01-part1-morning-race.md](./vol02/01-part1-morning-race.md) | 2권 1장 초고, 다정 POV 아침 식탁 배치, 정보 허브 압력, 하린의 질문 시간 직접 지정 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -119,7 +120,8 @@ naso-solo-agent-room/
 │   ├── 10-part10-first-crack.md
 │   └── 11-epilogue.md
 ├── vol02/
-│   └── 00-prologue.md
+│   ├── 00-prologue.md
+│   └── 01-part1-morning-race.md
 └── dist/
 ```
 
@@ -142,7 +144,8 @@ naso-solo-agent-room/
 - 1권 `10-part10-first-crack.md` 초고가 생성되었다.
 - 1권 `11-epilogue.md` 초고가 생성되었다.
 - 2권 `00-prologue.md` 초고가 생성되었다.
-- 다음 본편 초고는 2권 `01-part1-morning-race.md`다.
+- 2권 `01-part1-morning-race.md` 초고가 생성되었다.
+- 다음 본편 초고는 2권 `02-part2-one-on-one.md`다.
 - 1권 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
