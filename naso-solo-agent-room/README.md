@@ -36,6 +36,7 @@
 | [vol01/03-part3-dinner-build.md](./vol01/03-part3-dinner-build.md) | 1권 3장 초고, 다정 POV 저녁 준비, 식탁 관계 그래프, M-01-03 정보 허브 오해 씨앗 |
 | [vol01/04-part4-introduction-patch.md](./vol01/04-part4-introduction-patch.md) | 1권 4장 초고, 소연 POV 자기소개, 도윤-소연 조건 조합, M-01-02 비교표 오해 씨앗 |
 | [vol01/05-part5-night-walk.md](./vol01/05-part5-night-walk.md) | 1권 5장 초고, 하린 POV 밤 산책, 도윤의 빠른 확신, 선우의 지연 비용, M-01-01/M-01-02 심화 |
+| [vol01/06-part6-panel-overfit.md](./vol01/06-part6-panel-overfit.md) | 1권 6장 초고, Gemini/관찰실 POV 과적합, 도윤-하린 신호 예측 성공, 선우의 머리끈 탐색 사각지대 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -122,7 +123,8 @@ naso-solo-agent-room/
 - 1권 `03-part3-dinner-build.md` 초고가 생성되었다.
 - 1권 `04-part4-introduction-patch.md` 초고가 생성되었다.
 - 1권 `05-part5-night-walk.md` 초고가 생성되었다.
-- 1권 `06-part6-panel-overfit.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
+- 1권 `06-part6-panel-overfit.md` 초고가 생성되었다.
+- 1권 `07-part7-date-ticket.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
