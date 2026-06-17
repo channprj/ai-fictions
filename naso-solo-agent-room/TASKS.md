@@ -7,8 +7,9 @@
 - `PRD.md`는 gnhf objective의 마스터 PRD를 보존한다.
 - `BIBLE.md`는 패널 말투, 세계 규칙, 금지사항, 장면 엔진을 고정한다.
 - `outline/vol01-first-impression-build.md`는 생성되었다.
+- `outline/vol02-callback-night.md`는 생성되었다.
 - `state/affection-graph-vol01.md`와 `state/misunderstanding-queue-vol01.md`는 생성되었다.
-- 2권 이후 outline, 2권 이후 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
+- 2권 state 파일, 3권 이후 outline, 3권 이후 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙
