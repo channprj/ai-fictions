@@ -53,7 +53,8 @@
 - 2권 `08-part8-question-first.md` 초고는 생성되었다.
 - 2권 `09-part9-defensive-date.md` 초고는 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고는 생성되었다.
-- 다음 본편 초고는 2권 `11-epilogue.md`다.
+- 2권 `11-epilogue.md` 초고는 생성되었다.
+- 다음 본편 초고는 3권 `00-prologue.md`다.
 - 1권 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 

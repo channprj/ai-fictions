@@ -53,6 +53,7 @@
 | [vol02/08-part8-question-first.md](./vol02/08-part8-question-first.md) | 2권 8장 초고, 하린 POV 질문권 회수, Claude/GLM 해석 충돌, 선우의 현재 응답 중단 훅 |
 | [vol02/09-part9-defensive-date.md](./vol02/09-part9-defensive-date.md) | 2권 9장 초고, 소연 POV 방어적 데이트, M-02-03 조건 설명 붕괴와 도윤의 정리 실패 진전 훅 |
 | [vol02/10-part10-dead-signal.md](./vol02/10-part10-dead-signal.md) | 2권 10장 초고, 선우 POV 죽은 신호, M-02-01 반복 침묵 비용과 하린의 도윤 밤 미션 카드 훅 |
+| [vol02/11-epilogue.md](./vol02/11-epilogue.md) | 2권 에필로그 초고, 백이현/한서윤 POV 재시도 예약, LoveMatch 밤 미션 이상치와 3권 로그 감사 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -139,7 +140,8 @@ naso-solo-agent-room/
 │   ├── 07-part7-debug-table.md
 │   ├── 08-part8-question-first.md
 │   ├── 09-part9-defensive-date.md
-│   └── 10-part10-dead-signal.md
+│   ├── 10-part10-dead-signal.md
+│   └── 11-epilogue.md
 └── dist/
 ```
 
@@ -172,7 +174,8 @@ naso-solo-agent-room/
 - 2권 `08-part8-question-first.md` 초고가 생성되었다.
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
-- 다음 본편 초고는 2권 `11-epilogue.md`다.
+- 2권 `11-epilogue.md` 초고가 생성되었다.
+- 다음 본편 초고는 3권 `00-prologue.md`다.
 - 1권 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
