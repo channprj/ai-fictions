@@ -17,6 +17,7 @@
 - `outline/vol09-observer-effect.md`는 생성되었다.
 - `outline/vol10-zero-shot-hearts.md`는 생성되었다.
 - `outline/vol11-human-in-the-loop.md`는 생성되었다.
+- `outline/vol12-no-final-algorithm.md`는 생성되었다.
 - `state/affection-graph-vol01.md`와 `state/misunderstanding-queue-vol01.md`는 생성되었다.
 - `state/affection-graph-vol02.md`와 `state/misunderstanding-queue-vol02.md`는 생성되었다.
 - `state/affection-graph-vol03.md`와 `state/misunderstanding-queue-vol03.md`는 생성되었다.
@@ -28,7 +29,7 @@
 - `state/affection-graph-vol09.md`와 `state/misunderstanding-queue-vol09.md`는 생성되었다.
 - `state/affection-graph-vol10.md`와 `state/misunderstanding-queue-vol10.md`는 생성되었다.
 - `state/affection-graph-vol11.md`와 `state/misunderstanding-queue-vol11.md`는 생성되었다.
-- 12권 outline과 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
+- 12권 state 파일, 본편 원고, 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙
