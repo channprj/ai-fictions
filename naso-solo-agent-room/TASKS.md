@@ -17,7 +17,8 @@
 - `state/affection-graph-vol03.md`와 `state/misunderstanding-queue-vol03.md`는 생성되었다.
 - `state/affection-graph-vol04.md`와 `state/misunderstanding-queue-vol04.md`는 생성되었다.
 - `state/affection-graph-vol05.md`와 `state/misunderstanding-queue-vol05.md`는 생성되었다.
-- 6권 state 파일, 7권 이후 outline, 본편 원고, 배포본은 아직 생성하지 않았다.
+- `state/affection-graph-vol06.md`와 `state/misunderstanding-queue-vol06.md`는 생성되었다.
+- 7권 이후 outline, 본편 원고, 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙

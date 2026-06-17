@@ -34,6 +34,8 @@
 | [state/misunderstanding-queue-vol04.md](./state/misunderstanding-queue-vol04.md) | 4권 오해 큐, 과거 재판 압력, LoveMatch 위험 변수 보정 이월 메모 |
 | [state/affection-graph-vol05.md](./state/affection-graph-vol05.md) | 5권 장별 관계 상태, 조건표/거리표 압력, 6권 최종 선택 핸드오프 |
 | [state/misunderstanding-queue-vol05.md](./state/misunderstanding-queue-vol05.md) | 5권 오해 큐, 의존성 그래프 비용, LoveMatch 감정 변수 삭제 이월 메모 |
+| [state/affection-graph-vol06.md](./state/affection-graph-vol06.md) | 6권 장별 관계 상태, Act 2 선택권 회복 결산, 7권 제작 개입 핸드오프 |
+| [state/misunderstanding-queue-vol06.md](./state/misunderstanding-queue-vol06.md) | 6권 오해 큐, 성공/유예/단독 퇴소 분리, LoveMatch 화제성 개입 이월 메모 |
 
 ## 목표 구조
 
@@ -57,6 +59,7 @@ naso-solo-agent-room/
 │   ├── affection-graph-vol03.md
 │   ├── affection-graph-vol04.md
 │   ├── affection-graph-vol05.md
+│   ├── affection-graph-vol06.md
 │   └── ...
 ├── vol01/
 │   ├── 00-prologue.md
@@ -69,9 +72,8 @@ naso-solo-agent-room/
 
 - `PRD.md`는 gnhf objective의 마스터 PRD를 그대로 보존한다.
 - `BIBLE.md`는 후속 outline과 원고 작성자가 먼저 읽을 고정 캐논이다.
-- 1권부터 5권까지 outline과 state 파일이 생성되었다.
-- 6권 outline이 생성되었다.
-- 6권 state 파일, 7권 이후 outline, 본편 원고, 배포본은 아직 생성하지 않았다.
+- 1권부터 6권까지 outline과 state 파일이 생성되었다.
+- 7권 이후 outline, 본편 원고, 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
