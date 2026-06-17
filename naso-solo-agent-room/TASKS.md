@@ -55,7 +55,8 @@
 - 2권 `10-part10-dead-signal.md` 초고는 생성되었다.
 - 2권 `11-epilogue.md` 초고는 생성되었다.
 - 3권 `00-prologue.md` 초고는 생성되었다.
-- 다음 본편 초고는 3권 `01-part1-last-breakfast.md`다.
+- 3권 `01-part1-last-breakfast.md` 초고는 생성되었다.
+- 다음 본편 초고는 3권 `02-part2-choice-mission.md`다.
 - 1권 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
