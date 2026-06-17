@@ -31,7 +31,8 @@
 - `state/affection-graph-vol11.md`와 `state/misunderstanding-queue-vol11.md`는 생성되었다.
 - `state/affection-graph-vol12.md`와 `state/misunderstanding-queue-vol12.md`는 생성되었다.
 - 1권 `00-prologue.md` 초고는 생성되었다.
-- 1권 `01-part1-arrival-log.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
+- 1권 `01-part1-arrival-log.md` 초고는 생성되었다.
+- 1권 `02-part2-first-choice.md`부터의 본편 원고와 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙
