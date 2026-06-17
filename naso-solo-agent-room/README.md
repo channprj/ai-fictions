@@ -20,6 +20,7 @@
 | [TASKS.md](./TASKS.md) | 후속 에이전트용 작업 순서와 검수 체크리스트 |
 | [outline/vol01-first-impression-build.md](./outline/vol01-first-impression-build.md) | 1권 장별 목적, 갈등, 패널 로그, 엔딩 훅 |
 | [outline/vol02-callback-night.md](./outline/vol02-callback-night.md) | 2권 장별 목적, 타이밍 오해, 정보 비대칭, LoveMatch 밤 미션 훅 |
+| [outline/vol03-final-selection-crash.md](./outline/vol03-final-selection-crash.md) | 3권 장별 목적, 최종 선택 결산, 예측 실패, LoveMatch 이상치 훅 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -36,6 +37,7 @@ naso-solo-agent-room/
 ├── outline/
 │   ├── vol01-first-impression-build.md
 │   ├── vol02-callback-night.md
+│   ├── vol03-final-selection-crash.md
 │   └── ...
 ├── state/
 │   ├── affection-graph-vol01.md
@@ -52,7 +54,7 @@ naso-solo-agent-room/
 
 - `PRD.md`는 gnhf objective의 마스터 PRD를 그대로 보존한다.
 - `BIBLE.md`는 후속 outline과 원고 작성자가 먼저 읽을 고정 캐논이다.
-- 1권과 2권 outline, 1권과 2권 state 파일이 생성되었고, 3권 이후 outline 및 본편 원고는 아직 생성하지 않았다.
+- 1권부터 3권까지 outline, 1권과 2권 state 파일이 생성되었고, 3권 state 파일과 4권 이후 outline 및 본편 원고는 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
