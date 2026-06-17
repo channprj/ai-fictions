@@ -44,7 +44,8 @@
 - 1권 `11-epilogue.md` 초고는 생성되었다.
 - 2권 `00-prologue.md` 초고는 생성되었다.
 - 2권 `01-part1-morning-race.md` 초고는 생성되었다.
-- 다음 본편 초고는 2권 `02-part2-one-on-one.md`다.
+- 2권 `02-part2-one-on-one.md` 초고는 생성되었다.
+- 다음 본편 초고는 2권 `03-part3-delayed-response.md`다.
 - 1권 배포본은 아직 생성하지 않았다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
