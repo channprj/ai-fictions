@@ -140,7 +140,7 @@ flagged:
   hyeono: business_failure(masked detail)
   miri: ex_label_sensitivity=high
 operator_note: 위험 변수는 보호 동선용으로 표시됨. 단, 대화 노출 우선순위에 영향.
-M-04-05: active — 위험 변수 표기가 보호인지 축소인지 미정
+M-04-05: active — 위험 변수 표기가 보호인지 축소인지 판정 보류
 ```
 
 ```text
