@@ -23,6 +23,7 @@
 | [6권](./vol06/README.md) | Refactor Your Name (리팩터 유어 네임) | 새 사랑은 과거를 이기는 것인가, 아니면 과거와 함께 걷는 것인가? |
 | [7권](./vol07/README.md) | Spec Sheet Lovers (스펙 시트 러버스) | 내가 고른 사람을 좋아하는가, 나를 좋아해 줄 확률이 높은 사람을 고르는가? |
 | [8권](./vol08/README.md) | Deadlock Paradise (데드락 패러다이스) | 기다림은 배려인가, 책임 회피인가? |
+| [9권](./vol09/README.md) | Observer Effect (옵저버 이펙트) | 조작된 장면에서 나온 진심은 가짜인가? |
 
 > 1권부터 읽으려면 → [1권 프롤로그](./vol01/00-prologue.md)
 
@@ -247,6 +248,19 @@ naso-solo-agent-room/
     ├── 09-part9-bora-stop.md
     ├── 10-part10-deadlock-break.md
     └── 11-epilogue.md
+└── vol09/
+    ├── 00-prologue.md
+    ├── 01-part1-yuna-proof.md
+    ├── 02-part2-producer-room.md
+    ├── 03-part3-panel-split.md
+    ├── 04-part4-jihu-confession.md
+    ├── 05-part5-edited-truth.md
+    ├── 06-part6-claude-line.md
+    ├── 07-part7-codex-audit.md
+    ├── 08-part8-grok-no-joke.md
+    ├── 09-part9-public-break.md
+    ├── 10-part10-choice-after-manipulation.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -279,9 +293,9 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 1권부터 8권까지 각 12개 장 초고가 모두 완성되었다. Act 1(1~3권)·Act 2(4~6권)가 완결되었고, **Act 3(7~9권)의 7·8권이 완성**되어, 12권 중 8권이 마무리되었다.
-- Act 3의 7권은 조건 일치율이 감정 동의를 증명하지 못해 Codex 분석이 붕괴하고, 8권은 자동 미션이 교착을 유지(deadlock paradise)하는 동안 Gemini가 화려한 신호에 과적합했다가 태린의 단독 퇴소로 붕괴하며, 윤아가 시스템 개입 패턴을 증거로 모은다.
-- 다음 산출물은 9권 `Observer Effect`의 본편 초고다. `outline/vol09-observer-effect.md`와 `state/*-vol09.md`를 먼저 읽고, 8권 에필로그의 `observer-effect/yuna-proof` 폴더와 윤아-한서윤-백이현 증거 결합을 이어받아 최종 선택 중단과 추천 로그 감사로 진행한다.
+- 1권부터 9권까지 각 12개 장 초고가 모두 완성되었다. **Act 1(1~3권)·Act 2(4~6권)·Act 3(7~9권)이 완결**되어, 12권 중 9권이 마무리되었다.
+- Act 3은 스펙·화제성·제작 개입을 다룬다. 7권 조건표 붕괴, 8권 교착의 낙원과 태린 단독 퇴소, 9권 관찰자 효과(패널 분석이 미션 입력값으로 재사용된 사실 폭로)로 이어지며, 최종 선택이 처음으로 멈추고 패널이 첫 NO PREDICTION을 실행한다. 강태산은 책임 인정 대신 패널 접근 권한을 제한한다.
+- 다음 산출물은 10권 `Zero-Shot Hearts`의 본편 초고다. `outline/vol10-zero-shot-hearts.md`와 `state/*-vol10.md`를 먼저 읽고, 9권 에필로그의 `zero-shot-hearts/no-prior-data`·`prediction_access: restricted`·예측 칸 `null`을 이어받아 Act 4(모태솔로 기수·예측 중지)로 진행한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보

@@ -71,7 +71,8 @@
 - 6권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 2 결산권 `Refactor Your Name`이 완성되어 Act 1~2(1~6권)가 완결되었다.
 - 7권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 3 개막권 `Spec Sheet Lovers`가 완성되었다.
 - 8권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 3 중반권 `Deadlock Paradise`가 완성되었다.
-- 다음 본편 초고는 9권 `vol09` `00-prologue.md`다. `outline/vol09-observer-effect.md`와 `state/affection-graph-vol09.md`, `state/misunderstanding-queue-vol09.md`를 먼저 읽고, 8권 에필로그의 `observer-effect/yuna-proof`와 윤아-한서윤-백이현 증거 결합을 이어받아 진행한다.
+- 9권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 3 결산권 `Observer Effect`가 완성되어 **Act 1~3(1~9권)가 완결**되었다.
+- 다음 본편 초고는 10권 `vol10` `00-prologue.md`다. `outline/vol10-zero-shot-hearts.md`와 `state/affection-graph-vol10.md`, `state/misunderstanding-queue-vol10.md`를 먼저 읽고, 9권 에필로그의 `zero-shot-hearts/no-prior-data`·`prediction_access: restricted`·예측 칸 `null`을 이어받아 Act 4로 진행한다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙
