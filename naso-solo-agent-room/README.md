@@ -69,6 +69,13 @@
 | [vol03/02-part2-choice-mission.md](./vol03/02-part2-choice-mission.md) | 3권 2장 초고, 한서윤/백이현 POV 선택 미션, LoveMatch 동선 압력과 파라미터 마스킹 훅 |
 | [vol03/03-part3-sunwoo-harin.md](./vol03/03-part3-sunwoo-harin.md) | 3권 3장 초고, 선우 POV 늦은 사람들, M-03-01 사과 수신과 검증 유예 훅 |
 | [vol03/04-part4-doyoon-soyeon.md](./vol03/04-part4-doyoon-soyeon.md) | 3권 4장 초고, 소연 POV 조건의 끝, M-03-03 호감 인정과 자기증명용 비선택 준비 훅 |
+| [vol03/05-part5-taeo-eunchae.md](./vol03/05-part5-taeo-eunchae.md) | 3권 5장 초고, 태오 POV 허세 제거, 은채의 변화 인정과 선택 분리, M-03-05 누적 |
+| [vol03/06-part6-dajeong-fatigue.md](./vol03/06-part6-dajeong-fatigue.md) | 3권 6장 초고, 다정 POV 전달자 역할 중단과 자기 피로 발화, 민재의 답 없는 물러남, M-03-04 해소 |
+| [vol03/07-part7-panel-crash.md](./vol03/07-part7-panel-crash.md) | 3권 7장 초고, 관찰실/Codex POV 예측표 철회, 다섯 패널 해석 충돌, LoveMatch 편집 권고 출현 |
+| [vol03/08-part8-final-walk.md](./vol03/08-part8-final-walk.md) | 3권 8장 초고, 하린 POV 최종 산책, 방송 밖 재시도 약속과 이름 없는 선택 카드 |
+| [vol03/09-part9-final-selection.md](./vol03/09-part9-final-selection.md) | 3권 9장 초고, 하린/소연 POV 최종 선택, 유예·비선택·거절·자기보존 동시 발생과 시즌 FAILURE 라벨 |
+| [vol03/10-part10-after-camera.md](./vol03/10-part10-after-camera.md) | 3권 10장 초고, 소연/한서윤 POV 카메라 이후, 선택 이후 얼굴과 "유예" 손글씨 판정 반박 |
+| [vol03/11-epilogue.md](./vol03/11-epilogue.md) | 3권 에필로그 초고, 백이현 POV 조작 변수, risk_variable_seed 감사 보관과 Act 2 위험 변수 예고 |
 | [state/affection-graph-vol01.md](./state/affection-graph-vol01.md) | 1권 장별 관계 상태와 권말 핸드오프 |
 | [state/misunderstanding-queue-vol01.md](./state/misunderstanding-queue-vol01.md) | 1권 오해 큐, 해소 기한, 2권 이월 메모 |
 | [state/affection-graph-vol02.md](./state/affection-graph-vol02.md) | 2권 장별 관계 상태와 3권 최종 선택 전야 핸드오프 |
@@ -161,7 +168,15 @@ naso-solo-agent-room/
     ├── 00-prologue.md
     ├── 01-part1-last-breakfast.md
     ├── 02-part2-choice-mission.md
-    └── 03-part3-sunwoo-harin.md
+    ├── 03-part3-sunwoo-harin.md
+    ├── 04-part4-doyoon-soyeon.md
+    ├── 05-part5-taeo-eunchae.md
+    ├── 06-part6-dajeong-fatigue.md
+    ├── 07-part7-panel-crash.md
+    ├── 08-part8-final-walk.md
+    ├── 09-part9-final-selection.md
+    ├── 10-part10-after-camera.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -194,11 +209,9 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 3권 `00-prologue.md` 초고가 생성되었다.
-- 3권 `01-part1-last-breakfast.md` 초고가 생성되었다.
-- 3권 `02-part2-choice-mission.md` 초고가 생성되었다.
-- 3권 `03-part3-sunwoo-harin.md` 초고가 생성되었다.
-- 다음 본편 초고는 3권 `04-part4-doyoon-soyeon.md`다.
+- 3권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 완성되어 Act 1(첫 일반 기수)이 마무리되었다.
+- 1권부터 3권까지가 Act 1의 완결된 한 시즌을 이룬다. 최종 선택은 커플 수가 아니라 선택권 회복으로 닫히고, 11권 에필로그가 Act 2의 위험 변수(이혼·자녀·가족 반응) 씨앗을 예고한다.
+- 다음 산출물은 4권 `Legacy Heart Migration`의 본편 초고다. `outline/vol04-legacy-heart-migration.md`와 `state/*-vol04.md`를 먼저 읽고 진행한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보

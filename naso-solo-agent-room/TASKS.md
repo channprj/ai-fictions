@@ -59,7 +59,14 @@
 - 3권 `02-part2-choice-mission.md` 초고는 생성되었다.
 - 3권 `03-part3-sunwoo-harin.md` 초고는 생성되었다.
 - 3권 `04-part4-doyoon-soyeon.md` 초고는 생성되었다.
-- 다음 본편 초고는 3권 `05-part5-taeo-eunchae.md`다.
+- 3권 `05-part5-taeo-eunchae.md` 초고는 생성되었다.
+- 3권 `06-part6-dajeong-fatigue.md` 초고는 생성되었다.
+- 3권 `07-part7-panel-crash.md` 초고는 생성되었다.
+- 3권 `08-part8-final-walk.md` 초고는 생성되었다.
+- 3권 `09-part9-final-selection.md` 초고는 생성되었다.
+- 3권 `10-part10-after-camera.md` 초고는 생성되었다.
+- 3권 `11-epilogue.md` 초고는 생성되었다. 3권 전 12개 장 초고가 완성되어 Act 1(1~3권)이 마무리되었다.
+- 다음 본편 초고는 4권 `vol04` `00-prologue.md`다. `outline/vol04-legacy-heart-migration.md`와 `state/affection-graph-vol04.md`, `state/misunderstanding-queue-vol04.md`를 먼저 읽고 진행한다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙
