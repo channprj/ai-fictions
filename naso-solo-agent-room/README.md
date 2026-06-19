@@ -25,6 +25,7 @@
 | [8권](./vol08/README.md) | Deadlock Paradise (데드락 패러다이스) | 기다림은 배려인가, 책임 회피인가? |
 | [9권](./vol09/README.md) | Observer Effect (옵저버 이펙트) | 조작된 장면에서 나온 진심은 가짜인가? |
 | [10권](./vol10/README.md) | Zero-Shot Hearts (제로샷 하츠) | 서툰 마음은 미숙한가, 아니면 아직 오염되지 않은가? |
+| [11권](./vol11/README.md) | Human-in-the-Loop (휴먼 인 더 루프) | 방송은 끝나도 선택의 결과는 끝나지 않는다. 누가 그 이후를 책임지는가? |
 
 > 1권부터 읽으려면 → [1권 프롤로그](./vol01/00-prologue.md)
 
@@ -275,6 +276,19 @@ naso-solo-agent-room/
     ├── 09-part9-tiny-courage.md
     ├── 10-part10-zero-shot-choice.md
     └── 11-epilogue.md
+└── vol11/
+    ├── 00-prologue.md
+    ├── 01-part1-returned-people.md
+    ├── 02-part2-after-broadcast.md
+    ├── 03-part3-human-review.md
+    ├── 04-part4-seoyoon-letter.md
+    ├── 05-part5-baek-audit.md
+    ├── 06-part6-panel-lockout.md
+    ├── 07-part7-manual-observation.md
+    ├── 08-part8-claude-grok.md
+    ├── 09-part9-codex-patch.md
+    ├── 10-part10-live-choice.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -307,9 +321,10 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 1권부터 10권까지 각 12개 장 초고가 모두 완성되었다. Act 1~3(1~9권)이 완결되었고, **Act 4(10~12권)의 첫 권 `Zero-Shot Hearts`가 완성**되어, 12권 중 10권이 마무리되었다.
+- 1권부터 11권까지 각 12개 장 초고가 모두 완성되었다. Act 1~3(1~9권)이 완결되었고, **Act 4(10~12권)의 10·11권 `Zero-Shot Hearts`·`Human-in-the-Loop`이 완성**되어, 12권 중 11권이 마무리되었다.
 - Act 4의 10권은 모태솔로 기수에서 예측 칸이 전부 `null`인 상태로 시작한다. 패널은 빈 데이터를 대체 지표로 채우려는 유혹을 멈추고 `[NO PREDICTION]`을 관찰 원칙으로 저장하며, 이준-서아의 불완전하지만 정직한 시작, 기범의 경계 학습, 로운-나연의 예외 약속이 "서툰 마음은 미숙한가, 아직 오염되지 않은가"에 답한다.
-- 다음 산출물은 11권 `Human-in-the-Loop`의 본편 초고다. `outline/vol11-human-in-the-loop.md`와 `state/*-vol11.md`를 먼저 읽고, 10권 에필로그의 `human-review/after-broadcast`·`returned-people/review-consent`·`prediction_features: pending_removal`을 이어받아 이전 참가자들의 방송 이후 삶과 예측 기능 제거로 진행한다.
+- Act 4의 11권은 이전 참가자들이 자기 방송을 다시 보는 `human-review/after-broadcast` 회차다. 한서윤은 사과문을 변명·용서요청·방송약속 없이 쓰고 비송출로 결정하며, 백이현은 공개 감사로 정보 비대칭을 역전시킨다. 강태산이 예측 기능을 잠그자 패널은 예측 없는 수동 관찰로 본업을 회복하고, Codex는 "되돌리려면 책임지게" 만드는 제거 패치(PR #2090)를 열어 둔다. 윤아의 라이브 선택 거부가 참가자 전체로 번지며 "방송 이후를 누가 책임지는가"에 답한다.
+- 다음 산출물은 완결권 12권 `No Final Algorithm`의 본편 초고다. `outline/vol12-no-final-algorithm.md`와 `state/*-vol12.md`를 먼저 읽고, 11권의 `last-season/no-dashboard`·PR #2090 미결정·무예측 최종 촬영 선언을 이어받아 마지막 기수의 예측 없는 최종 선택과 선택권 보존 결말로 시리즈를 마무리한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
