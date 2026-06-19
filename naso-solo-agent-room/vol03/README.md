@@ -2,7 +2,7 @@
 
 > **감정 질문**: 실패란 커플이 되지 않는 것인가, 자기 마음을 끝내 말하지 못하는 것인가?
 
-[← 이전 권](../vol02/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol02/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol04/README.md)
 
 ## 회차 목록
 
@@ -23,4 +23,4 @@
 
 ---
 
-[← 이전 권](../vol02/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol02/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol04/README.md)
