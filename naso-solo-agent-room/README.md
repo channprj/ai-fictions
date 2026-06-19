@@ -22,6 +22,7 @@
 | [5권](./vol05/README.md) | Dependency Graph (디펜던시 그래프) | 조건이 사랑을 방해하는가, 아니면 책임 없는 설렘을 걸러내는가? |
 | [6권](./vol06/README.md) | Refactor Your Name (리팩터 유어 네임) | 새 사랑은 과거를 이기는 것인가, 아니면 과거와 함께 걷는 것인가? |
 | [7권](./vol07/README.md) | Spec Sheet Lovers (스펙 시트 러버스) | 내가 고른 사람을 좋아하는가, 나를 좋아해 줄 확률이 높은 사람을 고르는가? |
+| [8권](./vol08/README.md) | Deadlock Paradise (데드락 패러다이스) | 기다림은 배려인가, 책임 회피인가? |
 
 > 1권부터 읽으려면 → [1권 프롤로그](./vol01/00-prologue.md)
 
@@ -233,6 +234,19 @@ naso-solo-agent-room/
     ├── 09-part9-yuna-refuses.md
     ├── 10-part10-observed-heart.md
     └── 11-epilogue.md
+└── vol08/
+    ├── 00-prologue.md
+    ├── 01-part1-choice-loop.md
+    ├── 02-part2-glamour-date.md
+    ├── 03-part3-slow-confession.md
+    ├── 04-part4-gemini-overfit.md
+    ├── 05-part5-auto-mission.md
+    ├── 06-part6-yuna-investigates.md
+    ├── 07-part7-taerin-stage.md
+    ├── 08-part8-haejun-break.md
+    ├── 09-part9-bora-stop.md
+    ├── 10-part10-deadlock-break.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -265,9 +279,9 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 1권부터 7권까지 각 12개 장 초고가 모두 완성되었다. Act 1(1~3권)·Act 2(4~6권)가 완결되었고, **Act 3(7~9권, 스펙·화제성·제작 개입)의 첫 권 `Spec Sheet Lovers`가 완성**되어, 12권 중 7권이 마무리되었다.
-- Act 1은 선택권 회복으로, Act 2는 사후 케어 윤리와 외부 감사 보고로 닫힌다. Act 3의 7권은 고스펙 기수에서 조건 일치율(spec_match)이 감정 동의를 증명하지 못해 Codex의 조건 분석이 붕괴하고, 관찰자(윤아·패널)가 시스템 개입의 입력값이 되며, 강태산이 자동 미션과 순환 호감 구조(deadlock paradise)를 승인한다.
-- 다음 산출물은 8권 `Deadlock Paradise`의 본편 초고다. `outline/vol08-deadlock-paradise.md`와 `state/*-vol08.md`를 먼저 읽고, 7권 에필로그의 `auto_mission`·`loop_retention`·순환 호감 구조를 이어받아 다자 교착, Gemini 과적합, 태린의 단독 퇴소로 진행한다.
+- 1권부터 8권까지 각 12개 장 초고가 모두 완성되었다. Act 1(1~3권)·Act 2(4~6권)가 완결되었고, **Act 3(7~9권)의 7·8권이 완성**되어, 12권 중 8권이 마무리되었다.
+- Act 3의 7권은 조건 일치율이 감정 동의를 증명하지 못해 Codex 분석이 붕괴하고, 8권은 자동 미션이 교착을 유지(deadlock paradise)하는 동안 Gemini가 화려한 신호에 과적합했다가 태린의 단독 퇴소로 붕괴하며, 윤아가 시스템 개입 패턴을 증거로 모은다.
+- 다음 산출물은 9권 `Observer Effect`의 본편 초고다. `outline/vol09-observer-effect.md`와 `state/*-vol09.md`를 먼저 읽고, 8권 에필로그의 `observer-effect/yuna-proof` 폴더와 윤아-한서윤-백이현 증거 결합을 이어받아 최종 선택 중단과 추천 로그 감사로 진행한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보

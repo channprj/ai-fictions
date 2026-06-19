@@ -2,7 +2,7 @@
 
 > **감정 질문**: 내가 고른 사람을 좋아하는가, 나를 좋아해 줄 확률이 높은 사람을 고르는가?
 
-[← 이전 권](../vol06/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol06/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol08/README.md)
 
 ## 회차 목록
 
@@ -23,4 +23,4 @@
 
 ---
 
-[← 이전 권](../vol06/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol06/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol08/README.md)
