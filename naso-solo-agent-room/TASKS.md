@@ -74,7 +74,8 @@
 - 9권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 3 결산권 `Observer Effect`가 완성되어 Act 1~3(1~9권)가 완결되었다.
 - 10권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 4 개막권 `Zero-Shot Hearts`가 완성되었다.
 - 11권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 4 중반권 `Human-in-the-Loop`이 완성되었다.
-- 다음 본편 초고는 완결권 12권 `vol12` `00-prologue.md`다. `outline/vol12-no-final-algorithm.md`와 `state/affection-graph-vol12.md`, `state/misunderstanding-queue-vol12.md`를 먼저 읽고, 11권 에필로그의 `last-season/no-dashboard`·PR #2090 미결정·무예측 최종 촬영 선언을 이어받아 마지막 기수의 예측 없는 최종 선택과 선택권 보존 결말로 시리즈를 마무리한다.
+- 12권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. **완결권 `No Final Algorithm`이 완성되어 전 12권 시리즈가 완결되었다.**
+- **모든 본편 초고가 완료되었다(12권 × 12파일).** 후속 작업은 권리 검토, 분량 보강(권당 90,000~120,000자 목표 대비 점검), 문체 통일 패스 등 퇴고 단계다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙
