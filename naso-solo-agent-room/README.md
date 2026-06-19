@@ -19,6 +19,7 @@
 | [2권](./vol02/README.md) | Callback Night (콜백 나이트) | 늦은 진심은 변명인가, 가장 어렵게 도착한 마음인가? |
 | [3권](./vol03/README.md) | Final Selection Crash (최종 선택 크래시) | 실패란 커플이 되지 않는 것인가, 자기 마음을 끝내 말하지 못하는 것인가? |
 | [4권](./vol04/README.md) | Legacy Heart Migration (레거시 하트 마이그레이션) | 과거를 설명해야 사랑받을 수 있다면, 그 사랑은 시작 전부터 재판인가? |
+| [5권](./vol05/README.md) | Dependency Graph (디펜던시 그래프) | 조건이 사랑을 방해하는가, 아니면 책임 없는 설렘을 걸러내는가? |
 
 > 1권부터 읽으려면 → [1권 프롤로그](./vol01/00-prologue.md)
 
@@ -191,6 +192,19 @@ naso-solo-agent-room/
     ├── 09-part9-first-migration.md
     ├── 10-part10-legacy-error.md
     └── 11-epilogue.md
+└── vol05/
+    ├── 00-prologue.md
+    ├── 01-part1-distance-table.md
+    ├── 02-part2-family-shadow.md
+    ├── 03-part3-lunch-mission.md
+    ├── 04-part4-junha-raon.md
+    ├── 05-part5-miri-no-label.md
+    ├── 06-part6-grok-softens.md
+    ├── 07-part7-dependency-failure.md
+    ├── 08-part8-night-kitchen.md
+    ├── 09-part9-yuchan-choice.md
+    ├── 10-part10-segyeong-boundary.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -223,9 +237,9 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 1권부터 4권까지 각 12개 장 초고가 모두 완성되었다. Act 1(1~3권, 첫 일반 기수)이 마무리되었고, Act 2(4~6권, 두 번째 사랑)의 첫 권 `Legacy Heart Migration`이 완성되었다.
-- Act 1의 최종 선택은 커플 수가 아니라 선택권 회복으로 닫힌다. Act 2의 4권은 과거·자녀·가족 반응이 얽힌 두 번째 사랑에서 Claude의 과보호가 처음 붕괴하고, LoveMatch의 위험 변수가 보호 명분으로 가동되며 백이현이 첫 고발 메일 초안을 쓴다.
-- 다음 산출물은 5권 `Dependency Graph`의 본편 초고다. `outline/vol05-dependency-graph.md`와 `state/*-vol05.md`를 먼저 읽고, 4권 에필로그의 `distance_table`, `family_shadow`, `stability_reweight` 씨앗을 이어받아 진행한다.
+- 1권부터 5권까지 각 12개 장 초고가 모두 완성되었다. Act 1(1~3권, 첫 일반 기수)이 마무리되었고, Act 2(4~6권, 두 번째 사랑)의 4·5권이 완성되었다.
+- Act 1의 최종 선택은 커플 수가 아니라 선택권 회복으로 닫힌다. Act 2의 4권은 Claude의 과보호가 처음 붕괴하고, 5권은 거리·가족·돌봄 조건의 의존성 그래프 위에서 GLM이 구조 분석의 한계를 인정하며, LoveMatch가 감정 변수를 보정에서 삭제로 확장하고 사후 케어(aftercare)를 낮춘다.
+- 다음 산출물은 6권 `Refactor Your Name`의 본편 초고다. `outline/vol06-refactor-your-name.md`와 `state/*-vol06.md`를 먼저 읽고, 5권 에필로그의 감정 변수 삭제·`aftercare_priority: low`·가려진 `panel_log_integration` 요청을 이어받아 Act 2 최종 선택과 관찰실 윤리회의로 진행한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보

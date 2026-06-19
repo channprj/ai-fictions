@@ -2,7 +2,7 @@
 
 > **감정 질문**: 과거를 설명해야 사랑받을 수 있다면, 그 사랑은 시작 전부터 재판인가?
 
-[← 이전 권](../vol03/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol03/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol05/README.md)
 
 ## 회차 목록
 
@@ -23,4 +23,4 @@
 
 ---
 
-[← 이전 권](../vol03/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol03/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol05/README.md)
