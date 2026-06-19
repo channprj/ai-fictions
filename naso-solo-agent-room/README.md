@@ -21,6 +21,7 @@
 | [4권](./vol04/README.md) | Legacy Heart Migration (레거시 하트 마이그레이션) | 과거를 설명해야 사랑받을 수 있다면, 그 사랑은 시작 전부터 재판인가? |
 | [5권](./vol05/README.md) | Dependency Graph (디펜던시 그래프) | 조건이 사랑을 방해하는가, 아니면 책임 없는 설렘을 걸러내는가? |
 | [6권](./vol06/README.md) | Refactor Your Name (리팩터 유어 네임) | 새 사랑은 과거를 이기는 것인가, 아니면 과거와 함께 걷는 것인가? |
+| [7권](./vol07/README.md) | Spec Sheet Lovers (스펙 시트 러버스) | 내가 고른 사람을 좋아하는가, 나를 좋아해 줄 확률이 높은 사람을 고르는가? |
 
 > 1권부터 읽으려면 → [1권 프롤로그](./vol01/00-prologue.md)
 
@@ -219,6 +220,19 @@ naso-solo-agent-room/
     ├── 09-part9-final-selection.md
     ├── 10-part10-aftercare.md
     └── 11-epilogue.md
+└── vol07/
+    ├── 00-prologue.md
+    ├── 01-part1-perfect-arrival.md
+    ├── 02-part2-profile-shock.md
+    ├── 03-part3-kpi-date.md
+    ├── 04-part4-yuna-camera.md
+    ├── 05-part5-codex-confidence.md
+    ├── 06-part6-slow-bookstore.md
+    ├── 07-part7-production-push.md
+    ├── 08-part8-spec-collapse.md
+    ├── 09-part9-yuna-refuses.md
+    ├── 10-part10-observed-heart.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -251,9 +265,9 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 1권부터 6권까지 각 12개 장 초고가 모두 완성되었다. **Act 1(1~3권, 첫 일반 기수)과 Act 2(4~6권, 두 번째 사랑)가 완결**되어, 12권 중 전반부 6권이 마무리되었다.
-- Act 1의 최종 선택은 커플 수가 아니라 선택권 회복으로 닫힌다. Act 2는 두 번째 사랑의 상처·조건·사후 책임을 다루며, Claude의 과보호 붕괴(4권), GLM의 구조 분석 한계 인정(5권), 관찰실 윤리회의와 사후 케어 결산(6권)을 거친다. Act 2 말미에 백이현·한서윤·나은결이 강태산의 화제성 개입(자동 미션 승인·패널 로그 재사용)을 외부 감사로 보고하며 Act 3을 연다.
-- 다음 산출물은 7권 `Spec Sheet Lovers`의 본편 초고다. `outline/vol07-spec-sheet-lovers.md`와 `state/*-vol07.md`를 먼저 읽고, 6권 에필로그의 고스펙 기수·`engagement_score`·자동 미션 승인·패널 로그 추천 입력값을 이어받아 Act 3(스펙·화제성·제작 개입)으로 진행한다.
+- 1권부터 7권까지 각 12개 장 초고가 모두 완성되었다. Act 1(1~3권)·Act 2(4~6권)가 완결되었고, **Act 3(7~9권, 스펙·화제성·제작 개입)의 첫 권 `Spec Sheet Lovers`가 완성**되어, 12권 중 7권이 마무리되었다.
+- Act 1은 선택권 회복으로, Act 2는 사후 케어 윤리와 외부 감사 보고로 닫힌다. Act 3의 7권은 고스펙 기수에서 조건 일치율(spec_match)이 감정 동의를 증명하지 못해 Codex의 조건 분석이 붕괴하고, 관찰자(윤아·패널)가 시스템 개입의 입력값이 되며, 강태산이 자동 미션과 순환 호감 구조(deadlock paradise)를 승인한다.
+- 다음 산출물은 8권 `Deadlock Paradise`의 본편 초고다. `outline/vol08-deadlock-paradise.md`와 `state/*-vol08.md`를 먼저 읽고, 7권 에필로그의 `auto_mission`·`loop_retention`·순환 호감 구조를 이어받아 다자 교착, Gemini 과적합, 태린의 단독 퇴소로 진행한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
