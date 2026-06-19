@@ -236,6 +236,4 @@ next_hook: LoveMatch가 최종 선택 전날 선우-하린 조합 옆에 `low su
 
 ---
 
----
-
 [← 이전: 10. 죽은 신호](./10-part10-dead-signal.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 크래시 리포트 예고 →](../vol03/00-prologue.md)

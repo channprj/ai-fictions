@@ -380,6 +380,4 @@ next_pressure: Codex가 도윤 브랜치 불일치를 기록하고, 10장 패널
 
 ---
 
----
-
 [← 이전: 08. 침묵의 커밋](./08-part8-silent-commit.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 10. 첫 균열 →](./10-part10-first-crack.md)

@@ -337,6 +337,4 @@ next_hook: 도윤과 소연의 보라색 동선에서도 "잘 맞는 점" 질문
 
 ---
 
----
-
 [← 이전: 02. 선택 미션](./02-part2-choice-mission.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 04. 조건의 끝 →](./04-part4-doyoon-soyeon.md)

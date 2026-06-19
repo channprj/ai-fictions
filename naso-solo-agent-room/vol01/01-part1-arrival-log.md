@@ -385,6 +385,4 @@ Gemini가 아주 낮게 말했다.
 
 ---
 
----
-
 [← 이전: 00. 관찰실 부팅](./00-prologue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 02. 첫인상 선택 →](./02-part2-first-choice.md)
