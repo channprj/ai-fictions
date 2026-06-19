@@ -70,7 +70,8 @@
 - 5권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 2 중반권 `Dependency Graph`가 완성되었다.
 - 6권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 2 결산권 `Refactor Your Name`이 완성되어 Act 1~2(1~6권)가 완결되었다.
 - 7권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 3 개막권 `Spec Sheet Lovers`가 완성되었다.
-- 다음 본편 초고는 8권 `vol08` `00-prologue.md`다. `outline/vol08-deadlock-paradise.md`와 `state/affection-graph-vol08.md`, `state/misunderstanding-queue-vol08.md`를 먼저 읽고, 7권 에필로그의 `auto_mission`·`loop_retention`·순환 호감 구조(deadlock paradise)를 이어받아 진행한다.
+- 8권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 3 중반권 `Deadlock Paradise`가 완성되었다.
+- 다음 본편 초고는 9권 `vol09` `00-prologue.md`다. `outline/vol09-observer-effect.md`와 `state/affection-graph-vol09.md`, `state/misunderstanding-queue-vol09.md`를 먼저 읽고, 8권 에필로그의 `observer-effect/yuna-proof`와 윤아-한서윤-백이현 증거 결합을 이어받아 진행한다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙
