@@ -2,7 +2,7 @@
 
 > **감정 질문**: 서툰 마음은 미숙한가, 아니면 아직 오염되지 않은가?
 
-[← 이전 권](../vol09/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol09/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol11/README.md)
 
 ## 회차 목록
 
@@ -23,4 +23,4 @@
 
 ---
 
-[← 이전 권](../vol09/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol09/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol11/README.md)
