@@ -2,7 +2,7 @@
 
 > **감정 질문**: 조작된 장면에서 나온 진심은 가짜인가?
 
-[← 이전 권](../vol08/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol08/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol10/README.md)
 
 ## 회차 목록
 
@@ -23,4 +23,4 @@
 
 ---
 
-[← 이전 권](../vol08/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol08/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol10/README.md)

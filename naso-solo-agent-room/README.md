@@ -24,6 +24,7 @@
 | [7권](./vol07/README.md) | Spec Sheet Lovers (스펙 시트 러버스) | 내가 고른 사람을 좋아하는가, 나를 좋아해 줄 확률이 높은 사람을 고르는가? |
 | [8권](./vol08/README.md) | Deadlock Paradise (데드락 패러다이스) | 기다림은 배려인가, 책임 회피인가? |
 | [9권](./vol09/README.md) | Observer Effect (옵저버 이펙트) | 조작된 장면에서 나온 진심은 가짜인가? |
+| [10권](./vol10/README.md) | Zero-Shot Hearts (제로샷 하츠) | 서툰 마음은 미숙한가, 아니면 아직 오염되지 않은가? |
 
 > 1권부터 읽으려면 → [1권 프롤로그](./vol01/00-prologue.md)
 
@@ -261,6 +262,19 @@ naso-solo-agent-room/
     ├── 09-part9-public-break.md
     ├── 10-part10-choice-after-manipulation.md
     └── 11-epilogue.md
+└── vol10/
+    ├── 00-prologue.md
+    ├── 01-part1-first-ever-arrival.md
+    ├── 02-part2-eye-contact-error.md
+    ├── 03-part3-library-star.md
+    ├── 04-part4-boundary-lesson.md
+    ├── 05-part5-qa-date.md
+    ├── 06-part6-panel-empty-model.md
+    ├── 07-part7-first-jealousy.md
+    ├── 08-part8-no-script.md
+    ├── 09-part9-tiny-courage.md
+    ├── 10-part10-zero-shot-choice.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -293,9 +307,9 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 1권부터 9권까지 각 12개 장 초고가 모두 완성되었다. **Act 1(1~3권)·Act 2(4~6권)·Act 3(7~9권)이 완결**되어, 12권 중 9권이 마무리되었다.
-- Act 3은 스펙·화제성·제작 개입을 다룬다. 7권 조건표 붕괴, 8권 교착의 낙원과 태린 단독 퇴소, 9권 관찰자 효과(패널 분석이 미션 입력값으로 재사용된 사실 폭로)로 이어지며, 최종 선택이 처음으로 멈추고 패널이 첫 NO PREDICTION을 실행한다. 강태산은 책임 인정 대신 패널 접근 권한을 제한한다.
-- 다음 산출물은 10권 `Zero-Shot Hearts`의 본편 초고다. `outline/vol10-zero-shot-hearts.md`와 `state/*-vol10.md`를 먼저 읽고, 9권 에필로그의 `zero-shot-hearts/no-prior-data`·`prediction_access: restricted`·예측 칸 `null`을 이어받아 Act 4(모태솔로 기수·예측 중지)로 진행한다.
+- 1권부터 10권까지 각 12개 장 초고가 모두 완성되었다. Act 1~3(1~9권)이 완결되었고, **Act 4(10~12권)의 첫 권 `Zero-Shot Hearts`가 완성**되어, 12권 중 10권이 마무리되었다.
+- Act 4의 10권은 모태솔로 기수에서 예측 칸이 전부 `null`인 상태로 시작한다. 패널은 빈 데이터를 대체 지표로 채우려는 유혹을 멈추고 `[NO PREDICTION]`을 관찰 원칙으로 저장하며, 이준-서아의 불완전하지만 정직한 시작, 기범의 경계 학습, 로운-나연의 예외 약속이 "서툰 마음은 미숙한가, 아직 오염되지 않은가"에 답한다.
+- 다음 산출물은 11권 `Human-in-the-Loop`의 본편 초고다. `outline/vol11-human-in-the-loop.md`와 `state/*-vol11.md`를 먼저 읽고, 10권 에필로그의 `human-review/after-broadcast`·`returned-people/review-consent`·`prediction_features: pending_removal`을 이어받아 이전 참가자들의 방송 이후 삶과 예측 기능 제거로 진행한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
