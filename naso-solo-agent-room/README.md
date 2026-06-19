@@ -18,6 +18,7 @@
 | [1권](./vol01/README.md) | First Impression Build (첫인상 빌드) | 첫인상은 진짜 마음의 첫 버전인가, 가장 빠른 오해인가? |
 | [2권](./vol02/README.md) | Callback Night (콜백 나이트) | 늦은 진심은 변명인가, 가장 어렵게 도착한 마음인가? |
 | [3권](./vol03/README.md) | Final Selection Crash (최종 선택 크래시) | 실패란 커플이 되지 않는 것인가, 자기 마음을 끝내 말하지 못하는 것인가? |
+| [4권](./vol04/README.md) | Legacy Heart Migration (레거시 하트 마이그레이션) | 과거를 설명해야 사랑받을 수 있다면, 그 사랑은 시작 전부터 재판인가? |
 
 > 1권부터 읽으려면 → [1권 프롤로그](./vol01/00-prologue.md)
 
@@ -177,6 +178,19 @@ naso-solo-agent-room/
     ├── 09-part9-final-selection.md
     ├── 10-part10-after-camera.md
     └── 11-epilogue.md
+└── vol04/
+    ├── 00-prologue.md
+    ├── 01-part1-second-arrival.md
+    ├── 02-part2-profile-disclosure.md
+    ├── 03-part3-careful-dinner.md
+    ├── 04-part4-yuchan-segyeong.md
+    ├── 05-part5-chef-performance.md
+    ├── 06-part6-claude-overguard.md
+    ├── 07-part7-child-question.md
+    ├── 08-part8-no-more-trial.md
+    ├── 09-part9-first-migration.md
+    ├── 10-part10-legacy-error.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -209,9 +223,9 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 3권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 완성되어 Act 1(첫 일반 기수)이 마무리되었다.
-- 1권부터 3권까지가 Act 1의 완결된 한 시즌을 이룬다. 최종 선택은 커플 수가 아니라 선택권 회복으로 닫히고, 11권 에필로그가 Act 2의 위험 변수(이혼·자녀·가족 반응) 씨앗을 예고한다.
-- 다음 산출물은 4권 `Legacy Heart Migration`의 본편 초고다. `outline/vol04-legacy-heart-migration.md`와 `state/*-vol04.md`를 먼저 읽고 진행한다.
+- 1권부터 4권까지 각 12개 장 초고가 모두 완성되었다. Act 1(1~3권, 첫 일반 기수)이 마무리되었고, Act 2(4~6권, 두 번째 사랑)의 첫 권 `Legacy Heart Migration`이 완성되었다.
+- Act 1의 최종 선택은 커플 수가 아니라 선택권 회복으로 닫힌다. Act 2의 4권은 과거·자녀·가족 반응이 얽힌 두 번째 사랑에서 Claude의 과보호가 처음 붕괴하고, LoveMatch의 위험 변수가 보호 명분으로 가동되며 백이현이 첫 고발 메일 초안을 쓴다.
+- 다음 산출물은 5권 `Dependency Graph`의 본편 초고다. `outline/vol05-dependency-graph.md`와 `state/*-vol05.md`를 먼저 읽고, 4권 에필로그의 `distance_table`, `family_shadow`, `stability_reweight` 씨앗을 이어받아 진행한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
