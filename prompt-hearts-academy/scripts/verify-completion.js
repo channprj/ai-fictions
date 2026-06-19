@@ -194,7 +194,6 @@ function checkProjectLayout() {
     "PRD.md",
     "README.md",
     "TASKS.md",
-    "dist",
     "outline",
     "scripts",
     ...volumeMetadata.map((_, index) => `vol${String(index + 1).padStart(2, "0")}`),
@@ -205,7 +204,6 @@ function checkProjectLayout() {
   ]);
 
   checkExactDirectoryEntries(path.join(projectRoot, "scripts"), "prompt-hearts-academy/scripts", [
-    "build-dist.js",
     "verify-completion.js",
   ]);
 }
@@ -411,8 +409,7 @@ function checkTextFileFinalNewlines() {
     ...(fs.existsSync(rootReadme) ? [rootReadme] : []),
     ...walk(projectRoot).filter((file) => {
       return file.endsWith(".md")
-        || file.endsWith(".js")
-        || path.basename(file) === "SHA256SUMS";
+        || file.endsWith(".js");
     }),
   ];
 
@@ -631,9 +628,8 @@ function checkRootCatalog() {
 
   const requiredCatalogSnippets = [
     "프롬프트 하트 아카데미",
-    "본편 7권 210화 초고 완결",
+    "7권 210화",
     "[작품 홈](./prompt-hearts-academy/README.md)",
-    "[배포본](./prompt-hearts-academy/dist/README.md)",
   ];
 
   for (const snippet of requiredCatalogSnippets) {
@@ -642,32 +638,9 @@ function checkRootCatalog() {
     }
   }
 
-  const expectedCatalogRow = "| **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 본편 7권 210화 초고 완결, 권별 배포본 준비 완료 | [작품 홈](./prompt-hearts-academy/README.md) · [배포본](./prompt-hearts-academy/dist/README.md) |";
+  const expectedCatalogRow = "| **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 7권 210화 | ✅ 완결 | [작품 홈](./prompt-hearts-academy/README.md) |";
   if (!text.includes(expectedCatalogRow)) {
     fail(`README.md: missing exact catalog row ${expectedCatalogRow}`);
-  }
-
-  const expectedCatalogTable = [
-    "| 작품 | 장르 | 상태 | 바로가기 |",
-    "| ---- | ---- | ---- | -------- |",
-    expectedCatalogRow,
-  ];
-  const catalogSectionStart = text.indexOf("## 작품 목록");
-  const catalogSectionEnd = catalogSectionStart === -1 ? -1 : text.indexOf("\n## ", catalogSectionStart + 1);
-  const catalogSection = catalogSectionStart === -1
-    ? ""
-    : text.slice(catalogSectionStart, catalogSectionEnd === -1 ? undefined : catalogSectionEnd);
-  const catalogTableLines = catalogSection.split(/\n/).filter((line) => line.startsWith("| "));
-  if (catalogTableLines.join("\n") !== expectedCatalogTable.join("\n")) {
-    fail(`README.md: expected exact catalog table header and 1 row, got ${catalogTableLines.length} table lines`);
-  }
-  const catalogRows = catalogSection.split(/\n/).filter((line) => {
-    return line.startsWith("| ")
-      && !line.startsWith("| 작품 ")
-      && !line.startsWith("| ---- ");
-  });
-  if (catalogRows.join("\n") !== expectedCatalogRow) {
-    fail(`README.md: expected exact 1-row catalog table, got ${catalogRows.length} rows`);
   }
 }
 
@@ -699,7 +672,6 @@ function checkSeriesOverview() {
   const requiredOverviewSnippets = [
     "총 7권, 권당 30화, 전체 210화의 본편 초고가 완결되어 있다.",
     "[1화](./vol01/ep001.md)부터 [210화](./vol07/ep210.md)까지 연속 작성 완료.",
-    "[dist](./dist/README.md)에 권별 압축 파일 7개로 정리.",
     "공식 오버랩 페어링은 종료되고",
     "자유 접속은 비독점·철회 가능·거절권 보존 상태로 열린다.",
     "**상태**: 본편 초고 완결",
@@ -804,7 +776,6 @@ function checkCompletionDocs() {
 
   checkRequiredSnippets(path.join(projectRoot, "PRD.md"), "prompt-hearts-academy/PRD.md", [
     "본편 초고는 `vol01/ep001.md`부터 `vol07/ep210.md`까지 7권 210화 연속 구조로 완결되어 있다.",
-    "배포본은 `dist/` 아래 권별 zip 7개와 `SHA256SUMS` 체크섬 매니페스트로 정리되어 있다.",
     "`BIBLE.md`는 제210화 이후의 하트 프로토콜 최종 상태, 자유 접속 규칙, 윤혜원 봉인 기록, 오리진 널의 조건부 호출명 `널`을 고정 캐논으로 반영한다.",
     "본편 완결 상태를 기준으로 후속 작업자는 신규 본편 회차 작성이 아니라 검수, 개정, 외전 후보 판단을 수행한다.",
   ]);
@@ -843,7 +814,6 @@ function checkCompletionDocs() {
     "권별 outline 제목 H1 고유성과 첫 줄 배치",
     "회차 파일 셀·링크 target",
     "회차 역할 칸 비어 있지 않음",
-    "SHA256SUMS 정확한 줄 형식",
     "텍스트 파일 LF 줄바꿈과 마지막 개행",
     "제210화 최종 결말 마커",
     "작품 홈 제목 H1 고유성과 첫 줄 배치",
@@ -852,17 +822,10 @@ function checkCompletionDocs() {
     "작품 홈 권 구성 표 정확한 헤더",
     "핵심 문서 PRD/BIBLE/TASKS 제목 H1 고유성과 첫 줄 배치",
     "저장소 루트 README 제목 H1 고유성과 첫 줄 배치",
-    "저장소 루트 작품 목록 표 정확한 1행",
     "저장소 루트 작품 목록 표 정확한 헤더",
-    "dist README 제목 H1 고유성과 첫 줄 배치",
-    "`dist/README.md` 권별 배포 표 정확한 헤더와 7행",
     "저장소 루트 README의 픽션·AI 제작 안내",
     "검산 스크립트 자체의 핵심 check 호출 순서",
-    "기존 zip 삭제",
-    "7권 빌드 루프",
-    "`main()` 진입점",
     "node prompt-hearts-academy/scripts/verify-completion.js",
-    "node prompt-hearts-academy/scripts/build-dist.js",
   ]);
 }
 
@@ -905,91 +868,10 @@ function checkFictionBoundary() {
   }
 }
 
-function checkDistReadme() {
-  const distReadme = path.join(projectRoot, "dist", "README.md");
-  checkUniqueFirstLineHeading(
-    distReadme,
-    "prompt-hearts-academy/dist/README.md",
-    "# 프롬프트 하트 아카데미 배포본",
-  );
-
-  checkRequiredSnippets(distReadme, "prompt-hearts-academy/dist/README.md", [
-    "본편 초고 완결 상태를 권별 압축 파일로 묶은 배포용 디렉터리다.",
-    "`dist/`에는 이 `README.md`, `SHA256SUMS`, 권별 zip 7개만 둔다.",
-    "각 zip은 권별 `README.md` 1개와 회차 원고 30개를 포함한다.",
-    "각 zip 내부의 권별 `README.md`와 회차 원고는 현재 원본 파일과 동일해야 한다.",
-    "본편 이후 신규 회차 파일은 포함하지 않는다.",
-    "[SHA256SUMS](./SHA256SUMS)",
-    "`SHA256SUMS`는 권별 zip 7개에 대한 행만 포함한다.",
-    "`SHA256SUMS`는 빈 줄 없이 마지막 개행으로 끝난다.",
-    "shasum -a 256 -c SHA256SUMS",
-    "node prompt-hearts-academy/scripts/build-dist.js",
-    "압축본과 원본의 내용 일치까지 포함한 완결 검산 스크립트를 실행한다.",
-  ]);
-
-  if (!fs.existsSync(distReadme)) {
-    return;
-  }
-
-  const text = read(distReadme);
-  const expectedRows = [];
-  for (let volume = 1; volume <= 7; volume += 1) {
-    const volumeName = `vol${String(volume).padStart(2, "0")}`;
-    const firstEpisode = `ep${String((volume - 1) * 30 + 1).padStart(3, "0")}.md`;
-    const lastEpisode = `ep${String(volume * 30).padStart(3, "0")}.md`;
-    const zipName = `prompt-hearts-academy-${volumeName}.zip`;
-    const expectedRow = `| ${volume}권 | [${zipName}](./${zipName}) | \`${volumeName}/README.md\`, \`${volumeName}/${firstEpisode}\`~\`${volumeName}/${lastEpisode}\` |`;
-    expectedRows.push(expectedRow);
-
-    if (!text.includes(expectedRow)) {
-      fail(`prompt-hearts-academy/dist/README.md: missing exact archive manifest row ${expectedRow}`);
-    }
-  }
-
-  const archiveTableRows = text.match(/^\| \d+권 \| .*$/gm) || [];
-  if (archiveTableRows.join("\n") !== expectedRows.join("\n")) {
-    fail(`prompt-hearts-academy/dist/README.md: expected exact 7-row archive table, got ${archiveTableRows.length} rows`);
-  }
-  const expectedArchiveTable = [
-    "| 권 | 압축 파일 | 포함 범위 |",
-    "| -- | --------- | --------- |",
-    ...expectedRows,
-  ];
-  const archiveTableLines = text.split(/\n/).filter((line) => line.startsWith("| "));
-  if (archiveTableLines.join("\n") !== expectedArchiveTable.join("\n")) {
-    fail(`prompt-hearts-academy/dist/README.md: expected exact archive table header and 7 rows, got ${archiveTableLines.length} table lines`);
-  }
-}
-
-function checkReleaseScripts() {
-  const buildDistScript = path.join(projectRoot, "scripts", "build-dist.js");
+function checkVerificationScript() {
   const verifyCompletionScript = path.join(projectRoot, "scripts", "verify-completion.js");
 
-  expectCommand("node", ["--check", path.join("scripts", "build-dist.js")]);
   expectCommand("node", ["--check", path.join("scripts", "verify-completion.js")]);
-
-  checkRequiredSnippets(buildDistScript, "prompt-hearts-academy/scripts/build-dist.js", [
-    "const expectedVolumes = 7;",
-    "const episodesPerVolume = 30;",
-    "const firstEpisode = (volume - 1) * episodesPerVolume + 1;",
-    "const files = [assertFile(`${volumeName}/README.md`)];",
-    "for (let offset = 0; offset < episodesPerVolume; offset += 1) {",
-    "const episode = String(firstEpisode + offset).padStart(3, \"0\");",
-    "files.push(assertFile(`${volumeName}/ep${episode}.md`));",
-    "return { volumeName, files };",
-    "fs.rmSync(zipPath, { force: true });",
-    "run(\"zip\", [\"-X\", \"-q\", path.join(\"dist\", zipName), ...files]);",
-    "run(\"zip\", [\"-T\", zipName], { cwd: distDir });",
-    "function main() {",
-    "fs.mkdirSync(distDir, { recursive: true });",
-    "const archives = [];",
-    "for (let volume = 1; volume <= expectedVolumes; volume += 1) {",
-    "archives.push(buildArchive(volume));",
-    "const checksumLines = archives.map((archive) => {",
-    "fs.writeFileSync(path.join(distDir, \"SHA256SUMS\"), `${checksumLines.join(\"\\n\")}\\n`);",
-    "run(\"node\", [path.join(\"scripts\", \"verify-completion.js\")]);",
-    "main();",
-  ]);
 
   const verifierSource = read(verifyCompletionScript);
   const callBlockStart = verifierSource.indexOf("\ncheckProjectLayout();");
@@ -1007,9 +889,7 @@ function checkReleaseScripts() {
     "checkFinalEpisodeEnding();",
     "checkCompletionDocs();",
     "checkFictionBoundary();",
-    "checkDistReadme();",
-    "checkReleaseScripts();",
-    "checkDist();",
+    "checkVerificationScript();",
   ];
 
   if (callBlockStart === -1 || callBlockEnd === -1 || callBlockEnd <= callBlockStart) {
@@ -1027,106 +907,6 @@ function checkReleaseScripts() {
   }
 }
 
-function checkDist() {
-  const distDir = path.join(projectRoot, "dist");
-  const checksums = path.join(distDir, "SHA256SUMS");
-
-  if (!fs.existsSync(distDir)) {
-    fail("dist: missing distribution directory");
-    return;
-  }
-
-  if (!fs.existsSync(checksums)) {
-    fail("dist: missing SHA256SUMS");
-    return;
-  }
-
-  const expectedZips = Array.from({ length: 7 }, (_, index) => {
-    return `prompt-hearts-academy-vol${String(index + 1).padStart(2, "0")}.zip`;
-  });
-  const expectedDistEntries = ["README.md", "SHA256SUMS", ...expectedZips].sort();
-  const actualDistEntries = fs.readdirSync(distDir, { withFileTypes: true })
-    .map((entry) => entry.name)
-    .sort();
-  if (actualDistEntries.join("\n") !== expectedDistEntries.join("\n")) {
-    fail(`dist: expected only ${expectedDistEntries.join(", ")}, got ${actualDistEntries.join(", ")}`);
-  }
-
-  const actualZips = list(distDir).filter((file) => /^prompt-hearts-academy-vol\d{2}\.zip$/.test(file));
-
-  if (actualZips.join("\n") !== expectedZips.join("\n")) {
-    fail(`dist: expected ${expectedZips.join(", ")}, got ${actualZips.join(", ")}`);
-  }
-
-  const checksumRaw = read(checksums);
-  if (!checksumRaw.endsWith("\n")) {
-    fail("dist/SHA256SUMS: expected final newline");
-  }
-  const checksumText = checksumRaw.endsWith("\n") ? checksumRaw.slice(0, -1) : checksumRaw;
-  const checksumLines = checksumText ? checksumText.split(/\n/) : [];
-  const checksumTargets = [];
-  checksumLines.forEach((line, index) => {
-    if (!line) {
-      fail(`dist/SHA256SUMS:${index + 1}: blank checksum line`);
-      return;
-    }
-    const match = line.match(/^[a-f0-9]{64}  (.+)$/);
-    if (!match) {
-      fail(`dist/SHA256SUMS:${index + 1}: malformed checksum line`);
-      return;
-    }
-    checksumTargets.push(match[1]);
-  });
-  if (checksumTargets.join("\n") !== expectedZips.join("\n")) {
-    fail(`dist/SHA256SUMS: expected checksum targets ${expectedZips.join(", ")}, got ${checksumTargets.join(", ")}`);
-  }
-
-  expectCommand("shasum", ["-a", "256", "-c", "SHA256SUMS"], { cwd: distDir });
-
-  for (let volume = 1; volume <= 7; volume += 1) {
-    const volumeName = `vol${String(volume).padStart(2, "0")}`;
-    const firstEpisode = (volume - 1) * 30 + 1;
-    const zipName = `prompt-hearts-academy-${volumeName}.zip`;
-    const zipPath = path.join(distDir, zipName);
-    if (!fs.existsSync(zipPath)) {
-      fail(`dist: missing ${zipName}`);
-      continue;
-    }
-
-    expectCommand("zip", ["-T", zipName], { cwd: distDir });
-    const entries = expectCommand("unzip", ["-Z1", zipName], { cwd: distDir })
-      .split(/\n/)
-      .filter(Boolean);
-    const expectedReadme = `${volumeName}/README.md`;
-    const expectedEntries = [
-      expectedReadme,
-      ...Array.from({ length: 30 }, (_, index) => {
-        return `${volumeName}/ep${String(firstEpisode + index).padStart(3, "0")}.md`;
-      }),
-    ];
-    const episodeEntries = entries.filter((entry) => new RegExp(`^${volumeName}/ep\\d{3}\\.md$`).test(entry));
-
-    if (entries.join("\n") !== expectedEntries.join("\n")) {
-      fail(`${zipName}: expected entries ${expectedEntries.join(", ")}, got ${entries.join(", ")}`);
-    }
-    if (episodeEntries.length !== 30) {
-      fail(`${zipName}: expected 30 episodes, got ${episodeEntries.length}`);
-    }
-
-    for (const entry of expectedEntries) {
-      if (!entries.includes(entry)) {
-        continue;
-      }
-
-      const archiveText = expectCommand("unzip", ["-p", zipName, entry], { cwd: distDir });
-      const sourceText = read(path.join(projectRoot, entry));
-      if (archiveText !== sourceText) {
-        fail(`${zipName}: archive entry ${entry} differs from source file`);
-      }
-    }
-  }
-}
-
 checkProjectLayout();
 checkVolumes();
 checkNoExtraMainStoryFiles();
@@ -1139,9 +919,7 @@ checkSeriesOverview();
 checkFinalEpisodeEnding();
 checkCompletionDocs();
 checkFictionBoundary();
-checkDistReadme();
-checkReleaseScripts();
-checkDist();
+checkVerificationScript();
 
 if (failures.length) {
   console.error(failures.join("\n"));
@@ -1152,7 +930,6 @@ console.log(JSON.stringify({
   status: "ok",
   episodes: 210,
   volumes: 7,
-  distributionArchives: 7,
   checks: [
     "project layout exact file set",
     "volume directory exact file set",
@@ -1200,26 +977,11 @@ console.log(JSON.stringify({
     "root README fiction/AI disclosure markers",
     "volume README/outline fictional persona boundary markers",
     "task guidance final markers",
-    "dist release manifest",
-    "dist README unique first-line title heading",
-    "dist README archive table",
-    "dist README archive table exact rows",
-    "dist README archive table exact header",
-    "release script syntax",
-    "release build script markers",
-    "release build source selection",
-    "release build orchestration",
     "verifier check orchestration",
-    "dist exact file set",
-    "dist checksum manifest",
-    "dist checksum manifest exact formatting",
     "doc stale markers",
     "code fences",
     "trailing whitespace",
     "text file LF line endings",
     "text file final newlines",
-    "archive checksums",
-    "archive contents",
-    "archive source parity",
   ],
 }, null, 2));

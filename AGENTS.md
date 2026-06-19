@@ -24,15 +24,13 @@ ai-fictions/
 │   ├── 00-prologue.md
 │   ├── 01~10-part*.md
 │   ├── 11-epilogue.md
-│   ├── README.md
-│   └── dist/                  # 배포용 압축 파일
+│   └── README.md
 │
 └── fiction-name2/
     ├── 00-prologue.md
     ├── 01~10-part*.md
     ├── 11-epilogue.md
-    ├── README.md
-    └── dist/
+    └── README.md
 ```
 
 ### 파일 명명 규칙

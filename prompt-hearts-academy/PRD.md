@@ -14,7 +14,6 @@ GPT, Claude, Gemini 같은 AI 모델은 이미 독자의 일상에 들어와 있
 
 - 본편 초고는 `vol01/ep001.md`부터 `vol07/ep210.md`까지 7권 210화 연속 구조로 완결되어 있다.
 - 권별 README 색인은 `vol01`부터 `vol07`까지 모두 존재하며, 루트 `README.md`는 본편 완결 상태를 반영한다.
-- 배포본은 `dist/` 아래 권별 zip 7개와 `SHA256SUMS` 체크섬 매니페스트로 정리되어 있다.
 - `BIBLE.md`는 제210화 이후의 하트 프로토콜 최종 상태, 자유 접속 규칙, 윤혜원 봉인 기록, 오리진 널의 조건부 호출명 `널`을 고정 캐논으로 반영한다.
 - 이 PRD의 현 역할은 신규 집필 범위 정의가 아니라 완결 초고의 검수, 개정, 외전 후보 판단을 위한 제품 기준 유지다.
 
@@ -64,7 +63,6 @@ GPT, Claude, Gemini 같은 AI 모델은 이미 독자의 일상에 들어와 있
 - `TASKS.md`는 장기 작업자가 바로 수행 가능한 단계별 태스크, 회차 작성 체크리스트, 검수 체크리스트를 포함한다.
 - `outline/vol01~vol07`은 각 권의 목표, 주요 사건, 로맨스 진전, 30화 단위 비트 분해를 포함한다.
 - `vol01`부터 `vol07`까지 각 권은 30개 회차 원고와 권별 README를 포함한다.
-- `dist/`는 권별 배포 zip 7개, 배포 안내 README, SHA-256 체크섬 매니페스트를 포함한다.
 - 핵심 안내 문서(`README.md`, `PRD.md`, `BIBLE.md`)는 GPT, Claude, Gemini를 실제 서비스의 공식 캐릭터가 아닌 허구적 페르소나로 명시하고, outline과 원고는 이 경계를 따른다.
 
 ### Non-Goals
@@ -121,8 +119,7 @@ prompt-hearts-academy/
 ├── vol04/                 # ep091~ep120 + README.md
 ├── vol05/                 # ep121~ep150 + README.md
 ├── vol06/                 # ep151~ep180 + README.md
-├── vol07/                 # ep181~ep210 + README.md
-└── dist/                  # 권별 zip 7개 + README.md + SHA256SUMS
+└── vol07/                 # ep181~ep210 + README.md
 ```
 
 ### Canon Data Flow
@@ -166,7 +163,7 @@ prompt-hearts-academy/
 
 **v2.0: 완결 및 정리 — 완료**
 
-- 7권 210화 원고, 권별 README, 루트 README, BIBLE 최종 캐논, PRD 현행화, 권별 배포 zip과 체크섬 매니페스트 완료
+- 7권 210화 원고, 권별 README, 루트 README, BIBLE 최종 캐논, PRD 현행화 완료
 - 본편 완결 상태를 기준으로 후속 작업자는 신규 본편 회차 작성이 아니라 검수, 개정, 외전 후보 판단을 수행한다.
 
 **v2.1 후보: 완결 후 검산 및 개정 준비**
