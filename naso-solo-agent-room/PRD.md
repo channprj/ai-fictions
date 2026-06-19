@@ -232,12 +232,11 @@ naso-solo-agent-room/
 │   ├── vol10-zero-shot-hearts.md
 │   ├── vol11-human-in-the-loop.md
 │   └── vol12-no-final-algorithm.md
-├── vol01/
-│   ├── 00-prologue.md
-│   ├── 01-part1-arrival-log.md
-│   ├── ...
-│   └── 11-epilogue.md
-└── dist/
+└── vol01/
+    ├── 00-prologue.md
+    ├── 01-part1-arrival-log.md
+    ├── ...
+    └── 11-epilogue.md
 ```
 
 ### 4.4 Chapter Contract
@@ -1329,10 +1328,6 @@ Runtime Tracking
   misunderstanding queues
   panel arc notes
   production mystery timeline
-
-Distribution
-  dist/
-    -> volume zips, checksums, release notes
 ```
 
 ### 18.2 Canon Data Flow
@@ -1382,19 +1377,6 @@ vol12/
 ```
 
 슬러그는 영어 소문자와 하이픈만 사용한다.
-
-### 18.5 Distribution Requirements
-
-완결 후 `dist/`에는 다음을 둔다.
-
-- 권별 zip 파일 12개
-- 전체 합본 zip 1개
-- `SHA256SUMS`
-- 배포 안내 `README.md`
-- 작품 소개용 짧은 시놉시스
-- 권리/허구 고지
-
----
 
 ## 19. Risk Analysis
 
@@ -1539,19 +1521,6 @@ vol12/
 - Act 2에서 배운 "상처의 존중"이 Act 4 최종 선언에 반영되는지 확인한다.
 - Grok의 독설이 권말로 갈수록 실제 이해로 변하는지 확인한다.
 - Codex의 "재현 단계" 사고가 최종권에서 "테스트하지 않을 권리"로 변하는지 확인한다.
-
-### 20.6 Phase 5: Packaging
-
-산출물:
-
-- 권별 zip
-- 전체 합본
-- 체크섬
-- 독자용 README
-- 허구 고지
-- 권별 소개문
-
----
 
 ## 21. Done Definition
 

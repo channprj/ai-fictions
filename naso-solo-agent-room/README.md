@@ -157,12 +157,11 @@ naso-solo-agent-room/
 │   ├── 09-part9-defensive-date.md
 │   ├── 10-part10-dead-signal.md
 │   └── 11-epilogue.md
-├── vol03/
-│   ├── 00-prologue.md
-│   ├── 01-part1-last-breakfast.md
-│   ├── 02-part2-choice-mission.md
-│   └── 03-part3-sunwoo-harin.md
-└── dist/
+└── vol03/
+    ├── 00-prologue.md
+    ├── 01-part1-last-breakfast.md
+    ├── 02-part2-choice-mission.md
+    └── 03-part3-sunwoo-harin.md
 ```
 
 ## 현재 상태
@@ -200,7 +199,6 @@ naso-solo-agent-room/
 - 3권 `02-part2-choice-mission.md` 초고가 생성되었다.
 - 3권 `03-part3-sunwoo-harin.md` 초고가 생성되었다.
 - 다음 본편 초고는 3권 `04-part4-doyoon-soyeon.md`다.
-- 1권 배포본은 아직 생성하지 않았다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
