@@ -345,6 +345,4 @@ insufficient, 라고 적은 손끝이 괜히 차가워졌다.
 
 ---
 
----
-
 [← 이전: 05. 밤 산책](./05-part5-night-walk.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 07. 데이트권 →](./07-part7-date-ticket.md)

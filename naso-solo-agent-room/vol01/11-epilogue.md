@@ -228,6 +228,4 @@ next_hook: 비정상 밤 미션 추천이 pending 상태로 생성됨
 
 ---
 
----
-
 [← 이전: 10. 첫 균열](./10-part10-first-crack.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 0. 콜백 지옥 →](../vol02/00-prologue.md)

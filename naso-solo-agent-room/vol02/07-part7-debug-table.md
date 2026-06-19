@@ -383,6 +383,4 @@ GLM은 테이블을 저장했다.
 
 ---
 
----
-
 [← 이전: 6. 밤의 콜백](./06-part6-night-callback.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 8. 먼저 묻는 사람 →](./08-part8-question-first.md)

@@ -265,6 +265,4 @@ status: inactive
 
 ---
 
----
-
 [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 입소 로그 →](./01-part1-arrival-log.md)

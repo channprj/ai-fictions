@@ -358,6 +358,4 @@ next_pressure: 선우가 데이트권을 얻었지만 누구를 어떻게 부를
 
 ---
 
----
-
 [← 이전: 06. 과적합](./06-part6-panel-overfit.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 08. 침묵의 커밋 →](./08-part8-silent-commit.md)

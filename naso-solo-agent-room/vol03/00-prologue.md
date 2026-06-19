@@ -242,6 +242,4 @@ Codex는 두 문장이 겹친 화면을 오래 봤다.
 
 ---
 
----
-
 [← 이전: 11. 재시도 예약](../vol02/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 마지막 아침 →](./01-part1-last-breakfast.md)

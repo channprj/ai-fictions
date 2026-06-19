@@ -356,6 +356,4 @@ next_hook: LoveMatch가 선우-하린을 추천 상위 후보에서 제외함
 
 ---
 
----
-
 [← 이전: 09. 잘못 탄 브랜치](./09-part9-wrong-branch.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 11. 다음 로그 →](./11-epilogue.md)

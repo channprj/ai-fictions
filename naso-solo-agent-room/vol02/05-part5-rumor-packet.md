@@ -359,6 +359,4 @@ next_hook: 선우가 "그럼 제가 지금 물을게요"라고 말하지만, 하
 
 ---
 
----
-
 [← 이전: 4. 조건의 대화](./04-part4-spec-talk.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 6. 밤의 콜백 →](./06-part6-night-callback.md)
