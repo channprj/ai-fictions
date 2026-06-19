@@ -2,7 +2,7 @@
 
 > **감정 질문**: 새 사랑은 과거를 이기는 것인가, 아니면 과거와 함께 걷는 것인가?
 
-[← 이전 권](../vol05/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol05/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol07/README.md)
 
 ## 회차 목록
 
@@ -23,4 +23,4 @@
 
 ---
 
-[← 이전 권](../vol05/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol05/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol07/README.md)
