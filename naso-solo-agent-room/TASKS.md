@@ -68,7 +68,8 @@
 - 3권 `11-epilogue.md` 초고는 생성되었다. 3권 전 12개 장 초고가 완성되어 Act 1(1~3권)이 마무리되었다.
 - 4권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 2(두 번째 사랑)의 첫 권 `Legacy Heart Migration`이 완성되었다.
 - 5권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 2 중반권 `Dependency Graph`가 완성되었다.
-- 다음 본편 초고는 6권 `vol06` `00-prologue.md`다. `outline/vol06-refactor-your-name.md`와 `state/affection-graph-vol06.md`, `state/misunderstanding-queue-vol06.md`를 먼저 읽고, 5권 에필로그의 감정 변수 삭제·`aftercare_priority: low`·`panel_log_integration` 요청을 이어받아 진행한다.
+- 6권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 2 결산권 `Refactor Your Name`이 완성되어 **Act 1~2(1~6권)가 완결**되었다.
+- 다음 본편 초고는 7권 `vol07` `00-prologue.md`다. `outline/vol07-spec-sheet-lovers.md`와 `state/affection-graph-vol07.md`, `state/misunderstanding-queue-vol07.md`를 먼저 읽고, 6권 에필로그의 고스펙 기수·`engagement_score`·자동 미션 승인·패널 로그 추천 입력값을 이어받아 Act 3으로 진행한다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙

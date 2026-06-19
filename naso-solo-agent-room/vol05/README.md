@@ -2,7 +2,7 @@
 
 > **감정 질문**: 조건이 사랑을 방해하는가, 아니면 책임 없는 설렘을 걸러내는가?
 
-[← 이전 권](../vol04/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol04/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol06/README.md)
 
 ## 회차 목록
 
@@ -23,4 +23,4 @@
 
 ---
 
-[← 이전 권](../vol04/README.md) | [시리즈홈](../README.md)
+[← 이전 권](../vol04/README.md) | [시리즈홈](../README.md) | [다음 권 →](../vol06/README.md)

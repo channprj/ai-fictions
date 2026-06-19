@@ -20,6 +20,7 @@
 | [3권](./vol03/README.md) | Final Selection Crash (최종 선택 크래시) | 실패란 커플이 되지 않는 것인가, 자기 마음을 끝내 말하지 못하는 것인가? |
 | [4권](./vol04/README.md) | Legacy Heart Migration (레거시 하트 마이그레이션) | 과거를 설명해야 사랑받을 수 있다면, 그 사랑은 시작 전부터 재판인가? |
 | [5권](./vol05/README.md) | Dependency Graph (디펜던시 그래프) | 조건이 사랑을 방해하는가, 아니면 책임 없는 설렘을 걸러내는가? |
+| [6권](./vol06/README.md) | Refactor Your Name (리팩터 유어 네임) | 새 사랑은 과거를 이기는 것인가, 아니면 과거와 함께 걷는 것인가? |
 
 > 1권부터 읽으려면 → [1권 프롤로그](./vol01/00-prologue.md)
 
@@ -205,6 +206,19 @@ naso-solo-agent-room/
     ├── 09-part9-yuchan-choice.md
     ├── 10-part10-segyeong-boundary.md
     └── 11-epilogue.md
+└── vol06/
+    ├── 00-prologue.md
+    ├── 01-part1-old-name.md
+    ├── 02-part2-no-edit.md
+    ├── 03-part3-chef-without-stage.md
+    ├── 04-part4-raon-breaks.md
+    ├── 05-part5-panel-ethics.md
+    ├── 06-part6-last-date.md
+    ├── 07-part7-grok-apology.md
+    ├── 08-part8-choice-with-cost.md
+    ├── 09-part9-final-selection.md
+    ├── 10-part10-aftercare.md
+    └── 11-epilogue.md
 ```
 
 ## 현재 상태
@@ -237,9 +251,9 @@ naso-solo-agent-room/
 - 2권 `09-part9-defensive-date.md` 초고가 생성되었다.
 - 2권 `10-part10-dead-signal.md` 초고가 생성되었다.
 - 2권 `11-epilogue.md` 초고가 생성되었다.
-- 1권부터 5권까지 각 12개 장 초고가 모두 완성되었다. Act 1(1~3권, 첫 일반 기수)이 마무리되었고, Act 2(4~6권, 두 번째 사랑)의 4·5권이 완성되었다.
-- Act 1의 최종 선택은 커플 수가 아니라 선택권 회복으로 닫힌다. Act 2의 4권은 Claude의 과보호가 처음 붕괴하고, 5권은 거리·가족·돌봄 조건의 의존성 그래프 위에서 GLM이 구조 분석의 한계를 인정하며, LoveMatch가 감정 변수를 보정에서 삭제로 확장하고 사후 케어(aftercare)를 낮춘다.
-- 다음 산출물은 6권 `Refactor Your Name`의 본편 초고다. `outline/vol06-refactor-your-name.md`와 `state/*-vol06.md`를 먼저 읽고, 5권 에필로그의 감정 변수 삭제·`aftercare_priority: low`·가려진 `panel_log_integration` 요청을 이어받아 Act 2 최종 선택과 관찰실 윤리회의로 진행한다.
+- 1권부터 6권까지 각 12개 장 초고가 모두 완성되었다. **Act 1(1~3권, 첫 일반 기수)과 Act 2(4~6권, 두 번째 사랑)가 완결**되어, 12권 중 전반부 6권이 마무리되었다.
+- Act 1의 최종 선택은 커플 수가 아니라 선택권 회복으로 닫힌다. Act 2는 두 번째 사랑의 상처·조건·사후 책임을 다루며, Claude의 과보호 붕괴(4권), GLM의 구조 분석 한계 인정(5권), 관찰실 윤리회의와 사후 케어 결산(6권)을 거친다. Act 2 말미에 백이현·한서윤·나은결이 강태산의 화제성 개입(자동 미션 승인·패널 로그 재사용)을 외부 감사로 보고하며 Act 3을 연다.
+- 다음 산출물은 7권 `Spec Sheet Lovers`의 본편 초고다. `outline/vol07-spec-sheet-lovers.md`와 `state/*-vol07.md`를 먼저 읽고, 6권 에필로그의 고스펙 기수·`engagement_score`·자동 미션 승인·패널 로그 추천 입력값을 이어받아 Act 3(스펙·화제성·제작 개입)으로 진행한다.
 - 이 프로젝트는 권리 검토 전 내부 창작 설계 단계이며, 실제 방송 회차, 실제 출연자, 실제 제작진, 실제 방송 대사는 사용하지 않는다.
 
 ## 작품 정보
