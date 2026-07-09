@@ -36,6 +36,11 @@
 | [PRD.md](./PRD.md) | 12권 전체 목표, 능력 규칙, 인물, 권별 구조, 성공 기준 |
 | [BIBLE.md](./BIBLE.md) | 고정 캐논, 능력 티어, 인물 말투, 세계 규칙, 금지사항, 장면 엔진 |
 | [TASKS.md](./TASKS.md) | 후속 에이전트용 작업 순서와 검수 체크리스트 |
+| [state/capability-tree.md](./state/capability-tree.md) | 능력 티어별 언락·계기·한계의 권별 배치 |
+| [state/power-cost-ledger.md](./state/power-cost-ledger.md) | 큰 능력 사용의 노출·대가 기록 규칙과 초기 원장 |
+| [state/romance-graph.md](./state/romance-graph.md) | 현우-아린 9단계 사다리와 온도 추적 |
+| [state/rival-roster.md](./state/rival-roster.md) | 경쟁 유저·진영·아키텍트의 모델·목적·등장 권 |
+| [state/mystery-timeline.md](./state/mystery-timeline.md) | 락다운·제로 기원·아린 비밀의 단서→폭로 연결 |
 
 ## 목표 구조
 
@@ -66,7 +71,8 @@ solo-ai-user/
 ## 현재 상태
 
 - `PRD.md`, `BIBLE.md`, `TASKS.md`, `README.md` 기반 문서가 작성되었다. (Phase 0 완료)
-- outline, state, 본편 초고는 아직 없다. `TASKS.md`의 Phase 1(상태 추적) → Phase 2(권별 outline) → Phase 4(본편 초고) 순서로 진행한다.
+- `state/`의 5개 추적 파일(능력 트리·대가 원장·로맨스 그래프·경쟁 명단·미스터리 타임라인)이 작성되었다. (Phase 1 완료)
+- outline, 본편 초고는 아직 없다. `TASKS.md`의 Phase 2(권별 outline) → Phase 4(본편 초고) 순서로 진행한다.
 
 ## 작품 정보
 
