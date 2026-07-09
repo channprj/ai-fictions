@@ -10,8 +10,8 @@
 - `README.md`는 프로젝트 색인과 현재 상태를 담는다.
 - `state/`의 5개 추적 파일이 생성되었다(Phase 1 완료).
 - `outline/vol01-boot-sequence.md`(1권 outline)가 생성되었다(Phase 2, O2-01 완료).
-- `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/README.md`(1권 본편 초고 착수)가 생성되었다(Phase 4, 1권 2/12장). 1권은 outline이 완성돼 있어 본편 초고를 병행 착수했다.
-- 남은 일: 2~12권 outline(Phase 2)과 1권 나머지 장 `02-part2`~`11-epilogue`(Phase 4)를 병행 진행한다.
+- `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/02-part2-scapegoat.md`, `vol01/README.md`(1권 본편 초고)가 생성되었다(Phase 4, 1권 3/12장). 1권은 outline이 완성돼 있어 본편 초고를 병행 진행한다.
+- 남은 일: 2~12권 outline(Phase 2)과 1권 나머지 장 `03-part3`~`11-epilogue`(Phase 4)를 병행 진행한다.
 
 ## 작업 원칙
 

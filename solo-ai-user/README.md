@@ -75,8 +75,8 @@ solo-ai-user/
 - `PRD.md`, `BIBLE.md`, `TASKS.md`, `README.md` 기반 문서가 작성되었다. (Phase 0 완료)
 - `state/`의 5개 추적 파일(능력 트리·대가 원장·로맨스 그래프·경쟁 명단·미스터리 타임라인)이 작성되었다. (Phase 1 완료)
 - `outline/vol01-boot-sequence.md`(1권 12장 설계)가 작성되었다. (Phase 2 진행 중, 1/12권)
-- `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/README.md`(1권 본편 초고)가 작성되었다. (Phase 4 착수, 1권 2/12장)
-- 2~12권 outline과 1권 나머지 장(02~에필로그)은 아직 없다. `TASKS.md`의 Phase 2(권별 outline)와 Phase 4(본편 초고)를 병행 진행한다.
+- `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/02-part2-scapegoat.md`, `vol01/README.md`(1권 본편 초고)가 작성되었다. (Phase 4 진행 중, 1권 3/12장)
+- 2~12권 outline과 1권 나머지 장(03~에필로그)은 아직 없다. `TASKS.md`의 Phase 2(권별 outline)와 Phase 4(본편 초고)를 병행 진행한다.
 
 ## 작품 정보
 
