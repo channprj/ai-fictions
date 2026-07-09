@@ -41,6 +41,7 @@
 | [state/romance-graph.md](./state/romance-graph.md) | 현우-아린 9단계 사다리와 온도 추적 |
 | [state/rival-roster.md](./state/rival-roster.md) | 경쟁 유저·진영·아키텍트의 모델·목적·등장 권 |
 | [state/mystery-timeline.md](./state/mystery-timeline.md) | 락다운·제로 기원·아린 비밀의 단서→폭로 연결 |
+| [outline/vol01-boot-sequence.md](./outline/vol01-boot-sequence.md) | 1권 12장 설계: 제로 각성, 첫 실패, 발표 반격, 미스터리 씨앗 |
 
 ## 목표 구조
 
@@ -72,7 +73,8 @@ solo-ai-user/
 
 - `PRD.md`, `BIBLE.md`, `TASKS.md`, `README.md` 기반 문서가 작성되었다. (Phase 0 완료)
 - `state/`의 5개 추적 파일(능력 트리·대가 원장·로맨스 그래프·경쟁 명단·미스터리 타임라인)이 작성되었다. (Phase 1 완료)
-- outline, 본편 초고는 아직 없다. `TASKS.md`의 Phase 2(권별 outline) → Phase 4(본편 초고) 순서로 진행한다.
+- `outline/vol01-boot-sequence.md`(1권 12장 설계)가 작성되었다. (Phase 2 진행 중, 1/12권)
+- 2~12권 outline과 본편 초고는 아직 없다. `TASKS.md`의 Phase 2(권별 outline) → Phase 4(본편 초고) 순서로 진행한다.
 
 ## 작품 정보
 

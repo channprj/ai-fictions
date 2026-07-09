@@ -8,7 +8,8 @@
 - `BIBLE.md`는 능력 티어, 인물 말투, 세계 규칙, 금지사항, 장면 엔진을 고정한다.
 - `TASKS.md`는 후속 작업 순서와 검수 기준을 담는다.
 - `README.md`는 프로젝트 색인과 현재 상태를 담는다.
-- `state/`의 5개 추적 파일이 생성되었다(Phase 1 완료). outline, 본편 초고는 아직 없다. Phase 2부터 순서대로 진행한다.
+- `state/`의 5개 추적 파일이 생성되었다(Phase 1 완료).
+- `outline/vol01-boot-sequence.md`(1권 outline)가 생성되었다(Phase 2, O2-01 완료). 2~12권 outline과 본편 초고는 아직 없다. Phase 2를 이어서 진행한다.
 
 ## 작업 원칙
 
@@ -42,20 +43,20 @@
 
 각 outline은 `00-prologue`부터 `11-epilogue`까지 12개 장을 포함한다.
 
-| ID | 태스크 | 산출물 |
-| -- | ------ | ------ |
-| O2-01 | 1권 outline | `outline/vol01-boot-sequence.md` |
-| O2-02 | 2권 outline | `outline/vol02-first-deploy.md` |
-| O2-03 | 3권 outline | `outline/vol03-going-viral.md` |
-| O2-04 | 4권 outline | `outline/vol04-the-unreadable.md` |
-| O2-05 | 5권 outline | `outline/vol05-date-simulator.md` |
-| O2-06 | 6권 outline | `outline/vol06-context-overflow.md` |
-| O2-07 | 7권 outline | `outline/vol07-second-user.md` |
-| O2-08 | 8권 outline | `outline/vol08-model-war.md` |
-| O2-09 | 9권 outline | `outline/vol09-jailbreak.md` |
-| O2-10 | 10권 outline | `outline/vol10-origin-story.md` |
-| O2-11 | 11권 outline | `outline/vol11-the-architect.md` |
-| O2-12 | 12권 outline | `outline/vol12-human-in-command.md` |
+| ID | 태스크 | 산출물 | 상태 |
+| -- | ------ | ------ | ---- |
+| O2-01 | 1권 outline | `outline/vol01-boot-sequence.md` | 완료 |
+| O2-02 | 2권 outline | `outline/vol02-first-deploy.md` | 대기 |
+| O2-03 | 3권 outline | `outline/vol03-going-viral.md` | 대기 |
+| O2-04 | 4권 outline | `outline/vol04-the-unreadable.md` | 대기 |
+| O2-05 | 5권 outline | `outline/vol05-date-simulator.md` | 대기 |
+| O2-06 | 6권 outline | `outline/vol06-context-overflow.md` | 대기 |
+| O2-07 | 7권 outline | `outline/vol07-second-user.md` | 대기 |
+| O2-08 | 8권 outline | `outline/vol08-model-war.md` | 대기 |
+| O2-09 | 9권 outline | `outline/vol09-jailbreak.md` | 대기 |
+| O2-10 | 10권 outline | `outline/vol10-origin-story.md` | 대기 |
+| O2-11 | 11권 outline | `outline/vol11-the-architect.md` | 대기 |
+| O2-12 | 12권 outline | `outline/vol12-human-in-command.md` | 대기 |
 
 각 outline 완료 기준:
 
