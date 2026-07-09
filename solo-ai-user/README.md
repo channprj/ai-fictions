@@ -42,6 +42,7 @@
 | [state/rival-roster.md](./state/rival-roster.md) | 경쟁 유저·진영·아키텍트의 모델·목적·등장 권 |
 | [state/mystery-timeline.md](./state/mystery-timeline.md) | 락다운·제로 기원·아린 비밀의 단서→폭로 연결 |
 | [outline/vol01-boot-sequence.md](./outline/vol01-boot-sequence.md) | 1권 12장 설계: 제로 각성, 첫 실패, 발표 반격, 미스터리 씨앗 |
+| [outline/vol02-first-deploy.md](./outline/vol02-first-deploy.md) | 2권 12장 설계: 밖으로의 첫 배포, Tier 2 상시 자동화, 첫 노출 카운터 |
 | [vol01/README.md](./vol01/README.md) | 1권 본편 회차 목차 (프롤로그~에필로그) |
 
 ## 목표 구조
@@ -74,9 +75,9 @@ solo-ai-user/
 
 - `PRD.md`, `BIBLE.md`, `TASKS.md`, `README.md` 기반 문서가 작성되었다. (Phase 0 완료)
 - `state/`의 5개 추적 파일(능력 트리·대가 원장·로맨스 그래프·경쟁 명단·미스터리 타임라인)이 작성되었다. (Phase 1 완료)
-- `outline/vol01-boot-sequence.md`(1권 12장 설계)가 작성되었다. (Phase 2 진행 중, 1/12권)
+- `outline/vol01-boot-sequence.md`(1권 12장 설계), `outline/vol02-first-deploy.md`(2권 12장 설계)가 작성되었다. (Phase 2 진행 중, 2/12권)
 - `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/02-part2-scapegoat.md`, `vol01/03-part3-first-query.md`, `vol01/04-part4-hallucination.md`, `vol01/05-part5-your-call.md`, `vol01/06-part6-overnight.md`, `vol01/07-part7-the-build.md`, `vol01/08-part8-sabotage.md`, `vol01/09-part9-the-pitch.md`, `vol01/10-part10-unexplained.md`, `vol01/11-epilogue.md`, `vol01/README.md`(1권 본편 완고)가 작성되었다. (Phase 4 진행 중, 1권 12/12장 완료)
-- 2~12권 outline은 아직 없다. 1권 본편은 프롤로그~에필로그까지 완성되었다. `TASKS.md`의 Phase 2(권별 outline)와 Phase 4(2권 이후 본편 초고)를 진행한다.
+- 3~12권 outline은 아직 없다. 1권 본편은 프롤로그~에필로그까지 완성되었다. `TASKS.md`의 Phase 2(권별 outline)와 Phase 4(2권 이후 본편 초고)를 진행한다.
 
 ## 작품 정보
 
