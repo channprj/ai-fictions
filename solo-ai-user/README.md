@@ -42,6 +42,7 @@
 | [state/rival-roster.md](./state/rival-roster.md) | 경쟁 유저·진영·아키텍트의 모델·목적·등장 권 |
 | [state/mystery-timeline.md](./state/mystery-timeline.md) | 락다운·제로 기원·아린 비밀의 단서→폭로 연결 |
 | [outline/vol01-boot-sequence.md](./outline/vol01-boot-sequence.md) | 1권 12장 설계: 제로 각성, 첫 실패, 발표 반격, 미스터리 씨앗 |
+| [vol01/README.md](./vol01/README.md) | 1권 본편 회차 목차 (프롤로그~에필로그) |
 
 ## 목표 구조
 
@@ -74,7 +75,8 @@ solo-ai-user/
 - `PRD.md`, `BIBLE.md`, `TASKS.md`, `README.md` 기반 문서가 작성되었다. (Phase 0 완료)
 - `state/`의 5개 추적 파일(능력 트리·대가 원장·로맨스 그래프·경쟁 명단·미스터리 타임라인)이 작성되었다. (Phase 1 완료)
 - `outline/vol01-boot-sequence.md`(1권 12장 설계)가 작성되었다. (Phase 2 진행 중, 1/12권)
-- 2~12권 outline과 본편 초고는 아직 없다. `TASKS.md`의 Phase 2(권별 outline) → Phase 4(본편 초고) 순서로 진행한다.
+- `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/README.md`(1권 본편 초고)가 작성되었다. (Phase 4 착수, 1권 2/12장)
+- 2~12권 outline과 1권 나머지 장(02~에필로그)은 아직 없다. `TASKS.md`의 Phase 2(권별 outline)와 Phase 4(본편 초고)를 병행 진행한다.
 
 ## 작품 정보
 
