@@ -10,8 +10,8 @@
 - `README.md`는 프로젝트 색인과 현재 상태를 담는다.
 - `state/`의 5개 추적 파일이 생성되었다(Phase 1 완료).
 - `outline/vol01-boot-sequence.md`(1권 outline)가 생성되었다(Phase 2, O2-01 완료).
-- `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/02-part2-scapegoat.md`, `vol01/03-part3-first-query.md`, `vol01/04-part4-hallucination.md`, `vol01/05-part5-your-call.md`, `vol01/06-part6-overnight.md`, `vol01/07-part7-the-build.md`, `vol01/08-part8-sabotage.md`, `vol01/09-part9-the-pitch.md`, `vol01/10-part10-unexplained.md`, `vol01/README.md`(1권 본편 초고)가 생성되었다(Phase 4, 1권 11/12장). 1권은 outline이 완성돼 있어 본편 초고를 병행 진행한다.
-- 남은 일: 2~12권 outline(Phase 2)과 1권 마지막 장 `11-epilogue`(Phase 4)를 병행 진행한다.
+- `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/02-part2-scapegoat.md`, `vol01/03-part3-first-query.md`, `vol01/04-part4-hallucination.md`, `vol01/05-part5-your-call.md`, `vol01/06-part6-overnight.md`, `vol01/07-part7-the-build.md`, `vol01/08-part8-sabotage.md`, `vol01/09-part9-the-pitch.md`, `vol01/10-part10-unexplained.md`, `vol01/11-epilogue.md`, `vol01/README.md`(1권 본편 완고)가 생성되었다(Phase 4, 1권 12/12장 완료). 1권 본편 초고가 프롤로그~에필로그까지 전부 완성되었다.
+- 남은 일: 2~12권 outline(Phase 2)과 2권 이후 본편 초고(Phase 4)를 진행한다.
 
 ## 작업 원칙
 
