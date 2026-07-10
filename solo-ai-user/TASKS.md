@@ -12,8 +12,8 @@
 - `outline/vol01-boot-sequence.md`(1권 outline)가 생성되었다(Phase 2, O2-01 완료).
 - `outline/vol02-first-deploy.md`(2권 outline)가 생성되었다(Phase 2, O2-02 완료).
 - `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/02-part2-scapegoat.md`, `vol01/03-part3-first-query.md`, `vol01/04-part4-hallucination.md`, `vol01/05-part5-your-call.md`, `vol01/06-part6-overnight.md`, `vol01/07-part7-the-build.md`, `vol01/08-part8-sabotage.md`, `vol01/09-part9-the-pitch.md`, `vol01/10-part10-unexplained.md`, `vol01/11-epilogue.md`, `vol01/README.md`(1권 본편 완고)가 생성되었다(Phase 4, 1권 12/12장 완료). 1권 본편 초고가 프롤로그~에필로그까지 전부 완성되었다.
-- `vol02/00-prologue.md`(2권 프롤로그 「밖」), `vol02/01-part1-first-client.md`(2권 1장 「첫 의뢰」), `vol02/02-part2-the-squeeze.md`(2권 2장 「갑질」), `vol02/03-part3-first-deploy.md`(2권 3장 「첫 배포」), `vol02/04-part4-always-on.md`(2권 4장 「상시 가동」), `vol02/05-part5-turning-the-table.md`(2권 5장 「판을 흔들다」), `vol02/06-part6-the-debt.md`(2권 6장 「부채」), `vol02/07-part7-anomaly.md`(2권 7장 「이상 신호」), `vol02/README.md`(2권 회차 목차)가 생성되었다(Phase 4, 2권 8/12장). 2권 본편 초고를 프롤로그·1~7장까지 집필했다.
-- 남은 일: 3~12권 outline(Phase 2)과 2권 본편의 `08-part8`~`11-epilogue`(Phase 4)를 진행한다.
+- `vol02/00-prologue.md`(2권 프롤로그 「밖」), `vol02/01-part1-first-client.md`(2권 1장 「첫 의뢰」), `vol02/02-part2-the-squeeze.md`(2권 2장 「갑질」), `vol02/03-part3-first-deploy.md`(2권 3장 「첫 배포」), `vol02/04-part4-always-on.md`(2권 4장 「상시 가동」), `vol02/05-part5-turning-the-table.md`(2권 5장 「판을 흔들다」), `vol02/06-part6-the-debt.md`(2권 6장 「부채」), `vol02/07-part7-anomaly.md`(2권 7장 「이상 신호」), `vol02/08-part8-backlash.md`(2권 8장 「역풍」), `vol02/README.md`(2권 회차 목차)가 생성되었다(Phase 4, 2권 9/12장). 2권 본편 초고를 프롤로그·1~8장까지 집필했다.
+- 남은 일: 3~12권 outline(Phase 2)과 2권 본편의 `09-part9`~`11-epilogue`(Phase 4)를 진행한다.
 
 ## 작업 원칙
 
