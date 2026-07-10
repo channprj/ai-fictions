@@ -78,8 +78,8 @@ solo-ai-user/
 - `state/`의 5개 추적 파일(능력 트리·대가 원장·로맨스 그래프·경쟁 명단·미스터리 타임라인)이 작성되었다. (Phase 1 완료)
 - `outline/vol01-boot-sequence.md`(1권 12장 설계), `outline/vol02-first-deploy.md`(2권 12장 설계)가 작성되었다. (Phase 2 진행 중, 2/12권)
 - `vol01/00-prologue.md`, `vol01/01-part1-boot.md`, `vol01/02-part2-scapegoat.md`, `vol01/03-part3-first-query.md`, `vol01/04-part4-hallucination.md`, `vol01/05-part5-your-call.md`, `vol01/06-part6-overnight.md`, `vol01/07-part7-the-build.md`, `vol01/08-part8-sabotage.md`, `vol01/09-part9-the-pitch.md`, `vol01/10-part10-unexplained.md`, `vol01/11-epilogue.md`, `vol01/README.md`(1권 본편 완고)가 작성되었다. (Phase 4, 1권 12/12장 완료)
-- `vol02/00-prologue.md`(2권 프롤로그 「밖」), `vol02/01-part1-first-client.md`(2권 1장 「첫 의뢰」), `vol02/02-part2-the-squeeze.md`(2권 2장 「갑질」), `vol02/03-part3-first-deploy.md`(2권 3장 「첫 배포」), `vol02/04-part4-always-on.md`(2권 4장 「상시 가동」), `vol02/05-part5-turning-the-table.md`(2권 5장 「판을 흔들다」), `vol02/06-part6-the-debt.md`(2권 6장 「부채」), `vol02/README.md`(2권 본편 회차 목차)가 작성되었다. (Phase 4 진행 중, 2권 7/12장)
-- 3~12권 outline은 아직 없다. 1권 본편은 완성되었고, 2권 본편은 프롤로그·1~6장까지 집필했다. `TASKS.md`의 Phase 2(권별 outline)와 Phase 4(2권 본편 초고)를 진행한다.
+- `vol02/00-prologue.md`(2권 프롤로그 「밖」), `vol02/01-part1-first-client.md`(2권 1장 「첫 의뢰」), `vol02/02-part2-the-squeeze.md`(2권 2장 「갑질」), `vol02/03-part3-first-deploy.md`(2권 3장 「첫 배포」), `vol02/04-part4-always-on.md`(2권 4장 「상시 가동」), `vol02/05-part5-turning-the-table.md`(2권 5장 「판을 흔들다」), `vol02/06-part6-the-debt.md`(2권 6장 「부채」), `vol02/07-part7-anomaly.md`(2권 7장 「이상 신호」), `vol02/README.md`(2권 본편 회차 목차)가 작성되었다. (Phase 4 진행 중, 2권 8/12장)
+- 3~12권 outline은 아직 없다. 1권 본편은 완성되었고, 2권 본편은 프롤로그·1~7장까지 집필했다. `TASKS.md`의 Phase 2(권별 outline)와 Phase 4(2권 본편 초고)를 진행한다.
 
 ## 작품 정보
 
