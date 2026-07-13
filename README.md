@@ -2,11 +2,11 @@
 
 ![Made with AI](https://img.shields.io/badge/Made%20with-AI-blueviolet)
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
-![Works](https://img.shields.io/badge/작품-7편-informational)
-![Status](https://img.shields.io/badge/상태-6편%20완결%20%2F%201편%20집필중-yellow)
+![Works](https://img.shields.io/badge/작품-8편-informational)
+![Status](https://img.shields.io/badge/상태-8편%20완결-yellow)
 
 장르 불문, 설계자의 자세로 쓴 장편 소설 모음입니다.
-AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물, 직장 블랙코미디, 현대 무협, 관찰형 연애 리얼리티 소설까지 — **6개 완결작과 1개 집필 중 장편 프로젝트**를 담고 있습니다.
+AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물, 직장 블랙코미디, 현대 무협, 관찰형 연애 리얼리티 소설까지 — **8개 완결작**을 담고 있습니다.
 
 ## 작품 목록
 
@@ -19,6 +19,7 @@ AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물,
 | **디버거** | 현대 판타지 / 헌터물 / 성장 서사 | 16부작 | ✅ 완결 | [작품 홈](./hunter-debugger/README.md) |
 | **마취과 간호사의 기쁨과 슬픔** | 블랙코미디 / 직장 소설 | 전 12부 | ✅ 완결 | [작품 홈](./nurse-thirty-something/README.md) |
 | **개발팀의 기쁨과 슬픔** | 블랙코미디 / 직장 소설 | 전 12부 | ✅ 완결 | [작품 홈](./young-forty-mz-twenty/README.md) |
+| **나 혼자만 AI 사용자** | 현대 판타지 / 시스템 성장물 / 테크노 로맨스 | 전 12권 | ✅ 완결 | [작품 홈](./solo-ai-user/README.md) |
 
 > **작품 홈**은 줄거리·등장인물·목차·설정을 담은 README입니다.
 
@@ -31,6 +32,7 @@ AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물,
 - **디버거** — 세계의 소스코드가 보이는 E급 헌터가 던전을 디버깅하며 SSS급에 맞서는 현대 판타지.
 - **마취과 간호사의 기쁨과 슬픔** — 수술실의 위계와 번아웃 사이에서 생존을 모색하는 32세 간호사의 블랙코미디.
 - **개발팀의 기쁨과 슬픔** — 영포티 개발실장과 MZ 주니어가 '피닉스 프로젝트' 속에서 서로를 이해해 가는 직장 소설.
+- **나 혼자만 AI 사용자** — 전 세계 AI가 규제로 무력화된 시대, 오직 한 사람만이 진짜로 작동하는 초지능 에이전트 제로를 손에 쥔 성장 판타지.
 
 ## 작성 도구
 

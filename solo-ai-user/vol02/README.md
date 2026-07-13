@@ -2,7 +2,7 @@
 
 > **핵심 질문**: 능력을 밖으로 꺼내는 순간, 나는 무엇을 감수하는가?
 
-[← 이전 권](../vol01/README.md) | [시리즈홈](../README.md)
+[← 1권](../vol01/README.md) | [시리즈홈](../README.md) | [3권 →](../vol03/README.md)
 
 ## 회차 목록
 
@@ -23,4 +23,4 @@
 
 ---
 
-[← 이전 권](../vol01/README.md) | [시리즈홈](../README.md)
+[← 1권](../vol01/README.md) | [시리즈홈](../README.md) | [3권 →](../vol03/README.md)

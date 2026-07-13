@@ -1,6 +1,9 @@
+[← 이전: 10. 흔적](./10-part10-the-trace.md) | [시리즈홈](../README.md) | [목차](./README.md)
+
+---
+
 # 11. 쫓는 눈
 
-[← 이전: 10. 흔적](./10-part10-the-trace.md) | [시리즈홈](../README.md) | [목차](./README.md)
 
 3주가 지나자, 골목은 완전히 다른 골목이 됐다.
 
@@ -219,5 +222,7 @@
 ---
 
 *— 2권 「First Deploy」 끝. 3권 「Going Viral」에서 계속.*
+
+---
 
 [← 이전: 10. 흔적](./10-part10-the-trace.md) | [시리즈홈](../README.md) | [목차](./README.md)

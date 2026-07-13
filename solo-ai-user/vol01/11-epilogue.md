@@ -1,6 +1,9 @@
+[← 이전: 10. 설명되지 않는](./10-part10-unexplained.md) | [시리즈홈](../README.md) | [목차](./README.md)
+
+---
+
 # 11. 다음 배포
 
-[← 이전: 10. 설명되지 않는](./10-part10-unexplained.md) | [시리즈홈](../README.md) | [목차](./README.md)
 
 정규직 첫 주는, 이상하게 조용했다.
 
@@ -170,5 +173,7 @@
 ---
 
 *— 1권 「부팅 시퀀스」 끝. 2권 「First Deploy」에서 계속.*
+
+---
 
 [← 이전: 10. 설명되지 않는](./10-part10-unexplained.md) | [시리즈홈](../README.md) | [목차](./README.md)
