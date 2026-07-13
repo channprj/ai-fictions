@@ -1,5 +1,7 @@
 # vol01 outline: Boot Sequence
 
+[시리즈 홈](../README.md) | [권 목차](../vol01/README.md) | [다음 권 설계 →](./vol02-first-deploy.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`
 
 ## 권 약속
@@ -66,3 +68,5 @@
 - `state/power-cost-ledger.md`의 1권 항목에 대표 능력 사용(`09-part9`~`10-part10`의 발표 반격)과 exposure low, 자기의심 대가를 확정한다.
 - `state/mystery-timeline.md`의 1권 단서(M-01-01, M-01-02)가 `00-prologue`·`11-epilogue`에 배치됐음을 확인한다.
 - `vol01/00-prologue.md` 초고는 락다운 세계, 밑바닥 현우, 제로의 첫 응답을 담되, 제로가 모든 것을 아는 신의 시점처럼 말하지 않게 한다.
+
+[시리즈 홈](../README.md) | [권 목차](../vol01/README.md) | [다음 권 설계 →](./vol02-first-deploy.md)

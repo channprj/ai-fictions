@@ -1,5 +1,7 @@
 # 대가 원장 (Power Cost Ledger)
 
+[← 이전 상태 문서](./capability-tree.md) | [시리즈 홈](../README.md) | [문서 목차](../README.md#핵심-문서) | [다음 상태 문서 →](./mystery-timeline.md)
+
 > 목적: "능력으로 얻은 것에는 언제나 대가가 따른다"는 시리즈 약속을 회계처럼 관리한다. 큰 능력 사용은 노출(exposure)을 남기고, 노출은 누적되어 경쟁 유저·배후가 현우를 특정하는 근거가 된다.
 >
 > 연결: 노출 상승 → `rival-roster.md`의 적 등장 타이밍. 노출의 정점 → `mystery-timeline.md`의 배후 개입. 감정 대가 → `romance-graph.md`의 온도 변화.
@@ -62,3 +64,5 @@ cost: <노출 / 연산 / 감정 / 윤리 대가>
 - 큰 사이다 앞에 진짜 벽과 진짜 대가가 섰는가.
 - exposure 상승이 `rival-roster.md`의 적 등장·`mystery-timeline.md`의 배후 개입과 연결됐는가.
 - 감정·관계 대가가 `romance-graph.md`의 온도 변화에 반영됐는가.
+
+[← 이전 상태 문서](./capability-tree.md) | [시리즈 홈](../README.md) | [문서 목차](../README.md#핵심-문서) | [다음 상태 문서 →](./mystery-timeline.md)

@@ -1,5 +1,7 @@
 # vol06 outline: Context Overflow
 
+[← 이전 권 설계](./vol05-date-simulator.md) | [시리즈 홈](../README.md) | [권 목차](../vol06/README.md) | [다음 권 설계 →](./vol07-second-user.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol01-boot-sequence.md`, `outline/vol02-first-deploy.md`
 
 ## 권 약속
@@ -63,3 +65,5 @@
 - `state/romance-graph.md`를 갱신하여 현우와 아린이 스크립트를 버리고 신뢰를 회복한 '상호 합의된 연애' 상태로 변경한다.
 - `state/rival-roster.md`의 7권 두 번째 사용자 등장 떡밥으로 `11-epilogue`의 패킷 수집 장면이 매끄럽게 이어짐을 확인한다.
 - `vol06/00-prologue.md` 초고는 능력 과신에 빠진 현우와 자원 고갈의 징후를 그리며 긴장감 있게 시작한다.
+
+[← 이전 권 설계](./vol05-date-simulator.md) | [시리즈 홈](../README.md) | [권 목차](../vol06/README.md) | [다음 권 설계 →](./vol07-second-user.md)

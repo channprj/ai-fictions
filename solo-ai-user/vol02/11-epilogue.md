@@ -1,9 +1,6 @@
-[← 이전: 10. 흔적](./10-part10-the-trace.md) | [시리즈홈](../README.md) | [목차](./README.md)
-
----
-
 # 11. 쫓는 눈
 
+[← 이전 회차: 10. 흔적](./10-part10-the-trace.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 00. 관측자 →](../vol03/00-prologue.md)
 
 3주가 지나자, 골목은 완전히 다른 골목이 됐다.
 
@@ -223,6 +220,4 @@
 
 *— 2권 「First Deploy」 끝. 3권 「Going Viral」에서 계속.*
 
----
-
-[← 이전: 10. 흔적](./10-part10-the-trace.md) | [시리즈홈](../README.md) | [목차](./README.md)
+[← 이전 회차: 10. 흔적](./10-part10-the-trace.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 00. 관측자 →](../vol03/00-prologue.md)

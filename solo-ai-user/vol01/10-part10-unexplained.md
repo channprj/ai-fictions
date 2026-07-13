@@ -1,9 +1,6 @@
-[← 이전: 09. 발표](./09-part9-the-pitch.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 11. 다음 배포 →](./11-epilogue.md)
-
----
-
 # 10. 설명되지 않는
 
+[← 이전 회차: 09. 발표](./09-part9-the-pitch.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 11. 다음 배포 →](./11-epilogue.md)
 
 인사팀 면담 요청 메일은 발표 다음 날 아침에 왔다.
 
@@ -167,8 +164,4 @@
 
 처음으로, 두렵지 않았다.
 
----
-
----
-
-[← 이전: 09. 발표](./09-part9-the-pitch.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 11. 다음 배포 →](./11-epilogue.md)
+[← 이전 회차: 09. 발표](./09-part9-the-pitch.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 11. 다음 배포 →](./11-epilogue.md)

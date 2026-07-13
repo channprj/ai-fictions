@@ -1,5 +1,7 @@
 # PRD: 나 혼자만 AI 사용자
 
+[← 이전 문서](./README.md) | [시리즈 홈](./README.md) | [문서 목차](./README.md#핵심-문서) | [다음 문서 →](./BIBLE.md)
+
 > 작업명: `SOLOAI`
 > 문서 목적: "세계 유일의 AI 사용자" 성장 판타지를 장편 라이트노벨 소설로 설계하기 위한 마스터 PRD
 > 기준 분량: 일반 라이트노벨 12권
@@ -540,3 +542,5 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 > 현재 `TASKS.md`는 이 Phase 번호와 새 캐논을 아직 반영하지 않은 stale 문서다. 다음 상태 동기화가 끝날 때까지 충돌 시 이 PRD와 BIBLE이 우선하며, TASKS가 갱신됐다고 간주하지 않는다.
 
 > 후속 작성자는 `PRD.md` → `BIBLE.md` → 해당 권 `outline/` → 직전 2개 장 → 해당 `state/` 순으로 읽는다.
+
+[← 이전 문서](./README.md) | [시리즈 홈](./README.md) | [문서 목차](./README.md#핵심-문서) | [다음 문서 →](./BIBLE.md)

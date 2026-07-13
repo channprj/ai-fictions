@@ -1,9 +1,6 @@
-[시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 첫 의뢰 →](./01-part1-first-client.md)
-
----
-
 # 00. 밖
 
+[← 이전 회차: 11. 다음 배포](../vol01/11-epilogue.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 01. 첫 의뢰 →](./01-part1-first-client.md)
 
 토요일 오전 열 시. 현우는 3년 만에 아무 목적 없이 지하철을 탔다.
 
@@ -113,8 +110,4 @@
 
 이번엔, 대답이 너무 빨리 정해졌다.
 
----
-
----
-
-[시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 첫 의뢰 →](./01-part1-first-client.md)
+[← 이전 회차: 11. 다음 배포](../vol01/11-epilogue.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 01. 첫 의뢰 →](./01-part1-first-client.md)

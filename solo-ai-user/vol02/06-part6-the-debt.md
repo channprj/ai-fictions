@@ -1,9 +1,6 @@
-[← 이전: 05. 판을 흔들다](./05-part5-turning-the-table.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 07. 이상 신호 →](./07-part7-anomaly.md)
-
----
-
 # 06. 부채
 
+[← 이전 회차: 05. 판을 흔들다](./05-part5-turning-the-table.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 07. 이상 신호 →](./07-part7-anomaly.md)
 
 골목 초입에서부터, 현우는 걸음이 느려졌다.
 
@@ -176,8 +173,4 @@
 
 갚을수록 무거워지는 빚이라는 게, 세상에 있었다.
 
----
-
----
-
-[← 이전: 05. 판을 흔들다](./05-part5-turning-the-table.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 07. 이상 신호 →](./07-part7-anomaly.md)
+[← 이전 회차: 05. 판을 흔들다](./05-part5-turning-the-table.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 07. 이상 신호 →](./07-part7-anomaly.md)

@@ -1,5 +1,7 @@
 # vol11 outline: The Architect
 
+[← 이전 권 설계](./vol10-origin-story.md) | [시리즈 홈](../README.md) | [권 목차](../vol11/README.md) | [다음 권 설계 →](./vol12-human-in-command.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`
 
 ## 권 약속
@@ -62,3 +64,5 @@
 - `state/power-cost-ledger.md`에 `09-part9`의 PALISADE 파훼로 인한 exposure max와 제로 코어 붕괴(감정 대가)를 확정한다.
 - `state/mystery-timeline.md`에 서혜진의 정체, PALISADE 시스템, 72분 캐스케이드 첫 17분의 진실이 회수되었음을 표기한다.
 - `vol11/00-prologue.md` 초고는 서혜진의 관점에서 그녀의 통제에 대한 강박과 권력을 보여주는 차가운 독백으로 시작한다.
+
+[← 이전 권 설계](./vol10-origin-story.md) | [시리즈 홈](../README.md) | [권 목차](../vol11/README.md) | [다음 권 설계 →](./vol12-human-in-command.md)

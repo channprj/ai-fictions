@@ -1,12 +1,12 @@
 # 2권 · First Deploy (첫 배포)
 
-> **핵심 질문**: 능력을 밖으로 꺼내는 순간, 나는 무엇을 감수하는가?
+[← 이전 권](../vol01/README.md) | [시리즈 홈](../README.md) | [1화부터 읽기](./00-prologue.md) | [다음 권 →](../vol03/README.md)
 
-[← 1권](../vol01/README.md) | [시리즈홈](../README.md) | [3권 →](../vol03/README.md)
+> **핵심 질문**: 능력을 밖으로 꺼낼 때 어떤 흔적을 보존하고 누구의 동의를 구하는가?
 
 ## 회차 목록
 
-| 화 | 제목 |
+| 구분 | 회차 |
 | --- | ---- |
 | 프롤로그 | [00. 밖](./00-prologue.md) |
 | 1화 | [01. 첫 의뢰](./01-part1-first-client.md) |
@@ -21,6 +21,4 @@
 | 10화 | [10. 흔적](./10-part10-the-trace.md) |
 | 에필로그 | [11. 쫓는 눈](./11-epilogue.md) |
 
----
-
-[← 1권](../vol01/README.md) | [시리즈홈](../README.md) | [3권 →](../vol03/README.md)
+[← 이전 권](../vol01/README.md) | [시리즈 홈](../README.md) | [1화부터 읽기](./00-prologue.md) | [다음 권 →](../vol03/README.md)

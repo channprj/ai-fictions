@@ -1,9 +1,6 @@
-[← 이전: 04. 상시 가동](./04-part4-always-on.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 06. 부채 →](./06-part6-the-debt.md)
-
----
-
 # 05. 판을 흔들다
 
+[← 이전 회차: 04. 상시 가동](./04-part4-always-on.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 06. 부채 →](./06-part6-the-debt.md)
 
 밤을 지켜 낸다는 건, 생각보다 큰 일이었다.
 
@@ -200,8 +197,4 @@
 
 현우는 여사의 손을 마주 잡았다. 그리고 삼킨 말은, 삼킨 채로 두었다.
 
----
-
----
-
-[← 이전: 04. 상시 가동](./04-part4-always-on.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 06. 부채 →](./06-part6-the-debt.md)
+[← 이전 회차: 04. 상시 가동](./04-part4-always-on.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 06. 부채 →](./06-part6-the-debt.md)

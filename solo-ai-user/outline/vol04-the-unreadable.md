@@ -1,5 +1,7 @@
 # vol04 outline: The Unreadable
 
+[← 이전 권 설계](./vol03-going-viral.md) | [시리즈 홈](../README.md) | [권 목차](../vol04/README.md) | [다음 권 설계 →](./vol05-date-simulator.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`
 
 ## 권 약속
@@ -64,3 +66,5 @@
 - `state/romance-graph.md`의 4권 항목에 아린과의 첫 찐웃음과 다음 만남 약속을 통한 관계 진전을 기록한다.
 - `state/mystery-timeline.md`에 아린의 데이터가 인위적으로 지워졌다는 단서(M-04-01)를 추가한다.
 - `vol04/00-prologue.md` 초고는 제로의 완벽한 확률 계산기를 고장 내는 아린의 첫 등장에 집중하며, 제로 시점의 짧은 로그를 적절히 섞어 텐션을 높인다.
+
+[← 이전 권 설계](./vol03-going-viral.md) | [시리즈 홈](../README.md) | [권 목차](../vol04/README.md) | [다음 권 설계 →](./vol05-date-simulator.md)

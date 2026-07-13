@@ -1,9 +1,6 @@
-[← 이전: 04. 환각](./04-part4-hallucination.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 06. 밤샘 자동화 →](./06-part6-overnight.md)
-
----
-
 # 05. 판단은 네 몫
 
+[← 이전 회차: 04. 환각](./04-part4-hallucination.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 06. 밤샘 자동화 →](./06-part6-overnight.md)
 
 D-4의 아침, 회사 공기가 달라져 있었다.
 
@@ -175,8 +172,4 @@ D-4의 아침, 회사 공기가 달라져 있었다.
 
 D-3의 아침이었다. 시간은 여전히 모자랐고, 발표자 명단엔 아직 그의 이름이 없었다. 하지만 현우는 처음으로, 자기 두 발로 다시 판 위에 올라서 있었다.
 
----
-
----
-
-[← 이전: 04. 환각](./04-part4-hallucination.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 06. 밤샘 자동화 →](./06-part6-overnight.md)
+[← 이전 회차: 04. 환각](./04-part4-hallucination.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 06. 밤샘 자동화 →](./06-part6-overnight.md)

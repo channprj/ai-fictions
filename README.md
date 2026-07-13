@@ -1,5 +1,7 @@
 # AI Fictions
 
+[작품 목록](#작품-목록) | [SOLOAI 바로가기](./solo-ai-user/README.md)
+
 ![Made with AI](https://img.shields.io/badge/Made%20with-AI-blueviolet)
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 ![Works](https://img.shields.io/badge/작품-8편-informational)
@@ -55,3 +57,5 @@ AI 캠퍼스 연애 라이트노벨부터 이세계 판타지, 현대 헌터물,
 - 이 소설들은 모두 픽션이며, 등장하는 인물, 회사, 기관, AI 페르소나, 사건은 모두 허구의 창작 설정이며 실제와 무관합니다.
 - 작품 내에 등장하는 GPT, Claude, Gemini 등은 의인화된 가상 페르소나로 다루며 실제 서비스의 공식 성격이나 입장을 대변하지 않습니다.
 - 여러 AI 도구의 도움을 받아 작성되었으며, 자체 편집 및 퇴고를 통해 제작된 창작물입니다.
+
+[작품 목록](#작품-목록) | [SOLOAI 바로가기](./solo-ai-user/README.md)

@@ -1,8 +1,6 @@
-[← 이전: 권한 회수](./01-part1-authority-recall.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 17분의 공백 →](./03-part3-the-gap.md)
+# 02. PALISADE
 
----
-
-# PALISADE
+[← 이전 회차: 01. 권한 회수](./01-part1-authority-recall.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 03. 17분의 공백 →](./03-part3-the-gap.md)
 
 어두침침한 지하 아카이브실. 아린은 언제나처럼 먼지 쌓인 서류 더미 사이에서 현우를 기다리고 있었다. 그녀의 표정은 평소보다 굳어 있었다. 현우가 문을 열고 들어서자, 그녀는 말없이 현우의 헝클어진 머리와 굳게 다문 입술을 살폈다.
 
@@ -64,6 +62,4 @@
 
 [캐스케이드 발생 직후부터 정확히 00:00~17:00 구간. 첫 17분의 기록이 존재하지 않습니다.]
 
----
-
-[← 이전: 권한 회수](./01-part1-authority-recall.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 17분의 공백 →](./03-part3-the-gap.md)
+[← 이전 회차: 01. 권한 회수](./01-part1-authority-recall.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 03. 17분의 공백 →](./03-part3-the-gap.md)

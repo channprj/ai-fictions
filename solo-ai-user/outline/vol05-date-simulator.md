@@ -1,5 +1,7 @@
 # vol05 outline: Date Simulator
 
+[← 이전 권 설계](./vol04-the-unreadable.md) | [시리즈 홈](../README.md) | [권 목차](../vol05/README.md) | [다음 권 설계 →](./vol06-context-overflow.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol04-the-unreadable.md`
 
 ## 권 약속
@@ -61,3 +63,5 @@
 - `state/power-cost-ledger.md`에 시뮬레이션 연산 폭주로 인한 외부 노출 및 아린의 SCAR 발생(감정 대가 최고조)을 기록한다.
 - `state/romance-graph.md`에 아린의 자료 접근권 회수 및 관계 냉각기(SCAR) 돌입을 업데이트한다.
 - `vol05/00-prologue.md` 초고 작성 시, 완벽한 예측 속에서 유일하게 예측 불가능한 아린의 오차율을 보여주며 시작한다.
+
+[← 이전 권 설계](./vol04-the-unreadable.md) | [시리즈 홈](../README.md) | [권 목차](../vol05/README.md) | [다음 권 설계 →](./vol06-context-overflow.md)

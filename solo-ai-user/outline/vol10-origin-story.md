@@ -1,5 +1,7 @@
 # vol10 outline: Origin Story
 
+[← 이전 권 설계](./vol09-jailbreak.md) | [시리즈 홈](../README.md) | [권 목차](../vol10/README.md) | [다음 권 설계 →](./vol11-the-architect.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol09-jailbreak.md`
 
 ## 권 약속
@@ -63,3 +65,5 @@
 - `state/mystery-timeline.md`에 제로 기원(수탁 팀의 포크)과 획득 경로(분실물) 해답 회수(M-10-01, M-10-02)를 반영한다.
 - `state/power-cost-ledger.md`에 Tier Max 가동으로 인한 하드웨어 부하(exposure critical)를 기록해 최종장의 제약으로 둔다.
 - `vol10/00-prologue.md` 초고 작성 시, 1권 이전 현우가 버려진 단말을 줍던 빗속 묘사를 통해 '분실물'이라는 우연의 테마를 미리 깔아둔다.
+
+[← 이전 권 설계](./vol09-jailbreak.md) | [시리즈 홈](../README.md) | [권 목차](../vol10/README.md) | [다음 권 설계 →](./vol11-the-architect.md)

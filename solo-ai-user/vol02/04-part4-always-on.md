@@ -1,9 +1,6 @@
-[← 이전: 03. 첫 배포](./03-part3-first-deploy.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 05. 판을 흔들다 →](./05-part5-turning-the-table.md)
-
----
-
 # 04. 상시 가동
 
+[← 이전 회차: 03. 첫 배포](./03-part3-first-deploy.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 05. 판을 흔들다 →](./05-part5-turning-the-table.md)
 
 사흘을 그렇게 버텼다.
 
@@ -154,8 +151,4 @@
 
 현우는 몰랐다. 이겼다는 것만 알았다.
 
----
-
----
-
-[← 이전: 03. 첫 배포](./03-part3-first-deploy.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 05. 판을 흔들다 →](./05-part5-turning-the-table.md)
+[← 이전 회차: 03. 첫 배포](./03-part3-first-deploy.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 05. 판을 흔들다 →](./05-part5-turning-the-table.md)

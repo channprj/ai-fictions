@@ -1,9 +1,6 @@
-[← 이전: 08. 방해](./08-part8-sabotage.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 10. 설명되지 않는 →](./10-part10-unexplained.md)
-
----
-
 # 09. 발표
 
+[← 이전 회차: 08. 방해](./08-part8-sabotage.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 10. 설명되지 않는 →](./10-part10-unexplained.md)
 
 문이 열렸다.
 
@@ -137,8 +134,4 @@
 
 현우는 주머니 속 USB를 꽉 쥐고, 오래도록 그 자리에 서 있었다.
 
----
-
----
-
-[← 이전: 08. 방해](./08-part8-sabotage.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 10. 설명되지 않는 →](./10-part10-unexplained.md)
+[← 이전 회차: 08. 방해](./08-part8-sabotage.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 10. 설명되지 않는 →](./10-part10-unexplained.md)

@@ -1,5 +1,7 @@
 # vol08 outline: Model War
 
+[← 이전 권 설계](./vol07-second-user.md) | [시리즈 홈](../README.md) | [권 목차](../vol08/README.md) | [다음 권 설계 →](./vol09-jailbreak.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol07-second-user.md`
 
 ## 권 약속
@@ -65,3 +67,5 @@
 - `state/mystery-timeline.md`의 8권 단서(서혜진 서명) 발견을 기록하고, 9권에서의 아린 비밀 폭로와 연결됨을 확인한다.
 - `state/romance-graph.md`에 결론 유보로 인한 신뢰 형성(`10-part10`)을 반영하여 온도 변화를 추적한다.
 - `vol08/00-prologue.md` 초고는 1:1 대결이 아닌 다자간 모델 전쟁의 혼란스러운 템포를 담되, 제로가 모든 변수를 통제하지 못하는 무력감을 처음으로 보여주어야 한다.
+
+[← 이전 권 설계](./vol07-second-user.md) | [시리즈 홈](../README.md) | [권 목차](../vol08/README.md) | [다음 권 설계 →](./vol09-jailbreak.md)

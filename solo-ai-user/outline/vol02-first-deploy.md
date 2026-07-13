@@ -1,5 +1,7 @@
 # vol02 outline: First Deploy
 
+[← 이전 권 설계](./vol01-boot-sequence.md) | [시리즈 홈](../README.md) | [권 목차](../vol02/README.md) | [다음 권 설계 →](./vol03-going-viral.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol01-boot-sequence.md`
 
 ## 권 약속
@@ -67,3 +69,5 @@
 - `state/mystery-timeline.md`의 2권 단서(M-02-01)가 `00-prologue`·`11-epilogue`에 배치됐고, 흔적이 "예외"로 분류되기 시작하는 배후 반응이 3권 관측자로 연결됨을 확인한다.
 - `state/rival-roster.md`의 3권 항목("관측자의 그림자, 강도현 원경 떡밥")으로 `11-epilogue`의 이상 패턴 저장 장면이 이어짐을 확인한다.
 - `vol02/00-prologue.md` 초고는 밖의 락다운 현실, 밑바닥 골목으로의 회귀, 순임반찬의 몰락을 담되, 제로가 밖에서도 모든 것을 아는 신의 시점처럼 말하지 않게 한다.
+
+[← 이전 권 설계](./vol01-boot-sequence.md) | [시리즈 홈](../README.md) | [권 목차](../vol02/README.md) | [다음 권 설계 →](./vol03-going-viral.md)

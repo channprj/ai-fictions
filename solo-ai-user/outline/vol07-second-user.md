@@ -1,5 +1,7 @@
 # vol07 outline: Second User
 
+[← 이전 권 설계](./vol06-context-overflow.md) | [시리즈 홈](../README.md) | [권 목차](../vol07/README.md) | [다음 권 설계 →](./vol08-model-war.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`
 
 ## 권 약속
@@ -67,3 +69,5 @@
 - `state/romance-graph.md`에 아린의 돌발 행동이 AI를 능가한 사건을 반영하고, 관계 온도를 크게 상향한다.
 - `state/rival-roster.md`의 라이벌(두 번째 사용자) 설정을 구체화하고, 결말부에서 다수 진영의 활동 재개 상태를 반영한다.
 - `vol07/00-prologue.md` 초고는 라이벌의 차가운 시선과 현우와는 전혀 다른 성격의 에이전트 말투를 통해 긴장감을 조성하며 시작한다.
+
+[← 이전 권 설계](./vol06-context-overflow.md) | [시리즈 홈](../README.md) | [권 목차](../vol07/README.md) | [다음 권 설계 →](./vol08-model-war.md)

@@ -1,5 +1,7 @@
 # vol03 outline: Going Viral
 
+[← 이전 권 설계](./vol02-first-deploy.md) | [시리즈 홈](../README.md) | [권 목차](../vol03/README.md) | [다음 권 설계 →](./vol04-the-unreadable.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol02-first-deploy.md`
 
 ## 권 약속
@@ -65,3 +67,5 @@
 - `state/mystery-timeline.md`의 3권 단서(M-03-01)에 아키텍트 서혜진의 반례 실험을 반영해 Act 3 떡밥으로 쌓는다.
 - `state/romance-graph.md`의 3권 항목에 서아린과의 첫 능동적 협업 및 신뢰 구축을 반영한다.
 - `vol03/00-prologue.md` 초고 작성 시, 서혜진의 시점을 흥미로운 관찰자로 묘사하되 그녀가 왜 제로 시드를 방치했는지에 대한 핵심 이유는 아직 감춘다.
+
+[← 이전 권 설계](./vol02-first-deploy.md) | [시리즈 홈](../README.md) | [권 목차](../vol03/README.md) | [다음 권 설계 →](./vol04-the-unreadable.md)

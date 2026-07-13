@@ -1,9 +1,6 @@
-[← 이전: 08. 역풍](./08-part8-backlash.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 10. 흔적 →](./10-part10-the-trace.md)
-
----
-
 # 09. 손으로
 
+[← 이전 회차: 08. 역풍](./08-part8-backlash.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 10. 흔적 →](./10-part10-the-trace.md)
 
 첫차에서 내렸을 때 골목은 아직 파랬다.
 
@@ -222,8 +219,4 @@
 
 이미 켜진 카운터는, 승리로도 꺼지지 않았다.
 
----
-
----
-
-[← 이전: 08. 역풍](./08-part8-backlash.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 10. 흔적 →](./10-part10-the-trace.md)
+[← 이전 회차: 08. 역풍](./08-part8-backlash.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 10. 흔적 →](./10-part10-the-trace.md)

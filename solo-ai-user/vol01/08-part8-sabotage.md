@@ -1,9 +1,6 @@
-[← 이전: 07. 빌드](./07-part7-the-build.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 09. 발표 →](./09-part9-the-pitch.md)
-
----
-
 # 08. 방해
 
+[← 이전 회차: 07. 빌드](./07-part7-the-build.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 09. 발표 →](./09-part9-the-pitch.md)
 
 D-1. 아침 여덟 시. 텅 빈 폴더를 세 번째로 새로 고치던 현우의 손이, 알림 하나에 멈췄다.
 
@@ -139,8 +136,4 @@ D-Day. 아침 아홉 시. 대회의실 앞 복도.
 
 "대리님." 현우가 조용히 말했다. "제가 발표하겠습니다."
 
----
-
----
-
-[← 이전: 07. 빌드](./07-part7-the-build.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 09. 발표 →](./09-part9-the-pitch.md)
+[← 이전 회차: 07. 빌드](./07-part7-the-build.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 09. 발표 →](./09-part9-the-pitch.md)

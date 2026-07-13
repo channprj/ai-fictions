@@ -1,5 +1,7 @@
 # 장기 집필 태스크: 나 혼자만 AI 사용자
 
+[← 이전 문서](./BIBLE.md) | [시리즈 홈](./README.md) | [문서 목차](./README.md#핵심-문서)
+
 > 후속 에이전트가 한 번에 한 문서, 한 outline, 한 장면 단위로 작업해도 12권 캐논이 무너지지 않도록 하는 실행 문서다.
 
 ## 현재 상태
@@ -161,3 +163,5 @@ find solo-ai-user/outline -maxdepth 1 -type f -name 'vol*.md' | wc -l
 ```
 
 이 명령은 최종적으로 `12`가 되어야 한다.
+
+[← 이전 문서](./BIBLE.md) | [시리즈 홈](./README.md) | [문서 목차](./README.md#핵심-문서)

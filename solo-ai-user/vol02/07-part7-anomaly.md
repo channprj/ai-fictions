@@ -1,9 +1,6 @@
-[← 이전: 06. 부채](./06-part6-the-debt.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 08. 역풍 →](./08-part8-backlash.md)
-
----
-
 # 07. 이상 신호
 
+[← 이전 회차: 06. 부채](./06-part6-the-debt.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 08. 역풍 →](./08-part8-backlash.md)
 
 승리에는 냄새가 있었다.
 
@@ -174,8 +171,4 @@
 
 밖에서는, 이긴 자리가 곧 서 있는 자리였다. 그리고 서 있는 자리는—— 겨냥할 수 있는 자리였다.
 
----
-
----
-
-[← 이전: 06. 부채](./06-part6-the-debt.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 08. 역풍 →](./08-part8-backlash.md)
+[← 이전 회차: 06. 부채](./06-part6-the-debt.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 08. 역풍 →](./08-part8-backlash.md)

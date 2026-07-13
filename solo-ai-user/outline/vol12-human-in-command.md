@@ -1,5 +1,7 @@
 # vol12 outline: Human in Command
 
+[← 이전 권 설계](./vol11-the-architect.md) | [시리즈 홈](../README.md) | [권 목차](../vol12/README.md)
+
 > 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`
 
 ## 권 약속
@@ -63,3 +65,5 @@
 - `state/power-cost-ledger.md`에 치트를 내려놓는 대가(스스로 짊어질 불확실성)를 마지막 기록으로 남긴다.
 - `state/mystery-timeline.md`의 아키텍트 정체 및 락다운의 원인 등 모든 떡밥이 완전히 회수되었음을 확인한다.
 - `vol12/00-prologue.md` 집필 시, 거대한 사건 속에서도 무너지지 않는 주인공의 시선과 제로와의 연대감(도구가 아닌 파트너)을 부각시킨다.
+
+[← 이전 권 설계](./vol11-the-architect.md) | [시리즈 홈](../README.md) | [권 목차](../vol12/README.md)

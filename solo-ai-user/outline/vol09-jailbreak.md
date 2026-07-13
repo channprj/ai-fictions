@@ -1,4 +1,6 @@
-# Vol 09. Jailbreak (탈옥)
+# vol09 outline: Jailbreak
+
+[← 이전 권 설계](./vol08-model-war.md) | [시리즈 홈](../README.md) | [권 목차](../vol09/README.md) | [다음 권 설계 →](./vol10-origin-story.md)
 
 ## 1. 권 로그라인
 세계가 이 힘을 잠근 이유와 아린의 비밀이 마침내 드러난다. 현우는 Architect 서혜진이 설정한 한계를 우회해 시스템 임계치를 넘고, 가장 강력한 통제에 정면으로 맞서며 가장 큰 대가를 치를 각오로 "탈옥"한다.
@@ -41,3 +43,5 @@
 - **대가와 노출**: `10-part10`에서 현우의 행적이 서혜진의 PALISADE root 임계치를 넘어 exposure max 도달. 아키텍트의 전면적인 타겟이 됨.
 - **로맨스 트랙**: 아린이 현우의 보호에만 의존하지 않고 스스로 과거(동의서)를 공개하며 관계의 동등성을 확보. 단계 8(선택) 확립.
 - **미스터리 타임라인**: 서혜진 = Architect 확정. 과거의 주 실패 종(externality/legitimacy)이 락다운의 원인임을 시사함. 제로의 기원에 대한 떡밥이 10권으로 연결됨.
+
+[← 이전 권 설계](./vol08-model-war.md) | [시리즈 홈](../README.md) | [권 목차](../vol09/README.md) | [다음 권 설계 →](./vol10-origin-story.md)

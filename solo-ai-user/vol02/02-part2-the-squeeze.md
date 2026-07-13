@@ -1,9 +1,6 @@
-[← 이전: 01. 첫 의뢰](./01-part1-first-client.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 03. 첫 배포 →](./03-part3-first-deploy.md)
-
----
-
 # 02. 갑질
 
+[← 이전 회차: 01. 첫 의뢰](./01-part1-first-client.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 03. 첫 배포 →](./03-part3-first-deploy.md)
 
 사흘 동안, 현우는 회사 일을 하는 짬짬이 순임반찬의 판을 들여다봤다.
 
@@ -153,8 +150,4 @@
 
 그는 처음으로, 밤에 잠든 사이에도 지지 않는 무언가가 필요하다는 걸 깨달았다.
 
----
-
----
-
-[← 이전: 01. 첫 의뢰](./01-part1-first-client.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 03. 첫 배포 →](./03-part3-first-deploy.md)
+[← 이전 회차: 01. 첫 의뢰](./01-part1-first-client.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 03. 첫 배포 →](./03-part3-first-deploy.md)

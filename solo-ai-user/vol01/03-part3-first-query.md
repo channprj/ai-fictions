@@ -1,9 +1,6 @@
-[← 이전: 02. 희생양](./02-part2-scapegoat.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 04. 환각 →](./04-part4-hallucination.md)
-
----
-
 # 03. 첫 질의
 
+[← 이전 회차: 02. 희생양](./02-part2-scapegoat.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 04. 환각 →](./04-part4-hallucination.md)
 
 커서가 다시 살아난 건 십오 분쯤 지나서였다.
 
@@ -146,8 +143,4 @@
 
 이길 것 같았다. 이번만큼은, 정말로.
 
----
-
----
-
-[← 이전: 02. 희생양](./02-part2-scapegoat.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 04. 환각 →](./04-part4-hallucination.md)
+[← 이전 회차: 02. 희생양](./02-part2-scapegoat.md) | [시리즈 홈](../README.md) | [권 목차](./README.md) | [다음 회차: 04. 환각 →](./04-part4-hallucination.md)
