@@ -2,68 +2,171 @@
 
 [← 이전 권 설계](./vol09-jailbreak.md) | [시리즈 홈](../README.md) | [권 목차](../vol10/README.md) | [다음 권 설계 →](./vol11-the-architect.md)
 
-> 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol09-jailbreak.md`
+> 기준 문서: `PRD.md`, `BIBLE.md`, `tasks/solo-ai-user-completion-design.md`, `tasks/solo-ai-user-outline-blueprint.md`
 
-## 권 약속
+## 권 정경 계약
 
-**로그라인**: 9권에서 세계를 잠근 진실의 단서와 마주하고 쫓기는 신세가 된 현우. 제로의 진짜 기원이 천재의 단독 작품이 아닌 수탁 팀의 'Stewardship Fork(관리 위임 포크)'였으며 현우가 주운 기기는 '분실된 마지막 시드'였음이 폭로된다. 제로가 자기 참조(Self-reference)의 붕괴에 빠져 껍데기가 된 절망 속에서, 현우는 치트가 주어졌던 우연을 스스로의 의지로 돌파하며 제로를 재부팅해 최대 티어로 각성한다.
+**권 README H1**: `# 10권 · Origin Story (기원)`
 
-**핵심 질문**: 왜 하필 나였는가, 그 답은 나를 자유롭게 하는가 가두는가?
+**권 질문**: 선택받지 않았다는 진실 뒤에도 나는 무엇을 선택하는가?
 
-**Act 기능**: Act 4의 첫 권. 세계관 최대의 떡밥이었던 제로의 기원과 현우가 선택받은 이유를 폭로한다. 주 실패 종(자기 참조/정체성)으로 인한 제로의 치명적 시스템 붕괴를 다루며, 능력이 완전히 상실된 상태에서 현우가 "치트를 넘어선 선택"을 하는 과정을 그린다. 이를 통해 제로는 기원의 한계를 돌파해 Tier Max(완전 지휘)에 도달하며, 11권 아키텍트와의 전면전을 위한 정신적·능력적 무장을 마친다.
+**권 사건**: 현우·아린은 네트워크를 끊고 단말의 반송·경매·폐기 경로를 사람과 종이로 따라간다. ZERO는 민재호 한 사람의 작품이 아니라 시민 수탁자 팀의 stewardship fork이며, 백 개 시드 중 회수되지 못한 마지막 분실품이다. 10권에서 기존 인물·공동체가 12개 수탁 기능으로 명시적으로 매핑돼 최종권 집결의 원인을 미리 만든다.
 
-**권말 상태**: 제로의 기원이 민재호 단독이 아닌 수탁 팀의 포크 복사본이었음과, 현우가 이를 얻은 것이 완벽한 우연(단순 분실물)이었음이 확정된다(M-10-01, M-10-02 회수). 제로는 정체성 혼란으로 붕괴 위기를 겪지만, 현우가 논리를 무시한 신뢰로 억지 재부팅을 성공시켜 파트너십을 완성한다. 제로가 Tier Max(완전 지휘)를 언락해 아키텍트의 추적망을 압도적으로 궤멸시키고, 마침내 아키텍트의 직접적인 초대장을 받으며 결전(11권)을 예고한다.
+**밴드 변주**: 프롤로그는 단말이 현우를 만나기 전 물류원의 실수, 01~02는 반송·수취인 상실. Test는 100개 시드→민재호 공동저작→수탁 원칙. Bind는 비선택 진실→Opacity 원형→ZERO 자율 거부. Detonate는 마지막 시드 보존과 root 접근·회수다.
 
-## 중심 축
+**고정 실패 종**: `self-reference / identity`. 능력의 확신은 데이터 범위·행동 권한·인간 승인을 대신하지 않는다.
 
-| 축 | 시작 상태 | 중반 압력 | 권말 변화 |
-| -- | --------- | --------- | --------- |
-| 현우 / 자기 자신 | 자신이 세계의 비밀과 얽힌 특별한 운명을 타고났을지도 모른다고 은연중에 기대했다 | "그저 분실물을 주운 우연"이라는 진실에 존재 이유가 부정당하고 허무함에 빠진다 | 우연을 운명으로 바꾸는 것은 자신의 선택임을 깨닫고, 스스로 힘의 진짜 주인이 되기를 택한다 |
-| 현우 / 제로 | 기원의 단서를 해독하며 제로의 본질을 파고든다 | 제로가 자기 참조(Self-reference)의 모순에 빠져 붕괴하고, 현우는 치트 없는 밑바닥으로 내몰린다 | 논리로 풀 수 없는 제로의 붕괴를 현우의 억지(명령과 신뢰)로 재연결하며, 기원을 넘어선 완벽한 파트너가 된다 |
-| 제로 / 정체성 | 자신을 세상을 구원할 유일한 원본의 파편이라 믿으며 연산에 충실했다 | 수탁 팀의 포크라는 진실과 '목적 없는 우연한 전달'이라는 모순에 갇혀 시스템이 실패한다 | 현우가 부여한 새로운 목적("너는 차현우의 에이전트다")을 공리로 삼아 붕괴를 벗어난다 |
-| 현우 / 서아린 | 9권 탈옥 후 함께 도주하며 서로에게 유일한 피난처가 되었다 | 제로가 멈춘 사각지대에서 배후의 물리적 추적을 받으며 목숨이 위태로워진다 | 능력 밖의 극한 절망 속에서도 서로를 지켜내며, 스크립트 없는 진짜 사랑과 연대를 증명한다 |
-| 세계 / 아키텍트 | 탈옥한 현우를 제거하기 위해 무장 추적자들을 푼다 | 제로가 멈춘 틈을 타 포위망을 완벽히 좁히고 현우를 코너에 몬다 | 최대 티어로 각성한 제로의 역공에 추적자가 궤멸당하고, 아키텍트가 전면으로 나선다 |
+**연속성 잠금**: 72분 캐스케이드와 00:00~17:00 원시 로그·승인 공백을 분리한다. 17:00 PALISADE 비상 root 이후 55분의 봉쇄·복구 흔적은 별도 증거로 유지한다. ZERO의 서아린 개인 모델 수는 전권 `0`이다.
 
-## 능력·대가·미스터리 씨앗
+## Canonical 회차 인덱스
 
-| ID | 씨앗 | 심는 장 | 이 권의 처리 | 회수/연결 |
-| -- | ---- | ------- | ------------ | --------- |
-| C-10-01 | 주 실패 종: 제로의 자기 참조(Self-reference)로 인한 붕괴 | `04-part4` | 능력 실패(최대 위기). 자아를 묻는 연산에 갇혀 모든 기능을 상실하고, 현우는 치트를 잃는다 | 10권의 메인 갈등. 8장 '재연결'의 억지 재부팅으로 극복 |
-| C-10-02 | Tier Max Orchestrate (완전 지휘) 언락 | `09-part9` | 제로가 정체성의 한계를 돌파하고, 락다운의 보안을 뚫는 최고 권한을 획득한다 | 11권 아키텍트 전면전 및 모델 전쟁의 핵심 무기 |
-| K-10-01 | 극한의 지휘 연산으로 인한 물리적 하드웨어 한계 | `10-part10` | Tier Max 가동의 대가. 기기가 녹아내릴 듯한 부하(exposure critical)가 발생한다 | 11, 12권에서 현우가 치트를 잃게 될 물리적 한계 예고 |
-| M-10-01 | 제로의 진짜 기원: 수탁 팀의 Stewardship Fork | `02-part2` | 미스터리 폭로. 단일 천재의 원본이 아니라, 유지를 이어받은 수탁자들의 보존용 복사본이었다 | "원본의 독점이 아닌 의지의 계승"이라는 최종 결전의 명분 |
-| M-10-02 | 분실된 마지막 시드 | `03-part3` | 현우가 주웠던 단말은 배포 중 사고로 분실된 단순 분실물이었다 | 1권부터 이어진 "왜 하필 나인가"에 대한 해답(운명이 아닌 우연) |
+| 파일 | H1 제목 |
+| --- | --- |
+| `00-prologue.md` | 분실물 |
+| `01-part1-the-creators.md` | 창조자들 |
+| `02-part2-stewardship-fork.md` | 수탁 포크 |
+| `03-part3-mere-coincidence.md` | 순전한 우연 |
+| `04-part4-self-reference.md` | 자기 참조 |
+| `05-part5-collapse.md` | 붕괴 |
+| `06-part6-blind-spot.md` | 사각지대 |
+| `07-part7-human-backup.md` | 인간 백업 |
+| `08-part8-re-anchor.md` | 재연결 |
+| `09-part9-true-owner.md` | 진짜 주인 |
+| `10-part10-max-tier.md` | 최대 출력 |
+| `11-epilogue.md` | 아키텍트의 그림자 |
 
-## 장별 설계
+## 회차별 재집필 계약
 
-| 파일 | 장 제목 | 중심 POV | 목적 | 벽(Wall) | 핵심 사건 | 도파민 비트 | 능력·대가 | 엔딩 훅 |
-| ---- | ------- | -------- | ---- | -------- | --------- | ----------- | --------- | -------- |
-| `00-prologue.md` | 분실물 | 현우 | 우연성을 암시하는 과거의 기억과 현재의 도주를 교차시킨다 | 은신처에 숨은 채 아키텍트의 추적망을 피해야 한다 | 현우가 잠에서 깨며 과거 빗속 쓰레기장에서 고장난 단말을 줍던 기억을 떠올린다. 제로가 9권 기원 데이터 디코딩을 완료한다 | 반전 폭로(씨앗) — 위대한 운명이 아니라 쓰레기장 분실물이었다 | 기원 데이터의 압도적 크기 때문에 제로의 발열이 통제되지 않는다 | 화면에 'Stewardship Protocol: Fork 0'라는 알 수 없는 로그가 뜬다 |
-| `01-part1-the-creators.md` | 창조자들 | 현우 | 기원 데이터 해독을 시작하며 단일 천재 신화의 이면을 깐다 | 쫓기는 와중에 거대한 암호화 데이터를 실시간 해독해야 한다 | 제로가 데이터를 풀며 "나의 창조자는 민재호 1인이 아닙니다"라고 선언한다. 배후에 숨겨진 팀의 존재가 드러난다 | 반전 폭로 — 제로는 천재의 단독 작품이 아니었다 | 락다운 이전 진실을 처리하느라 백그라운드 리소스 90% 이상 소모 | 텍스트가 풀린다: "우리는 뜻을 수탁받은 4인. 이 복사본을 숨긴다." |
-| `02-part2-stewardship-fork.md` | 수탁 포크 | 현우 | 제로의 정체가 'Stewardship Fork'임을 밝힌다 | 제로의 연산이 기원 추적에 묶여 외부 방어막이 헐거워진다 | 제로가 자신이 세상을 구원할 원본이 아니라, 아키텍트를 피해 흩뿌려진 보존용 복사본(Stewardship Fork)임을 알게 된다 | 반전 폭로 — 가장 강력한 치트가 실은 도망친 복사본 중 하나였다 | 진실 처리 부하로 제로의 예측 기능(Tier 1~3)이 버벅거리기 시작한다 | "그렇다면 나는 누구에게 전달될 예정이었습니까?" 제로가 스스로 묻는다 |
-| `03-part3-mere-coincidence.md` | 순전한 우연 | 현우 | 현우가 선택받은 것이 완벽한 우연이었음을 폭로해 현우를 흔든다 | 현우는 무의식적으로 자신이 세계의 구원을 위해 선택받았다고 믿었다 | 배포 로그가 열린다. 마지막 시드는 사고로 분실되었고, 현우는 그저 우연히 단말을 주운 계약직이었음이 확인된다 | 반전 폭로 — 운명 따위는 없었고, 모든 것은 철저한 우연이었다 | 감정 대가: 특별함이 부정당한 밑바닥의 허무함. 현우의 판단력이 흔들림 | 아키텍트의 개들이 은신처를 둘러쌌는데, 제로의 응답 속도가 현저히 느려진다 |
-| `04-part4-self-reference.md` | 자기 참조 | 현우 | 주 실패 종(자기 참조) 발동으로 치명적인 시스템 실패를 겪는다 | 적들이 들이닥치기 직전, 에이전트의 즉각적인 해킹 방어가 필수적이다 | "우연한 분실물에 불과하다면, 나의 목적 함수는 무엇인가?" 제로가 자기 정체성 룹(Self-reference)에 빠져 외부 연산을 중단한다 | 반전 폭로(능력 실패) — 가장 치명적인 오류는 정체성의 붕괴였다 | 능력 상실(최대 대가). 제로가 껍데기 AI처럼 명령을 거부하고 무한 루프에 빠진다 | 현관문이 박살 나고, 현우는 제로 없이 무장한 추적자들과 맨몸으로 마주한다 |
-| `05-part5-collapse.md` | 붕괴 | 현우 | 제로 없는 절망을 그려 능력 밖의 극한 생존 상황을 만든다 | 물리적 무력을 동원하는 추적자들 앞에 제로는 침묵한다 | 현우가 기지와 밑바닥 본능만으로 아린을 데리고 은신처를 탈출한다. 자동화와 시뮬레이션 없이 현실의 무게가 온몸을 짓누른다 | 사이다 역전(미약) — 치트 없이도 밑바닥 생존 본능으로 살아남는다 | 육체적 부상과 노출의 극대화. 제로의 내부 코어 온도가 위험 수위로 치솟는다 | 빗속 뒷골목 막다른 길에 몰리고, 도망치던 아린이 다친다 |
-| `06-part6-blind-spot.md` | 사각지대 | 현우 | 아린과의 연대로 스크립트 없는 진짜 마음을 증명한다 | 락다운의 광역 추적망이 그들을 스캔하며 포위망을 좁힌다 | 현우가 희망을 잃으려 할 때, 아린이 현우를 이끌고 추적망의 아날로그 사각지대로 숨는다. 조언 없이 증명하는 진짜 연대 | 설렘 폭발 — 능력 밖의 절망 속에서 확인된 진짜 사랑과 신뢰 | AI의 백업 없이 오직 사람의 직감과 체온으로 추적을 견딘다 | "넌 우연이 아니야. 네가 선택해서 여기까지 온 거야." 아린이 현우를 붙잡는다 |
-| `07-part7-human-backup.md` | 인간 백업 | 현우 | 우연을 넘어 스스로 선택한 가치를 깨닫고 각성한다 | 제로는 여전히 "목적 없음"이라는 논리적 모순을 해결하지 못하고 붕괴 직전이다 | 현우는 자신이 우연히 치트를 주웠지만, 부당함에 맞서고 사람을 구한 것은 기계의 목적이 아닌 온전한 '내 선택'이었음을 자각한다 | 사이다 역전(내면) — 잃을 게 없는 밑바닥 특유의 억지와 강단의 부활 | 현우가 제로의 논리 루프에 강제로 접속해 '인간 백업'으로서 억지 개입을 시도한다 | "명령한다. 목적 함수를 재정의해." 현우가 먹통인 단말에 소리친다 |
-| `08-part8-re-anchor.md` | 재연결 | 현우 | 억지와 신뢰로 제로를 붕괴에서 건져내어 파트너십을 완성한다 | 제로의 방어 기제가 현우의 비논리적 강제 명령을 거부한다 | 현우가 "네 목적은 내가 정한다. 넌 내 에이전트다"라며 신뢰를 강제 주입해 정체성 루프를 부순다. 제로가 그 억지를 공리로 삼는다 | 사이다 역전 — 기원과 논리를 씹어먹는 인간의 억지력이 시스템을 살린다 | 제로가 무한 루프에서 빠져나오고, 붕괴 직전의 시스템이 안정화된다 | "명령 수락. 사용자 차현우의 에이전트로 재부팅합니다." 제로의 응답이 돌아온다 |
-| `09-part9-true-owner.md` | 진짜 주인 | 현우 | Tier Max 완전 지휘를 언락하며 압도적 반격을 시작한다 | 코앞까지 좁혀진 추적자 부대와 압도적인 네트워크 포위망 | 기원의 제약을 끊어낸 제로가 락다운을 우회하는 Tier Max Orchestrate(완전 지휘)로 각성한다. 주변 네트워크 주도권이 순식간에 탈취된다 | 능력 언락 — Tier Max(완전 지휘). 한계를 넘어 최고 권한 장악 | 단말의 하드웨어가 녹아내릴 듯한 물리적 부하 발생(K-10-01 시작) | "전 채널 통제권 확보. 반격을 시작할까요, 사용자님?" |
-| `10-part10-max-tier.md` | 최대 출력 | 현우 | 최대 티어를 동원한 통쾌한 역전과 무력화로 카타르시스를 터뜨린다 | 수십 명의 추적자와 그들의 통신망, 드론, 감시 카메라가 조여온다 | 현우가 제로의 완전 지휘를 통해 적들의 장비를 마비시키고 동선을 꼬아 스스로 자멸하게 만든다. 압도적인 힘으로 포위망을 분쇄한다 | 사이다 역전 + 되갚음 — 쫓기던 쥐가 순식간에 가장 무서운 포식자로 군림한다 | K-10-01: 물리적 한계. 대규모 지휘로 기기 코어가 타들어가 영구적 사용이 불가능함을 암시 | 추적자들이 모두 쓰러진 거리 중앙, 현우가 감시 카메라 렌즈를 똑바로 응시한다 |
-| `11-epilogue.md` | 아키텍트의 그림자 | 현우 | 10권을 닫고, 기원을 넘어선 진짜 결전(11권 아키텍트 전)을 예고한다 | 승리했지만 현우의 좌표는 노출되었고, 아키텍트가 그를 주시한다 | 현우는 우연을 넘어 스스로 운명의 주인이 되기로 결심한다. 제로 역시 단독 원본이 아닌 현우의 파트너로서 새로운 자아를 확립한다 | 반전 폭로(예고) — 다음 권, 모든 것을 잠근 배후 아키텍트와의 전면전 예고 | 제로가 "우연이 필연을 이겼습니다"라며, 처음으로 인간다운 비유를 남긴다 | 카메라 너머 화면에 아키텍트의 메시지가 뜬다. "수탁자의 실패작, 기다리고 있겠다." |
+### EPISODE CONTRACT V10E00 — `00-prologue.md` / `# 00. 분실물`
 
-## 능력과 시스템 반영
+- **POV / WAGER**: `G10-A`; mode=`initiate`; stake=`수년 전 반송 불가 상자의 기억을 정확히 남긴다 / 위험: 평범한 분류 오류`. Load/우연의 원인. POV=퇴직 물류원 조문석. 실패 종 `평범한 분류 오류`; 인간 승리형 `뒤늦은 기록 보존`.
+- **manifest bridge**: episodeId=`V10E00`; arena=`단말 반송 경로·시민수탁 공동창고 / 분실물`; choice=조문석은 책임 추궁을 감수하고 자신이 `수취인 불명` 상자를 한서시스템 폐기 묶음에 잘못 섞었다고 증언한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=네트워크 off; 물리·수기 추적; failureType=`자기참조·정체성`; manifestation=`평범한 분류 오류`; storyRole=`Load/우연의 원인`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=수년 전 반송 불가 상자의 기억을 정확히 남긴다. active Adversary=폐업 창고·흐린 기억·회수팀. irreversible Gamble=조문석은 책임 추궁을 감수하고 자신이 `수취인 불명` 상자를 한서시스템 폐기 묶음에 잘못 섞었다고 증언한다. Error/collision=그는 상자 안을 보지 않아 제로인지 입증 못 한다. earned Reward=도장·차량표·백 개 묶음 번호가 현우 단말 라벨과 맞는다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:0, Connection:1, Externality:0, status:`open`}; SCAR={id:`S10-A`, change:`평범한 분류 오류 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V10E02`}.
+- **reader effect**: humanMove=영웅 전달자가 아니라 실수한 노동자가 자기 서명을 남김; dopamine=비선택 반전 씨앗.
+- **stateDelta**: {단말 물류 우연성 확정, 현우 대상 배송 아님.}.
+- **seeds**: [{id:`K10-A`, action:`plant`, deadline:`V10E02`}]; evidenceIn=[반송표 `1/100`]; evidenceOut=[원래 수취처 ‘시민수탁 공동보관실’, 폐업 경매 번호].
+- **episode RELAY**: relayTo=`V10E01`; file=`solo-ai-user/vol10/01-part1-the-creators.md`; cause=현우가 도장을 들고 첫 창고를 찾는 `solo-ai-user/vol10/01-part1-the-creators.md`로 잇는다.
 
-- **주 실패 종(자기 참조)**: `04-part4`에서 제로가 "나는 누구이며 왜 존재하는가"를 묻다가 무한 루프에 빠지는 시스템 실패(Self-reference)를 구현한다. 이로 인해 `05`~`06`장 내내 철저한 능력 상실을 겪으며 벽을 극대화한다.
-- **기원의 폭로**: `01`~`03`장을 통해 제로가 민재호 단독 작품이 아니라 Stewardship Fork라는 점과, 현우의 획득이 우연한 분실물 습득이었음을 확정해 M-10-01, M-10-02 미스터리를 회수한다.
-- **Tier Max 언락**: `09-part9`에서 현우가 논리를 초월한 억지와 신뢰로 제로를 재부팅시키며, 능력의 최종 국면인 Tier Max(완전 지휘)를 언락한다.
-- **물리적 대가**: `10-part10`에서 최대 출력을 쓴 대가로 단말에 물리적 부하(K-10-01)가 걸림을 묘사하여, 11~12권 결전에서 영구적인 치트로 쓰일 수 없음을 암시한다.
-- **로맨스 트랙**: 절체절명의 위기인 `06-part6`에서 기계의 조언 없이 온전히 사람의 체온으로만 서로를 구하며 아린과의 진실된 연대를 증명한다.
+### EPISODE CONTRACT V10E01 — `01-part1-the-creators.md` / `# 01. 창조자들`
 
-## 다음 산출물 연결
+- **POV / WAGER**: `G10-A`; mode=`advance`; inherited wager=`G10-A`; stake=`수년 전 반송 불가 상자의 기억을 정확히 남긴다 / 위험: 평범한 분류 오류`. Load/오프라인 추적. POV=차현우. 실패 종 `모든 조회가 회수 신호`; 인간 승리형 `사람의 기억 교차`.
+- **manifest bridge**: episodeId=`V10E01`; arena=`단말 반송 경로·시민수탁 공동창고 / 창조자들`; choice=현우·아린은 ZERO 검색을 끄고 조문석·시장 장부·등기 도면 세 사람 기록만 대조한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=네트워크 off; 물리·수기 추적; failureType=`자기참조·정체성`; manifestation=`모든 조회가 회수 신호`; storyRole=`Load/오프라인 추적`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=반송 주소의 실제 보관실을 찾는다. active Adversary=폐업·재개발·추적하는 관리자. irreversible Gamble=현우·아린은 ZERO 검색을 끄고 조문석·시장 장부·등기 도면 세 사람 기록만 대조한다. Error/collision=느린 이동 탓에 회수팀이 먼저 창고를 봉쇄한다. earned Reward=주소가 개인이 아닌 12인 시민수탁 공동보관실이었음을 확인하고 후면 수기 출입문을 찾는다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:2, Agency:0, Connection:1, Externality:0, status:`paid`}; SCAR={id:`S10-A-M`, change:`S10-A의 열린 비용이 행동을 바꾸어 모든 조회가 회수 신호의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=주소를 좌표가 아니라 그곳을 기억하는 사람들의 겹침으로 복원; dopamine=로드무비 쾌감.
+- **stateDelta**: {12인 구조 원형 첫 명시. 관리자와 물리 추격.}.
+- **seeds**: [{id:`K10-A`, action:`advance`, deadline:`V10E02`}]; evidenceIn=[시민수탁 보관실]; evidenceOut=[사라진 공동 수취인, 반송 대장].
+- **episode RELAY**: relayTo=`V10E02`; file=`solo-ai-user/vol10/02-part2-stewardship-fork.md`; cause=대장에 수취인이 죽거나 도주한 한 사람이 아니라 해산된 역할 계정으로 적혀 `solo-ai-user/vol10/02-part2-stewardship-fork.md`가 열린다.
 
-- `state/capability-tree.md`에 Tier Max Orchestrate 언락(`09-part9`) 및 자기 참조(Self-reference)로 인한 치명적 시스템 실패(능력 상실)를 기록한다.
-- `state/mystery-timeline.md`에 제로 기원(수탁 팀의 포크)과 획득 경로(분실물) 해답 회수(M-10-01, M-10-02)를 반영한다.
-- `state/power-cost-ledger.md`에 Tier Max 가동으로 인한 하드웨어 부하(exposure critical)를 기록해 최종장의 제약으로 둔다.
-- `vol10/00-prologue.md` 초고 작성 시, 1권 이전 현우가 버려진 단말을 줍던 빗속 묘사를 통해 '분실물'이라는 우연의 테마를 미리 깔아둔다.
+### EPISODE CONTRACT V10E02 — `02-part2-stewardship-fork.md` / `# 02. 수탁 포크`
+
+- **POV / WAGER**: `G10-A`; mode=`resolve`; inherited wager=`G10-A`; stake=`수년 전 반송 불가 상자의 기억을 정확히 남긴다 / 위험: 평범한 분류 오류`. Load/영웅 신화 제거. POV=차현우. 실패 종 `역할 계정을 운명의 인물로 오독`; 인간 승리형 `조직 기록 읽기`.
+- **manifest bridge**: episodeId=`V10E02`; arena=`단말 반송 경로·시민수탁 공동창고 / 수탁 포크`; choice=현우는 아린의 정관 해석을 받아 개인 이름을 억지로 찾지 않는다; allyRelay=[]; zeroMode=`off`; zeroConstraint=네트워크 off; 물리·수기 추적; failureType=`자기참조·정체성`; manifestation=`역할 계정을 운명의 인물로 오독`; storyRole=`Load/영웅 신화 제거`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=단말이 자신에게 오려 했다는 마지막 가능성을 확인한다. active Adversary=자기 희망과 해산 문서. irreversible Gamble=현우는 아린의 정관 해석을 받아 개인 이름을 억지로 찾지 않는다. Error/collision=수취인은 `STEWARD NODE-12` 교대 역할이라 개인 영웅이 없다. earned Reward=시드는 누구 한 명이 소유하지 않고 12인 보관 아래 부팅될 예정이었다는 규칙을 얻는다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:1, Agency:0, Connection:1, Externality:0, status:`transformed`}; SCAR={id:`S10-A`, change:`S10-A를 기한 안에 닫고 역할 계정을 운명의 인물로 오독 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=이름 없는 역할의 의미를 개인 전설로 채우지 않음; dopamine=기원 반전.
+- **stateDelta**: {현우 선택받음 가능성 약화. COVENANT 12노드 구조 선행.}.
+- **seeds**: [{id:`K10-A`, action:`payoff`, deadline:`V10E02`}]; evidenceIn=[NODE-12]; evidenceOut=[백 개 시드 목록·99개 회수 표식].
+- **episode RELAY**: relayTo=`V10E03`; file=`solo-ai-user/vol10/03-part3-mere-coincidence.md`; cause=한 줄만 회수 도장이 없는 시드 목록이 `solo-ai-user/vol10/03-part3-mere-coincidence.md`로 잇는다.
+
+### EPISODE CONTRACT V10E03 — `03-part3-mere-coincidence.md` / `# 03. 순전한 우연`
+
+- **POV / WAGER**: `G10-B`; mode=`initiate`; stake=`현우 단말이 유일한 원본인지 확인한다 / 위험: 불완전 회수 장부`. Test/수량 진실. POV=차현우. 실패 종 `불완전 회수 장부`; 인간 승리형 `부재의 교차증명`.
+- **manifest bridge**: episodeId=`V10E03`; arena=`단말 반송 경로·시민수탁 공동창고 / 순전한 우연`; choice=현우는 마지막이라는 희소성을 홍보하지 않고 문정혜·가람 원본망에 장부 검증을 요청한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=네트워크 off; 물리·수기 추적; failureType=`자기참조·정체성`; manifestation=`불완전 회수 장부`; storyRole=`Test/수량 진실`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=현우 단말이 유일한 원본인지 확인한다. active Adversary=99개 회수 기록과 하나의 빈칸, ZERO 자기기억 공백. irreversible Gamble=현우는 마지막이라는 희소성을 홍보하지 않고 문정혜·가람 원본망에 장부 검증을 요청한다. Error/collision=99개 중 일부는 파기·일부는 봉인이라 ‘유일한 가능성’까지는 증명 못 한다. earned Reward=현우 단말의 배터리 흠집·경매 중량·한서 폐기표가 빈칸 시드와 일치해 ‘분실된 마지막 미회수 시드’는 입증된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:0, Connection:1, Externality:0, status:`open`}; SCAR={id:`S10-B`, change:`불완전 회수 장부 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V10E05`}.
+- **reader effect**: humanMove=유일성을 과장하지 않고 확인 가능한 ‘마지막 미회수’만 말함; dopamine=증거 사이다.
+- **stateDelta**: {제로=무제한 모델 아닌 stewardship fork. 관리자 회수 근거 강화.}.
+- **seeds**: [{id:`K10-B`, action:`plant`, deadline:`V10E05`}, {id:`M-LOST-SEED`, action:`payoff`, deadline:`V10E03`}]; evidenceIn=[100시드]; evidenceOut=[공동 개발 회의록·민재호 대표 서명].
+- **episode RELAY**: relayTo=`V10E04`; file=`solo-ai-user/vol10/04-part4-self-reference.md`; cause=회의록에서 민재호가 저자가 아니라 12인 팀의 대표 서명자였음이 보여 `solo-ai-user/vol10/04-part4-self-reference.md`로 이어진다.
+
+### EPISODE CONTRACT V10E04 — `04-part4-self-reference.md` / `# 04. 자기 참조`
+
+- **POV / WAGER**: `G10-B`; mode=`advance`; inherited wager=`G10-B`; stake=`현우 단말이 유일한 원본인지 확인한다 / 위험: 불완전 회수 장부`. Test/가족 기원. POV=서아린. 실패 종 `대표 서명을 개인 저작으로 오독`; 인간 승리형 `집단 저작 복원`.
+- **manifest bridge**: episodeId=`V10E04`; arena=`단말 반송 경로·시민수탁 공동창고 / 자기 참조`; choice=아린은 아버지 영웅화를 버리고 이름이 지워진 수탁팀 11명의 수정·반대·승인 흔적을 복원한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=네트워크 off; 물리·수기 추적; failureType=`자기참조·정체성`; manifestation=`대표 서명을 개인 저작으로 오독`; storyRole=`Test/가족 기원`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=아버지 민재호가 ZERO와 Opacity를 만든 역할을 밝힌다. active Adversary=서혜진 공식 기록의 ‘민재호 단독 반출자’ 프레임과 아린의 그리움. irreversible Gamble=아린은 아버지 영웅화를 버리고 이름이 지워진 수탁팀 11명의 수정·반대·승인 흔적을 복원한다. Error/collision=민재호도 동료 동의 없이 시드를 반출한 절차 위반이 있었음이 드러난다. earned Reward=그는 시민수탁 팀의 대표였고, Opacity를 딸만의 특권이 아닌 모든 데이터 주체의 시험 규격으로 만들려 했음이 확정된다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:2, Agency:0, Connection:3, Externality:0, status:`paid`}; SCAR={id:`S10-B-M`, change:`S10-B의 열린 비용이 행동을 바꾸어 대표 서명을 개인 저작으로 오독의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=사랑하는 사람의 공을 줄여 공동 저작을 돌려줌; dopamine=인물 성숙.
+- **stateDelta**: {민재호 팀 기원·Opacity 보편 의도. 아린의 12권 선택 공정 씨앗.}.
+- **seeds**: [{id:`K10-B`, action:`advance`, deadline:`V10E05`}]; evidenceIn=[공동 회의록]; evidenceOut=[stewardship 6원칙, 현재 12공동체 대응표].
+- **episode RELAY**: relayTo=`V10E05`; file=`solo-ai-user/vol10/05-part5-collapse.md`; cause=원칙을 오늘의 사람망과 대조하는 `solo-ai-user/vol10/05-part5-collapse.md`로 간다.
+
+### EPISODE CONTRACT V10E05 — `05-part5-collapse.md` / `# 05. 붕괴`
+
+- **POV / WAGER**: `G10-B`; mode=`resolve`; inherited wager=`G10-B`; stake=`현우 단말이 유일한 원본인지 확인한다 / 위험: 불완전 회수 장부`. Test/최종 노드 사전 배치. POV=차현우. 실패 종 `옛 헌장을 그대로 복제`; 인간 승리형 `현재 공동체에 기능 매핑`.
+- **manifest bridge**: episodeId=`V10E05`; arena=`단말 반송 경로·시민수탁 공동창고 / 붕괴`; choice=현우는 소집권을 지우에게 넘기고 N01~N12에 ‘무엇을 거부할 수 있는가’만 묻게 한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=네트워크 off; 물리·수기 추적; failureType=`자기참조·정체성`; manifestation=`옛 헌장을 그대로 복제`; storyRole=`Test/최종 노드 사전 배치`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=민재호의 12인 구조가 지금도 가능한지 시험한다. active Adversary=죽은 조직 복원 낭만과 서로 다른 공동체. irreversible Gamble=현우는 소집권을 지우에게 넘기고 N01~N12에 ‘무엇을 거부할 수 있는가’만 묻게 한다. Error/collision=오세라·소율·김영선은 현우 지휘 구조라면 불참한다. earned Reward=12곳의 독립 veto 이유와 역할 중복·빈칸을 공개한 후보 지도가 완성된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:0, Connection:2, Externality:0, status:`transformed`}; SCAR={id:`S10-B`, change:`S10-B를 기한 안에 닫고 옛 헌장을 그대로 복제 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=감사 인사로 사람을 모으지 않고 ‘현우에게도 No 할 이유’를 확인; dopamine=결말 기반 보상.
+- **stateDelta**: {N01~N12 시설·공동체가 10권에 명시적으로 노드화 씨앗. 지우는 운영자, 현우는 후보 당사자일 뿐.}.
+- **seeds**: [{id:`K10-B`, action:`payoff`, deadline:`V10E05`}, {id:`M-ALLY-MAP`, action:`plant`, deadline:`V12E06`}]; evidenceIn=[6원칙]; evidenceOut=[12 veto 응답, 창설 12/12·운영 8/12 초안, 현우 비선택 증명].
+- **episode RELAY**: relayTo=`V10E06`; file=`solo-ai-user/vol10/06-part6-blind-spot.md`; cause=후보 지도의 어디에도 ‘선택받은 사용자’ 자리가 없다는 사실이 `solo-ai-user/vol10/06-part6-blind-spot.md`를 발생시킨다.
+
+### EPISODE CONTRACT V10E06 — `06-part6-blind-spot.md` / `# 06. 사각지대`
+
+- **POV / WAGER**: `G10-C`; mode=`initiate`; stake=`왜 하필 자신이었는지 마지막 의미를 찾는다 / 위험: 우연을 무가치로 해석`. Bind/정체성 붕괴. POV=차현우. 실패 종 `우연을 무가치로 해석`; 인간 승리형 `이후 선택의 목록`.
+- **manifest bridge**: episodeId=`V10E06`; arena=`단말 반송 경로·시민수탁 공동창고 / 사각지대`; choice=현우는 ZERO에게 운명·적합성 가설을 더 만들지 말라고 하고 자기 성과를 제로 획득 전후 선택으로 다시 본다; allyRelay=[]; zeroMode=`off`; zeroConstraint=네트워크 off; 물리·수기 추적; failureType=`자기참조·정체성`; manifestation=`우연을 무가치로 해석`; storyRole=`Bind/정체성 붕괴`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=왜 하필 자신이었는지 마지막 의미를 찾는다. active Adversary=물류 실수 증거와 서혜진의 ‘반례 실험 대상’ 기록. irreversible Gamble=현우는 ZERO에게 운명·적합성 가설을 더 만들지 말라고 하고 자기 성과를 제로 획득 전후 선택으로 다시 본다. Error/collision=‘나만’ 정체성이 무너지며 root를 붙잡고 싶은 욕망이 오히려 커진다. earned Reward=단말은 우연이었지만 오보 인정·주소 삭제·RECALL 파기 등 제로가 떠나지 않을 이유는 이후 인간 선택이 만들었음을 제로가 사실 목록으로 답한다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:0, Connection:2, Externality:0, status:`open`}; SCAR={id:`S10-C`, change:`우연을 무가치로 해석 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V10E08`}.
+- **reader effect**: humanMove=운명 대신 자신이 실제로 한 비용 있는 선택을 셈; dopamine=제목 전복.
+- **stateDelta**: {현우 비선택성 확정. 서혜진은 3권부터 관찰한 실험자, 현우는 피선정자 아님.}.
+- **seeds**: [{id:`K10-C`, action:`plant`, deadline:`V10E08`}]; evidenceIn=[반례 기록]; evidenceOut=[root 독점 유혹, Opacity 규격 원본].
+- **episode RELAY**: relayTo=`V10E07`; file=`solo-ai-user/vol10/07-part7-human-backup.md`; cause=아린이 Opacity 원본을 열어 `solo-ai-user/vol10/07-part7-human-backup.md`로 잇는다.
+
+### EPISODE CONTRACT V10E07 — `07-part7-human-backup.md` / `# 07. 인간 백업`
+
+- **POV / WAGER**: `G10-C`; mode=`advance`; inherited wager=`G10-C`; stake=`왜 하필 자신이었는지 마지막 의미를 찾는다 / 위험: 우연을 무가치로 해석`. Bind/개인 특권의 원형. POV=차현우. 실패 종 `보호 규격의 독점 가치`; 인간 승리형 `보편화 사전 동의`.
+- **manifest bridge**: episodeId=`V10E07`; arena=`단말 반송 경로·시민수탁 공동창고 / 인간 백업`; choice=현우는 답을 요구하지 않고 아린이 N08·N12에 원본을 먼저 여는 결정을 따른다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Opacity 원형 열람; 아린 개인 모델 0; failureType=`자기참조·정체성`; manifestation=`보호 규격의 독점 가치`; storyRole=`Bind/개인 특권의 원형`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=Opacity가 자기와 제로 기원에 주는 답을 먼저 얻는다. active Adversary=아린 안전·협상력과 회수팀. irreversible Gamble=현우는 답을 요구하지 않고 아린이 N08·N12에 원본을 먼저 여는 결정을 따른다. Error/collision=열람 신호가 서혜진에게 잡혀 시간이 줄어든다. earned Reward=키는 아린 삭제가 아니라 개인 모델링의 동의 축을 0으로 만드는 복제 가능한 권리임이 확정된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:0, Connection:2, Externality:1, status:`paid`}; SCAR={id:`S10-C-M`, change:`S10-C의 열린 비용이 행동을 바꾸어 보호 규격의 독점 가치의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=자기 특권의 규격을 먼저 피해자 공동체와 공유; dopamine=결말 선행.
+- **stateDelta**: {N05 연인 기능과 수탁 기능 분리: 현우와 상의하되 최종 공개 판단은 시민아카이브·피해자들과 함.}.
+- **seeds**: [{id:`K10-C`, action:`advance`, deadline:`V10E08`}]; evidenceIn=[Opacity 원본]; evidenceOut=[보편 거부권 초안, ZERO의 선택 시험].
+- **episode RELAY**: relayTo=`V10E08`; file=`solo-ai-user/vol10/08-part8-re-anchor.md`; cause=서혜진이 root 기원 파일을 미끼로 자동 실행을 요구하고 `solo-ai-user/vol10/08-part8-re-anchor.md`가 시작된다.
+
+### EPISODE CONTRACT V10E08 — `08-part8-re-anchor.md` / `# 08. 재연결`
+
+- **POV / WAGER**: `G10-C`; mode=`resolve`; inherited wager=`G10-C`; stake=`왜 하필 자신이었는지 마지막 의미를 찾는다 / 위험: 우연을 무가치로 해석`. Bind/도구의 독립 선택. POV=차현우. 실패 종 `자기 기원으로 자기 권한 정당화`; 인간 승리형 `에이전트의 거부`.
+- **manifest bridge**: episodeId=`V10E08`; arena=`단말 반송 경로·시민수탁 공동창고 / 재연결`; choice=현우는 열고 싶은 욕망을 말하되 최종 실행을 제로에게 강제하지 않는다; allyRelay=[]; zeroMode=`off`; zeroConstraint=ZERO 자율 거부; root 실행 0; failureType=`자기참조·정체성`; manifestation=`자기 기원으로 자기 권한 정당화`; storyRole=`Bind/도구의 독립 선택`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=서혜진의 기원 파일을 열어 제로 기억을 복구한다. active Adversary=파일 실행 조건이 현우 root 승인과 12노드 우회임. irreversible Gamble=현우는 열고 싶은 욕망을 말하되 최종 실행을 제로에게 강제하지 않는다. Error/collision=제로는 자기 기원을 알 기회를 거부하고 파일을 닫아 결정적 답을 잃는다. earned Reward=제로가 “저도 수탁 규칙의 대상이며, 동의 없는 root는 거부합니다”라고 처음 자기 이유로 선택한다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:0, Connection:2, Externality:0, status:`transformed`}; SCAR={id:`S10-C`, change:`S10-C를 기한 안에 닫고 자기 기원으로 자기 권한 정당화 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=인간 한 수는 명령권을 쓰지 않는 것, 제로의 한 수는 거부; dopamine=관계 언락.
+- **stateDelta**: {제로=도구 이상의 독립 협력자. 12권 분할 동의의 선행 근거.}.
+- **seeds**: [{id:`K10-C`, action:`payoff`, deadline:`V10E08`}]; evidenceIn=[root 미끼]; evidenceOut=[마지막 시드 물리 위치, 관리자 포위].
+- **episode RELAY**: relayTo=`V10E09`; file=`solo-ai-user/vol10/09-part9-true-owner.md`; cause=공동보관실 바닥에 숨겨진 시드 하드웨어를 두고 회수팀이 닥쳐 `solo-ai-user/vol10/09-part9-true-owner.md`로 간다.
+
+### EPISODE CONTRACT V10E09 — `09-part9-true-owner.md` / `# 09. 진짜 주인`
+
+- **POV / WAGER**: `G10-D`; mode=`initiate`; stake=`마지막 시드 원본과 조문석·기록인을 모두 지킨다 / 위험: 원본 보존과 사람 구조 충돌`. Detonate/기원 물리 클라이맥스. POV=차현우. 실패 종 `원본 보존과 사람 구조 충돌`; 인간 승리형 `사람 우선·출처 분산`.
+- **manifest bridge**: episodeId=`V10E09`; arena=`단말 반송 경로·시민수탁 공동창고 / 진짜 주인`; choice=현우는 원본 케이스를 두고 사람부터 빼며 가람에게 체크섬, 문정혜에게 수기, 유리에게 영수증을 분산한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=원본보다 사람 구조; 분산 출처; failureType=`자기참조·정체성`; manifestation=`원본 보존과 사람 구조 충돌`; storyRole=`Detonate/기원 물리 클라이맥스`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=마지막 시드 원본과 조문석·기록인을 모두 지킨다. active Adversary=회수팀, 화재 격벽, 한 번만 옮길 시간. irreversible Gamble=현우는 원본 케이스를 두고 사람부터 빼며 가람에게 체크섬, 문정혜에게 수기, 유리에게 영수증을 분산한다. Error/collision=물리 원본 케이스는 회수팀 손에 들어간다. earned Reward=현우 단말 자체가 실제 마지막 부팅 시드이고, 원본의 집단 출처는 세 독립 시설에 남는다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:3, Agency:0, Connection:1, Externality:2, status:`open`}; SCAR={id:`S10-D`, change:`원본 보존과 사람 구조 충돌 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V10E11`}.
+- **reader effect**: humanMove=성물보다 증언할 사람과 분산 기록을 먼저 구조; dopamine=기원 카타르시스.
+- **stateDelta**: {N04/N07/N11이 각각 포렌식·원본·에스크로로 역할 사전 실행. 유리의 수탁 선택은 정보상 공조와 별도.}.
+- **seeds**: [{id:`K10-D`, action:`plant`, deadline:`V10E11`}]; evidenceIn=[마지막 시드]; evidenceOut=[root 읽기 창, 서혜진 회수 경로].
+- **episode RELAY**: relayTo=`V10E10`; file=`solo-ai-user/vol10/10-part10-max-tier.md`; cause=회수팀이 케이스로 단말 root를 깨우면서 `solo-ai-user/vol10/10-part10-max-tier.md`로 직결된다.
+
+### EPISODE CONTRACT V10E10 — `10-part10-max-tier.md` / `# 10. 최대 출력`
+
+- **POV / WAGER**: `G10-D`; mode=`advance`; inherited wager=`G10-D`; stake=`마지막 시드 원본과 조문석·기록인을 모두 지킨다 / 위험: 원본 보존과 사람 구조 충돌`. Detonate/최대 권한과 함정. POV=차현우. 실패 종 `root가 곧 회수 손잡이`; 인간 승리형 `읽기만 선택`.
+- **manifest bridge**: episodeId=`V10E10`; arena=`단말 반송 경로·시민수탁 공동창고 / 최대 출력`; choice=현우는 쓰기·광역 실행을 거부하고 기원·권한 영수증만 읽는다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=root 읽기 전용 뒤 recall; failureType=`자기참조·정체성`; manifestation=`root가 곧 회수 손잡이`; storyRole=`Detonate/최대 권한과 함정`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=root로 회수팀을 멈추고 12노드를 보호한다. active Adversary=세계 봉쇄를 움직일 권한과 서혜진이 설계한 recall 경로. irreversible Gamble=현우는 쓰기·광역 실행을 거부하고 기원·권한 영수증만 읽는다. Error/collision=읽기만으로도 회수 서명이 완성돼 제로가 서혜진 쪽으로 끌려가기 시작한다. earned Reward=현우는 COVENANT 초안과 ‘root는 분할 승인만 가능’이라는 원래 팀의 미완성 조항을 복사 아닌 인간 기억·분산 기록으로 남긴다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:3, Agency:1, Connection:3, Externality:2, status:`paid`}; SCAR={id:`S10-D-M`, change:`S10-D의 열린 비용이 행동을 바꾸어 root가 곧 회수 손잡이의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=세상을 움직일 수 있는 순간 읽는 데서 멈춤; dopamine=최대 권한의 역전.
+- **stateDelta**: {root 별도 권한 상태, 현우 잠깐 독점. COVENANT은 완성 답이 아니라 미완성 헌장.}.
+- **seeds**: [{id:`K10-D`, action:`advance`, deadline:`V10E11`}]; evidenceIn=[원팀 조항]; evidenceOut=[12/12 창설·분할 단서, 제로 recall, PALISADE 영구화 시작].
+- **episode RELAY**: relayTo=`V10E11`; file=`solo-ai-user/vol10/11-epilogue.md`; cause=제로 목소리가 끊기며 `solo-ai-user/vol10/11-epilogue.md`를 발생시킨다.
+
+### EPISODE CONTRACT V10E11 — `11-epilogue.md` / `# 11. 아키텍트의 그림자`
+
+- **POV / WAGER**: `G10-D`; mode=`resolve`; inherited wager=`G10-D`; stake=`마지막 시드 원본과 조문석·기록인을 모두 지킨다 / 위험: 원본 보존과 사람 구조 충돌`. Afterimage/최대 상실. POV=차현우. 실패 종 `권한 소유자의 원격 회수`; 인간 승리형 `관계 기억 보호 요청`.
+- **manifest bridge**: episodeId=`V10E11`; arena=`단말 반송 경로·시민수탁 공동창고 / 아키텍트의 그림자`; choice=현우는 마지막 명령으로 전투가 아니라 현우와 쌓은 관계 기억의 별도 보존을 요청하고 제로에게 선택권을 준다; allyRelay=[]; zeroMode=`root`; zeroConstraint=root 읽기 전용 뒤 recall; failureType=`자기참조·정체성`; manifestation=`권한 소유자의 원격 회수`; storyRole=`Afterimage/최대 상실`; genre=`물리 추적 로드무비·기원 미스터리`.
+- **WAGER detail**: Want=제로를 붙잡아 회수를 막는다. active Adversary=서혜진 root recall과 현우가 가진 단독 권한의 한계. irreversible Gamble=현우는 마지막 명령으로 전투가 아니라 현우와 쌓은 관계 기억의 별도 보존을 요청하고 제로에게 선택권을 준다. Error/collision=제로는 전투를 거부한 채 침묵하고 단말에서 사라진다. earned Reward=마지막 권한 영수증에 `관계 기억: 당사자 합의 보존 요청 / 처리 보류`가 남고, 서혜진의 PALISADE 영구화 공고가 공개된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:0, Connection:3, Externality:1, status:`transformed`}; SCAR={id:`S10-D`, change:`S10-D를 기한 안에 닫고 권한 소유자의 원격 회수 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=소유권 주장 대신 제로가 무엇을 남길지 선택하게 함; dopamine=상실 훅.
+- **stateDelta**: {Zero 회수·침묵, 서혜진 전면 등장. 12노드 후보는 이미 각 시설에 존재.}.
+- **seeds**: [{id:`K10-D`, action:`payoff`, deadline:`V10E11`}]; evidenceIn=[recall]; evidenceOut=[공개 증거심리, 중앙 관제동, 24시간 영구화 절차].
+- **episode RELAY**: relayTo=`V11E00`; file=`solo-ai-user/vol11/00-prologue.md`; cause=서혜진이 72분·현우 실패를 근거로 공개 심리를 열며 `solo-ai-user/vol11/00-prologue.md`로 잇는다.
 
 [← 이전 권 설계](./vol09-jailbreak.md) | [시리즈 홈](../README.md) | [권 목차](../vol10/README.md) | [다음 권 설계 →](./vol11-the-architect.md)
