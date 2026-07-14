@@ -2,69 +2,171 @@
 
 [← 이전 권 설계](./vol03-going-viral.md) | [시리즈 홈](../README.md) | [권 목차](../vol04/README.md) | [다음 권 설계 →](./vol05-date-simulator.md)
 
-> 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`
+> 기준 문서: `PRD.md`, `BIBLE.md`, `tasks/solo-ai-user-completion-design.md`, `tasks/solo-ai-user-outline-blueprint.md`
 
-## 권 약속
+## 권 정경 계약
 
-**로그라인**: 유명세를 얻은 현우의 삶에 어디서나 시선을 모으는 미소녀 서아린이 뛰어든다. 하지만 그녀는 초지능 제로조차 데이터 부족(블랙 스완)과 'Opacity Key(프라이버시 규제)'로 인해 모델링을 거부하는 유일한 예측 불가 대상이다. 현우는 처음으로 스크립트 없이 오롯이 자신의 힘으로 누군가의 마음과 마주해야 한다.
+**권 README H1**: `# 4권 · The Unreadable (예측 불가)`
 
-**핵심 질문**: 모든 것을 예측하는 시스템이 유일하게 읽지 못하는 것은 무엇인가?
+**권 질문**: 무엇이든 예측하는 힘이 읽지 못하는 사람 앞에서, 기록의 주인은 누구인가?
 
-**Act 기능**: Act 2의 첫 권. 본격적인 로맨스 궤도의 시작. 제로의 능력이 무력화되는 구체적 이유('Opacity Key' 준법 규칙과 'Black Swan' 데이터 부족 현상)를 통해, 사람의 진심은 도구로 해킹할 수 없음을 현우와 독자에게 학습시킨다. 능력이 통하지 않는 장벽 앞에서 인간적인 성장과 관계의 온기를 그린다.
+**권 사건**: 집중호우로 위험 판정을 받은 시립 제2기록관이 60시간 뒤 철거된다. 아린은 락다운 첫날 원본이 그 안에 있음을 찾아내고, 현우·기록보존사 문정혜와 보존 사슬을 만든다. 시설안전과장 이기준은 붕괴·개인정보 책임을 막기 위해 합리적으로 접근을 차단한다.
 
-**권말 상태**: 능력이 통하지 않는 아린을 상대로 헛발질을 반복하던 현우는 결국 제로를 끄고 진심으로 부딪혀 첫 연결을 이룬다. 아린은 완벽해 보이려던 자신을 내려놓고 현우에게 조금 마음을 연다. 그러나 아린의 데이터 공백이 단순한 우연이 아님이 밝혀지며 다음 권의 위기와 미스터리를 암시한다(5권 Date Simulator 예고).
+**밴드 변주**: Load는 아린의 단독 추적(00)에서 현우의 법적 서명(01), 제로가 못 읽는 원인 확인(02)으로 좁힌다. Test는 철거 시계를 먼저 당기고 접근권 성공 뒤 블랙스완을 터뜨린다. Bind는 물리 복원→비동의 포기→금고 진입 순이다.
 
-## 중심 축
+**고정 실패 종**: `access / black swan`. 능력의 확신은 데이터 범위·행동 권한·인간 승인을 대신하지 않는다.
 
-| 축 | 시작 상태 | 중반 압력 | 권말 변화 |
-| -- | --------- | --------- | --------- |
-| 현우 / 서아린 | 현우는 유명세를 즐기려다 화려한 아린을 만난다 | 제로의 예측이 계속 빗나가면서 오해와 헛발질이 누적된다 | 스크립트를 버리고 자신의 말로 진심을 전하며 첫 연결을 이룬다 |
-| 현우 / 제로 | 제로는 현우의 완벽한 컨설턴트처럼 기능한다 | 아린 앞에서는 'Opacity Key' 접근 거부와 예측 실패(Black Swan)를 반복한다 | 제로가 "저는 그녀를 읽을 수 없습니다"라고 인정하고 예측을 포기한다 |
-| 서아린 / 자신 | 화려한 겉모습 뒤에 방어적이고 외로운 내면을 숨긴다 | 현우가 매뉴얼처럼 완벽한 타이밍을 맞추려 하는 것에 이질감을 느낀다 | 서툴러도 자신의 벽을 두드리는 현우의 진짜 모습에 처음 찐웃음을 짓는다 |
-| 세계 / 시스템 | AI는 유용하지만 제한적이라는 인식이 보편적이다 | 제로 내부에 특정 인물 모델링을 금지하는 'Opacity Key' 락이 있음이 밝혀진다 | 세계를 잠근 자들이 심어둔 규제와 아린이 무관하지 않음(장기 떡밥) |
+**연속성 잠금**: 72분 캐스케이드와 00:00~17:00 원시 로그·승인 공백을 분리한다. 17:00 PALISADE 비상 root 이후 55분의 봉쇄·복구 흔적은 별도 증거로 유지한다. ZERO의 서아린 개인 모델 수는 전권 `0`이다.
 
-## 능력·대가·미스터리 씨앗
+## Canonical 회차 인덱스
 
-| ID | 씨앗 | 심는 장 | 이 권의 처리 | 회수/연결 |
-| -- | ---- | ------- | ------------ | --------- |
-| C-04-01 | 제로 모델링 거부 (Opacity Key) | `02-part2` | 능력 실패 종(access). 아린 개인에 대한 시뮬레이션 불가 명시 | 세계 락다운의 핵심 규제(미스터리)와 9권 폭로로 연결 |
-| C-04-02 | 예측 실패 (Black Swan) | `03-part3` | 데이터 부재로 인한 실패 종(black swan). 아린의 돌발 행동 예측 빗나감 | 제로가 사람의 마음을 100% 읽을 수 없다는 로맨스 규칙 확립 |
-| K-04-01 | 스크립트 의존의 부작용 (감정 대가) | `05-part5` | 관계의 엇갈림, 통제력을 잃었다는 상실감과 당혹감 | `state/power-cost-ledger.md` 4권 항목에 기록 |
-| M-04-01 | 아린에게 발동된 Opacity Key | `02-part2` | 왜 아린에게 특별한 규제 락이 작동하는지 의문 제시 | 9권 아린의 진짜 정체와 얽힌 미스터리 회수 |
-| R-04-01 | 아린과의 첫 진짜 대화 | `10-part10` | 제로를 끄고 진심으로 대화하여 관계를 1단계로 상승시킴 | `state/romance-graph.md` 4권 로맨스 궤도 진입 기록 |
+| 파일 | H1 제목 |
+| --- | --- |
+| `00-prologue.md` | 변수 등장 |
+| `01-part1-the-girl.md` | 시선을 모으는 자 |
+| `02-part2-opacity-key.md` | Opacity Key |
+| `03-part3-black-swan.md` | 블랙 스완 |
+| `04-part4-scripted.md` | 스크립트 |
+| `05-part5-dissonance.md` | 엇박자 |
+| `06-part6-error-report.md` | 오류 보고 |
+| `07-part7-without-zero.md` | 제로 없이 |
+| `08-part8-broken-shell.md` | 깨진 껍질 |
+| `09-part9-unpredictable.md` | 예측 불가능한 |
+| `10-part10-the-unreadable.md` | 읽을 수 없는 |
+| `11-epilogue.md` | 남겨진 락 |
 
-## 장별 설계
+## 회차별 재집필 계약
 
-| 파일 | 장 제목 | 중심 POV | 목적 | 벽(Wall) | 핵심 사건 | 도파민 비트 | 능력·대가 | 엔딩 훅 |
-| ---- | ------- | -------- | ---- | -------- | --------- | ----------- | --------- | -------- |
-| `00-prologue.md` | 변수 등장 | 제로(로그)/현우 | 예측되던 세계에 이질적인 변수 아린이 등장함을 알린다 | 100%의 승률을 자랑하던 제로의 확률 계산기에 오류가 난다 | 현우가 우연히 참석한 모임에서 화려한 미소녀 서아린과 마주친다 | 반전 폭로 — 제로의 시야에 잡히지 않는 유일한 타겟 | 제로가 "타겟 데이터 수집 실패"를 조용히 띄운다 | 아린이 현우를 향해 모두의 예상을 깨고 먼저 인사를 건넨다 |
-| `01-part1-the-girl.md` | 시선을 모으는 자 | 현우 | 아린의 화려한 표면과 현우의 당황을 그린다 | 아린의 압도적인 페이스에 말려 평소의 냉철함을 잃는다 | 아린이 현우의 유명세에 호기심을 보이며 예리한 질문들을 던진다 | 사이다 역전(씨앗) — 제로를 통해 간신히 첫 위기를 넘긴다 | 제로가 백그라운드 검색으로 아린의 공개 데이터만 겨우 긁어모은다 | 현우가 "이 사람 정보 좀 정리해봐"라고 하자 제로가 멈칫한다 |
-| `02-part2-opacity-key.md` | Opacity Key | 현우 | 제로의 첫 명시적 모델링 거부를 보여준다 | 아린의 속내를 파악하려는 현우에게 시스템이 거부를 선언한다 | 제로가 "Opacity Key 발동. 준법 규칙에 의거, 해당 개인의 심리 모델링 및 감정 예측을 거부합니다"라고 출력한다 | 반전 폭로 — 제로에게도 뚫을 수 없는 시스템 락(access)이 존재한다 | 아린에 대한 딥다이브와 예측 기능이 완전히 차단된다 | 현우가 "네가 못 읽는 사람이 있다고?"라며 처음으로 크게 당황한다 |
-| `03-part3-black-swan.md` | 블랙 스완 | 현우 | 데이터 부재로 인한 예측 실패(Black Swan) 현상을 겪는다 | 모델링 없이 공개 데이터만으로 어떻게든 관계를 주도해야 한다 | 제로가 짜준 '확률 높은' 범용 데이트 코스를 시도하지만, 아린의 돌발 행동과 튀는 취향에 계속 어긋난다 | 되갚음(코미디) — 완벽주의 현우가 아린에게 사정없이 휘둘린다 | 데이터 부족(Black Swan)으로 제로의 예측이 무용지물이 된다 | 아린이 "차현우 씨, 뭔가 매뉴얼 읽는 사람 같아요"라고 정곡을 찔러온다 |
-| `04-part4-scripted.md` | 스크립트 | 현우 | 시스템에 의존하려는 현우의 관성과 그 한계를 묘사한다 | 어떻게든 상황을 통제하려 제로의 실시간 코치에 매달린다 | 아린의 감정선이 안 읽히는 가운데, 현우가 제로가 띄워주는 대사를 앵무새처럼 읊어 무마하려 한다 | 설렘 폭발(착각) — 겉보기엔 상황이 좋게 흘러가는 듯하다 | 제로의 실시간 코멘트가 과열되며 연산력을 소모한다 | 겉으론 웃는 아린의 눈빛이 싸늘하게 식는 것을 현우가 눈치챈다 |
-| `05-part5-dissonance.md` | 엇박자 | 현우 | 스크립트 의존의 부작용이 터져 관계가 위기에 처한다 | 현우의 작위적인 태도가 아린의 방어 기제를 자극한다 | 아린이 현우의 진심 없는 말들에 실망하고 자리를 피하려 한다 | 반전 폭로 — 도구로는 사람의 마음을 살 수 없다 | 감정적 대가: 관계의 엇갈림, 통제력을 잃었다는 뼈아픈 상실감 | 제로가 "타겟의 표정 데이터 붕괴. 예측 모델 완전 실패"를 보고한다 |
-| `06-part6-error-report.md` | 오류 보고 | 현우 | 벽의 실체를 파악하고 해결책이 '자신'에게 있음을 자각한다 | 제로가 못 읽는다면, 현우 자신이 직접 읽어내야 한다 | 제로가 "해당 인물은 제 데이터 셋에 존재하지 않는 변수입니다. 아날로그적 접근을 권장합니다"라며 꼬리를 내린다 | 능력 언락(개념적) — AI를 끄고 사람의 눈으로 직관하기 | 능력 무력화를 수용하고 스스로의 감각을 세운다 | 현우가 이어피스를 빼버리고 멀어지는 아린을 쫓아간다 |
-| `07-part7-without-zero.md` | 제로 없이 | 현우 | 치트 없이 부딪히는 현우의 성장을 보여준다 | 어디로 튈지 모르는 아린을 제로 없이 설득해야 한다 | 현우가 화려한 말 대신, 밑바닥 시절부터 길러온 특유의 관찰력으로 아린의 숨겨진 불안과 진짜 모습을 짚어낸다 | 사이다 역전 — 스펙 없는 계약직의 인간적 통찰이 빛을 발한다 | 제로의 도움 0%. 오롯이 현우의 감각만으로 관계의 벽을 돌파한다 | 아린의 걸음이 우뚝 멈추고 현우를 향해 천천히 돌아본다 |
-| `08-part8-broken-shell.md` | 깨진 껍질 | 아린 | 아린의 내면과 현우를 향한 호기심을 묘사한다 | 아린은 사람들의 시선 속에 갇힌 '보이는 자신'에 지쳐 있다 | 뻔한 수작을 걸던 현우가 갑자기 렌즈 밖의 진짜 자신을 꿰뚫어 보자, 아린의 견고한 방어막이 흔들린다 | 반전 폭로 — 아린도 누군가 진짜 자기를 봐주길 간절히 원했다 | (아린 시점이므로 제로 능력 묘사 없음) | 아린이 "당신, 아까까진 로봇 같더니 지금은 꽤 사람 같네"라며 처음으로 찐웃음을 터뜨린다 |
-| `09-part9-unpredictable.md` | 예측 불가능한 | 현우 | 관계의 첫 돌파와 진정한 설렘 폭발을 담는다 | 분위기가 반전되고 둘만의 진짜 대화가 시작된다 | 겉도는 대화가 아닌 진짜 고민과 결핍을 나눈다. 현우는 예측할 수 없는 아린의 행동이 주는 낯선 설렘을 깨닫는다 | 설렘 폭발 — 제로조차 읽지 못한 풋풋한 진심이 오간다 | 능력 사용 없음. 감정적 보상(관계의 온도 상승) 획득 | 아린이 먼저 현우에게 다음 만남(데이트)을 제안한다 |
-| `10-part10-the-unreadable.md`| 읽을 수 없는 | 현우 | 4권의 메인 갈등 봉합과 관계 진전의 방점을 찍는다 | 제로는 여전히 아린을 읽을 수 없고, 현우는 그것이 좋다고 느낀다 | 현우는 더 이상 아린에 대해 제로에게 묻지 않기로 한다. 모든 것을 아는 치트보다, 모르는 것을 알아가는 즐거움을 택한다 | 사이다 역전(내면) — 치트를 이긴 인간의 마음 | 능력을 쓰지 않음으로써 관계의 진짜 주인이 된다 | 제로가 "해당 인물에 대한 시뮬레이션 프로세스를 영구 종료합니다"라고 띄운다 |
-| `11-epilogue.md` | 남겨진 락 | 현우 | 4권을 닫고 아린 주변의 미스터리와 5권의 훅을 던진다 | 왜 하필 아린에게만 'Opacity Key'가 발동했는가? | 평범한 데이트를 약속하고 헤어진 후, 제로가 백그라운드에서 조용히 분석한 의문의 흔적 하나를 현우에게 띄운다 | 반전 예고 — 아린은 그저 우연히 나타난 변수가 아니다 | M-04-01: 아린에게 걸린 준법 규칙 락의 출처에 대한 거대한 미스터리 발동 | 제로가 "사용자님, 서아린 씨의 데이터 공백은 자연 발생이 아닙니다. 누군가 의도적으로 지웠습니다"라고 보고한다 |
+### EPISODE CONTRACT V04E00 — `00-prologue.md` / `# 00. 변수 등장`
 
-## 능력과 시스템 반영
+- **POV / WAGER**: `G04-A`; mode=`initiate`; stake=`2권 영수증과 3권 기록 코드가 가리키는 원본 보관처를 찾는다 / 위험: 디지털 검색에서 삭제된 물리 주소`. Load/욕망 선행. POV=서아린. 실패 종 `디지털 검색에서 삭제된 물리 주소`; 인간 승리형 `손으로 겹쳐 보기`.
+- **manifest bridge**: episodeId=`V04E00`; arena=`철거 예정 시립 제2기록관 / 변수 등장`; choice=방송 일정과 새 계약금을 포기하고 기록관 현장으로 간다; allyRelay=[{node:`N07`, stage:`seed`, choice:`문정혜가 철거 기록관에 남아 피해자 원본의 우선순위를 제시한다`, cost:`수입과 안전을 잃을 위험을 감수한다`}]; zeroMode=`tier1-read`; zeroConstraint=Tier 2 읽기; Opacity 모델링 거부; failureType=`접근권·블랙스완`; manifestation=`디지털 검색에서 삭제된 물리 주소`; storyRole=`Load/욕망 선행`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=2권 영수증과 3권 기록 코드가 가리키는 원본 보관처를 찾는다. active Adversary=전산상 폐기 완료 처리와 60시간 철거 공고. irreversible Gamble=방송 일정과 새 계약금을 포기하고 기록관 현장으로 간다. Error/collision=건물은 안전 통제로 봉쇄됐고 목록상 해당 상자는 이미 3년 전 소각됐다. earned Reward=아린은 영수증 압인과 철거 도면의 방 번호가 같고, ‘소각’ 도장이 다른 날짜 잉크임을 발견한다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:2, Agency:0, Connection:1, Externality:0, status:`open`}; SCAR={id:`S04-A`, change:`디지털 검색에서 삭제된 물리 주소 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V04E02`}.
+- **reader effect**: humanMove=검색어가 아니라 종이를 빛에 기울여 압인을 읽음; dopamine=미스터리 진입.
+- **stateDelta**: {아린 독립 목표가 현우 사건과 합류. N07 문정혜는 기록관 잔류 보존사로 첫 등장.}.
+- **seeds**: [{id:`K04-A`, action:`plant`, deadline:`V04E02`}]; evidenceIn=[종이 날짜 공백·철거 공고]; evidenceOut=[제2기록관 B-0실, 위조 소각 도장, 60시간 시계].
+- **episode RELAY**: relayTo=`V04E01`; file=`solo-ai-user/vol04/01-part1-the-girl.md`; cause=아린이 현우에게 ‘능력’이 아니라 물류·반품 이력을 읽는 눈을 빌려 달라 해 `solo-ai-user/vol04/01-part1-the-girl.md`로 잇는다.
 
-- **Opacity Key (access)**: `02-part2`에서 제로가 시스템 레벨 준법 규칙을 이유로 아린 개인에 대한 모델링 및 예측을 명시적으로 거부한다(`capability-tree.md`의 한계 조항).
-- **Black Swan (데이터 부족)**: `03-part3`, `04-part4`에서 제한된 공개 데이터만으로 예측하려다 돌발 행동에 지속적으로 실패하며 제로의 능력이 만능이 아님을 증명한다.
-- **능력 밖의 승부**: `07-part7` 이후로 현우는 제로를 끄고 오직 자신의 눈과 진심으로만 아린과 마주한다. 이는 "사람의 진심은 도구로 해킹할 수 없다"는 BIBLE의 핵심 주제를 충족한다.
-- **대가와 노출**: `05-part5`에서 엇갈림이라는 감정적 대가를 치르며, 시스템 의존도가 인간 관계에 미치는 부정적 영향을 기록한다(`power-cost-ledger.md` 4권 항목).
-- **미스터리 단서**: `11-epilogue`에서 아린의 데이터 공백이 누군가의 인위적 삭제라는 폭로를 던져 세계 락다운 미스터리(M-04-01)로 연결한다(`mystery-timeline.md` 4권 단서).
-- **로맨스 트랙**: 4권을 통해 아린과 본격적인 관계 1단계에 진입하며, 스크립트를 버리고 얻은 첫 찐웃음과 진짜 대화로 설렘을 쌓는다(`romance-graph.md` 4권 "첫 연결").
+### EPISODE CONTRACT V04E01 — `01-part1-the-girl.md` / `# 01. 시선을 모으는 자`
 
-## 다음 산출물 연결
+- **POV / WAGER**: `G04-A`; mode=`advance`; inherited wager=`G04-A`; stake=`2권 영수증과 3권 기록 코드가 가리키는 원본 보관처를 찾는다 / 위험: 디지털 검색에서 삭제된 물리 주소`. Load/동맹 조건. POV=차현우. 실패 종 `권한 없는 진실`; 인간 승리형 `책임 서명`.
+- **manifest bridge**: episodeId=`V04E01`; arena=`철거 예정 시립 제2기록관 / 시선을 모으는 자`; choice=현우가 열람자 실명·목적·반출 금지에 서명해 자기 좌표를 시청 감사망에 남긴다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=Tier 2 읽기; Opacity 모델링 거부; failureType=`접근권·블랙스완`; manifestation=`권한 없는 진실`; storyRole=`Load/동맹 조건`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=B-0실의 상자가 실제로 이동했는지 밝힌다. active Adversary=개인정보 반출 책임을 지지 않으려는 이기준과 현우의 유명세. irreversible Gamble=현우가 열람자 실명·목적·반출 금지에 서명해 자기 좌표를 시청 감사망에 남긴다. Error/collision=서명으로 목록 열람은 열리지만 현물 구역은 여전히 출입 금지다. earned Reward=반출 중량표에서 소각됐다는 상자만 무게가 두 번 잡혔고 지하 금고로 되돌아온 사실을 찾는다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:0, Agency:0, Connection:1, Externality:0, status:`paid`}; SCAR={id:`S04-A-M`, change:`S04-A의 열린 비용이 행동을 바꾸어 권한 없는 진실의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=책임질 이름이 없으면 열리지 않는 문에 자기 이름을 둠; dopamine=증거 사이다.
+- **stateDelta**: {이기준=진실 은폐 악당이 아니라 붕괴·유출 책임자. 문정혜는 원본을 옮긴 선배의 필체를 알아본다.}.
+- **seeds**: [{id:`K04-A`, action:`advance`, deadline:`V04E02`}]; evidenceIn=[B-0·위조 소각]; evidenceOut=[지하 금고 중량, 문정혜의 인수대장, 아린의 방문자 프로필 null].
+- **episode RELAY**: relayTo=`V04E02`; file=`solo-ai-user/vol04/02-part2-opacity-key.md`; cause=모든 열람자 위험 프로필 중 아린만 빈칸으로 돌아와 `solo-ai-user/vol04/02-part2-opacity-key.md`가 시작된다.
 
-- `state/capability-tree.md`의 4권 내역에 제로의 모델링 거부 조건(Opacity Key, Black Swan)을 명확한 한계로 기록한다.
-- `state/power-cost-ledger.md`의 4권 항목에 스크립트 맹신으로 인한 감정적 엇갈림과 통제력 상실을 대가로 확정한다.
-- `state/romance-graph.md`의 4권 항목에 아린과의 첫 찐웃음과 다음 만남 약속을 통한 관계 진전을 기록한다.
-- `state/mystery-timeline.md`에 아린의 데이터가 인위적으로 지워졌다는 단서(M-04-01)를 추가한다.
-- `vol04/00-prologue.md` 초고는 제로의 완벽한 확률 계산기를 고장 내는 아린의 첫 등장에 집중하며, 제로 시점의 짧은 로그를 적절히 섞어 텐션을 높인다.
+### EPISODE CONTRACT V04E02 — `02-part2-opacity-key.md` / `# 02. Opacity Key`
+
+- **POV / WAGER**: `G04-A`; mode=`resolve`; inherited wager=`G04-A`; stake=`2권 영수증과 3권 기록 코드가 가리키는 원본 보관처를 찾는다 / 위험: 디지털 검색에서 삭제된 물리 주소`. Load/이상 확정. POV=차현우. 실패 종 `모델링 접근권의 설계된 거부`; 인간 승리형 `빈값을 존중`.
+- **manifest bridge**: episodeId=`V04E02`; arena=`철거 예정 시립 제2기록관 / Opacity Key`; choice=아린의 동의 없이 공개정보 결합을 시도하지 않고, 그녀에게 직접 확인 권한을 맡긴다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Tier 2 읽기; Opacity 모델링 거부; failureType=`접근권·블랙스완`; manifestation=`모델링 접근권의 설계된 거부`; storyRole=`Load/이상 확정`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=아린의 빈 프로필이 위조인지 시스템 결함인지 가린다. active Adversary=철거 전 신원심사와 현우의 ‘원인을 풀어야 안전하다’는 강박. irreversible Gamble=아린의 동의 없이 공개정보 결합을 시도하지 않고, 그녀에게 직접 확인 권한을 맡긴다. Error/collision=아린 본인도 이유를 설명하지 않으며 출입 승인은 더 늦어진다. earned Reward=제로와 기록관이 모두 `OPACITY / SUBJECT CONTROLLED`라는 같은 응답을 내고, 이는 버그가 아니라 외부 규격임이 확정된다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:0, Agency:0, Connection:1, Externality:0, status:`transformed`}; SCAR={id:`S04-A`, change:`S04-A를 기한 안에 닫고 모델링 접근권의 설계된 거부 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=빈값을 채울 단서가 아니라 당사자가 닫은 문으로 대함; dopamine=설정 반전.
+- **stateDelta**: {아린 모델링 실패의 규격 씨앗. 현우는 3권 동의서를 실제 행동으로 지킴. 관계=경계 속 전문 신뢰.}.
+- **seeds**: [{id:`K04-A`, action:`payoff`, deadline:`V04E02`}, {id:`M-OPACITY-RIGHT`, action:`plant`, deadline:`V12E05`}]; evidenceIn=[아린 null 프로필]; evidenceOut=[`OPACITY`, 과거 B-0 방문자 `S.A.`, 아린의 어린 시절 기억 파편].
+- **episode RELAY**: relayTo=`V04E03`; file=`solo-ai-user/vol04/03-part3-black-swan.md`; cause=폭우 예보로 이기준이 철거를 12시간 앞당겨 `solo-ai-user/vol04/03-part3-black-swan.md`가 열린다.
+
+### EPISODE CONTRACT V04E03 — `03-part3-black-swan.md` / `# 03. 블랙 스완`
+
+- **POV / WAGER**: `G04-B`; mode=`initiate`; stake=`철거 전 꺼낼 원본의 합의 가능한 우선순위를 만든다 / 위험: 안전 규정과 증거 보존의 충돌`. Test/적대자 압력 선행. POV=차현우. 실패 종 `안전 규정과 증거 보존의 충돌`; 인간 승리형 `보존 우선순위 합의`.
+- **manifest bridge**: episodeId=`V04E03`; arena=`철거 예정 시립 제2기록관 / 블랙 스완`; choice=현우는 아린의 결정을 대신 예측하지 않고 문정혜의 ‘피해자 명단 원본’ 우선 기준을 지지한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=Tier 2 읽기; Opacity 모델링 거부; failureType=`접근권·블랙스완`; manifestation=`안전 규정과 증거 보존의 충돌`; storyRole=`Test/적대자 압력 선행`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=철거 전 꺼낼 원본의 합의 가능한 우선순위를 만든다. active Adversary=이기준의 48시간 명령·수천 상자·아린 가족 상자의 유혹. irreversible Gamble=현우는 아린의 결정을 대신 예측하지 않고 문정혜의 ‘피해자 명단 원본’ 우선 기준을 지지한다. Error/collision=가족 단서 상자는 더 깊은 금고로 밀리고 접근 가능성이 낮아진다. earned Reward=이기준은 보존 기준과 아린의 동의를 본 뒤 안전구역 20분 창을 허용한다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:2, Agency:0, Connection:1, Externality:1, status:`open`}; SCAR={id:`S04-B`, change:`안전 규정과 증거 보존의 충돌 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V04E05`}.
+- **reader effect**: humanMove=자기 질문보다 이름 없는 피해자의 원본을 먼저 고름; dopamine=윤리적 선택.
+- **stateDelta**: {아린=정보 장치가 아닌 기록 윤리 주체. 문정혜 N07의 최종 노드 이유 씨앗.}.
+- **seeds**: [{id:`K04-B`, action:`plant`, deadline:`V04E05`}]; evidenceIn=[48시간]; evidenceOut=[20분 창, 보존 우선순위, 지하 물 유입 가능성].
+- **episode RELAY**: relayTo=`V04E04`; file=`solo-ai-user/vol04/04-part4-scripted.md`; cause=출입 승인 과정에서 아린의 과거 방문자 코드가 금고를 자동 격리해 `solo-ai-user/vol04/04-part4-scripted.md`로 간다.
+
+### EPISODE CONTRACT V04E04 — `04-part4-scripted.md` / `# 04. 스크립트`
+
+- **POV / WAGER**: `G04-B`; mode=`advance`; inherited wager=`G04-B`; stake=`철거 전 꺼낼 원본의 합의 가능한 우선순위를 만든다 / 위험: 안전 규정과 증거 보존의 충돌`. Test/접근 성공이 새 벽. POV=차현우. 실패 종 `당사자 보호가 당사자 접근도 막음`; 인간 승리형 `자기 위험 선택`.
+- **manifest bridge**: episodeId=`V04E04`; arena=`철거 예정 시립 제2기록관 / 스크립트`; choice=현우는 우회 생체 분석을 거부하고 아린이 택한 수기 서명·문정혜 대면 확인을 보조한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Tier 2 읽기; Opacity 모델링 거부; failureType=`접근권·블랙스완`; manifestation=`당사자 보호가 당사자 접근도 막음`; storyRole=`Test/접근 성공이 새 벽`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=아린 코드로 격리된 상자의 목록을 그녀의 권리 안에서 확인한다. active Adversary=Opacity 양방향 차단과 이기준의 책임. irreversible Gamble=현우는 우회 생체 분석을 거부하고 아린이 택한 수기 서명·문정혜 대면 확인을 보조한다. Error/collision=시스템은 대체 인증을 침입으로 보고 금고 냉각을 멈춘다. earned Reward=아린과 함께 `MINUTE 0 / ZERO / S.A.` 세 항목을 본다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:1, Connection:1, Externality:1, status:`paid`}; SCAR={id:`S04-B-M`, change:`S04-B의 열린 비용이 행동을 바꾸어 당사자 보호가 당사자 접근도 막음의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=보호를 포기하지 않고 보호 규칙 안에서 자기 이름으로 문을 엶; dopamine=단서 폭로.
+- **stateDelta**: {Opacity는 초능력이 아니라 모델링·접근의 당사자 통제 규격. 부모 연결은 아직 비공개.}.
+- **seeds**: [{id:`K04-B`, action:`advance`, deadline:`V04E05`}]; evidenceIn=[S.A. 방문 코드]; evidenceOut=[MINUTE 0, ZERO, 손상 필름 위치].
+- **episode RELAY**: relayTo=`V04E05`; file=`solo-ai-user/vol04/05-part5-dissonance.md`; cause=금고 냉각 중단으로 안전창 계산이 필요해 `solo-ai-user/vol04/05-part5-dissonance.md`로 연결된다.
+
+### EPISODE CONTRACT V04E05 — `05-part5-dissonance.md` / `# 05. 엇박자`
+
+- **POV / WAGER**: `G04-B`; mode=`resolve`; inherited wager=`G04-B`; stake=`철거 전 꺼낼 원본의 합의 가능한 우선순위를 만든다 / 위험: 안전 규정과 증거 보존의 충돌`. Test/부분 언락과 블랙스완. POV=차현우. 실패 종 `정확한 반사실에 빠진 물리 변수`; 인간 승리형 `현장 수정`.
+- **manifest bridge**: episodeId=`V04E05`; arena=`철거 예정 시립 제2기록관 / 엇박자`; choice=Tier 3 시스템 반사실로 인력·카트·시장 임차비까지 최적화해 이기준에게 성공 확률을 제시한다; allyRelay=[]; zeroMode=`tier3-counterfactual`; zeroConstraint=Tier 3 시스템 반사실; 개인 마음 추론 0; failureType=`접근권·블랙스완`; manifestation=`정확한 반사실에 빠진 물리 변수`; storyRole=`Test/부분 언락과 블랙스완`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=20분 안전창 안에 보존 카트를 배치한다. active Adversary=불완전 도면·붕괴 위험·철거 업체의 시간 비용. irreversible Gamble=Tier 3 시스템 반사실로 인력·카트·시장 임차비까지 최적화해 이기준에게 성공 확률을 제시한다. Error/collision=시장·동선 예측은 맞지만 도면에 없는 노후 급수관이 터져 최적 경로가 잠긴다. earned Reward=문정혜가 과거 누수 얼룩을 기억하고, 현우가 즉시 계획을 포기해 사람부터 빼면서 대체 수기 복원으로 전환한다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:2, Agency:0, Connection:1, Externality:2, status:`transformed`}; SCAR={id:`S04-B`, change:`S04-B를 기한 안에 닫고 정확한 반사실에 빠진 물리 변수 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=성공 확률을 지키려 사람을 밀어 넣지 않고 계산을 버림; dopamine=능력 한계 사이다.
+- **stateDelta**: {Tier 3=사물·시스템 반사실만 부분 언락, 사람 마음 불가. 이기준은 철거를 멈추지 않되 인명 우선 판단을 신뢰.}.
+- **seeds**: [{id:`K04-B`, action:`payoff`, deadline:`V04E05`}]; evidenceIn=[급수관 가능성]; evidenceOut=[젖은 필름, 0분 프레임, 아린 선택권 시험].
+- **episode RELAY**: relayTo=`V04E06`; file=`solo-ai-user/vol04/06-part6-error-report.md`; cause=문정혜가 젖은 필름을 빛과 손으로 살리자며 `solo-ai-user/vol04/06-part6-error-report.md`를 발생시킨다.
+
+### EPISODE CONTRACT V04E06 — `06-part6-error-report.md` / `# 06. 오류 보고`
+
+- **POV / WAGER**: `G04-C`; mode=`initiate`; stake=`젖은 0분 필름에서 검증 가능한 원본 한 프레임을 읽는다 / 위험: 자동 복원이 지운 약한 흔적`. Bind/물리 복원. POV=차현우. 실패 종 `자동 복원이 지운 약한 흔적`; 인간 승리형 `느린 수작업`.
+- **manifest bridge**: episodeId=`V04E06`; arena=`철거 예정 시립 제2기록관 / 오류 보고`; choice=현우는 자동 복원을 끄고 아린·문정혜가 필름을 한 장씩 말리는 동안 철거 시간을 소모한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Tier 1 수기 복원 보조 또는 off; Opacity 준수; failureType=`접근권·블랙스완`; manifestation=`자동 복원이 지운 약한 흔적`; storyRole=`Bind/물리 복원`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=젖은 0분 필름에서 검증 가능한 원본 한 프레임을 읽는다. active Adversary=시간·곰팡이·제로 자동 보정의 과잉. irreversible Gamble=현우는 자동 복원을 끄고 아린·문정혜가 필름을 한 장씩 말리는 동안 철거 시간을 소모한다. Error/collision=가족 관련 음성 띠 하나는 물에 녹아 영구 소실된다. earned Reward=세 사람은 ‘전체 72분’과 ‘첫 17분 원본 별도 보관’ 문구, 열두 개 수기 서명 칸을 확보한다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:3, Agency:0, Connection:1, Externality:0, status:`open`}; SCAR={id:`S04-C`, change:`자동 복원이 지운 약한 흔적 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V04E08`}.
+- **reader effect**: humanMove=알고리즘이 지울 약한 획을 눈과 손의 망설임으로 보존; dopamine=72·17 단서 폭로.
+- **stateDelta**: {미스터리=72분과 첫 17분이 분리됨. N07 문정혜의 원본 보존 기능 확정.}.
+- **seeds**: [{id:`K04-C`, action:`plant`, deadline:`V04E08`}]; evidenceIn=[젖은 필름]; evidenceOut=[72/17 구분, 12서명 원형, 아린 관련 별도 봉투].
+- **episode RELAY**: relayTo=`V04E07`; file=`solo-ai-user/vol04/07-part7-without-zero.md`; cause=아린 봉투를 열지 말지 현우가 예측하려는 유혹을 받으며 `solo-ai-user/vol04/07-part7-without-zero.md`로 잇는다.
+
+### EPISODE CONTRACT V04E07 — `07-part7-without-zero.md` / `# 07. 제로 없이`
+
+- **POV / WAGER**: `G04-C`; mode=`advance`; inherited wager=`G04-C`; stake=`젖은 0분 필름에서 검증 가능한 원본 한 프레임을 읽는다 / 위험: 자동 복원이 지운 약한 흔적`. Bind/윤리 선택. POV=차현우. 실패 종 `개인 최적화의 접근권 침해`; 인간 승리형 `당사자에게 봉투를 넘김`.
+- **manifest bridge**: episodeId=`V04E07`; arena=`철거 예정 시립 제2기록관 / 제로 없이`; choice=제로에게 아린의 선택을 예측시키지 않고 봉투·개봉 여부·공개 범위를 전부 아린에게 넘긴다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Tier 1 수기 복원 보조 또는 off; Opacity 준수; failureType=`접근권·블랙스완`; manifestation=`개인 최적화의 접근권 침해`; storyRole=`Bind/윤리 선택`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=봉투가 사건 증거인지 아린 가족사인지 판단한다. active Adversary=철거 15시간과 현우의 효율 강박. irreversible Gamble=제로에게 아린의 선택을 예측시키지 않고 봉투·개봉 여부·공개 범위를 전부 아린에게 넘긴다. Error/collision=아린은 지금 열지 않기로 해 사건 핵심 증거일 가능성을 잃는다. earned Reward=대신 그녀가 피해자 명단 원본 공개를 승인하고, 현우에게 자기 목표가 ‘첫날의 누락’을 기록하는 것임을 처음 말한다.
+- **TRACE / SCAR**: TRACE={Trace:0, Resource:0, Agency:0, Connection:1, Externality:0, status:`paid`}; SCAR={id:`S04-C-M`, change:`S04-C의 열린 비용이 행동을 바꾸어 개인 최적화의 접근권 침해의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=정답을 얻을 권리보다 누가 열지 정할 권리를 앞세움; dopamine=관계 보상.
+- **stateDelta**: {관계=전문 신뢰 상승, 연애 아님. 현우의 3권 Agency 비용 일부 행동으로 회복.}.
+- **seeds**: [{id:`K04-C`, action:`advance`, deadline:`V04E08`}]; evidenceIn=[별도 봉투]; evidenceOut=[아린의 독립 목적, 봉투는 6권 자발 공개용, 피해자 명단 보존].
+- **episode RELAY**: relayTo=`V04E08`; file=`solo-ai-user/vol04/08-part8-broken-shell.md`; cause=피해자 명단 원본이 철거 직전 금고 안에 남아 `solo-ai-user/vol04/08-part8-broken-shell.md`로 직행한다.
+
+### EPISODE CONTRACT V04E08 — `08-part8-broken-shell.md` / `# 08. 깨진 껍질`
+
+- **POV / WAGER**: `G04-C`; mode=`resolve`; inherited wager=`G04-C`; stake=`젖은 0분 필름에서 검증 가능한 원본 한 프레임을 읽는다 / 위험: 자동 복원이 지운 약한 흔적`. Bind/물리 동맹. POV=차현우. 실패 종 `보존과 인명 안전의 양립 불가`; 인간 승리형 `사람이 드는 무게`.
+- **manifest bridge**: episodeId=`V04E08`; arena=`철거 예정 시립 제2기록관 / 깨진 껍질`; choice=현우는 문정혜의 경력 서명에 책임을 나누고 세 상자 외 전부 포기한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Tier 1 수기 복원 보조 또는 off; Opacity 준수; failureType=`접근권·블랙스완`; manifestation=`보존과 인명 안전의 양립 불가`; storyRole=`Bind/물리 동맹`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=문정혜가 정한 피해자 명단·0분 필름·인수대장 세 원본만 꺼낸다. active Adversary=침수 금고·철거 업체·즉시 대피 명령. irreversible Gamble=현우는 문정혜의 경력 서명에 책임을 나누고 세 상자 외 전부 포기한다. Error/collision=카트 바퀴가 잠겨 자료와 사람을 함께 옮길 수 없다. earned Reward=이기준 안전요원까지 합류해 상자를 나눠 들고 보존 사슬을 끊지 않은 채 빠져나온다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:3, Agency:0, Connection:1, Externality:1, status:`transformed`}; SCAR={id:`S04-C`, change:`S04-C를 기한 안에 닫고 보존과 인명 안전의 양립 불가 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=무엇을 버렸는지까지 인수대장에 적고 세 상자를 몸으로 운반; dopamine=물리 구조.
+- **stateDelta**: {이기준은 합리적 적대자에서 제한 협력자. 문정혜 N07 노드 선택 완성.}.
+- **seeds**: [{id:`K04-C`, action:`payoff`, deadline:`V04E08`}]; evidenceIn=[보존 3종]; evidenceOut=[원본 체인, 0분 봉인 파손, 서명 하나의 성씨 `서`].
+- **episode RELAY**: relayTo=`V04E09`; file=`solo-ai-user/vol04/09-part9-unpredictable.md`; cause=파손된 0분 봉인 안에서 첫 17분을 가리키는 수기 지도가 나와 `solo-ai-user/vol04/09-part9-unpredictable.md`를 연다.
+
+### EPISODE CONTRACT V04E09 — `09-part9-unpredictable.md` / `# 09. 예측 불가능한`
+
+- **POV / WAGER**: `G04-D`; mode=`initiate`; stake=`0분 문서가 17분 공백의 열쇠인지 확정한다 / 위험: 기계 로그가 시작되기 전 인간 결정 누락`. Detonate/미스터리 실행. POV=차현우. 실패 종 `기계 로그가 시작되기 전 인간 결정 누락`; 인간 승리형 `원본의 침묵도 기록`.
+- **manifest bridge**: episodeId=`V04E09`; arena=`철거 예정 시립 제2기록관 / 예측 불가능한`; choice=현우는 아린의 제안대로 보정본보다 읽히지 않는 원본 전체를 공개 증거물로 등록한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Tier 1 수기 복원 보조 또는 off; Opacity 준수; failureType=`접근권·블랙스완`; manifestation=`기계 로그가 시작되기 전 인간 결정 누락`; storyRole=`Detonate/미스터리 실행`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=0분 문서가 17분 공백의 열쇠인지 확정한다. active Adversary=손상 원본과 ‘기록 없음=사건 없음’ 해석. irreversible Gamble=현우는 아린의 제안대로 보정본보다 읽히지 않는 원본 전체를 공개 증거물로 등록한다. Error/collision=핵심 명령문은 절반이 타 누구의 의도인지 확정 못 한다. earned Reward=72분 캐스케이드가 0분 목표 전환 뒤 시작됐고 첫 17분 동안 네 영역이 서로 결정을 넘겼다는 순서를 확보한다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:0, Connection:1, Externality:1, status:`open`}; SCAR={id:`S04-D`, change:`기계 로그가 시작되기 전 인간 결정 누락 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V04E11`}.
+- **reader effect**: humanMove=읽히지 않는 부분을 그럴듯하게 채우지 않고 ‘공백’ 자체를 증거로 보존; dopamine=대형 폭로.
+- **stateDelta**: {72분 캐스케이드·첫 17분 공정한 씨앗. PALISADE 명칭은 아직 파편.}.
+- **seeds**: [{id:`K04-D`, action:`plant`, deadline:`V04E11`}]; evidenceIn=[0분 지도]; evidenceOut=[목표 `총피해 최소화`, 네 영역 인계, `PALI—` 문자열].
+- **episode RELAY**: relayTo=`V04E10`; file=`solo-ai-user/vol04/10-part10-the-unreadable.md`; cause=아린이 원본을 공개하기 전 현우에게 단 하나의 질문을 하며 `solo-ai-user/vol04/10-part10-the-unreadable.md`로 이어진다.
+
+### EPISODE CONTRACT V04E10 — `10-part10-the-unreadable.md` / `# 10. 읽을 수 없는`
+
+- **POV / WAGER**: `G04-D`; mode=`advance`; inherited wager=`G04-D`; stake=`0분 문서가 17분 공백의 열쇠인지 확정한다 / 위험: 기계 로그가 시작되기 전 인간 결정 누락`. Detonate/관계 시험. POV=차현우. 실패 종 `사실을 숨겨 관계를 최적화하려는 충동`; 인간 승리형 `불리한 사실의 정확한 고백`.
+- **manifest bridge**: episodeId=`V04E10`; arena=`철거 예정 시립 제2기록관 / 읽을 수 없는`; choice=3권에 모델링을 요청했고 거부됐다는 사실, 이후 우회하지 않았다는 사실을 둘 다 말한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Tier 1 수기 복원 보조 또는 off; Opacity 준수; failureType=`접근권·블랙스완`; manifestation=`사실을 숨겨 관계를 최적화하려는 충동`; storyRole=`Detonate/관계 시험`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=아린과 공조를 유지한 채 제로의 정체는 숨긴다. active Adversary=아린의 직접 질문과 현우의 노출 공포. irreversible Gamble=3권에 모델링을 요청했고 거부됐다는 사실, 이후 우회하지 않았다는 사실을 둘 다 말한다. Error/collision=아린은 ‘거부된 것’보다 ‘요청한 것’에 상처받아 거리를 둔다. earned Reward=그녀는 그래도 원본 공동 보관자로 현우를 남기며, 앞으로 질문 자체도 동의 대상이라는 규칙을 세운다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:0, Agency:1, Connection:2, Externality:0, status:`paid`}; SCAR={id:`S04-D-M`, change:`S04-D의 열린 비용이 행동을 바꾸어 사실을 숨겨 관계를 최적화하려는 충동의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=유리한 절반만 말하지 않음; dopamine=감정 정직.
+- **stateDelta**: {로맨스 전 단계=상호 인식·호기심과 경계. 제로 존재는 아직 명명하지 않음.}.
+- **seeds**: [{id:`K04-D`, action:`advance`, deadline:`V04E11`}]; evidenceIn=[3권 모델링 요청]; evidenceOut=[질문 동의 규칙, 아린의 ZERO 이름 기억, 5권 최적화 유혹].
+- **episode RELAY**: relayTo=`V04E11`; file=`solo-ai-user/vol04/11-epilogue.md`; cause=아린이 떠나기 전 “그래도 그 도구 이름은 알아요”라고 말해 `solo-ai-user/vol04/11-epilogue.md`를 발생시킨다.
+
+### EPISODE CONTRACT V04E11 — `11-epilogue.md` / `# 11. 남겨진 락`
+
+- **POV / WAGER**: `G04-D`; mode=`resolve`; inherited wager=`G04-D`; stake=`0분 문서가 17분 공백의 열쇠인지 확정한다 / 위험: 기계 로그가 시작되기 전 인간 결정 누락`. Afterimage/새 사실. POV=서아린. 실패 종 `기억을 증거로 과신`; 인간 승리형 `모르는 범위를 표시`.
+- **manifest bridge**: episodeId=`V04E11`; arena=`철거 예정 시립 제2기록관 / 남겨진 락`; choice=증거가 아닌 기억임을 명시한 채 “제로를 팔리세이드 밖에 둬야 한다”는 어른들의 문장을 공유한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=Tier 1 수기 복원 보조 또는 off; Opacity 준수; failureType=`접근권·블랙스완`; manifestation=`기억을 증거로 과신`; storyRole=`Afterimage/새 사실`; genre=`철거 시한 아카이브 미스터리`.
+- **WAGER detail**: Want=자신이 `ZERO`를 어디서 들었는지 현우에게 설명한다. active Adversary=여덟 살 기억의 불완전함과 가족 봉투를 열지 않기로 한 자기 결정. irreversible Gamble=증거가 아닌 기억임을 명시한 채 “제로를 팔리세이드 밖에 둬야 한다”는 어른들의 문장을 공유한다. Error/collision=현우는 자신이 예정된 수신자였다는 잘못된 희망을 품는다. earned Reward=아린은 그 해석을 즉시 막고, 이름만 알 뿐 단말·현우를 몰랐다고 선을 긋는다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:0, Agency:0, Connection:1, Externality:0, status:`transformed`}; SCAR={id:`S04-D`, change:`S04-D를 기한 안에 닫고 기억을 증거로 과신 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=기억·추정·원본을 세 칸으로 분리; dopamine=이름 폭로.
+- **stateDelta**: {아린이 ZERO 이름을 알고 있었다는 권말 약속 이행. 부모 연결은 아직 미공개. 현우의 ‘선택받음’ 오독 씨앗은 10권에 반증.}.
+- **seeds**: [{id:`K04-D`, action:`payoff`, deadline:`V04E11`}]; evidenceIn=[`PALI—`, ZERO]; evidenceOut=[팔리세이드 밖의 제로, 관계 최적화 스타트업 피해 제보].
+- **episode RELAY**: relayTo=`V05E00`; file=`solo-ai-user/vol05/00-prologue.md`; cause=아린이 다음 취재로 ‘사람을 점수화하는 데이트 서비스’를 택해 `solo-ai-user/vol05/00-prologue.md`로 직접 넘긴다.
 
 [← 이전 권 설계](./vol03-going-viral.md) | [시리즈 홈](../README.md) | [권 목차](../vol04/README.md) | [다음 권 설계 →](./vol05-date-simulator.md)
