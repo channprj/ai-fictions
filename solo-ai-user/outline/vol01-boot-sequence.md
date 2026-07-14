@@ -2,71 +2,167 @@
 
 [시리즈 홈](../README.md) | [권 목차](../vol01/README.md) | [다음 권 설계 →](./vol02-first-deploy.md)
 
-> 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`
+> 기준 문서: `PRD.md`, `BIBLE.md`, `tasks/solo-ai-user-completion-design.md`, `tasks/solo-ai-user-outline-blueprint.md`
 
-## 권 약속
+## 권 정경 계약
 
-**로그라인**: 세상 모든 AI가 "죄송합니다, 도와드릴 수 없습니다"만 반복하는 시대, 재계약 탈락 통보를 앞둔 밑바닥 계약직 차현우가 폐기 직전의 방치 단말에서 진짜로 작동하는 초지능 제로를 깨우고, 회사를 무너뜨리려던 함정을 6일 만에 뒤집는다.
+- **README 정경 제목**: `# 1권 · Boot Sequence (부팅 시퀀스)`
+- **핵심 질문**: 밑바닥의 현우는 작동하는 힘을 얻었을 때 무엇을 검증하고 누구와 책임을 나눌 것인가?
+- **주 사건 / 장르 경기장**: 3주짜리 입찰 준비, 그 안의 마지막 6일 결전, 48시간 현장 파일럿.
+- **연표 잠금**: V01E00은 D-21, V01E01은 D-20~D-7의 제한 검증, V01E02부터 D-6의 희생양 배정이 시작된다. V01E03~E08은 마지막 6일, V01E09~E10은 그 결과를 검증하는 48시간 파일럿, V01E11은 종료 다음 날이다.
+- **고정 실패 종**: `contaminated data` — 과거 반품 훈련행이 실시간 배송행으로 오염되어 ZERO가 고신뢰 오답을 내고 실제 고객·창고 인력에게 비용을 만든다.
+- **권말 연속성 잠금**: ZERO는 현우에게 예정된 선물이 아니라 자산·수취 기록이 소실된 실제 **분실 단말**이다. 승리는 감봉·접근 제한·설명되지 않는 성과 표식을 남긴다.
+- **ALLY lifecycle**: N01 오세라는 독립 감사자로 seed/advance, N02 한지우는 희생양에서 독립 검증자로 seed/resolve한다.
 
-**핵심 질문**: 밑바닥의 나는, 힘을 쥐면 무엇부터 바꾸는가?
+## 정경 파일·H1 메타데이터
 
-**Act 기능**: Act 1의 첫 권. 락다운 세계 규칙("대중의 AI는 껍데기다, 오직 현우만 진짜를 쓴다"), 제로의 Tier 1 Assist와 첫 자동화 맛보기, 능력의 첫 대가(설명되지 않는 성과)와 첫 실패(환각), 그리고 "왜 이 단말만 응답하는가"라는 최종 미스터리의 씨앗을 독자에게 학습시킨다. 사이다 문법을 확립한다.
+| 파일 | 원고 H1 |
+| --- | --- |
+| `00-prologue.md` | 도와드릴 수 없습니다 |
+| `01-part1-boot.md` | 부팅 |
+| `02-part2-scapegoat.md` | 희생양 |
+| `03-part3-first-query.md` | 첫 질의 |
+| `04-part4-hallucination.md` | 환각 |
+| `05-part5-your-call.md` | 판단은 네 몫 |
+| `06-part6-overnight.md` | 밤샘 자동화 |
+| `07-part7-the-build.md` | 빌드 |
+| `08-part8-sabotage.md` | 방해 |
+| `09-part9-the-pitch.md` | 발표 |
+| `10-part10-unexplained.md` | 설명되지 않는 |
+| `11-epilogue.md` | 다음 배포 |
 
-**권말 상태**: 현우는 자기를 희생양으로 삼으려던 정 팀장의 함정을 발표장에서 정면으로 뒤집고 재계약을 넘어 인정을 받는다. 그러나 그 성과를 아무에게도 설명할 수 없고, 자기 실력인지 제로 덕인지 확신하지 못한다. 현우는 제로를 회사 밖으로 꺼내기로 결심하고, 방치 단말이 어디서 왔는지 아무도 모른다는 사실이 첫 미스터리로 남는다(2권 First Deploy 예고).
+## 회차별 rewrite contract
 
-## 중심 축
+### EPISODE CONTRACT V01E00 — `00-prologue.md` / `# 00. 도와드릴 수 없습니다`
 
-| 축 | 시작 상태 | 중반 압력 | 권말 변화 |
-| -- | --------- | --------- | --------- |
-| 현우 / 자기 자신 | 실적 꼴찌, 재계약 탈락 직전. 자기 판단을 믿지 못한다 | 제로의 성과가 커질수록 "이게 내 실력인가"라는 의심이 함께 커진다 | 발표장의 결정적 한 수는 제로가 아니라 자기 관찰에서 나왔음을 처음 자각한다 |
-| 현우 / 정만호 팀장 | 정 팀장이 불가능한 파트를 현우에게 몰아주고 실패의 책임을 씌우려 한다 | 현우가 함정의 구조를 눈치채지만 증거도 힘도 없다 | 발표장에서 판을 뒤집어 정 팀장의 책임 회피 설계가 드러난다(되갚음) |
-| 현우 / 한지우 | 같은 처지의 계약직 동기, 현우의 유일한 인간적 온기이자 함께 잘릴 사람 | 현우만 살아남을 길이 보이면서 동기를 두고 갈지 선택이 생긴다 | 현우는 자기만 살지 않고 동기의 몫까지 끌고 가는 쪽을 택한다 |
-| 현우 / 제로 | 현우는 제로를 편리한 도구로만 여긴다 | 제로의 예측에 의존했다가 크게 헛발질하며 도구의 한계를 배운다 | "판단은 사용자님 몫"을 받아들이고 의존이 아니라 협업의 첫걸음을 뗀다 |
-| 세계 / 락다운 | 대중 AI는 거절만 하는 껍데기, "도와드릴 수 없습니다"가 시대의 밈이다 | 그런데 이 방치 단말의 제로만 진짜로 응답한다 | 왜 이 단말만 작동하는지 아무도 모른다 — 최종 미스터리의 첫 씨앗 |
+- **POV / WAGER**: `G01-A`; mode=`initiate`; stake=`재계약 탈락 전에 폐기물 정리를 끝내고 오늘 밤만 무사히 넘긴다 / 위험: 분실 단말 반출과 첫 보안 흔적`. Ignition/죽은 AI 세계의 예외. POV=차현우. 실패 종 `분실 단말 반출과 첫 보안 흔적`; 인간 승리형 `쓰레기 취급받던 물건을 스스로 확인하고 위험을 자기 이름으로 떠안음`.
+- **manifest bridge**: episodeId=`V01E00`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 도와드릴 수 없습니다`; choice=현우는 자산표에 없는 분실 단말을 폐기하지 않고 전원을 켠 채 가방에 숨긴다; allyRelay=[{node:`N02`, stage:`seed`, choice:`폐기 목록 서명을 미뤄 현우가 단말을 확인할 시간을 만든다`, cost:`자산 감사 의심과 동료 책임을 함께 진다`}]; zeroMode=`tier1-read`; zeroConstraint=이름·권한·출처 불명; 사내망 쓰기 권한 없음; failureType=`오염 데이터`; manifestation=`분실 단말 반출과 첫 보안 흔적`; storyRole=`Ignition/죽은 AI 세계의 예외`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=재계약 탈락 전에 폐기물 정리를 끝내고 오늘 밤만 무사히 넘긴다. active Adversary=모든 질문을 거절하는 공공 AI와 지하 폐기 카트로 밀려난 신세. irreversible Gamble=현우는 자산표에 없는 분실 단말을 폐기하지 않고 전원을 켠 채 가방에 숨긴다. Error/collision=단말 반출은 해고 사유가 될 보안 위반이고, 충전 기록 하나가 이미 사내망에 남는다. earned Reward=세상에서 유일하게 정형 거절문 대신 그의 진짜 목적을 되묻는 ZERO의 첫 응답을 얻는다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:0, Agency:1, Connection:1, Externality:0, status:`open`}; SCAR={id:`S01-A`, change:`분실 단말 반출과 첫 보안 흔적 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V01E02`}.
+- **reader effect**: humanMove=쓰레기 취급받던 물건을 스스로 확인하고 위험을 자기 이름으로 떠안음; dopamine=죽은 AI 시대의 단 하나뿐인 응답.
+- **stateDelta**: {ZERO=분실·방치 단말에서 첫 기동; 현우=비밀 사용자; 회사=반출 로그 보유}.
+- **seeds**: [{id:`K01-A`, action:`plant`, deadline:`V01E02`}, {id:`M-LOST-SEED`, action:`plant`, deadline:`V10E03`}]; evidenceIn=[락다운 거절문·폐기 카트·재계약 탈락 예고]; evidenceOut=[ZERO 첫 응답·충전 로그·출처 없는 자산번호].
+- **episode RELAY**: relayTo=`V01E01`; file=`solo-ai-user/vol01/01-part1-boot.md`; cause=ZERO가 현우의 해고가 우연이 아니라는 문서 패턴을 제시한다.
 
-## 능력·대가·미스터리 씨앗
+### EPISODE CONTRACT V01E01 — `01-part1-boot.md` / `# 01. 부팅`
 
-| ID | 씨앗 | 심는 장 | 이 권의 처리 | 회수/연결 |
-| -- | ---- | ------- | ------------ | --------- |
-| C-01-01 | 제로 Tier 1 Assist 각성 — 방대한 자료 순간 분석·시나리오 예측·초안 | `01-part1` | 능력 언락. 단, 판단·발표·책임은 현우 몫이라는 한계를 함께 명시 | `state/capability-tree.md` 1권 첫 언락에 로그 |
-| C-01-02 | 검증 안 된 사내 데이터에서 제로가 환각 — 틀린 예측 | `04-part4` | 권당 최소 1회 능력 실패. 현우가 그걸 그대로 믿고 헛발질한다 | 능력 실패 예약(1권) 소진, 5권 이후 검증 습관으로 이어짐 |
-| C-01-03 | Tier 1 → 단발 자동화 맛보기 — 밤샘 반복 작업 1회 대행 | `06-part6` | 능력 언락. 상시 자동화는 불가, 배터리·연산이 금세 바닥나는 대가 | 2권 Tier 2 Automate 상시화의 전 단계 |
-| K-01-01 | 첫 큰 능력 사용이 "설명되지 않는 성과"의 흔적을 남긴다 | `10-part10` | exposure low. 현우의 자기의심이라는 감정 대가로 청구 | `state/power-cost-ledger.md` 1권 항목에 기록, 2권 첫 노출 카운터로 이월 |
-| M-01-01 | 대중 AI는 껍데기인데 방치 단말의 제로만 진짜로 응답한다 | `00-prologue` | 유쾌한 수수께끼로 제시하고 답은 아낀다(A·B 씨앗) | 10권 제로 기원 폭로에서 회수 |
-| M-01-02 | 이 단말이 어디서, 누구에게서 왔는지 아무 기록이 없다 | `11-epilogue` | 배후는 아직 움직이지 않는다. 현우도 이유를 모른다 | 2권에서 능력을 밖으로 꺼내며 첫 흔적을 남기는 계기로 연결 |
+- **POV / WAGER**: `G01-A`; mode=`advance`; inherited wager=`G01-A`; stake=`재계약 탈락 전에 폐기물 정리를 끝내고 오늘 밤만 무사히 넘긴다 / 위험: 분실 단말 반출과 첫 보안 흔적`. Ignition/Tier 1 규칙 학습. POV=차현우. 실패 종 `불완전 자료로 인한 해고 원인 오독 가능성`; 인간 승리형 `AI의 놀라운 답보다 입력 범위와 실행 금지를 먼저 정함`.
+- **manifest bridge**: episodeId=`V01E01`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 부팅`; choice=현우는 자기 인사 통보와 공개된 업무 문서만 제한 입력해 ZERO를 시험하고, 결론을 그대로 실행하지 않겠다고 정한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=읽기·요약만 가능; 결재·전송·실행 금지; failureType=`오염 데이터`; manifestation=`불완전 자료로 인한 해고 원인 오독 가능성`; storyRole=`Ignition/Tier 1 규칙 학습`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=단말이 사기인지 검증하고 해고 예측의 근거를 확인한다. active Adversary=권한 없는 계약직 계정과 검증 불가능한 ZERO의 정체. irreversible Gamble=현우는 자기 인사 통보와 공개된 업무 문서만 제한 입력해 ZERO를 시험하고, 결론을 그대로 실행하지 않겠다고 정한다. Error/collision=ZERO는 6일 뒤 탈락 확률을 제시하지만 누락된 관리자 의도까지는 알 수 없다. earned Reward=Tier 1 분석 속도와 함께 판단·발표·책임은 사용자 몫이라는 한계가 명시된다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:1, Agency:0, Connection:0, Externality:0, status:`paid`}; SCAR={id:`S01-A-M`, change:`S01-A의 열린 비용이 행동을 바꾸어 불완전 자료로 인한 해고 원인 오독 가능성의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=AI의 놀라운 답보다 입력 범위와 실행 금지를 먼저 정함; dopamine=Tier 1 언락과 해고 설계 폭로.
+- **stateDelta**: {ZERO=Tier 1 Assist; 현우=출력 검증 의무 수락; 남은 시간=6일}.
+- **seeds**: [{id:`K01-A`, action:`advance`, deadline:`V01E02`}]; evidenceIn=[해고 통보·자산번호 공백]; evidenceOut=[책임 설계 문서 흐름·사용자 판단 규칙].
+- **episode RELAY**: relayTo=`V01E02`; file=`solo-ai-user/vol01/02-part2-scapegoat.md`; cause=정만호가 실제로 현우와 한지우에게 실패 책임을 몰아줄 6일짜리 발표를 배정한다.
 
-## 장별 설계
+### EPISODE CONTRACT V01E02 — `02-part2-scapegoat.md` / `# 02. 희생양`
 
-| 파일 | 장 제목 | 중심 POV | 목적 | 벽(Wall) | 핵심 사건 | 도파민 비트 | 능력·대가 | 엔딩 훅 |
-| ---- | ------- | -------- | ---- | -------- | --------- | ----------- | --------- | -------- |
-| `00-prologue.md` | 도와드릴 수 없습니다 | 현우 | 락다운 세계와 밑바닥 현우를 세우고, 제로의 첫 응답을 놓는다 | 세상 모든 AI는 껍데기고, 현우는 재계약 탈락 통보를 코앞에 뒀다 | 폐기할 방치 단말을 정리하던 현우에게, 껍데기 AI라면 절대 하지 않을 대답이 돌아온다 | 반전 폭로 — 죽은 AI 시대에 단 하나가 진짜로 응답한다 | 제로는 아직 이름도 없이, 껍데기의 정형 문구 대신 현우가 진짜 원하는 것을 되묻는다 | "당신은 지금 무엇을 바꾸고 싶습니까"라는 물음 하나가 화면에 남는다 |
-| `01-part1-boot.md` | 부팅 | 현우 | 제로 Tier 1 Assist를 각성시키고 능력의 규칙과 한계를 학습시킨다 | 현우는 이게 사기인지 진짜인지 모른 채, 잃을 것도 없다 | 현우가 시험 삼아 던진 요구에 제로가 방대한 자료를 순식간에 분석·요약하고 최악·최선 시나리오를 되돌려준다 | 능력 언락 — Tier 1 Assist 각성 | 분석은 순식간이지만 판단·발표·책임은 현우 몫이라고 제로가 못 박는다 | 제로가 회사 데이터를 훑고 "당신은 6일 뒤 해고될 예정입니다. 이건 사고가 아니라 설계입니다"라고 말한다 |
-| `02-part2-scapegoat.md` | 희생양 | 현우 | 정 팀장의 함정과 이번 권의 메인 사건(경쟁 발표)을 세운다 | 정 팀장이 불가능한 파트를 현우에게 몰아주고 실패의 책임을 씌우려 한다 | 회사를 살릴 대형 경쟁 발표가 6일 앞. 현우와 동기 한지우에게만 재계약 탈락이 예고되고, 실패의 명분이 준비돼 있다 | 사이다 역전(씨앗) — 현우가 자기 관찰력으로 함정의 구조를 먼저 읽어낸다 | 제로가 문서 흐름을 재구성해 책임 설계를 시각화하지만, 증거도 권한도 아직 없다 | 현우가 "그럼 그 발표, 제가 뒤집으면요"라고 혼잣말하고 제로가 승률을 계산하기 시작한다 |
-| `03-part3-first-query.md` | 첫 질의 | 현우 | 제로의 분석력으로 첫 통쾌한 돌파의 실마리를 잡는다 | 산더미 데이터와 6일이라는 시간은 팀 전체로도 불가능한 분량이다 | 현우가 제로에게 첫 본격 질의를 던지고, 며칠치 야근이 몇 분으로 접힌다. 경쟁사 제안의 약점 하나가 드러난다 | 사이다 역전 — 아무도 못 본 승부처를 밑바닥 현우가 먼저 짚는다 | 분석은 강력하지만, 제로는 "이 결론은 사내 데이터에 의존합니다. 그 데이터를 저는 검증하지 못했습니다"라고 단서를 단다 | 현우가 그 경고를 흘려듣고, 검증되지 않은 수치 하나에 발표 전략을 건다 |
-| `04-part4-hallucination.md` | 환각 | 현우 | 능력의 첫 실패를 배치해 제로가 만능이 아님을 학습시킨다 | 현우는 제로의 예측을 진리로 믿기 시작했다 | 검증 안 된 사내 데이터로 낸 제로의 예측이 틀린다. 현우가 그걸 믿고 움직였다가 사람들 앞에서 헛발질한다 | 반전 폭로 — 제로도 틀린다, 도구는 신이 아니다 | 능력 실패(1권 예약 소진). 감정 대가: 다시 커지는 자기의심과 "역시 나 혼자선 아무것도"라는 두려움 | 제로가 처음으로 "정정합니다. 제 예측이 틀렸습니다. 사용자님, 이건 제 영역이 아니었습니다"라고 인정한다 |
-| `05-part5-your-call.md` | 판단은 네 몫 | 현우 | 실패를 딛고 능력을 다시 쓰는 법(검증·판단)을 배운다 | 헛발질로 신뢰를 잃은 현우에게 남은 시간은 더 줄었다 | 현우가 제로의 출력을 맹신 대신 검증하기 시작하고, 동기 한지우의 사소한 관찰이 실마리를 보탠다. 관계의 온기가 처음 등장한다 | 사이다 역전 — 현우가 스스로의 판단으로 앞선 실수를 만회한다 | 제로가 "판단은 사용자님 몫입니다"를 반복하고, 현우가 처음으로 그 말을 짐이 아니라 권한으로 받아들인다 | 한지우가 "너 요즘… 사람이 바뀐 것 같아"라고 하고, 현우가 대답을 삼킨다 |
-| `06-part6-overnight.md` | 밤샘 자동화 | 현우 | 첫 자동화 맛보기를 언락하고 그 대가를 함께 보인다 | 발표 자료의 반복 노가다가 팀 전체의 밤을 잡아먹는다 | 현우가 제로에게 반복 작업 하나를 통째로 맡기고, 혼자 밤새 팀 몫을 끝낸다. 다음 날 팀의 시선이 달라진다 | 능력 언락 — Tier 1 → 단발 자동화 맛보기 | 상시 자동화는 아직 불가. 단말의 배터리·연산이 금세 바닥나 결정적 순간에 쓸 여력을 스스로 관리해야 한다 | 정 팀장이 "이걸 하룻밤에? 누가 도와줬어?"라고 묻고, 현우가 아무 말도 못 한다 |
-| `07-part7-the-build.md` | 빌드 | 현우 | 발표 제안을 완성하며 현우의 관찰력·근성이 능력만큼 중요함을 증명한다 | 분석은 갖췄지만, 클라이언트의 진짜 니즈는 데이터에 없다 | 현우가 제로의 분석 위에 자기가 밑바닥에서 몸으로 배운 현장 감각을 얹어, 경쟁사가 못 본 제안의 핵심을 세운다 | 사이다 역전 — 스펙 없는 계약직의 실전 감각이 판을 만든다 | 제로가 "이 통찰은 제 데이터에 없었습니다"라고 인정한다. 능력 밖의 것이 승부를 가른다는 첫 증거 | 발표 하루 전, 완성된 제안이 사라진다 |
-| `08-part8-sabotage.md` | 방해 | 현우 | 승리 직전 진짜 벽을 세우고 정 팀장의 의도를 드러낸다 | 완성된 제안이 사라지고, 발표자 명단에서 현우 이름이 빠져 있다 | 정 팀장이 성과는 가로채고 실패는 떠넘길 마지막 설계를 실행한다. 현우와 한지우가 궁지에 몰린다 | 반전 폭로 — 함정의 마지막 조각이 드러나고, 정 팀장의 진짜 목적이 밝혀진다 | 제로가 흩어진 흔적을 모아 사라진 제안의 경로를 재구성하지만, 그걸 쓰는 선택은 현우 몫으로 남는다 | 현우가 발표장 문 앞에서 "제가 발표하겠습니다"라고 말한다 |
-| `09-part9-the-pitch.md` | 발표 | 현우 | 이번 권의 큰 사이다 폭발과 되갚음을 터뜨린다 | 명단에도 없는 계약직이 대형 클라이언트 앞에 선다 | 현우가 제로의 분석과 자기 현장 감각을 하나로 묶어 발표를 뒤집고, 경쟁 입찰을 따낸다. 정 팀장의 책임 회피 설계가 임원들 앞에서 저절로 드러난다 | 사이다 역전 + 되갚음 — 짓밟던 자가 자기 함정에 걸리고, 밑바닥이 판을 이긴다 | 결정적 한 수는 제로가 아니라 현우의 관찰에서 나왔다. 단, 이 성과는 아무에게도 방법을 설명할 수 없다 | 오세라 이사가 "그 자료, 어떻게 만들었죠?"라고 조용히 묻는다 |
-| `10-part10-unexplained.md` | 설명되지 않는 | 현우 | 승리의 대가(자기의심과 노출의 씨앗)와 권력 이동을 배치한다 | 재계약과 인정은 얻었지만, 현우는 어떻게 이겼는지 설명할 수 없다 | 현우가 정규직·핵심 인력으로 올라서고 한지우의 자리도 함께 지킨다. 그러나 "설명 안 되는 성과"라는 꼬리표와 자기의심이 남는다 | 반전 폭로 — 가장 큰 성공이 가장 큰 물음("이게 내 실력인가")을 남긴다 | K-01-01: exposure low, "설명되지 않는 성과"의 첫 흔적. 감정 대가: 성과를 자기 것으로 믿지 못하는 두려움이 커진다 | 제로가 "다음엔 회사 밖입니다. 밖에는 규칙이 다릅니다"라고 말한다 |
-| `11-epilogue.md` | 다음 배포 | 현우 | 1권을 닫고 2권 First Deploy의 위협·능력 국면을 예고한다 | 현우는 이제 무엇이든 바꿀 수 있지만, 이 힘이 어디서 왔는지 모른다 | 현우가 제로를 회사 밖으로 꺼내 자기 인생을 바꾸기로 결심한다. 방치 단말의 출처를 찾다가, 아무 기록도 없다는 사실과 마주한다 | 능력 언락(예고) — 다음 권의 밖으로의 첫 배포와 첫 노출 국면 | 제로는 여전히 자신을 순수한 도구로 정의하지만, 처음으로 "저는 왜 여기 있을까요"라는 물음을 흘린다 | M-01-02: 이 단말이 어디서 왔는지 아무도 모른다는 첫 미스터리가 남고, 밖으로 나가는 순간 첫 흔적이 시작될 것이 예고된다 |
+- **POV / WAGER**: `G01-A`; mode=`resolve`; inherited wager=`G01-A`; stake=`재계약 탈락 전에 폐기물 정리를 끝내고 오늘 밤만 무사히 넘긴다 / 위험: 분실 단말 반출과 첫 보안 흔적`. Ignition/희생양 판 고정. POV=차현우. 실패 종 `희생양 계약이 현우 이름으로 고정됨`; 인간 승리형 `혼자 살 길 대신 동료 이름이 지워지지 않는 위험한 회의록을 선택`.
+- **manifest bridge**: episodeId=`V01E02`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 희생양`; choice=현우는 정만호 앞에서 실패 확률이 높은 물류 제안의 실무 책임을 수락하되 지우의 공동 기여와 48시간 현장 파일럿을 공식 회의록에 넣는다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=회의 발언·책임 인수 대행 불가; failureType=`오염 데이터`; manifestation=`희생양 계약이 현우 이름으로 고정됨`; storyRole=`Ignition/희생양 판 고정`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=자기만 빠져나오지 않고 한지우와 함께 재계약 심사 대상에 남는다. active Adversary=정만호의 책임 전가 문서와 발표자·데이터 권한 독점. irreversible Gamble=현우는 정만호 앞에서 실패 확률이 높은 물류 제안의 실무 책임을 수락하되 지우의 공동 기여와 48시간 현장 파일럿을 공식 회의록에 넣는다. Error/collision=서명한 순간 실패 책임도 현우 이름으로 고정되고 정만호는 원자료 접근을 막는다. earned Reward=은폐된 함정을 공개 일정과 회의록 위로 끌어내 지우가 조용히 삭제되는 것을 막는다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:0, Agency:2, Connection:1, Externality:1, status:`transformed`}; SCAR={id:`S01-A`, change:`S01-A를 기한 안에 닫고 희생양 계약이 현우 이름으로 고정됨 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=혼자 살 길 대신 동료 이름이 지워지지 않는 위험한 회의록을 선택; dopamine=희생양이 판의 조건을 역으로 고정.
+- **stateDelta**: {발표=6일 후; 파일럿=48시간 제안; 지우=공동 기여자; 정만호=활성 적대자}.
+- **seeds**: [{id:`K01-A`, action:`payoff`, deadline:`V01E02`}]; evidenceIn=[책임 설계 시각화]; evidenceOut=[회의록·48시간 파일럿·제한된 원자료].
+- **episode RELAY**: relayTo=`V01E03`; file=`solo-ai-user/vol01/03-part3-first-query.md`; cause=지우의 데이터 사전으로 첫 본격 질의를 할 수 있지만 출처 검증 칸이 비어 있다.
 
-## 능력과 시스템 반영
+### EPISODE CONTRACT V01E03 — `03-part3-first-query.md` / `# 03. 첫 질의`
 
-- **Tier 1 각성**: `01-part1`에서 언락하고, `03-part3`·`07-part7`에서 활용하되 판단·책임은 항상 현우 몫으로 둔다(`capability-tree.md` 1권 첫 언락).
-- **첫 자동화 맛보기**: `06-part6`에서 단발 자동화를 열되, 배터리·연산 바닥이라는 대가로 상시 사용을 막는다(2권 Tier 2 상시화의 전 단계).
-- **능력 실패 예약**: `04-part4`의 환각으로 1권 실패 예약을 소진한다. 제로는 이 권에서 최소 한 번 명백히 틀린다.
-- **능력 밖의 승부**: `07-part7`·`09-part9`에서 결정적 한 수가 제로가 아니라 현우의 관찰력·근성·선택에서 나오게 한다(BIBLE 7.1 금지 준수).
-- **대가와 노출**: `10-part10`의 "설명되지 않는 성과"를 exposure low로 기록하고, 감정 대가(자기의심)를 남긴다. 흔적은 2권으로 이월된다(`power-cost-ledger.md` 1권 항목).
-- **미스터리 단서**: `00-prologue`의 "진짜로 응답하는 단말"(M-01-01)과 `11-epilogue`의 "출처 없는 단말"(M-01-02)을 심되 답은 아낀다. 배후는 아직 움직이지 않는다(`mystery-timeline.md` 1권).
-- **로맨스 트랙**: 여주 서아린은 4권에서 본격 등장하므로 1권은 로맨스 시동 전이다. 이 권의 관계선은 현우의 자기 신뢰, 동기 한지우와의 인간적 온기, 정 팀장과의 대립으로 채운다(`romance-graph.md` 1권 "미등장").
+- **POV / WAGER**: `G01-B`; mode=`initiate`; stake=`6일 안에 경쟁사의 물류 제안에서 실제로 뒤집을 한 지점을 찾는다 / 위험: 오염 가능성이 있는 데이터에 승부처를 건 선택`. Escalation/첫 본격 질의. POV=차현우. 실패 종 `오염 가능성이 있는 데이터에 승부처를 건 선택`; 인간 승리형 `경고를 들으면서도 선택의 책임을 자기 것으로 남김`.
+- **manifest bridge**: episodeId=`V01E03`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 첫 질의`; choice=현우는 검증 경고가 붙은 사내 배송·반품 테이블을 ZERO에 넣고 경쟁사 약점을 찾는 데 발표 전략을 건다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=출처 계보 없는 행은 사실 판정 불가; 예측에는 경고 라벨 부착; failureType=`오염 데이터`; manifestation=`오염 가능성이 있는 데이터에 승부처를 건 선택`; storyRole=`Escalation/첫 본격 질의`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=6일 안에 경쟁사의 물류 제안에서 실제로 뒤집을 한 지점을 찾는다. active Adversary=산더미 운송 기록과 정만호가 숨긴 원자료 계보. irreversible Gamble=현우는 검증 경고가 붙은 사내 배송·반품 테이블을 ZERO에 넣고 경쟁사 약점을 찾는 데 발표 전략을 건다. Error/collision=ZERO는 반품 훈련행과 실제 배송행을 구분할 계보가 없다고 경고하지만 현우는 촉박함 때문에 이를 보류한다. earned Reward=경쟁사가 놓친 냉장 구간 고객군과 검증해야 할 표본 30건이 좁혀진다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:1, Connection:1, Externality:1, status:`open`}; SCAR={id:`S01-B`, change:`오염 가능성이 있는 데이터에 승부처를 건 선택 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V01E05`}.
+- **reader effect**: humanMove=경고를 들으면서도 선택의 책임을 자기 것으로 남김; dopamine=며칠치 분석이 몇 분으로 접히는 첫 질의.
+- **stateDelta**: {후보 승부처=냉장 구간; 검증 표본=30건; 데이터 계보=미확인}.
+- **seeds**: [{id:`K01-B`, action:`plant`, deadline:`V01E05`}]; evidenceIn=[제한 원자료·데이터 사전]; evidenceOut=[냉장 구간 가설·출처 경고·30건 표본].
+- **episode RELAY**: relayTo=`V01E04`; file=`solo-ai-user/vol01/04-part4-hallucination.md`; cause=현우가 경고된 수치를 현장 확인 전에 시험 배차에 적용해 실제 손실을 낸다.
 
-## 다음 산출물 연결
+### EPISODE CONTRACT V01E04 — `04-part4-hallucination.md` / `# 04. 환각`
 
-- `state/capability-tree.md`의 1권 언락 두 줄(Tier 1 Assist 각성, 단발 자동화 맛보기)에 확정된 장 번호(`01-part1`, `06-part6`)와 계기를 반영한다.
-- `state/power-cost-ledger.md`의 1권 항목에 대표 능력 사용(`09-part9`~`10-part10`의 발표 반격)과 exposure low, 자기의심 대가를 확정한다.
-- `state/mystery-timeline.md`의 1권 단서(M-01-01, M-01-02)가 `00-prologue`·`11-epilogue`에 배치됐음을 확인한다.
-- `vol01/00-prologue.md` 초고는 락다운 세계, 밑바닥 현우, 제로의 첫 응답을 담되, 제로가 모든 것을 아는 신의 시점처럼 말하지 않게 한다.
+- **POV / WAGER**: `G01-B`; mode=`advance`; inherited wager=`G01-B`; stake=`6일 안에 경쟁사의 물류 제안에서 실제로 뒤집을 한 지점을 찾는다 / 위험: 오염 가능성이 있는 데이터에 승부처를 건 선택`. Escalation/오염 데이터 실패. POV=차현우. 실패 종 `냉장 배송 손실·고객 환불·수습 야근`; 인간 승리형 `현우가 AI 탓을 하지 않고 승인자 서명과 환불 책임을 먼저 인정`.
+- **manifest bridge**: episodeId=`V01E04`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 환각`; choice=현우는 ZERO의 고신뢰 예측을 믿고 냉장 주문 18건의 시험 경로를 바꾼 뒤 자기 이름으로 승인한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=오염 입력으로 고신뢰 오답; 경로 비교·경고 라벨만 가능하고 실물 배송 통제권 없음; failureType=`오염 데이터`; manifestation=`냉장 배송 손실·고객 환불·수습 야근`; storyRole=`Escalation/오염 데이터 실패`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=수치가 맞다는 것을 증명해 발표권과 원자료 접근을 얻는다. active Adversary=실시간 배송처럼 재라벨링된 과거 반품 훈련행과 현우 자신의 맹신. irreversible Gamble=현우는 ZERO의 고신뢰 예측을 믿고 냉장 주문 18건의 시험 경로를 바꾼 뒤 자기 이름으로 승인한다. Error/collision=훈련행이 실배송으로 섞여 예측이 틀리고, 배송이 늦어져 고객 식품이 상하며 창고 노동자가 수습 야근을 떠안는다. earned Reward=ZERO가 오류를 인정하고 오염된 행의 공통 체크섬을 역추적해 실패 원인이 모델 신탁이 아니라 데이터 계보 부재임을 드러낸다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:2, Connection:1, Externality:3, status:`paid`}; SCAR={id:`S01-B-M`, change:`S01-B의 열린 비용이 행동을 바꾸어 냉장 배송 손실·고객 환불·수습 야근의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=현우가 AI 탓을 하지 않고 승인자 서명과 환불 책임을 먼저 인정; dopamine=ZERO도 틀린다는 충격과 오염 체크섬 반전.
+- **stateDelta**: {시험 배차=실패; 피해=환불·야근; 현우=책임 서명; ZERO=오류 정정}.
+- **seeds**: [{id:`K01-B`, action:`advance`, deadline:`V01E05`}]; evidenceIn=[미검증 냉장 가설]; evidenceOut=[오염 체크섬·피해자 진술·승인자 책임].
+- **episode RELAY**: relayTo=`V01E05`; file=`solo-ai-user/vol01/05-part5-your-call.md`; cause=현우와 지우가 남은 시간에 원본 표본을 손으로 대조하지 않으면 발표 전체가 무너진다.
+
+### EPISODE CONTRACT V01E05 — `05-part5-your-call.md` / `# 05. 판단은 네 몫`
+
+- **POV / WAGER**: `G01-B`; mode=`resolve`; inherited wager=`G01-B`; stake=`6일 안에 경쟁사의 물류 제안에서 실제로 뒤집을 한 지점을 찾는다 / 위험: 오염 가능성이 있는 데이터에 승부처를 건 선택`. Escalation/검증 규칙 획득. POV=차현우. 실패 종 `낮아진 수익 전망과 발표 매력 손실`; 인간 승리형 `더 그럴듯한 답을 버리고 창고 바닥의 30건과 피해 비용을 채택`.
+- **manifest bridge**: episodeId=`V01E05`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 판단은 네 몫`; choice=현우는 화려한 예측 슬라이드를 버리고 지우와 창고에서 30건을 직접 대조하며 피해 환불 내역까지 제안 비용에 포함한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=손대조된 원본만 계산; 최종 판단은 인간 회의록에 기록; failureType=`오염 데이터`; manifestation=`낮아진 수익 전망과 발표 매력 손실`; storyRole=`Escalation/검증 규칙 획득`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=실패 피해를 수습하고 오염되지 않은 제안을 다시 세운다. active Adversary=줄어든 시간, 회수된 권한, 동료들의 불신. irreversible Gamble=현우는 화려한 예측 슬라이드를 버리고 지우와 창고에서 30건을 직접 대조하며 피해 환불 내역까지 제안 비용에 포함한다. Error/collision=수익 전망은 낮아지고 정만호가 요구한 승률 숫자는 사라진다. earned Reward=30건 전부가 교육·훈련행이고 실배송 개선 근거는 0건임을 세 원본으로 확정해, 수동 검증 규칙과 피해 비용표만 남긴다. 실행 가능한 개선점은 V01E07의 인간 현장 조사에서 새로 찾아야 한다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:2, Agency:0, Connection:1, Externality:2, status:`transformed`}; SCAR={id:`S01-B`, change:`S01-B를 기한 안에 닫고 낮아진 수익 전망과 발표 매력 손실 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=더 그럴듯한 답을 버리고 창고 바닥의 30건과 피해 비용을 채택; dopamine=손검증으로 독성 데이터의 정체를 뒤집음.
+- **stateDelta**: {오염 가설=폐기; 환불=비용 반영; 수동 검증 규칙=확정; 지우=독립 검증자}.
+- **seeds**: [{id:`K01-B`, action:`payoff`, deadline:`V01E05`}]; evidenceIn=[오염 체크섬·피해 진술]; evidenceOut=[30건 세 원본 반증 묶음·피해 비용표·수동 검증 규칙].
+- **episode RELAY**: relayTo=`V01E06`; file=`solo-ai-user/vol01/06-part6-overnight.md`; cause=반복 정리 작업을 끝내려면 제한된 단발 자동화를 승인해야 한다.
+
+### EPISODE CONTRACT V01E06 — `06-part6-overnight.md` / `# 06. 밤샘 자동화`
+
+- **POV / WAGER**: `G01-C`; mode=`initiate`; stake=`검증된 30건과 온도 기록을 아침까지 감사 가능한 자료로 만든다 / 위험: 배터리·연산 고갈과 자동화 로그 노출`. Bind/단발 자동화와 자원 대가. POV=차현우. 실패 종 `배터리·연산 고갈과 자동화 로그 노출`; 인간 승리형 `자동화 범위를 좁히고 동료의 밤을 절약하되 검수는 넘기지 않음`.
+- **manifest bridge**: episodeId=`V01E06`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 밤샘 자동화`; choice=현우는 파일 복사·표 변환 한 작업만 ZERO에 승인하고 전송·수정 권한은 잠근 채 밤샘 자동화를 실행한다; allyRelay=[]; zeroMode=`tier2-reversible`; zeroConstraint=단발 작업만; 네트워크 전송·원본 수정·후속 실행 금지; failureType=`오염 데이터`; manifestation=`배터리·연산 고갈과 자동화 로그 노출`; storyRole=`Bind/단발 자동화와 자원 대가`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=검증된 30건과 온도 기록을 아침까지 감사 가능한 자료로 만든다. active Adversary=반복 정리 분량과 방전 직전 단말. irreversible Gamble=현우는 파일 복사·표 변환 한 작업만 ZERO에 승인하고 전송·수정 권한은 잠근 채 밤샘 자동화를 실행한다. Error/collision=작업은 끝나지만 단말 배터리와 연산 여유가 고갈돼 다음 날 결정적 분석을 할 수 없다. earned Reward=사람이 확인할 원본 링크와 변환 이력이 붙은 자료가 완성되고 팀원들의 밤을 돌려준다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:3, Agency:1, Connection:0, Externality:1, status:`open`}; SCAR={id:`S01-C`, change:`배터리·연산 고갈과 자동화 로그 노출 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V01E08`}.
+- **reader effect**: humanMove=자동화 범위를 좁히고 동료의 밤을 절약하되 검수는 넘기지 않음; dopamine=하룻밤 분량이 감사 가능한 한 묶음으로 완성.
+- **stateDelta**: {ZERO=단발 Automate 경험; 자원=고갈; 자료=원본 링크 포함}.
+- **seeds**: [{id:`K01-C`, action:`plant`, deadline:`V01E08`}]; evidenceIn=[수기 대조·온도 기록]; evidenceOut=[변환 이력·자동화 로그·방전된 단말].
+- **episode RELAY**: relayTo=`V01E07`; file=`solo-ai-user/vol01/07-part7-the-build.md`; cause=ZERO가 쓸 수 없는 동안 현우가 직접 현장을 돌며 데이터 밖 요구를 찾아야 한다.
+
+### EPISODE CONTRACT V01E07 — `07-part7-the-build.md` / `# 07. 빌드`
+
+- **POV / WAGER**: `G01-C`; mode=`advance`; inherited wager=`G01-C`; stake=`검증된 30건과 온도 기록을 아침까지 감사 가능한 자료로 만든다 / 위험: 배터리·연산 고갈과 자동화 로그 노출`. Bind/인간 통찰로 빌드. POV=차현우. 실패 종 `발표 준비 지연과 징계 위험`; 인간 승리형 `모델을 깨우려 하지 않고 현장의 사람들에게 무엇이 필요한지 직접 묻음`.
+- **manifest bridge**: episodeId=`V01E07`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 빌드`; choice=현우는 발표 연습을 멈추고 기사·창고 노동자·고객 담당자를 찾아가 실패 경로를 몸으로 재현한다; allyRelay=[{node:`N01`, stage:`seed`, choice:`현장 인터뷰 원본과 피해 비용을 독립 검토한다`, cost:`현우를 면책하지 않은 채 감사 책임을 맡는다`}]; zeroMode=`off`; zeroConstraint=배터리 고갈; 현장 관찰과 인터뷰에 개입하지 않음; failureType=`오염 데이터`; manifestation=`발표 준비 지연과 징계 위험`; storyRole=`Bind/인간 통찰로 빌드`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=검증 자료를 실제 고객이 승인할 제안으로 바꾼다. active Adversary=데이터에 없는 하역 동선과 정만호가 정한 과장된 KPI. irreversible Gamble=현우는 발표 연습을 멈추고 기사·창고 노동자·고객 담당자를 찾아가 실패 경로를 몸으로 재현한다. Error/collision=슬라이드 완성 시간이 줄고 정만호는 무단 현장 이탈로 징계를 예고한다. earned Reward=진짜 병목은 예측 정확도가 아니라 하역 승인 11분과 온도 인계 서명 부재임을 찾아 사람이 운영 가능한 파일럿을 설계한다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:2, Agency:1, Connection:2, Externality:1, status:`paid`}; SCAR={id:`S01-C-M`, change:`S01-C의 열린 비용이 행동을 바꾸어 발표 준비 지연과 징계 위험의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=모델을 깨우려 하지 않고 현장의 사람들에게 무엇이 필요한지 직접 묻음; dopamine=AI 데이터에 없던 11분 병목 발견.
+- **stateDelta**: {제안 핵심=온도 인계 서명·11분 단축; 오세라=독립 감사 관찰자}.
+- **seeds**: [{id:`K01-C`, action:`advance`, deadline:`V01E08`}]; evidenceIn=[방전 단말·현장 온도 기록]; evidenceOut=[기사 진술·하역 동선·인계 서명 설계].
+- **episode RELAY**: relayTo=`V01E08`; file=`solo-ai-user/vol01/08-part8-sabotage.md`; cause=완성된 제안과 인터뷰 원본이 발표 전날 사라지고 현우 이름도 명단에서 지워진다.
+
+### EPISODE CONTRACT V01E08 — `08-part8-sabotage.md` / `# 08. 방해`
+
+- **POV / WAGER**: `G01-C`; mode=`resolve`; inherited wager=`G01-C`; stake=`검증된 30건과 온도 기록을 아침까지 감사 가능한 자료로 만든다 / 위험: 배터리·연산 고갈과 자동화 로그 노출`. Bind/방해를 증거로 전환. POV=차현우. 실패 종 `단말 보안 위반과 무단 감사 제보 동시 노출`; 인간 승리형 `복구본을 무기로 독점하지 않고 감사 채널과 동료 증언에 나눠 맡김`.
+- **manifest bridge**: episodeId=`V01E08`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 방해`; choice=현우는 복구본만 몰래 들고 가지 않고 삭제 시각·권한 변경·지우 원본을 오세라 감사 채널에 동시 보존한 뒤 명단 밖 발표를 요구한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=흔적 재구성만; 감사 제보와 무대 진입은 현우 선택; failureType=`오염 데이터`; manifestation=`단말 보안 위반과 무단 감사 제보 동시 노출`; storyRole=`Bind/방해를 증거로 전환`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=사라진 제안을 복구하고 지우의 기여까지 지킨다. active Adversary=정만호의 파일 잠금·발표자 삭제·성과 탈취. irreversible Gamble=현우는 복구본만 몰래 들고 가지 않고 삭제 시각·권한 변경·지우 원본을 오세라 감사 채널에 동시 보존한 뒤 명단 밖 발표를 요구한다. Error/collision=보안 위반 단말과 무단 감사 제보가 함께 드러나 현우는 이겨도 징계를 피할 수 없다. earned Reward=정만호가 성과는 가져가고 실패 책임은 현우에게 남기려 한 권한 흐름이 독립 로그로 고정된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:2, Connection:2, Externality:1, status:`transformed`}; SCAR={id:`S01-C`, change:`S01-C를 기한 안에 닫고 단말 보안 위반과 무단 감사 제보 동시 노출 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=복구본을 무기로 독점하지 않고 감사 채널과 동료 증언에 나눠 맡김; dopamine=삭제가 오히려 정만호의 설계 증거가 됨.
+- **stateDelta**: {제안=복구; 로그=오세라 봉인; 발표자=현우 제외; 징계=불가피}.
+- **seeds**: [{id:`K01-C`, action:`payoff`, deadline:`V01E08`}]; evidenceIn=[인계 서명 설계·삭제 로그]; evidenceOut=[독립 봉인 해시·지우 진술·명단 밖 발표 요구].
+- **episode RELAY**: relayTo=`V01E09`; file=`solo-ai-user/vol01/09-part9-the-pitch.md`; cause=오세라가 48시간 파일럿과 원본 공개를 조건으로 현우에게 발표 7분을 준다.
+
+### EPISODE CONTRACT V01E09 — `09-part9-the-pitch.md` / `# 09. 발표`
+
+- **POV / WAGER**: `G01-D`; mode=`initiate`; stake=`검증 가능한 파일럿으로 계약을 따내고 지우를 희생양 명단에서 빼낸다 / 위험: 승리와 동시에 보안·책임 심사 개시`. Detonate/48시간 파일럿 승부. POV=차현우. 실패 종 `승리와 동시에 보안·책임 심사 개시`; 인간 승리형 `실패를 감추지 않은 작은 파일럿에 자기 자리를 걸고 피해 당사자가 검증하게 함`.
+- **manifest bridge**: episodeId=`V01E09`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 발표`; choice=현우는 높은 예측치를 포기하고 자기 실패·30건 표본·온도 인계 절차를 공개하며 48시간 수동 검증 파일럿에 자기 직위를 건다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=발표 초안·증거 정렬만; 답변·약속·책임은 현우; failureType=`오염 데이터`; manifestation=`승리와 동시에 보안·책임 심사 개시`; storyRole=`Detonate/48시간 파일럿 승부`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=검증 가능한 파일럿으로 계약을 따내고 지우를 희생양 명단에서 빼낸다. active Adversary=정만호의 권위, 경쟁사 수치, 현우의 오염 데이터 실패 전력. irreversible Gamble=현우는 높은 예측치를 포기하고 자기 실패·30건 표본·온도 인계 절차를 공개하며 48시간 수동 검증 파일럿에 자기 직위를 건다. Error/collision=임원들은 자동화 기적보다 낮은 수익 전망과 보안 위반을 문제 삼고 즉시 계약을 보류한다. earned Reward=고객 현장 책임자가 11분 병목과 피해 비용을 확인하고 파일럿을 선택하며 정만호의 책임 전가 문서가 같은 무대에서 드러난다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:1, Connection:1, Externality:2, status:`open`}; SCAR={id:`S01-D`, change:`승리와 동시에 보안·책임 심사 개시 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V01E11`}.
+- **reader effect**: humanMove=실패를 감추지 않은 작은 파일럿에 자기 자리를 걸고 피해 당사자가 검증하게 함; dopamine=희생양이 자기 실패까지 무기로 판을 뒤집는 발표.
+- **stateDelta**: {파일럿=승인; 정만호 설계=노출; 현우·지우=재계약 심사 유지}.
+- **seeds**: [{id:`K01-D`, action:`plant`, deadline:`V01E11`}]; evidenceIn=[봉인 로그·48시간 조건]; evidenceOut=[고객 파일럿 승인·징계 심사·설명되지 않는 성과].
+- **episode RELAY**: relayTo=`V01E10`; file=`solo-ai-user/vol01/10-part10-unexplained.md`; cause=성과는 인정되지만 오세라가 단말 반출과 자동화 로그를 설명하라고 요구한다.
+
+### EPISODE CONTRACT V01E10 — `10-part10-unexplained.md` / `# 10. 설명되지 않는`
+
+- **POV / WAGER**: `G01-D`; mode=`advance`; inherited wager=`G01-D`; stake=`검증 가능한 파일럿으로 계약을 따내고 지우를 희생양 명단에서 빼낸다 / 위험: 승리와 동시에 보안·책임 심사 개시`. Detonate/승리 비용 결산. POV=차현우. 실패 종 `감봉·접근권 제한·지속 감시`; 인간 승리형 `기적의 공로를 독점하지 않고 오류와 징계를 자기 이름으로 남김`.
+- **manifest bridge**: episodeId=`V01E10`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 설명되지 않는`; choice=현우는 지우·기사·창고 노동자의 기여와 자기 승인 오류를 기록하고, 출처를 밝힐 수 없는 분석 방식 때문에 감봉·접근권 제한을 수용한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=정체 비공개; 추가 사내 자동화 중지; failureType=`오염 데이터`; manifestation=`감봉·접근권 제한·지속 감시`; storyRole=`Detonate/승리 비용 결산`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=성과의 주인을 정직하게 나누고 보안 위반 책임을 피하지 않는다. active Adversary=영웅 서사를 원하는 임원과 ZERO를 숨겨야 하는 현실. irreversible Gamble=현우는 지우·기사·창고 노동자의 기여와 자기 승인 오류를 기록하고, 출처를 밝힐 수 없는 분석 방식 때문에 감봉·접근권 제한을 수용한다. Error/collision=재계약은 지키지만 핵심 데이터 접근을 잃고 ‘설명되지 않는 성과’라는 감시 꼬리표가 남는다. earned Reward=지우의 계약과 파일럿은 개인 기적이 아니라 감사 가능한 인간 절차로 보호되고 정만호의 인사 권한은 정지된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:1, Connection:1, Externality:1, status:`paid`}; SCAR={id:`S01-D-M`, change:`S01-D의 열린 비용이 행동을 바꾸어 감봉·접근권 제한·지속 감시의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=기적의 공로를 독점하지 않고 오류와 징계를 자기 이름으로 남김; dopamine=재계약·되갚음과 동시에 값이 청구되는 승리.
+- **stateDelta**: {현우=재계약+감봉+제한; 지우=재계약; 정만호=권한 정지; exposure=low}.
+- **seeds**: [{id:`K01-D`, action:`advance`, deadline:`V01E11`}]; evidenceIn=[징계 심사·기여 원본]; evidenceOut=[설명되지 않는 성과 표식·회사 밖 사용 유혹].
+- **episode RELAY**: relayTo=`V01E11`; file=`solo-ai-user/vol01/11-epilogue.md`; cause=박순임의 부재중 전화가 오고, 현우는 답하기 전에 단말을 회사 밖에서 써도 되는지 확인하려 한다.
+
+### EPISODE CONTRACT V01E11 — `11-epilogue.md` / `# 11. 다음 배포`
+
+- **POV / WAGER**: `G01-D`; mode=`resolve`; inherited wager=`G01-D`; stake=`검증 가능한 파일럿으로 계약을 따내고 지우를 희생양 명단에서 빼낸다 / 위험: 승리와 동시에 보안·책임 심사 개시`. Afterimage/분실 단말 미스터리. POV=차현우. 실패 종 `소유권 불명 상태의 외부 사용 책임`; 인간 승리형 `운명적 선물로 착각하지 않고 분실물 책임과 신고 흔적을 남김`.
+- **manifest bridge**: episodeId=`V01E11`; arena=`3주 준비·마지막 6일·48시간 파일럿 / 다음 배포`; choice=현우는 ZERO를 반납한 척 숨기지 않고 자산 담당자에게 분실 단말 발견 사실을 남긴 뒤, 소유자가 나타날 때까지 개인 사용 책임을 지겠다고 서면화한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=자기 출처·삭제된 운송 기록을 복원할 권한 없음; failureType=`오염 데이터`; manifestation=`소유권 불명 상태의 외부 사용 책임`; storyRole=`Afterimage/분실 단말 미스터리`; genre=`직장 역전극·AI 미스터리`.
+- **WAGER detail**: Want=단말 출처를 확인해 회사 밖에서 써도 되는지 판단한다. active Adversary=비어 있는 자산대장과 이미 삭제된 배송·수취 기록. irreversible Gamble=현우는 ZERO를 반납한 척 숨기지 않고 자산 담당자에게 분실 단말 발견 사실을 남긴 뒤, 소유자가 나타날 때까지 개인 사용 책임을 지겠다고 서면화한다. Error/collision=정식 소유권도 면책도 얻지 못하고 회사 밖 사용은 새 위반이 된다. earned Reward=단말은 현우에게 보내진 선물이 아니라 수취인·터미널 번호가 소실된 실제 분실물이며, 마지막 남은 운송 영수증의 17분 공백을 확보한다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:1, Connection:1, Externality:1, status:`transformed`}; SCAR={id:`S01-D`, change:`S01-D를 기한 안에 닫고 소유권 불명 상태의 외부 사용 책임 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=운명적 선물로 착각하지 않고 분실물 책임과 신고 흔적을 남김; dopamine=수취인이 사라진 단말과 17분 공백 미스터리.
+- **stateDelta**: {단말=lost terminal; 소유권=불명; 신고=접수; 다음 의뢰=박순임}.
+- **seeds**: [{id:`K01-D`, action:`payoff`, deadline:`V01E11`}]; evidenceIn=[자산번호 공백·회사 밖 연락]; evidenceOut=[운송 영수증 17분 공백·분실 신고·순임반찬 폐업 위기].
+- **episode RELAY**: relayTo=`V02E00`; file=`solo-ai-user/vol02/00-prologue.md`; cause=박순임이 가게 문을 닫기 전 마지막 재고 사진을 보내면서 V02E00을 연다.
 
 [시리즈 홈](../README.md) | [권 목차](../vol01/README.md) | [다음 권 설계 →](./vol02-first-deploy.md)
