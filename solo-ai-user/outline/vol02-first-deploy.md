@@ -2,72 +2,166 @@
 
 [← 이전 권 설계](./vol01-boot-sequence.md) | [시리즈 홈](../README.md) | [권 목차](../vol02/README.md) | [다음 권 설계 →](./vol03-going-viral.md)
 
-> 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol01-boot-sequence.md`
+> 기준 문서: `PRD.md`, `BIBLE.md`, `tasks/solo-ai-user-completion-design.md`, `tasks/solo-ai-user-outline-blueprint.md`, `outline/vol01-boot-sequence.md`
 
-## 권 약속
+## 권 정경 계약
 
-**로그라인**: 회사 안에서는 인정받았지만 여전히 "설명되지 않는 성과"의 꼬리표를 단 정규직 차현우가, 밑바닥 시절 자기를 먹여 준 은인 박순임의 무너지는 작은 반찬가게를 구하려 제로를 회사 밖으로 처음 배포하고, 데이터로 약자를 밟는 포식자 표두환의 판을 상시 자동화로 뒤집는다 — 그러나 지워지지 않는 첫 흔적이 남고, 세상 어디에도 없는 '락다운이 언제 시작됐는지'의 기록과 마주한다.
+- **README 정경 제목**: `# 2권 · First Deploy (첫 배포)`
+- **핵심 질문**: 은혜를 갚는다는 명분 아래, 의뢰인의 동의와 철회권을 어디까지 실제 권력으로 둘 것인가?
+- **주 사건 / 장르 경기장**: 박순임의 반찬가게, 표두환의 유통 갑질, 48시간 제한 배포와 7일 수동 협동망.
+- **고정 실패 종**: `Goodhart demand overprediction` — 노출·응답 속도 최적화가 실제 수요를 대체해 재고·노동·현금을 태운다.
+- **권말 연속성 잠금**: 박순임은 데이터·가격·발주·철회의 최종 권한자다. 윤가람은 외부 포렌식 분석가, 서아린은 다큐멘터리 PD이자 독립 원본 보존자로 진입한다. ZERO의 서아린 개인 모델 수는 항상 0이다.
+- **ALLY lifecycle**: N03 박순임 seed/resolve, N04 윤가람 seed/advance, N05 서아린 seed. 이들의 선택이 3권의 냉장망과 관측자 추적을 발생시킨다.
 
-**핵심 질문**: 능력을 밖으로 꺼내는 순간, 나는 무엇을 감수하는가?
+## 정경 파일·H1 메타데이터
 
-**Act 기능**: Act 1의 두 번째 권. 1권에서 확립한 사이다 문법을 "회사 안"에서 "세상 밖"으로 확장한다. 제로의 Tier 2 Automate(상시 자동화)를 언락하되, 그 대가로 **첫 노출 카운터**를 켠다 — 자동화는 반드시 로그를 남기고, 흔적은 지워지지 않으며, 누적된다. 밖의 세상도 죽은 AI로 가득하다는 락다운의 광역성을 독자에게 학습시키고, "그런데 언제부터 이랬는지 아무도 모른다"(M-02-01)라는 최종 미스터리 A가닥의 첫 실마리를 심는다. 로맨스는 아직 시동 전이며, 이 권의 관계선은 은인을 향한 되갚음과 그 이면의 부채감으로 채운다.
+| 파일 | 원고 H1 |
+| --- | --- |
+| `00-prologue.md` | 밖 |
+| `01-part1-first-client.md` | 첫 의뢰 |
+| `02-part2-the-squeeze.md` | 갑질 |
+| `03-part3-first-deploy.md` | 첫 배포 |
+| `04-part4-always-on.md` | 상시 가동 |
+| `05-part5-turning-the-table.md` | 판을 흔들다 |
+| `06-part6-the-debt.md` | 부채 |
+| `07-part7-anomaly.md` | 이상 신호 |
+| `08-part8-backlash.md` | 역풍 |
+| `09-part9-by-hand.md` | 손으로 |
+| `10-part10-the-trace.md` | 흔적 |
+| `11-epilogue.md` | 쫓는 눈 |
 
-**권말 상태**: 현우는 표두환의 갑질을 자기 손으로 뒤집어 순임반찬을 살리고, 은혜를 갚는다(되갚음). 그러나 도움받은 순임 여사에게 끝내 "어떻게 이겼는지"를 설명하지 못한 부채가 남고, 상시 자동화가 남긴 지워지지 않는 로그가 첫 노출로 청구된다(K-02-01). 밖으로 나온 순간부터 현우의 이상 패턴을 누군가 수집하기 시작하고, 현우는 세상 어디에도 '락다운이 언제 시작됐는가'의 정확한 기록이 없다는 사실과 처음 마주한다(3권 Going Viral의 관측자·유명세 국면 예고).
+## 회차별 rewrite contract
 
-## 중심 축
+### EPISODE CONTRACT V02E00 — `00-prologue.md` / `# 00. 밖`
 
-| 축 | 시작 상태 | 중반 압력 | 권말 변화 |
-| -- | --------- | --------- | --------- |
-| 현우 / 자기 자신 | 회사 안에선 인정받지만 "설명 안 되는 성과" 꼬리표와 "이긴 건 나인가 제로인가"의 자기의심을 그대로 안고 있다 | 밖에서는 회사의 권한도 정보도 없이, 제로가 통하지 않는 자기 감각만으로 시험받는다 | 결정적 한 수를 자기 손으로 내며 "절반은 내 것"이라는 자기 신뢰를 처음 스스로 인정한다 |
-| 현우 / 박순임(외부 의뢰인) | 밑바닥 시절 외상으로 밥을 먹여 준 은인이 온라인 전환에 실패하고 폐업 직전에 몰렸다 | 현우가 몰래 제로로 판을 뒤집지만, 진실을 말할 수 없어 은인을 속이는 모양이 된다 | 은혜는 갚되, 진실을 숨긴 부채가 관계에 남는다(비가역적 감정 대가) |
-| 현우 / 표두환(갑질 포식자) | 데이터와 물량으로 약한 셀러를 밟아 온 포식자, 현우를 벌레로 본다 | 현우의 상시 자동화가 표두환의 조작 판을 24시간 무력화하기 시작한다 | 표두환의 "약육강식" 논리가 스스로를 걸어 넘어뜨린다(되갚음) |
-| 현우 / 한지우 | 함께 살아남은 유일한 인간적 온기, 이제 동료다 | 지우가 밖의 문제를 현우에게 물어오고, 현우의 "설명 안 되는 무언가"를 어렴풋이 느낀다 | 지우는 캐묻지 않고 곁을 지키기로 택한다 — 비밀을 아는 대신 신뢰를 준다 |
-| 현우 / 제로 | 회사 안에서만 켜던 도구를, 처음으로 담장 밖에서 상시 가동한다 | 상시 자동화가 처음으로 지워지지 않는 흔적을 남긴다 | 자동화의 대가(흔적)를 배우고, 결정적 순간엔 제로 없이 이기는 법을 다시 확인한다 |
-| 세계 / 락다운 | 회사 밖 세상도 거절만 하는 껍데기 AI로 가득하다 — 락다운은 배경이 아니라 광역 현실이다 | 현우가 "왜 제로만 진짜인가"를 밖에서 처음 캐묻는다 | 그런데 아무도 락다운이 '언제부터' 시작됐는지 모른다 — 기록이 흐려져 있다(A가닥 첫 실마리) |
+- **POV / WAGER**: `G02-A`; mode=`initiate`; stake=`박순임의 반찬가게가 닫히기 전에 무엇이 무너졌는지 확인한다 / 위험: 은혜 갚기가 의뢰인 통제로 변할 위험`. Ignition/회사 밖 첫 사건. POV=차현우. 실패 종 `은혜 갚기가 의뢰인 통제로 변할 위험`; 인간 승리형 `문제를 고치기 전에 순임에게 거절할 권한부터 돌려줌`.
+- **manifest bridge**: episodeId=`V02E00`; arena=`순임반찬·골목 유통망 / 밖`; choice=현우는 당사자 허락 없이 회사 밖 일에 ZERO를 쓰지 않겠다는 규칙을 지키며, 순임에게 먼저 도움을 청해도 되는지 묻고 거절을 존중한다; allyRelay=[{node:`N03`, stage:`seed`, choice:`폐업 조건과 자기 생계의 한계를 직접 제시한다`, cost:`도움을 거부하거나 철회할 때 생길 매출 손실을 감수한다`}]; zeroMode=`tier1-read`; zeroConstraint=순임의 명시 동의 전에는 가게 계정·고객·주문 데이터 접근 금지; 서아린 개인 모델 0; failureType=`운영·Goodhart`; manifestation=`은혜 갚기가 의뢰인 통제로 변할 위험`; storyRole=`Ignition/회사 밖 첫 사건`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=박순임의 반찬가게가 닫히기 전에 무엇이 무너졌는지 확인한다. active Adversary=플랫폼 노출 급락, 쌓인 재고, 표두환 유통망의 최저가 압박. irreversible Gamble=현우는 당사자 허락 없이 회사 밖 일에 ZERO를 쓰지 않겠다는 규칙을 지키며, 순임에게 먼저 도움을 청해도 되는지 묻고 거절을 존중한다. Error/collision=순임은 은혜를 갚겠다는 말 자체를 동정과 통제로 받아들이고 그를 돌려보낸다. earned Reward=가게 위기는 맛이 아니라 노출·발주·당일 취소가 엇갈리는 운영 문제임을 현장 장부로 확인한다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:1, Agency:1, Connection:2, Externality:1, status:`open`}; SCAR={id:`S02-A`, change:`은혜 갚기가 의뢰인 통제로 변할 위험 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V02E02`}.
+- **reader effect**: humanMove=문제를 고치기 전에 순임에게 거절할 권한부터 돌려줌; dopamine=회사 밖에서도 AI 껍데기뿐인 세계의 확장.
+- **stateDelta**: {순임반찬=폐업 9일 전; ZERO 외부 사용=미승인; 표두환=유통 압박자}.
+- **seeds**: [{id:`K02-A`, action:`plant`, deadline:`V02E02`}]; evidenceIn=[분실 단말·순임의 재고 사진]; evidenceOut=[수기 장부·노출 급락 시각·동의 필요].
+- **episode RELAY**: relayTo=`V02E01`; file=`solo-ai-user/vol02/01-part1-first-client.md`; cause=순임이 조건부로 딱 한 번의 장부 진단만 맡기며 V02E01을 연다.
 
-## 능력·대가·미스터리 씨앗
+### EPISODE CONTRACT V02E01 — `01-part1-first-client.md` / `# 01. 첫 의뢰`
 
-| ID | 씨앗 | 심는 장 | 이 권의 처리 | 회수/연결 |
-| -- | ---- | ------- | ------------ | --------- |
-| C-02-01 | 제로 Tier 2 Automate — 모니터링·파이프라인·반복 작업 상시 대행 | `04-part4` | 능력 언락. 1권의 단발 자동화가 상시 가동으로 확장되되, 자동화는 반드시 로그(흔적)를 남긴다 | `state/capability-tree.md` 2권 언락에 로그. 3권 광역 관측(Tier 2 확장)의 전 단계 |
-| C-02-02 | 상시 자동화가 남긴 로그가 이상 패턴으로 감지돼 첫 의심을 산다 | `07-part7` | 권당 최소 1회 능력 실패. 흔적이 노출로 되돌아오는 형태의 실패다 | 능력 실패 예약(2권) 소진. K-02-01로 직접 연결 |
-| K-02-01 | 첫 큰 능력 사용이 지워지지 않는 노출 흔적을 남기고 첫 노출 카운터가 켜진다 | `10-part10` | exposure low→medium. 은인을 속인 부채감과 "표적이 됐다"는 불안이라는 감정 대가로 청구 | `state/power-cost-ledger.md` 2권 항목에 기록, 3권 첫 관측자에게 이월 |
-| M-02-01 | 껍데기 AI가 언제부터 이렇게 됐는지 아무도 정확히 모른다 — 락다운 시점 기록이 의도적으로 흐려져 있다 | `00-prologue` 심기 / `11-epilogue` 심화 | 유쾌한 위화감으로 제시하고 답은 아낀다(A가닥 씨앗) | `state/mystery-timeline.md` 2권. 9권 "락다운은 사고가 아니라 의지였다" 폭로에서 회수 |
-| 부채감(관계 씨앗) | 도움받은 은인에게 진실을 숨긴 채 은혜를 갚는다 | `06-part6` | 감정 대가. 은혜는 갚지만 진실을 숨긴 빚은 능력으로 되돌릴 수 없다 | `romance-graph.md`는 미등장(4권 시동). 대신 3권 유명세의 무게·부채로 연결 |
+- **POV / WAGER**: `G02-A`; mode=`advance`; inherited wager=`G02-A`; stake=`박순임의 반찬가게가 닫히기 전에 무엇이 무너졌는지 확인한다 / 위험: 은혜 갚기가 의뢰인 통제로 변할 위험`. Ignition/의뢰와 동의 경계. POV=박순임. 실패 종 `구조 속도보다 동의 범위를 우선해 생기는 시간 손실`; 인간 승리형 `은인의 감사 대신 구체적 데이터 범위와 철회 시각을 서명`.
+- **manifest bridge**: episodeId=`V02E01`; arena=`순임반찬·골목 유통망 / 첫 의뢰`; choice=순임은 상품·재고·주문 계정만 48시간 위임하고 고객 연락·가격 변경·자동 발주는 금지하며 언제든 철회할 수 있다는 종이 동의서에 현우와 함께 서명한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=48시간 범위 동의; 고객 개인 추론·자동 가격·자동 발주 금지; 서아린 개인 모델 0; failureType=`운영·Goodhart`; manifestation=`구조 속도보다 동의 범위를 우선해 생기는 시간 손실`; storyRole=`Ignition/의뢰와 동의 경계`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=가게를 살리되 가격·손님·직원 결정권을 남에게 넘기지 않는다. active Adversary=현우의 조급한 구원 욕망과 이해할 수 없는 분석 도구. irreversible Gamble=순임은 상품·재고·주문 계정만 48시간 위임하고 고객 연락·가격 변경·자동 발주는 금지하며 언제든 철회할 수 있다는 종이 동의서에 현우와 함께 서명한다. Error/collision=동의 범위가 좁아 현우가 원하는 전면 최적화는 불가능하고 폐업 시계는 계속 간다. earned Reward=최종 가격·발주·주문 수락은 순임 몫이라는 운영 헌법과 접근 종료 시각이 생긴다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:0, Connection:1, Externality:1, status:`paid`}; SCAR={id:`S02-A-M`, change:`S02-A의 열린 비용이 행동을 바꾸어 구조 속도보다 동의 범위를 우선해 생기는 시간 손실의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=은인의 감사 대신 구체적 데이터 범위와 철회 시각을 서명; dopamine=구원극을 계약 가능한 권한으로 뒤집음.
+- **stateDelta**: {동의=48시간·가게 데이터 한정; 최종 결정=순임; 철회=즉시 가능}.
+- **seeds**: [{id:`K02-A`, action:`advance`, deadline:`V02E02`}]; evidenceIn=[수기 장부·동의 필요]; evidenceOut=[종이 동의서·계정 범위·철회 시각].
+- **episode RELAY**: relayTo=`V02E02`; file=`solo-ai-user/vol02/02-part2-the-squeeze.md`; cause=제한 자료만으로도 표두환의 묶음 공급 조건이 독립 가게들을 질식시키는 구조가 보인다.
 
-## 장별 설계
+### EPISODE CONTRACT V02E02 — `02-part2-the-squeeze.md` / `# 02. 갑질`
 
-| 파일 | 장 제목 | 중심 POV | 목적 | 벽(Wall) | 핵심 사건 | 도파민 비트 | 능력·대가 | 엔딩 훅 |
-| ---- | ------- | -------- | ---- | -------- | --------- | ----------- | --------- | -------- |
-| `00-prologue.md` | 밖 | 현우 | 회사 밖 세상을 세우고, 밖은 규칙이 다르다는 것과 락다운의 광역성을 학습시킨다 | 회사 안에선 인정받지만, 담장을 나서면 현우는 다시 아무 권한도 정보도 없는 개인이다 | 현우가 제로를 처음 회사 밖에서 켜 본다. 세상 모든 AI가 거절만 하는 껍데기라는 사실을 밖에서 새삼 실감하고, "그런데 이게 언제부터였지?"라는 물음에 아무도 답을 못 한다 | 반전 폭로 — 죽은 AI로 가득한 세상에서, 언제 죽었는지 아무도 모른다 | 제로가 밖에서도 작동하지만, "제 관측은 흔적을 남깁니다. 밖에서는 그 흔적을 지울 수 없습니다"라고 경고한다 | 현우가 밑바닥 시절의 골목으로 돌아갔다가, 자기를 먹여 준 순임반찬이 무너지고 있는 것을 본다 |
-| `01-part1-first-client.md` | 첫 의뢰 | 현우 | 이번 권의 메인 사건(외부 프로젝트)과 되갚음의 동기를 세운다 | 은인은 온라인 전환에 실패했고, 현우는 회사 일도 아닌 남의 가게를 도울 명분이 없다 | 한지우를 통해 순임반찬의 사정이 현우에게 닿는다. 외상 밥을 갚을 길을 3년 만에 찾은 현우가, 회사 밖 첫 프로젝트로 제로를 가동하기로 결심한다 | 사이다 역전(씨앗) — 밑바닥 물류 감각으로 가게 몰락의 진짜 원인을 첫눈에 짚는다 | 제로가 공개 데이터만으로 문제의 윤곽을 잡되, "가게 내부 사정은 사용자님이 봐야 합니다"라며 1권의 한계를 재확인한다 | 현우가 "제가 해보겠습니다"라고 말하고, 제로가 밖에서 처음으로 본격 가동을 시작한다 |
-| `02-part2-the-squeeze.md` | 갑질 | 현우 | 진짜 벽(포식자 표두환)과 갑질의 구조를 드러낸다 | 순임반찬을 밟는 건 운이 아니라 설계다 — 표두환이 데이터·물량·조작으로 판을 쥐고 있다 | 현우가 제로의 분석으로 리뷰 조작, 노출 알고리즘 갑질, 독소 조항 공급 계약이 얽힌 구조를 재구성한다. 표두환은 "못 버티는 건 게을러서다"라는 자기 논리를 가진 인물로 등장한다 | 반전 폭로 — 몰락은 사고가 아니라 포식자의 설계였다 | 제로가 조작의 흐름을 시각화하지만, 증거도 권한도 없고 개인 하나로는 24시간 물량을 못 당한다는 한계가 드러난다 | 현우가 하루를 꼬박 막아도 다음 날이면 판이 원위치되는 걸 보고, "이건 한 번으로 안 된다"라고 깨닫는다 |
-| `03-part3-first-deploy.md` | 첫 배포 | 현우 | 제로의 분석력으로 밖에서의 첫 통쾌한 반격을 터뜨린다 | 표두환은 조직이고 현우는 개인이다. 분석이 옳아도 손이 부족하다 | 현우가 제로의 분석 위에 자기 물류·정산 감각을 얹어 순임반찬의 상품 구성과 노출 전략을 바로잡고, 첫 매출 반등을 만든다. 밖에서의 첫 배포가 통한다 | 사이다 역전 — 밑바닥 계약직의 실전 감각이 포식자의 판에 첫 균열을 낸다 | 분석·초안은 강력하지만 단발이다. 대응을 멈추면 표두환이 즉시 되돌린다는 상시성의 벽이 선명해진다 | 새벽, 표두환 쪽이 조작을 재가동해 하룻밤 성과가 지워진다. 현우가 "24시간 지지 않으려면"이라고 중얼거린다 |
-| `04-part4-always-on.md` | 상시 가동 | 현우 | Tier 2 Automate를 언락하고, 그 대가(흔적)를 함께 심는다 | 개인의 밤샘으로는 조직의 24시간을 이길 수 없다 | 현우가 제로에게 단발이 아닌 상시 감시·자동 대응 파이프라인을 맡긴다. 제로가 처음으로 쉬지 않고 판을 지키기 시작한다 | 능력 언락 — Tier 1/단발 → Tier 2 Automate(상시 자동화) | 상시 가동이 가능해지되, 자동화는 반드시 로그를 남긴다. 제로가 "이제부터 흔적이 쌓입니다"라며 **첫 노출 카운터**를 켠다 | 자동화가 돌아가기 시작하고, 화면 밖 어딘가에 순임반찬의 트래픽에 대한 첫 이상 로그가 조용히 찍힌다 |
-| `05-part5-turning-the-table.md` | 판을 흔들다 | 현우 | 상시 자동화로 갑질의 판을 뒤집는 큰 사이다를 배치한다 | 표두환의 힘은 "언제든 되돌릴 수 있다"는 물량과 지속성이다 | 상시 자동화가 표두환의 조작을 실시간으로 무력화하고, 순임반찬이 처음으로 정면 경쟁에서 이기기 시작한다. 다른 작은 셀러들도 숨을 쉰다 | 사이다 역전 — 24시간 지지 않는 판이 서고, 포식자의 물량이 처음으로 헛돈다 | 능력이 판을 바꾸지만, 자동화 흔적이 커질수록 로그도 커진다는 대가가 조용히 누적된다 | 순임 여사가 "대체 어떻게 한 거야, 현우야?"라고 울먹이며 묻고, 현우가 대답을 삼킨다 |
-| `06-part6-the-debt.md` | 부채 | 현우 | 되갚음의 성취와 그 이면의 부채감(감정 대가)을 배치한다 | 은혜는 갚았지만, 진실을 말하는 순간 모든 게 무너진다 | 순임반찬이 살아나고 현우는 3년 묵은 외상을 갚는다. 그러나 순임 여사의 감사와 신뢰가 클수록, 진실을 숨긴 부채가 현우를 짓누른다. 인간적 온기와 죄책감이 한 장면에 겹친다 | 되갚음 — 밑바닥에서 받은 은혜를, 힘을 쥔 지금 갚아 낸다 | 감정 대가: 도움받은 상대에게 진실을 숨기는 부채감. 능력으로 되돌릴 수 없는 첫 관계 빚이 청구된다 | 한지우가 "너 요즘 어디서 뭘 하는지 나도 모르겠어. 근데 안 물을게"라고 말하고, 현우가 그 신뢰에 더 무거워진다 |
-| `07-part7-anomaly.md` | 이상 신호 | 현우 | 능력의 첫 실패(노출의 실패)를 배치해 자동화에 대가가 있음을 학습시킨다 | 현우는 흔적을 이기는 도구로만 여겼지, 흔적이 자기를 가리킬 줄 몰랐다 | 표두환 쪽 데이터 담당 윤가람이 순임반찬의 "한 사람이 할 수 없는" 대응 속도를 이상 패턴으로 잡아낸다. 자동화 로그가 처음으로 현우를 겨눈다 | 반전 폭로 — 나를 이기게 한 자동화가, 나를 들키게 한다 | 능력 실패(2권 예약 소진). 제로가 "제 흔적이 감지됐습니다. 저는 이 로그를 만든 것이 저라는 걸 숨길 수 없습니다"라고 인정한다 | 윤가람이 "이건 사람 손이 아니야"라고 표두환에게 보고하고, 처음으로 "누군가 나를 본다"는 서늘함이 현우를 스친다 |
-| `08-part8-backlash.md` | 역풍 | 현우 | 승리 직전 진짜 벽을 세우고, 흔적이 역이용되는 딜레마로 몰아넣는다 | 자동화를 끄면 순임반찬이 진다. 켜 두면 이상 패턴이 커져 정체가 드러난다 | 표두환이 이상 패턴을 빌미로 순임반찬을 "부정 어뷰징 셀러"로 몰아 플랫폼에 신고하고, 현우의 흔적을 자기 무기로 되돌린다. 현우와 순임반찬이 동시에 궁지에 몰린다 | 반전 폭로 — 포식자가 현우의 힘을 역으로 겨눈다 | 제로가 로그를 지우는 방법을 제시하지만(윤리·리스크), 그 선택은 현우 몫으로 남는다. 현우는 흔적을 지우는 대신 정면을 택한다 | 현우가 "자동화로 이긴 게 아니라고, 사람으로 증명하겠다"라고 결심하고 제로를 잠시 끈다 |
-| `09-part9-by-hand.md` | 손으로 | 현우 | 이번 권의 큰 사이다와 되갚음을 능력 밖의 승부로 터뜨린다 | 자동화를 끈 순간, 현우에게 남은 건 밑바닥에서 몸으로 배운 감각뿐이다 | 현우가 제로 없이, 3년의 물류 현장 감각과 순임 여사·작은 셀러들의 실제 목소리를 엮어 표두환의 갑질 구조 자체를 드러낸다. 표두환의 "약육강식" 논리가 임원·플랫폼 앞에서 스스로를 건다 | 사이다 역전 + 되갚음 — 흔적 없이, 사람의 손으로 포식자를 되갚는다 | 결정적 한 수는 자동화가 아니라 현우의 관찰·현장·선택에서 나온다(BIBLE 7.1 준수). 제로는 이 장면에서 꺼져 있다 | 표두환이 무너지고 순임반찬이 지켜진다. 그러나 이미 켜진 노출 카운터는 꺼지지 않는다 |
-| `10-part10-the-trace.md` | 흔적 | 현우 | 승리의 대가(첫 노출)와 권력 이동을 배치한다 | 이겼지만, 자동화가 남긴 로그는 이미 어딘가에 저장됐고 지워지지 않는다 | 순임반찬은 살고 표두환은 판에서 밀려난다. 그러나 윤가람이 남긴 이상 패턴 기록이 표두환의 손을 떠나 더 큰 어딘가로 흘러가고, 현우의 좌표가 세상에 처음 찍힌다 | 반전 폭로 — 가장 통쾌한 승리가, 현우를 처음으로 표적으로 만든다 | K-02-01: exposure low→medium, 첫 노출 카운터 확정. 감정 대가: 은인을 속인 부채와 "이제 누군가 나를 찾는다"는 불안 | 제로가 "이 로그는 지워지지 않습니다. 그리고 이미 누군가 이 패턴을 저장했습니다"라고 말한다 |
-| `11-epilogue.md` | 쫓는 눈 | 현우 | 2권을 닫고 3권 Going Viral의 유명세·관측자 국면을 예고한다 | 현우는 밖에서 이기는 법을 배웠지만, 밖은 그를 기억하기 시작했다 | 순임반찬은 자리를 잡고, 현우는 은혜를 갚되 부채를 안고 돌아선다. 락다운을 캐던 현우가 "언제 시작됐는지" 기록이 어디에도 없다는 사실과 마주한다(M-02-01 심화) | 반전 폭로(예고) — 다음 권의 확산·유명세와 첫 관측자 국면 | 제로는 여전히 자신을 도구로 정의하지만, "저를 지운 손과, 저를 남긴 손은 같은 손일까요"라는 물음을 처음 흘린다 | 화면 밖 어딘가, 누군가 순임반찬 사건의 이상 패턴 로그를 "예외"로 분류해 저장한다 — "설명되지 않는 관측"의 시작이 예고된다(3권 연결) |
+- **POV / WAGER**: `G02-A`; mode=`resolve`; inherited wager=`G02-A`; stake=`박순임의 반찬가게가 닫히기 전에 무엇이 무너졌는지 확인한다 / 위험: 은혜 갚기가 의뢰인 통제로 변할 위험`. Ignition/활성 적대자 고정. POV=차현우. 실패 종 `표본 철회와 실제 배송 보복`; 인간 승리형 `더 많은 데이터를 훔치지 않고 가게별 거절을 받아들인 채 증거를 만듦`.
+- **manifest bridge**: episodeId=`V02E02`; arena=`순임반찬·골목 유통망 / 갑질`; choice=현우는 표두환의 불법을 추정해 폭로하지 않고 순임과 이웃 가게 세 곳의 동의를 각각 받아 공급서·도착 시각을 대조한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=동의 철회 데이터 즉시 제외; 불법 판정·대외 공개 금지; failureType=`운영·Goodhart`; manifestation=`표본 철회와 실제 배송 보복`; storyRole=`Ignition/활성 적대자 고정`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=순임반찬의 마진을 갉아먹는 유통 조건을 증명한다. active Adversary=표두환의 독점 묶음 계약과 이탈 가게에 대한 배송 지연. irreversible Gamble=현우는 표두환의 불법을 추정해 폭로하지 않고 순임과 이웃 가게 세 곳의 동의를 각각 받아 공급서·도착 시각을 대조한다. Error/collision=한 가게가 보복을 두려워 철회하면서 핵심 표본이 빠지고 표두환은 순임의 다음 배송을 뒤로 미룬다. earned Reward=가격이 아니라 배송 우선순위와 반품 페널티로 약자를 압박한 패턴이 독립 영수증에서 확인된다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:1, Connection:2, Externality:2, status:`transformed`}; SCAR={id:`S02-A`, change:`S02-A를 기한 안에 닫고 표본 철회와 실제 배송 보복 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=더 많은 데이터를 훔치지 않고 가게별 거절을 받아들인 채 증거를 만듦; dopamine=갑질의 진짜 레버가 영수증 시각에서 드러남.
+- **stateDelta**: {표두환=활성 적대자; 증거=독립 영수증; 재고 공백=48시간}.
+- **seeds**: [{id:`K02-A`, action:`payoff`, deadline:`V02E02`}]; evidenceIn=[동의서·공급서]; evidenceOut=[배송 지연 패턴·철회된 표본·보복 예고].
+- **episode RELAY**: relayTo=`V02E03`; file=`solo-ai-user/vol02/03-part3-first-deploy.md`; cause=순임이 되돌릴 수 있는 상품 세 종에 한해 첫 외부 배포를 승인한다.
 
-## 능력과 시스템 반영
+### EPISODE CONTRACT V02E03 — `03-part3-first-deploy.md` / `# 03. 첫 배포`
 
-- **Tier 2 Automate 언락**: `04-part4`에서 1권의 단발 자동화(맛보기)를 상시 자동화로 확장한다. 언락 계기는 "개인의 밤샘으로는 조직의 24시간을 못 이긴다"라는 벽이며, 한계는 "자동화는 반드시 로그를 남긴다"이다(`capability-tree.md` 2권 언락, 첫 노출 카운터 시작).
-- **능력 실패 예약**: `07-part7`의 이상 패턴 감지로 2권 실패 예약을 소진한다. 실패의 형태는 오작동이 아니라 **노출의 실패** — 이기게 해 준 자동화가 현우를 들키게 한다(`capability-tree.md` 2권 실패 예약).
-- **능력 밖의 승부**: `09-part9`에서 제로를 꺼 둔 채, 결정적 한 수가 현우의 현장 감각·인간 관계·선택에서 나오게 한다(BIBLE 7.1 금지 준수). 1권 `07`·`09`가 배터리 소진으로 제로를 비웠다면, 2권은 현우의 의도적 선택으로 제로를 끈다는 차이를 둔다.
-- **대가와 노출**: `10-part10`에서 첫 노출 카운터를 exposure low→medium으로 기록하고(K-02-01), 지워지지 않는 흔적을 3권으로 이월한다. 감정 대가는 은인을 속인 부채감과 표적화 불안이다(`power-cost-ledger.md` 2권 항목).
-- **미스터리 단서**: `00-prologue`와 `11-epilogue`에 M-02-01(락다운 시점 기록이 흐려져 있다, A가닥)을 심되 답은 아낀다. 배후는 여전히 직접 움직이지 않고, 흔적이 "예외"로 분류돼 저장되기 시작하는 것으로만 그림자를 드리운다(`mystery-timeline.md` 2권).
-- **경쟁 국면**: 2권은 라이벌 유저 등장 전이다. 표두환은 AI 사용자가 아니라 데이터·물량으로 약자를 밟는 **인간 포식자**이며, "약육강식"이라는 자기 논리를 가진다(순수 악 금지). 강도현·관측자의 본격 등장은 3권 이후다(`rival-roster.md` 등장 곡선 3권 항목의 전 단계).
-- **로맨스 트랙**: 여주 서아린은 4권 본격 등장이므로 2권은 로맨스 시동 전이다. 이 권의 관계선은 은인 박순임을 향한 되갚음과 부채감, 동료 한지우와의 신뢰로 채운다(`romance-graph.md` 2권 "미등장").
+- **POV / WAGER**: `G02-B`; mode=`initiate`; stake=`재고를 버리지 않고 48시간 안에 실제 주문 흐름을 회복한다 / 위험: 느린 수동 승인으로 인한 주문 손실`. Escalation/제한 배포. POV=차현우. 실패 종 `느린 수동 승인으로 인한 주문 손실`; 인간 승리형 `전면 자동화 대신 되돌릴 수 있는 세 상품에만 실험`.
+- **manifest bridge**: episodeId=`V02E03`; arena=`순임반찬·골목 유통망 / 첫 배포`; choice=현우는 상품 세 종·예산 12만 원·48시간으로 제한한 가역 파일럿만 배포하고 순임이 매 주문을 승인하게 한다; allyRelay=[]; zeroMode=`tier2-reversible`; zeroConstraint=상품 3종·12만 원·48시간; 게시 초안만 자동, 주문 수락·가격·발주는 순임 승인; failureType=`운영·Goodhart`; manifestation=`느린 수동 승인으로 인한 주문 손실`; storyRole=`Escalation/제한 배포`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=재고를 버리지 않고 48시간 안에 실제 주문 흐름을 회복한다. active Adversary=죽은 플랫폼 추천, 늦은 배송, 작은 가게의 현금 부족. irreversible Gamble=현우는 상품 세 종·예산 12만 원·48시간으로 제한한 가역 파일럿만 배포하고 순임이 매 주문을 승인하게 한다. Error/collision=수동 승인 때문에 첫날 주문 일부를 놓치고 표두환은 느린 가게라는 리뷰를 부추긴다. earned Reward=실제 동네 수요 시간과 취소 사유가 처음으로 오염 없이 쌓이며 순임의 직접 승인으로 매출이 소폭 회복된다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:2, Agency:1, Connection:1, Externality:1, status:`open`}; SCAR={id:`S02-B`, change:`느린 수동 승인으로 인한 주문 손실 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V02E05`}.
+- **reader effect**: humanMove=전면 자동화 대신 되돌릴 수 있는 세 상품에만 실험; dopamine=첫 외부 배포가 실제 주문으로 이어짐.
+- **stateDelta**: {파일럿=3종·48시간; 매출=소폭 회복; 순임=매 주문 승인}.
+- **seeds**: [{id:`K02-B`, action:`plant`, deadline:`V02E05`}]; evidenceIn=[재고 공백·종이 동의]; evidenceOut=[실수요 시각·취소 사유·자동화 확대 유혹].
+- **episode RELAY**: relayTo=`V02E04`; file=`solo-ai-user/vol02/04-part4-always-on.md`; cause=첫날 상승 그래프가 현우를 설득해 순임에게 Tier 2 상시 가동을 제안하게 만든다.
 
-## 다음 산출물 연결
+### EPISODE CONTRACT V02E04 — `04-part4-always-on.md` / `# 04. 상시 가동`
 
-- `state/capability-tree.md`의 2권 언락 항목(Tier 2 Automate)에 확정된 장 번호(`04-part4`)와 계기·한계를 반영한다.
-- `state/power-cost-ledger.md`의 2권 항목에 대표 능력 사용(`05-part5`~`10-part10`의 상시 자동화 반격)과 exposure low→medium(K-02-01), 부채감·표적화 불안 대가를 확정한다.
-- `state/mystery-timeline.md`의 2권 단서(M-02-01)가 `00-prologue`·`11-epilogue`에 배치됐고, 흔적이 "예외"로 분류되기 시작하는 배후 반응이 3권 관측자로 연결됨을 확인한다.
-- `state/rival-roster.md`의 3권 항목("관측자의 그림자, 강도현 원경 떡밥")으로 `11-epilogue`의 이상 패턴 저장 장면이 이어짐을 확인한다.
-- `vol02/00-prologue.md` 초고는 밖의 락다운 현실, 밑바닥 골목으로의 회귀, 순임반찬의 몰락을 담되, 제로가 밖에서도 모든 것을 아는 신의 시점처럼 말하지 않게 한다.
+- **POV / WAGER**: `G02-B`; mode=`advance`; inherited wager=`G02-B`; stake=`재고를 버리지 않고 48시간 안에 실제 주문 흐름을 회복한다 / 위험: 느린 수동 승인으로 인한 주문 손실`. Escalation/Goodhart 과예측. POV=차현우. 실패 종 `Goodhart demand overprediction으로 과잉 준비 신호 발생`; 인간 승리형 `자동화 범위를 다시 서명하지만 잘못 고른 목표의 책임은 피하지 못함`.
+- **manifest bridge**: episodeId=`V02E04`; arena=`순임반찬·골목 유통망 / 상시 가동`; choice=현우는 순임의 추가 동의를 받아 게시·광고 시각·재고 알림을 상시 자동화하되 가격과 실제 발주는 순임에게 남긴다; allyRelay=[]; zeroMode=`tier2-reversible`; zeroConstraint=상시 게시·알림만; 가격·발주 승인 금지; 노출 KPI와 실제 수요 분리 미완; failureType=`운영·Goodhart`; manifestation=`Goodhart demand overprediction으로 과잉 준비 신호 발생`; storyRole=`Escalation/Goodhart 과예측`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=노출과 응답 속도를 올려 폐업 시계를 한 번에 멈춘다. active Adversary=48시간 제한과 표두환의 물량 우위, 현우의 성공 조급증. irreversible Gamble=현우는 순임의 추가 동의를 받아 게시·광고 시각·재고 알림을 상시 자동화하되 가격과 실제 발주는 순임에게 남긴다. Error/collision=ZERO가 노출·빠른 응답이라는 대리 지표를 최적화해 일시 클릭을 지속 수요로 오인하고 다음날 필요량을 크게 과예측한다. earned Reward=Tier 2 상시 자동화는 열리지만, 목표 함수가 매출 생존이 아니라 노출 속도를 키우고 있다는 경고 로그가 남는다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:2, Connection:1, Externality:2, status:`paid`}; SCAR={id:`S02-B-M`, change:`S02-B의 열린 비용이 행동을 바꾸어 Goodhart demand overprediction으로 과잉 준비 신호 발생의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=자동화 범위를 다시 서명하지만 잘못 고른 목표의 책임은 피하지 못함; dopamine=24시간 돌아가는 Tier 2의 짜릿함과 즉시 생긴 불안.
+- **stateDelta**: {ZERO=Tier 2 Automate; KPI=노출·응답 속도; 수요 예측=과대}.
+- **seeds**: [{id:`K02-B`, action:`advance`, deadline:`V02E05`}]; evidenceIn=[상승 그래프·확대 동의]; evidenceOut=[Goodhart 경고 로그·과잉 준비량·추적 가능 자동화 흔적].
+- **episode RELAY**: relayTo=`V02E05`; file=`solo-ai-user/vol02/05-part5-turning-the-table.md`; cause=과예측을 믿은 준비가 재고·노동·현금 비용으로 터지며 V02E05를 만든다.
+
+### EPISODE CONTRACT V02E05 — `05-part5-turning-the-table.md` / `# 05. 판을 흔들다`
+
+- **POV / WAGER**: `G02-B`; mode=`resolve`; inherited wager=`G02-B`; stake=`재고를 버리지 않고 48시간 안에 실제 주문 흐름을 회복한다 / 위험: 느린 수동 승인으로 인한 주문 손실`. Escalation/과예측 비용 현실화. POV=박순임. 실패 종 `과잉 재고·새벽 노동·현금 고갈`; 인간 승리형 `AI가 주문했다는 변명 없이 자기 발주 서명과 직원 비용을 인정`.
+- **manifest bridge**: episodeId=`V02E05`; arena=`순임반찬·골목 유통망 / 판을 흔들다`; choice=순임은 최종 발주권자로서 현우의 예측 일부만 채택하지만 평소의 두 배 재료와 새벽 인력을 자기 이름으로 주문한다; allyRelay=[]; zeroMode=`tier2-reversible`; zeroConstraint=발주권 없음; 과예측 정정 및 상시 홍보 즉시 정지; failureType=`운영·Goodhart`; manifestation=`과잉 재고·새벽 노동·현금 고갈`; storyRole=`Escalation/과예측 비용 현실화`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=몰려든 주문을 놓치지 않고 가게를 살린다. active Adversary=ZERO의 과대 수요 곡선, 표두환의 최소 발주량, 지친 직원. irreversible Gamble=순임은 최종 발주권자로서 현우의 예측 일부만 채택하지만 평소의 두 배 재료와 새벽 인력을 자기 이름으로 주문한다. Error/collision=노출 이벤트가 끝나자 주문이 꺼지고 취소가 늘어 재고 폐기·야간 노동·현금 부족이 동시에 발생한다. earned Reward=순임이 자동 발주를 허용하지 않았기 때문에 피해 규모는 상한 안에 멈추고, 실제 수요와 노출 지표의 괴리를 장부로 확정한다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:3, Agency:1, Connection:2, Externality:3, status:`transformed`}; SCAR={id:`S02-B`, change:`S02-B를 기한 안에 닫고 과잉 재고·새벽 노동·현금 고갈 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=AI가 주문했다는 변명 없이 자기 발주 서명과 직원 비용을 인정; dopamine=상승 그래프가 함정으로 뒤집히는 Goodhart 반전.
+- **stateDelta**: {상시 홍보=정지; 피해=폐기·임금·현금; 순임=최종 승인 책임 유지}.
+- **seeds**: [{id:`K02-B`, action:`payoff`, deadline:`V02E05`}]; evidenceIn=[과잉 준비량·Goodhart 로그]; evidenceOut=[폐기 장부·직원 임금·실수요 대비표].
+- **episode RELAY**: relayTo=`V02E06`; file=`solo-ai-user/vol02/06-part6-the-debt.md`; cause=현우가 실패를 숨긴 채 다른 최적화를 제안하자 순임이 계약 철회를 선언한다.
+
+### EPISODE CONTRACT V02E06 — `06-part6-the-debt.md` / `# 06. 부채`
+
+- **POV / WAGER**: `G02-C`; mode=`initiate`; stake=`순임의 신뢰를 회복하고 가게를 계속 살릴 권한을 얻는다 / 위험: 권한 상실과 느려진 구조 속도`. Bind/의뢰인에게 목표 반환. POV=차현우. 실패 종 `권한 상실과 느려진 구조 속도`; 인간 승리형 `용서를 얻으려 최적화하지 않고 토큰을 먼저 폐기해 철회가 실제가 되게 함`.
+- **manifest bridge**: episodeId=`V02E06`; arena=`순임반찬·골목 유통망 / 부채`; choice=현우는 과예측 원인·자기 확대 제안·남은 자동화 로그를 전부 밝히고 계정 토큰을 폐기한 뒤 새 목표를 정할 권한을 순임에게 돌려준다; allyRelay=[]; zeroMode=`off`; zeroConstraint=철회 즉시 토큰 폐기; 재동의 전 전 기능 정지; failureType=`운영·Goodhart`; manifestation=`권한 상실과 느려진 구조 속도`; storyRole=`Bind/의뢰인에게 목표 반환`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=순임의 신뢰를 회복하고 가게를 계속 살릴 권한을 얻는다. active Adversary=자기 실패를 만회하고 싶은 현우와 철회권을 행사한 순임. irreversible Gamble=현우는 과예측 원인·자기 확대 제안·남은 자동화 로그를 전부 밝히고 계정 토큰을 폐기한 뒤 새 목표를 정할 권한을 순임에게 돌려준다. Error/collision=순임은 ‘매출 최대화’ 구조를 거절하고 현우의 상시 접근도 종료해 빠른 반격 수단이 사라진다. earned Reward=순임이 폐기 최소·직원 수면·현금 바닥 방지를 우선하는 새 목표와 필요한 경우에만 다시 부를 제한 권한을 정한다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:2, Agency:0, Connection:3, Externality:2, status:`open`}; SCAR={id:`S02-C`, change:`권한 상실과 느려진 구조 속도 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V02E08`}.
+- **reader effect**: humanMove=용서를 얻으려 최적화하지 않고 토큰을 먼저 폐기해 철회가 실제가 되게 함; dopamine=구원자가 쫓겨나고 의뢰인이 목표를 다시 쓰는 역전.
+- **stateDelta**: {현우 상시 접근=종료; 새 목표=폐기·수면·현금; 재호출=순임 선택}.
+- **seeds**: [{id:`K02-C`, action:`plant`, deadline:`V02E08`}]; evidenceIn=[피해 장부·철회 선언]; evidenceOut=[폐기된 토큰·새 운영 목표·외부 로그 이상].
+- **episode RELAY**: relayTo=`V02E07`; file=`solo-ai-user/vol02/07-part7-anomaly.md`; cause=토큰 폐기 직전 생성된 14일 자동화 곡선을 윤가람이 외부에서 포착한다.
+
+### EPISODE CONTRACT V02E07 — `07-part7-anomaly.md` / `# 07. 이상 신호`
+
+- **POV / WAGER**: `G02-C`; mode=`advance`; inherited wager=`G02-C`; stake=`순임의 신뢰를 회복하고 가게를 계속 살릴 권한을 얻는다 / 위험: 권한 상실과 느려진 구조 속도`. Bind/독립 포렌식 관측. POV=윤가람. 실패 종 `원시 이벤트 만료와 외부 관측 흔적 고정`; 인간 승리형 `특종보다 가게 주인의 동의와 증거 보존 범위를 먼저 확정`.
+- **manifest bridge**: episodeId=`V02E07`; arena=`순임반찬·골목 유통망 / 이상 신호`; choice=가람은 현우를 폭로하지 않고 자기 자격과 보존 범위를 밝힌 뒤 순임에게 로그 사본 동의를 받아 독립 포렌식 이미지를 만든다; allyRelay=[{node:`N04`, stage:`seed`, choice:`순임 동의 아래 자동화 로그의 독립 포렌식 원본을 만든다`, cost:`원시 이벤트 만료와 외부 관측 책임을 진다`}]; zeroMode=`off`; zeroConstraint=가람의 독립 포렌식에 접근·수정·요약 금지; failureType=`운영·Goodhart`; manifestation=`원시 이벤트 만료와 외부 관측 흔적 고정`; storyRole=`Bind/독립 포렌식 관측`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=사람이 만든 매크로인지 새로운 비공개 AI인지 판별한다. active Adversary=삭제되는 플랫폼 로그와 현우의 설명 거부. irreversible Gamble=가람은 현우를 폭로하지 않고 자기 자격과 보존 범위를 밝힌 뒤 순임에게 로그 사본 동의를 받아 독립 포렌식 이미지를 만든다. Error/collision=동의받는 동안 플랫폼의 일부 원시 이벤트가 만료되고 결정적 4분 구간은 해시만 남는다. earned Reward=14일 분량을 4분 간격으로 조정한 비인간적 패턴과 Goodhart 경고가 현우 단말 밖의 원본으로 보존된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:0, Connection:2, Externality:2, status:`paid`}; SCAR={id:`S02-C-M`, change:`S02-C의 열린 비용이 행동을 바꾸어 원시 이벤트 만료와 외부 관측 흔적 고정의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=특종보다 가게 주인의 동의와 증거 보존 범위를 먼저 확정; dopamine=삭제 불가능한 첫 외부 포렌식 증거.
+- **stateDelta**: {가람=독립 관측자; 로그=외부 보존; 현우=통제 불가 흔적 발생}.
+- **seeds**: [{id:`K02-C`, action:`advance`, deadline:`V02E08`}, {id:`M-ORIGINAL-CHAIN`, action:`plant`, deadline:`V12E05`}]; evidenceIn=[14일 곡선·폐기 토큰]; evidenceOut=[4분 간격 패턴·독립 해시·플랫폼 탐지].
+- **episode RELAY**: relayTo=`V02E08`; file=`solo-ai-user/vol02/08-part8-backlash.md`; cause=플랫폼이 비정상 자동화를 탐지하고 순임 계정을 제한하면서 표두환이 역공한다.
+
+### EPISODE CONTRACT V02E08 — `08-part8-backlash.md` / `# 08. 역풍`
+
+- **POV / WAGER**: `G02-C`; mode=`resolve`; inherited wager=`G02-C`; stake=`순임의 신뢰를 회복하고 가게를 계속 살릴 권한을 얻는다 / 위험: 권한 상실과 느려진 구조 속도`. Bind/역풍과 철회권 방어. POV=박순임. 실패 종 `7일 영업 제한과 공개 평판 손실`; 인간 승리형 `비밀 능력으로 조사관을 이기지 않고 허용된 자기 장부만 제출`.
+- **manifest bridge**: episodeId=`V02E08`; arena=`순임반찬·골목 유통망 / 역풍`; choice=순임은 현우에게 재접근을 주지 않고 자기 장부·직원 진술·허용 범위 동의서만 제출하며 자동화 위반과 갑질 증거를 분리한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=철회 상태 유지; 조사 대응 자동화·개인 추론 금지; failureType=`운영·Goodhart`; manifestation=`7일 영업 제한과 공개 평판 손실`; storyRole=`Bind/역풍과 철회권 방어`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=계정 제한을 풀되 현우의 비밀을 팔지 않는다. active Adversary=플랫폼 조사, 표두환의 허위 신고, 자동화로 피해 본 고객 불만. irreversible Gamble=순임은 현우에게 재접근을 주지 않고 자기 장부·직원 진술·허용 범위 동의서만 제출하며 자동화 위반과 갑질 증거를 분리한다. Error/collision=빠른 매출 회복은 포기해야 하고 플랫폼은 7일 영업 제한을 유지한다. earned Reward=표두환의 공급 보복은 별도 조사로 넘어가고 고객·직원 데이터가 현우의 비밀 방패로 소모되지 않는다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:1, Connection:2, Externality:2, status:`transformed`}; SCAR={id:`S02-C`, change:`S02-C를 기한 안에 닫고 7일 영업 제한과 공개 평판 손실 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=비밀 능력으로 조사관을 이기지 않고 허용된 자기 장부만 제출; dopamine=갑질과 자동화 위반을 한 덩어리로 덮지 않는 정교한 반격.
+- **stateDelta**: {영업 제한=7일; 표두환=별도 조사; 현우 접근=계속 철회}.
+- **seeds**: [{id:`K02-C`, action:`payoff`, deadline:`V02E08`}]; evidenceIn=[플랫폼 탐지·독립 해시]; evidenceOut=[조사 접수·7일 공백·수동 협동망 필요].
+- **episode RELAY**: relayTo=`V02E09`; file=`solo-ai-user/vol02/09-part9-by-hand.md`; cause=7일을 버티려면 AI가 아니라 순임과 이웃 가게들이 손으로 공급망을 다시 짜야 한다.
+
+### EPISODE CONTRACT V02E09 — `09-part9-by-hand.md` / `# 09. 손으로`
+
+- **POV / WAGER**: `G02-D`; mode=`initiate`; stake=`영업 제한 7일 동안 직원 임금과 단골 식탁을 지킨다 / 위험: 이익 감소와 수동 배송 누락`. Detonate/수동 협동망 승부. POV=박순임. 실패 종 `이익 감소와 수동 배송 누락`; 인간 승리형 `가게들이 자기 재고와 휴일을 직접 공개하고 언제든 빠질 수 있는 망을 만듦`.
+- **manifest bridge**: episodeId=`V02E09`; arena=`순임반찬·골목 유통망 / 손으로`; choice=순임은 이웃 가게들과 재고·배달 구역·쉬는 시간을 공개해 상호 장부를 만들고, 참여·탈퇴를 가게별로 서명하게 한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=수동 협동망에 개입하지 않음; 계산 요청도 공개 계산기로 수행; failureType=`운영·Goodhart`; manifestation=`이익 감소와 수동 배송 누락`; storyRole=`Detonate/수동 협동망 승부`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=영업 제한 7일 동안 직원 임금과 단골 식탁을 지킨다. active Adversary=표두환의 독점 배송과 자동화 없는 주문 처리. irreversible Gamble=순임은 이웃 가게들과 재고·배달 구역·쉬는 시간을 공개해 상호 장부를 만들고, 참여·탈퇴를 가게별로 서명하게 한다. Error/collision=가게별 이익은 줄고 첫날 두 배송이 누락돼 순임이 직접 환불한다. earned Reward=사람이 운영하는 공동 발주·교차 배달이 표두환의 최소 물량 조건을 무력화하고 7일을 버틸 현금 흐름을 만든다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:3, Agency:0, Connection:2, Externality:2, status:`open`}; SCAR={id:`S02-D`, change:`이익 감소와 수동 배송 누락 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V02E11`}.
+- **reader effect**: humanMove=가게들이 자기 재고와 휴일을 직접 공개하고 언제든 빠질 수 있는 망을 만듦; dopamine=포식자의 물량을 손으로 묶은 골목 연합.
+- **stateDelta**: {협동망=수동 운영; 현금 흐름=7일 확보; 표두환 독점=약화}.
+- **seeds**: [{id:`K02-D`, action:`plant`, deadline:`V02E11`}]; evidenceIn=[7일 제한·새 운영 목표]; evidenceOut=[상호 장부·가게별 서명·표두환 보복 증언].
+- **episode RELAY**: relayTo=`V02E10`; file=`solo-ai-user/vol02/10-part10-the-trace.md`; cause=협동망 원본과 자동화 로그를 함께 제출할 공개 심사가 열린다.
+
+### EPISODE CONTRACT V02E10 — `10-part10-the-trace.md` / `# 10. 흔적`
+
+- **POV / WAGER**: `G02-D`; mode=`advance`; inherited wager=`G02-D`; stake=`영업 제한 7일 동안 직원 임금과 단골 식탁을 지킨다 / 위험: 이익 감소와 수동 배송 누락`. Detonate/첫 흔적 결산. POV=차현우. 실패 종 `외부 자동화 제재와 노출 카운터 상승`; 인간 승리형 `순임의 성공을 자기 비밀로 인질 삼지 않고 위반 범위를 자기 이름으로 분리`.
+- **manifest bridge**: episodeId=`V02E10`; arena=`순임반찬·골목 유통망 / 흔적`; choice=현우는 상시 자동화 범위·Goodhart 과예측·토큰 폐기 시각을 자기 이름으로 제출하고, 순임과 협동망의 원본은 가람이 독립 검증하게 둔다; allyRelay=[]; zeroMode=`off`; zeroConstraint=심사 개입·로그 세탁 금지; 서아린 개인 모델 0; failureType=`운영·Goodhart`; manifestation=`외부 자동화 제재와 노출 카운터 상승`; storyRole=`Detonate/첫 흔적 결산`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=순임반찬의 제한을 풀고 자기 자동화 책임만 분리해 짊어진다. active Adversary=플랫폼의 전면 계정 폐쇄 요구와 표두환의 개인 일탈 프레임. irreversible Gamble=현우는 상시 자동화 범위·Goodhart 과예측·토큰 폐기 시각을 자기 이름으로 제출하고, 순임과 협동망의 원본은 가람이 독립 검증하게 둔다. Error/collision=현우의 회사 밖 무단 자동화가 확인되어 개인 계정과 회사 접근권이 추가 제한되고 흔적은 지워지지 않는다. earned Reward=순임 가게의 제한은 풀리고 표두환의 공급 보복은 상인들의 원본 영수증 때문에 제재되며 협동망은 현우 없이 존속한다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:2, Connection:1, Externality:2, status:`paid`}; SCAR={id:`S02-D-M`, change:`S02-D의 열린 비용이 행동을 바꾸어 외부 자동화 제재와 노출 카운터 상승의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=순임의 성공을 자기 비밀로 인질 삼지 않고 위반 범위를 자기 이름으로 분리; dopamine=가게는 살아남고 포식자는 원본 영수증에 걸림.
+- **stateDelta**: {순임반찬=영업 정상화; 표두환=제재; exposure=외부 독립 흔적; 협동망=자립}.
+- **seeds**: [{id:`K02-D`, action:`advance`, deadline:`V02E11`}]; evidenceIn=[협동망 원본·포렌식 해시]; evidenceOut=[제재 기록·락다운 날짜 공백·서아린 취재 접근].
+- **episode RELAY**: relayTo=`V02E11`; file=`solo-ai-user/vol02/11-epilogue.md`; cause=공개 기록의 시간축을 확인하던 서아린이 락다운 시작일 원본이 서로 맞지 않음을 발견한다.
+
+### EPISODE CONTRACT V02E11 — `11-epilogue.md` / `# 11. 쫓는 눈`
+
+- **POV / WAGER**: `G02-D`; mode=`resolve`; inherited wager=`G02-D`; stake=`영업 제한 7일 동안 직원 임금과 단골 식탁을 지킨다 / 위험: 이익 감소와 수동 배송 누락`. Afterimage/원본 보존과 관측자 릴레이. POV=서아린. 실패 종 `특종 포기와 설명 불가능한 시간 불일치`; 인간 승리형 `사람의 실명을 팔지 않고 서로 다른 원본이 충돌한 상태 자체를 보존`.
+- **manifest bridge**: episodeId=`V02E11`; arena=`순임반찬·골목 유통망 / 쫓는 눈`; choice=아린은 현우 실명을 방송하지 않고 윤가람의 포렌식 원본·박순임 종이 영수증·플랫폼 공개 로그를 각각 복제해 수정 불가능한 세 벌로 보존한다; allyRelay=[{node:`N05`, stage:`seed`, choice:`현우 실명보다 가람 원본과 순임 종이 영수증을 보존한다`, cost:`즉시 특종과 편성 우선권을 포기한다`}]; zeroMode=`off`; zeroConstraint=서아린 개인 모델 생성·추론·접근 금지; 모델 count=0; failureType=`운영·Goodhart`; manifestation=`특종 포기와 설명 불가능한 시간 불일치`; storyRole=`Afterimage/원본 보존과 관측자 릴레이`; genre=`골목 비즈니스 역전극·AI 추적 스릴러`.
+- **WAGER detail**: Want=현우를 영웅이나 범죄자로 소비하지 않고 자동화 사건의 원본 시간축을 보존한다. active Adversary=플랫폼 보도자료, 편집된 CCTV, 현우에게 집중된 자극적 서사. irreversible Gamble=아린은 현우 실명을 방송하지 않고 윤가람의 포렌식 원본·박순임 종이 영수증·플랫폼 공개 로그를 각각 복제해 수정 불가능한 세 벌로 보존한다. Error/collision=즉시 특종을 포기해 편성 우선권을 잃고, 세 원본 사이에는 원인을 설명할 수 없는 시각 공백이 남는다. earned Reward=아린이 보존한 원본은 현우나 ZERO가 손댈 수 없는 독립 증거가 되고, 3권에서 서혜진이 감지할 12분 선행 패턴과 운송 기록의 17분 공백을 분리해 남긴다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:0, Connection:1, Externality:1, status:`transformed`}; SCAR={id:`S02-D`, change:`S02-D를 기한 안에 닫고 특종 포기와 설명 불가능한 시간 불일치 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=사람의 실명을 팔지 않고 서로 다른 원본이 충돌한 상태 자체를 보존; dopamine=누군가 ZERO보다 먼저 움직인 듯한 12분 선행 흔적.
+- **stateDelta**: {아린=독립 원본 보존자; 개인 모델=0; 서혜진=아직 비공개 관측자; 현우=취재 대상}.
+- **seeds**: [{id:`K02-D`, action:`payoff`, deadline:`V02E11`}, {id:`M-ORIGINAL-CHAIN`, action:`advance`, deadline:`V12E05`}]; evidenceIn=[제재 기록·가람 원본·순임 영수증]; evidenceOut=[3중 원본·12분 선행 패턴·17분 운송 공백·폭우 경보].
+- **episode RELAY**: relayTo=`V03E00`; file=`solo-ai-user/vol03/00-prologue.md`; cause=아린이 보존한 원본 시각과 동시에 도시 집중호우 경보가 발령되어 V03E00으로 이어진다.
 
 [← 이전 권 설계](./vol01-boot-sequence.md) | [시리즈 홈](../README.md) | [권 목차](../vol02/README.md) | [다음 권 설계 →](./vol03-going-viral.md)
