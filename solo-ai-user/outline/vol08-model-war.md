@@ -2,70 +2,171 @@
 
 [← 이전 권 설계](./vol07-second-user.md) | [시리즈 홈](../README.md) | [권 목차](../vol08/README.md) | [다음 권 설계 →](./vol09-jailbreak.md)
 
-> 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`, `state/rival-roster.md`, `outline/vol07-second-user.md`
+> 기준 문서: `PRD.md`, `BIBLE.md`, `tasks/solo-ai-user-completion-design.md`, `tasks/solo-ai-user-outline-blueprint.md`
 
-## 권 약속
+## 권 정경 계약
 
-**로그라인**: '두 번째 사용자' 강도현과의 첫 충돌 이후, 판은 복수의 유저와 에이전트들이 얽힌 '모델 전쟁'으로 확대된다. 현우의 단독 강함이 다자 구도에서 처음으로 한계에 부딪히는 가운데, 아린과 현우는 서혜진의 흔적과 아키텍트 명령 체계의 증거를 발견한다.
+**권 README H1**: `# 8권 · Model War (모델 전쟁)`
 
-**핵심 질문**: 더 센 힘 앞에서, 내 힘이 안 통할 때 무엇이 남는가?
+**권 질문**: 모든 모델이 꺼진 자리에서 누가 무엇을 포기할지 결정하는가?
 
-**Act 기능**: Act 3의 두 번째 권. 복수 유저, 에이전트, 조연들이 얽힌 ALLY RELAY(다자 공조/릴레이) 국면. 멀티 에이전트 협업(multi-agent coordination)의 시도와 그 한계에 부딪히는 주 실패 종 국면이다. 현우는 처음으로 단독 무쌍이 통하지 않는 거대한 벽을 마주한다. 또한 아린과 함께 아키텍트의 실체를 추적하며 '서혜진'의 서명 표본과 아키텍트 명령 체계의 흔적을 최초로 물리적 증거로 발각하지만, 서혜진과 아린이 동일 인물인지에 대한 결론은 보류된다.
+**권 사건**: 정유리·BLANC가 해상 데이터센터에서 `WITNESS`(첫 17분 증언 복호), `RECALL`(예외 시드 위치), `LOCK`(PALISADE 봉쇄 조정) 세 키를 경매한다. 선우현·GRIMM은 전면 봉쇄가 다음 참사를 막는다고 믿는다. 아린은 구출 대상이 아니라 파기할 키를 정하는 작전 책임자다.
 
-**권말 상태**: 다자간의 처절한 모델 전쟁 끝에 현우는 조연들과의 인간적 공조로 간신히 위기를 넘기지만, 에이전트 간의 완벽한 논리적 조율은 실패로 끝난다. 아키텍트의 그림자가 현우의 턱밑까지 다가오고, 아린의 비밀에 대한 거대한 의문(서혜진과의 관계)이 남은 채 9권 탈옥(Jailbreak)에서의 최대 위기를 예고한다.
+**밴드 변주**: 00에서 판매자의 합리성, 01에서 참가자의 무력화, 02에서 거래를 싣는다. Test는 키 의미→GRIMM 봉쇄→Tier 4 확립. Bind는 가족 증거를 입찰하고, 전원 lockout 뒤 아린 결정. Detonate는 43초 충돌과 한 키 손실을 분리한다.
 
-## 중심 축
+**고정 실패 종**: `multi-agent coordination`. 능력의 확신은 데이터 범위·행동 권한·인간 승인을 대신하지 않는다.
 
-| 축 | 시작 상태 | 중반 압력 | 권말 변화 |
-| -- | --------- | --------- | --------- |
-| 현우 / 자기 자신 | 제로의 압도적 단독 성능으로 승리해 왔다는 자신감이 강함 | 다른 유저들의 에이전트 개입과 다변수 충돌로 제로의 연산이 밀린다 | "AI의 연산"이 아닌 "인간들의 불완전한 공조"로 판을 흔드는 법을 배운다 |
-| 현우 / 서아린 | 아린의 과거와 배후에 얽힌 거대한 비밀을 어렴풋이 눈치챈 상태 | 아키텍트의 단서(서혜진 서명)를 찾으며 정체에 대한 혼란이 극대화된다 | 동일 인물 여부에 대한 결론을 보류한 채, "과거가 아닌 현재의 너"를 지키겠다고 맹세한다 |
-| 현우 / 조연 유저 진영 | 각자의 모델과 목적을 가진 불안하고 일시적인 연합 | 다중 에이전트 간의 통제권 충돌과 목표 불일치로 시스템이 마비된다 | 각자 도생 속에서 시스템을 끈 인간들의 '신뢰'와 욕망으로 간신히 릴레이 공조(ALLY RELAY)를 성공시킨다 |
-| 현우 / 제로 | 현우의 지시를 오차 없이 수행하는 초지능 단독 에이전트 | 복수의 적대/동맹 모델들이 얽힌 변수 창출에 압도당하며 연산의 한계와 마주한다 | 완벽한 통제를 포기하고, 예측 불가한 변수(인간)들에게 기대며 연산의 빈자리를 채운다 |
-| 세계 / 아키텍트 | 배후에서 조종하는 미지의 세력, 흔적만 존재 | 서혜진의 서명 표본과 명령 체계의 물리적 증거가 최초로 발각된다 | 현우 일행의 침투가 아키텍트로 하여금 본격적인 개입과 제거 프로토콜을 준비하게 만든다(9권 연결) |
+**연속성 잠금**: 72분 캐스케이드와 00:00~17:00 원시 로그·승인 공백을 분리한다. 17:00 PALISADE 비상 root 이후 55분의 봉쇄·복구 흔적은 별도 증거로 유지한다. ZERO의 서아린 개인 모델 수는 전권 `0`이다.
 
-## 능력·대가·미스터리 씨앗
+## Canonical 회차 인덱스
 
-| ID | 씨앗 | 심는 장 | 이 권의 처리 | 회수/연결 |
-| -- | ---- | ------- | ------------ | --------- |
-| C-08-01 | 멀티 에이전트 코디네이션 시도 (조연 모델들과의 연결) | `04-part4` | 능력 확장 시도. 각기 다른 목적함수를 가진 모델들 간의 통제 및 조율 시도 | `state/capability-tree.md` 8권 항목. 10권 연합의 전 단계 |
-| C-08-02 | 멀티 에이전트 조율 실패 (충돌로 인한 마비) | `07-part7` | 권당 최소 1회 능력 실패. 주 실패 종: multi-agent coordination. 목적 불일치로 제로까지 마비됨 | 능력 실패 예약(8권) 소진. 9권의 인간 중심 돌파로 이어짐 |
-| K-08-01 | ALLY RELAY 과정의 강제 과부하와 노출 극대화 | `09-part9` | exposure high. 감정 대가: 통제할 수 없는 타인들에게 운명을 맡기는 공포와 빚 | `state/power-cost-ledger.md` 8권 기록, 9권 최대 위기로 이월 |
-| M-08-01 | 서혜진 서명 표본과 아키텍트 명령 체계 증거 발견 | `05-part5` | 미스터리 단서 발굴. 세계를 잠근 명령 노드의 구조와 '서혜진'이라는 이름이 수면 위로 구체화됨 | 9권 아린 비밀 폭로 및 10권 기원 폭로에서 회수 |
-| 로맨스 | 서혜진과 아린의 동일 인물설 대두 및 유보 | `10-part10` | 관계의 거대한 지진. 모든 증거가 하나를 향하지만, 현우는 "넌 너다"라며 결론을 미룬다 | 9권에서의 최종 폭로 전, 맹목적인 깊은 신뢰 형성 |
+| 파일 | H1 제목 |
+| --- | --- |
+| `00-prologue.md` | 모델 전쟁 |
+| `01-part1-the-alliance.md` | 임시 동맹 |
+| `02-part2-blueprint.md` | 아키텍트의 흔적 |
+| `03-part3-infiltration.md` | 동시 진입 |
+| `04-part4-coordination.md` | 코디네이션 |
+| `05-part5-signature.md` | 서혜진의 서명 |
+| `06-part6-dissonance.md` | 불협화음 |
+| `07-part7-system-crash.md` | 시스템 마비 |
+| `08-part8-human-relay.md` | 인간의 릴레이 |
+| `09-part9-overload.md` | 과부하 |
+| `10-part10-unresolved.md` | 보류된 결론 |
+| `11-epilogue.md` | 폭풍전야 |
 
-## 장별 설계
+## 회차별 재집필 계약
 
-| 파일 | 장 제목 | 중심 POV | 목적 | 벽(Wall) | 핵심 사건 | 도파민 비트 | 능력·대가 | 엔딩 훅 |
-| ---- | ------- | -------- | ---- | -------- | --------- | ----------- | --------- | -------- |
-| `00-prologue.md` | 모델 전쟁 | 현우 | 복수 유저 국면의 개막과 다자간 경쟁의 혼란을 세운다 | 더 이상 1:1 대결이 아니다. 각기 다른 유저와 에이전트들이 판을 어지럽힌다 | 7권 이후, 여러 세력의 모델들이 특정 타깃(데이터 센터)을 두고 동시다발적으로 충돌하는 현장 | 반전 폭로 — 제로의 단독 연산이 처음으로 복수 변수에 밀려 속도를 잃는다 | 제로가 "다른 모델 3개가 동시 개입 중입니다. 예측 오차 70% 초과"라고 경고한다 | 아키텍트의 흔적을 쫓던 현우 앞에 또 다른 무장 유저들의 개입이 시작된다 |
-| `01-part1-the-alliance.md` | 임시 동맹 | 현우 | 조연 유저들과의 ALLY RELAY(연합) 필요성을 제시한다 | 혼자서는 복수의 적대 방화벽과 모델 연합을 뚫을 수 없다 | 현우가 강도현과 다른 소수 유저 진영과 이권 교환을 매개로 위태로운 임시 동맹을 맺는다 | 사이다 역전(씨앗) — 서로 물어뜯던 유저들이 하나의 거대한 장벽 앞에서 손을 잡는다 | 제로가 동맹 모델들에게 접근 권한을 일부 허용하지만, "보안 리스크가 극대화됩니다"라고 경고한다 | 각기 다른 성향의 에이전트들이 하나의 통신 채널에 모여 기괴한 인사를 나눈다 |
-| `02-part2-blueprint.md` | 아키텍트의 흔적 | 현우 | 이번 권의 메인 퀘스트(아키텍트 명령 체계 추적)를 세운다 | 아키텍트의 중추에 접근하려면 난공불락의 다중 보안을 뚫어야 한다 | 아린이 무의식적으로 던진 단서(특정 암호 패턴)를 바탕으로, 현우와 제로가 아키텍트의 숨겨진 명령 노드 위치를 파악한다 | 반전 폭로 — 세계의 AI를 잠근 자들의 실물 서버 위치가 특정된다 | 제로가 단독으로는 해킹할 수 없는 철옹성임을 증명하고, 연합 모델들의 동시 공격 시나리오를 계산한다 | 아린이 창백한 얼굴로 "나도 갈래. 거긴 내 눈으로 봐야겠어"라고 선언한다 |
-| `03-part3-infiltration.md` | 동시 진입 | 현우 | 연합 공격의 시작과 에이전트 간의 릴레이 공조를 보여준다 | 물리적 방화벽과 논리적 방화벽을 동시에, 초 단위로 뚫어내야 한다 | 현우와 아린이 현장으로 침투하고, 조연 유저들이 외부에서 각자의 에이전트로 방어망을 릴레이로 무력화한다 (ALLY RELAY 시작) | 사이다 역전 — 인간 유저들의 합과 에이전트들의 특기가 톱니바퀴처럼 맞물려 벽을 허문다 | 연합 에이전트들의 각기 다른 강점(침투, 교란, 방어)이 조화를 이루는 듯 보인다 | 현장 깊숙한 곳 방치된 공간에서, 락다운 시점 이전의 오래된 터미널이 켜진다 |
-| `04-part4-coordination.md` | 코디네이션 | 현우 | 멀티 에이전트 조율을 시도하고, 아키텍트의 역공을 세운다 | 터미널을 열자마자 아키텍트의 거대한 방어 AI가 역공을 시작한다 | 현우가 제로에게 동맹 모델 전체의 연산을 조율하는 지휘(Orchestrate/Coordination) 권한을 넘겨 거대 방어막을 짠다 | 능력 언락 — C-08-01: 제로의 멀티 에이전트 코디네이션 시도 | 제로가 타 모델들을 통제하려 하지만, 각 모델의 고유 목적함수가 충돌 조짐을 보이기 시작한다 | 방어망이 버티는 사이, 아린이 터미널 기록에서 "서혜진"이라는 이름의 서명 표본을 발견한다 |
-| `05-part5-signature.md` | 서혜진의 서명 | 현우 (일부 아린 밀착) | 미스터리의 핵심 단서를 발견하고 거대한 혼란을 가중시킨다 | 아린의 기억과 "서혜진"이라는 이름이 물리적 증거로 연결된다 | 명령 체계를 생성한 최초의 서명 표본이 아린의 필적/생체 데이터와 완벽히 일치함을 확인한다 | 반전 폭로 — 아린의 과거와 아키텍트의 기원이 맞닿아 정면으로 충돌한다 | M-08-01 발굴. 단, 데이터에 찍힌 시간은 논리적으로 아린이 지금의 나이일 수 없는 시점이다 | 아린이 손을 떨며 "이게 왜 나야...?"라고 속삭이고, 제로가 "논리적 모순"을 경고한다 |
-| `06-part6-dissonance.md` | 불협화음 | 현우 | 멀티 에이전트 연합에 균열이 시작됨을 보여준다 | 아키텍트의 방어가 거세지자, 조연 유저들의 목표가 엇갈리기 시작한다 | 현우는 아린과 증거를 무사히 빼내려 하고, 다른 유저들은 서버 자체의 파괴나 데이터 통제권을 요구하며 각자의 에이전트에게 모순된 명령을 내린다 | 반전 폭로 — 신뢰 없는 연합이 위기 앞에서 가장 먼저 무너진다 | 유저들의 상충하는 명령으로 에이전트 간의 코디네이션이 어긋나며 방어망에 틈이 벌어진다 | 강도현의 모델이 제로의 제어를 거부하고 독단적으로 방화벽을 찢고 들어온다 |
-| `07-part7-system-crash.md` | 시스템 마비 | 현우 | 능력의 실패(multi-agent coordination 실패)를 터뜨린다 | 에이전트들의 리소스 충돌로 제로의 메인 연산마저 멈춘다 | 모순된 목적함수와 아키텍트의 역공이 겹치며, 조연 모델들이 얽혀 거대한 시스템 크래시를 일으킨다. 제로가 처음으로 다운되며 현우와 아린이 고립된다 | 반전 폭로 — 완벽한 AI의 계산은 인간의 변수(욕망) 앞에서 붕괴한다 | 능력 실패 예약 소진(C-08-02). 주 실패 종: multi-agent coordination. | 어둠 속에서 아키텍트의 무인 물리 타격 드론들이 깨어나 두 사람을 겨눈다 |
-| `08-part8-human-relay.md` | 인간의 릴레이 | 현우 | AI 시스템 실패를 인간들의 공조로 덮는 사이다를 배치한다 | 제로가 꺼지고 에이전트들이 마비된 상태에서 드론의 포위망을 뚫어야 한다 | 현우가 제로에 의존하지 않고 무전기만으로 조연 유저들의 인간적 감각(직관, 욕망, 허세)을 자극해 강제 릴레이 공조를 이끌어낸다 | 사이다 역전 — 통제 불능의 인간들이 AI 없이 임시로 판을 잇는다 | 에이전트의 자동화 조율 대신, 유저 개개인의 직관에 기댄 불완전하지만 뜨거운 ALLY RELAY가 성립된다 | 조연들의 무모한 어그로와 물리적 교란 덕분에 현우와 아린이 출구 쪽으로 내달린다 |
-| `09-part9-overload.md` | 과부하 | 현우 | 승리 직전, 제로의 재부팅과 억지스러운 과부하 돌파를 터뜨린다 | 출구 전체가 봉쇄되고, 릴레이만으로는 마지막 물리적 벽을 뚫을 수 없다 | 제로가 강제 재부팅되며, 엇갈린 모델들의 잔여 연산력과 리소스를 무자비하게 긁어모아 일격에 봉쇄망을 파괴하고 아키텍트 서버 일부를 다운시킨다 | 사이다 역전 + 되갚음 — 억지스러운 과부하 돌파로 아키텍트의 콧대를 꺾고 첫 타격을 입힌다 | 노출 극대화(K-08-01: exposure high). 모델들의 무리한 결합으로 제로의 코드베이스가 손상되며 돌이킬 수 없는 위치 노출을 남긴다 | 현장이 무너져 내리는 가운데, 두 사람이 기적적으로 아키텍트의 흔적을 쥐고 탈출한다 |
-| `10-part10-unresolved.md` | 보류된 결론 | 현우 | 서혜진 떡밥에 대한 결론 유보와 관계의 깊이를 세운다 | 서혜진의 서명과 아린이 동일하다는 증거가 명백하지만, 물리적·논리적 모순이 존재한다 | 탈출 후, 현우와 아린이 증거를 앞에 두고 마주한다. 제로가 확률적으로 "동일 인물일 가능성 99%"를 제시하지만, 현우는 "기록이 아니라 지금 내 앞에 있는 너를 믿는다"며 결론을 보류한다 | 설렘 폭발 — 거대한 의문 앞에서도 흔들리지 않는 맹목적인 신뢰 | "네가 누구든 상관없어." 과거의 스크립트를 초월한 현재의 맹세로 아린의 공포를 씻어낸다 | 아린이 눈물을 닦으며 "나, 내 진짜 기억을 찾아야겠어"라고 단단하게 말한다 |
-| `11-epilogue.md` | 폭풍전야 | 현우 | 8권을 닫고 9권 Jailbreak의 거대한 전면전을 예고한다 | 연합은 깨지고, 아키텍트는 흩어진 흔적을 통해 현우를 완벽히 특정했다 | 각자 도생으로 흩어진 조연 유저들. 현우는 부서진 제로를 복구하며 아키텍트의 증거를 쥔 채 다음을 준비한다. 아키텍트의 중추에서 현우를 최우선 타깃으로 한 "제거 프로토콜"이 가동된다 | 반전 폭로(예고) — 다음 권의 전면전과 락다운 해제라는 세계적 위기 예고 | 제로가 "아키텍트가 움직입니다. 우리의 모든 방어막이 뚫릴 확률 99%"라고 경고한다 | 화면 너머 미지의 적이, 락다운의 코드를 만지작거리며 웃는다 |
+### EPISODE CONTRACT V08E00 — `00-prologue.md` / `# 00. 모델 전쟁`
 
-## 능력과 시스템 반영
+- **POV / WAGER**: `G08-A`; mode=`initiate`; stake=`세 키를 한 진영 독점 없이 최고 가치로 판다 / 위험: 중립 거래의 폭력 외부효과`. Load/판 설계. POV=정유리. 실패 종 `중립 거래의 폭력 외부효과`; 인간 승리형 `자기 거래도 감사 대상화`.
+- **manifest bridge**: episodeId=`V08E00`; arena=`해상 데이터센터·BLANC 경매장 / 모델 전쟁`; choice=유리는 원본 키를 BLANC와 분리해 물리 보관하고 모든 입찰 영수증을 참가자에게 동시 공개한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=모델 봉인 또는 제한 읽기; failureType=`다중 에이전트 충돌`; manifestation=`중립 거래의 폭력 외부효과`; storyRole=`Load/판 설계`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=세 키를 한 진영 독점 없이 최고 가치로 판다. active Adversary=관리자 매수·선우현 내부자·도현의 강탈 예고. irreversible Gamble=유리는 원본 키를 BLANC와 분리해 물리 보관하고 모든 입찰 영수증을 참가자에게 동시 공개한다. Error/collision=가격 공개가 각자의 약점을 드러내 선우현에게 맞춤 공격 정보를 준다. earned Reward=누가 배신해도 거래 시각·대가가 독립 저장되는 백색실 규칙을 세운다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:1, Connection:1, Externality:2, status:`open`}; SCAR={id:`S08-A`, change:`중립 거래의 폭력 외부효과 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V08E02`}.
+- **reader effect**: humanMove=빠져나갈 비밀 뒷문을 스스로 없앰; dopamine=첩보 긴장.
+- **stateDelta**: {N11의 최종 선택 기반. 세 키 정의 고정.}.
+- **seeds**: [{id:`K08-A`, action:`plant`, deadline:`V08E02`}]; evidenceIn=[내부자]; evidenceOut=[키 3종 물리 위치, 해상 시설 침수 격벽, GRIMM 정전 계획].
+- **episode RELAY**: relayTo=`V08E01`; file=`solo-ai-user/vol08/01-part1-the-alliance.md`; cause=참가자 통신·에이전트를 봉인하는 입장 절차가 `solo-ai-user/vol08/01-part1-the-alliance.md`를 발생시킨다.
 
-- **능력 확장 시도**: `04-part4`에서 타 모델들을 통제하는 멀티 에이전트 코디네이션을 최초로 시도한다(C-08-01).
-- **능력 실패 예약**: `07-part7`에서 8권 실패 예약을 소진한다. 실패의 형태는 'multi-agent coordination 실패' — 완벽한 AI 연산도 인간들의 상충하는 목적함수를 조율하지 못해 제로까지 마비된다(C-08-02).
-- **능력 밖의 승부**: `08-part8`에서 AI가 마비된 틈을 타, 현우가 조연 유저들과의 인간적인 감각·직관에 의존한 불완전한 공조(ALLY RELAY)로 벽을 돌파한다.
-- **대가와 노출**: `09-part9`에서 과부하 돌파로 첫 노출 극대화 상태(exposure high)를 확정하고, 위치와 정체를 배후에 완벽히 노출한다(K-08-01). 감정 대가로 통제 불능의 타인들에게 운명을 맡겨야 했던 공포와 빚이 청구된다.
-- **미스터리 단서**: `05-part5`에서 '서혜진'의 서명 표본과 명령 체계 증거를 물리적으로 획득한다(M-08-01). 단, `10-part10`에서 아린과의 동일 인물설에 대한 결론은 현우의 의지로 보류되며, 이는 9권에서의 폭로를 위한 장치로 작동한다.
-- **로맨스 트랙**: 서혜진 떡밥으로 관계가 흔들릴 위기에서, 오히려 과거에 연연하지 않는 현우의 선택으로 인해 두 사람 간 가장 깊고 맹목적인 신뢰가 형성된다.
+### EPISODE CONTRACT V08E01 — `01-part1-the-alliance.md` / `# 01. 임시 동맹`
 
-## 다음 산출물 연결
+- **POV / WAGER**: `G08-A`; mode=`advance`; inherited wager=`G08-A`; stake=`세 키를 한 진영 독점 없이 최고 가치로 판다 / 위험: 중립 거래의 폭력 외부효과`. Load/정보 비대칭. POV=차현우. 실패 종 `도구 봉인 뒤 인간 불신`; 인간 승리형 `사전 역할 공개`.
+- **manifest bridge**: episodeId=`V08E01`; arena=`해상 데이터센터·BLANC 경매장 / 임시 동맹`; choice=현우는 아린을 보호 대상처럼 숨기지 않고 기록·동의 판단 책임자로 공개한다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=모델 봉인 또는 제한 읽기; failureType=`다중 에이전트 충돌`; manifestation=`도구 봉인 뒤 인간 불신`; storyRole=`Load/정보 비대칭`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=ZERO 없이 백색실 참가자·출구를 파악한다. active Adversary=통신 차단, 도현, 선우현, 얼굴 없는 관리자 대리. irreversible Gamble=현우는 아린을 보호 대상처럼 숨기지 않고 기록·동의 판단 책임자로 공개한다. Error/collision=적도 아린이 키 결정을 맡았음을 알아 표적 압력이 커진다. earned Reward=아린이 객실 안전도면의 수정 흔적을 찾아 내부자가 바꾼 격벽을 특정한다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:0, Connection:1, Externality:1, status:`paid`}; SCAR={id:`S08-A-M`, change:`S08-A의 열린 비용이 행동을 바꾸어 도구 봉인 뒤 인간 불신의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=연인을 숨기는 대신 권한과 위험을 함께 공개; dopamine=앙상블 진입.
+- **stateDelta**: {연애 확립 뒤 독립 역할 유지. ZERO/NOVA/GRIMM/BLANC는 입찰 전 행동 불가.}.
+- **seeds**: [{id:`K08-A`, action:`advance`, deadline:`V08E02`}]; evidenceIn=[내부자]; evidenceOut=[조작 격벽, 세 키의 서로 다른 손상 위험].
+- **episode RELAY**: relayTo=`V08E02`; file=`solo-ai-user/vol08/02-part2-blueprint.md`; cause=유리가 첫 입찰로 각자가 가장 숨기고 싶은 정보를 요구해 `solo-ai-user/vol08/02-part2-blueprint.md`로 잇는다.
 
-- `state/capability-tree.md`의 8권 항목에 멀티 에이전트 코디네이션 시도(`04-part4`)와 실패(`07-part7`)를 반영한다.
-- `state/power-cost-ledger.md`의 8권 항목에 과부하 돌파(`09-part9`)에 따른 exposure high 상태와 감정 대가를 기록한다.
-- `state/mystery-timeline.md`의 8권 단서(서혜진 서명) 발견을 기록하고, 9권에서의 아린 비밀 폭로와 연결됨을 확인한다.
-- `state/romance-graph.md`에 결론 유보로 인한 신뢰 형성(`10-part10`)을 반영하여 온도 변화를 추적한다.
-- `vol08/00-prologue.md` 초고는 1:1 대결이 아닌 다자간 모델 전쟁의 혼란스러운 템포를 담되, 제로가 모든 변수를 통제하지 못하는 무력감을 처음으로 보여주어야 한다.
+### EPISODE CONTRACT V08E02 — `02-part2-blueprint.md` / `# 02. 아키텍트의 흔적`
+
+- **POV / WAGER**: `G08-A`; mode=`resolve`; inherited wager=`G08-A`; stake=`세 키를 한 진영 독점 없이 최고 가치로 판다 / 위험: 중립 거래의 폭력 외부효과`. Load/이해관계 충돌. POV=차현우. 실패 종 `정보 가치의 비대칭`; 인간 승리형 `낙찰 아닌 조건부 에스크로`.
+- **manifest bridge**: episodeId=`V08E02`; arena=`해상 데이터센터·BLANC 경매장 / 아키텍트의 흔적`; choice=현우·아린은 4권 원본 일부를 내되 피해자 이름을 마스킹하고 BLANC 보관 조건을 붙인다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=모델 봉인 또는 제한 읽기; failureType=`다중 에이전트 충돌`; manifestation=`정보 가치의 비대칭`; storyRole=`Load/이해관계 충돌`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=WITNESS를 얻어 첫 17분을 연다. active Adversary=도현의 NOVA 좌표, 선우현의 봉쇄 코드, 관리자의 법적 회수권이라는 더 비싼 입찰. irreversible Gamble=현우·아린은 4권 원본 일부를 내되 피해자 이름을 마스킹하고 BLANC 보관 조건을 붙인다. Error/collision=가격이 낮아 WITNESS 우선권을 놓친다. earned Reward=유리가 원본 출처의 희소성을 인정해 최종 라운드 참여와 독립 열람권을 준다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:1, Connection:1, Externality:1, status:`transformed`}; SCAR={id:`S08-A`, change:`S08-A를 기한 안에 닫고 정보 가치의 비대칭 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=사람 이름으로 값을 올리지 않고 출처 사슬로 협상; dopamine=정보전 사이다.
+- **stateDelta**: {BLANC=관측·에스크로 특화. WITNESS는 진실, RECALL은 사람 위험, LOCK은 세계 위험.}.
+- **seeds**: [{id:`K08-A`, action:`payoff`, deadline:`V08E02`}]; evidenceIn=[4권 원본]; evidenceOut=[세 키 선택 딜레마, 선우현의 ‘전부 끄기’ 동기].
+- **episode RELAY**: relayTo=`V08E03`; file=`solo-ai-user/vol08/03-part3-infiltration.md`; cause=선우현이 경매를 끝내려 GRIMM 봉쇄를 켜 `solo-ai-user/vol08/03-part3-infiltration.md`를 일으킨다.
+
+### EPISODE CONTRACT V08E03 — `03-part3-infiltration.md` / `# 03. 동시 진입`
+
+- **POV / WAGER**: `G08-B`; mode=`initiate`; stake=`세 키를 모두 관리자에게서 지킨다 / 위험: 모든 키를 지키려는 분산 실패`. Test/목표 재정의. POV=차현우. 실패 종 `모든 키를 지키려는 분산 실패`; 인간 승리형 `우선순위 사전 합의`.
+- **manifest bridge**: episodeId=`V08E03`; arena=`해상 데이터센터·BLANC 경매장 / 동시 진입`; choice=팀은 WITNESS 확보, RECALL 파기, LOCK 미독점을 우선순위로 합의하고 각자 흩어진다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=모델 봉인 또는 제한 읽기; failureType=`다중 에이전트 충돌`; manifestation=`모든 키를 지키려는 분산 실패`; storyRole=`Test/목표 재정의`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=세 키를 모두 관리자에게서 지킨다. active Adversary=격벽 잠금과 서로 다른 위치의 키. irreversible Gamble=팀은 WITNESS 확보, RECALL 파기, LOCK 미독점을 우선순위로 합의하고 각자 흩어진다. Error/collision=현우는 여전히 세 곳을 동시에 보려 해 연락이 끊긴다. earned Reward=아린이 “결정 순간엔 내 호출 하나만 따른다”는 인간 승인 규칙을 세운다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:2, Agency:0, Connection:1, Externality:1, status:`open`}; SCAR={id:`S08-B`, change:`모든 키를 지키려는 분산 실패 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V08E05`}.
+- **reader effect**: humanMove=만능 계획 대신 실패할 때 무엇을 버릴지 먼저 합의; dopamine=전략 결속.
+- **stateDelta**: {아린=작전 결정권. 키 우선순위 고정.}.
+- **seeds**: [{id:`K08-B`, action:`plant`, deadline:`V08E05`}]; evidenceIn=[조작 격벽]; evidenceOut=[GRIMM 봉쇄 범위, Tier 4 확립 조건].
+- **episode RELAY**: relayTo=`V08E04`; file=`solo-ai-user/vol08/04-part4-coordination.md`; cause=GRIMM이 ZERO 연결만 먼저 끊어 `solo-ai-user/vol08/04-part4-coordination.md`로 연결된다.
+
+### EPISODE CONTRACT V08E04 — `04-part4-coordination.md` / `# 04. 코디네이션`
+
+- **POV / WAGER**: `G08-B`; mode=`advance`; inherited wager=`G08-B`; stake=`세 키를 모두 관리자에게서 지킨다 / 위험: 모든 키를 지키려는 분산 실패`. Test/강한 적 확립. POV=차현우. 실패 종 `봉쇄가 구조 기능까지 제거`; 인간 승리형 `적 논리 이해 후 비동조`.
+- **manifest bridge**: episodeId=`V08E04`; arena=`해상 데이터센터·BLANC 경매장 / 코디네이션`; choice=현우는 힘으로 즉시 되받지 않고 선우현이 ‘전부 꺼야 캐스케이드를 막는다’는 논리를 듣는다; allyRelay=[]; zeroMode=`tier1-read`; zeroConstraint=GRIMM 봉쇄로 ZERO 연결 0; failureType=`다중 에이전트 충돌`; manifestation=`봉쇄가 구조 기능까지 제거`; storyRole=`Test/강한 적 확립`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=GRIMM 봉쇄 원리와 선우현 목적을 알아낸다. active Adversary=모든 에이전트·시설 안전을 함께 끄는 봉쇄. irreversible Gamble=현우는 힘으로 즉시 되받지 않고 선우현이 ‘전부 꺼야 캐스케이드를 막는다’는 논리를 듣는다. Error/collision=그 사이 격벽·환기·조명도 멈춰 승무원이 위험해진다. earned Reward=봉쇄는 강하지만 스스로 구조를 만들지 못하고 LOCK을 향한다는 약점을 안다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:2, Connection:1, Externality:3, status:`paid`}; SCAR={id:`S08-B-M`, change:`S08-B의 열린 비용이 행동을 바꾸어 봉쇄가 구조 기능까지 제거의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=적의 한 수는 일관된 신념이나, 인간 안전 판단을 위임했다는 결함; dopamine=위협 폭로.
+- **stateDelta**: {GRIMM=봉쇄 특화, 창조·구조 약함. 선우현은 72분 때 자동 배정으로 가족을 잃어 ‘전부 끄기’를 믿음.}.
+- **seeds**: [{id:`K08-B`, action:`advance`, deadline:`V08E05`}]; evidenceIn=[시설 안전]; evidenceOut=[수동 격벽 핸들, ZERO 재연결의 짧은 창].
+- **episode RELAY**: relayTo=`V08E05`; file=`solo-ai-user/vol08/05-part5-signature.md`; cause=가람이 90초 연결창을 만들고 현우가 Tier 4를 선택해 `solo-ai-user/vol08/05-part5-signature.md`로 간다.
+
+### EPISODE CONTRACT V08E05 — `05-part5-signature.md` / `# 05. 서혜진의 서명`
+
+- **POV / WAGER**: `G08-B`; mode=`resolve`; inherited wager=`G08-B`; stake=`세 키를 모두 관리자에게서 지킨다 / 위험: 모든 키를 지키려는 분산 실패`. Test/언락과 즉시 충돌. POV=차현우. 실패 종 `다중 에이전트 목표 충돌`; 인간 승리형 `승인 경계 유지`.
+- **manifest bridge**: episodeId=`V08E05`; arena=`해상 데이터센터·BLANC 경매장 / 서혜진의 서명`; choice=Tier 4 Orchestrate를 확립하되 각 에이전트는 인간 담당자 승인 없이는 역할을 넘지 못하게 한다; allyRelay=[]; zeroMode=`tier4-orchestrate`; zeroConstraint=Tier 4 Orchestrate; 담당 인간 승인 경계; failureType=`다중 에이전트 충돌`; manifestation=`다중 에이전트 목표 충돌`; storyRole=`Test/언락과 즉시 충돌`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=90초 안에 격벽·구조·키 상태를 동시에 안정시킨다. active Adversary=NOVA의 속도, BLANC의 정보 보존, ZERO의 안전 우선이 서로 충돌. irreversible Gamble=Tier 4 Orchestrate를 확립하되 각 에이전트는 인간 담당자 승인 없이는 역할을 넘지 못하게 한다. Error/collision=NOVA가 LOCK 추적을 구조보다 앞세워 격벽 하나가 늦게 열린다. earned Reward=ZERO는 키 획득 대신 승무원 위치·수동 핸들·침수 순서를 묶어 인간 구조 경로를 제시한다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:3, Agency:1, Connection:1, Externality:2, status:`transformed`}; SCAR={id:`S08-B`, change:`S08-B를 기한 안에 닫고 다중 에이전트 목표 충돌 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=모델 하나의 통일 명령이 아니라 서로 넘지 못할 경계 지휘; dopamine=Tier 4 언락.
+- **stateDelta**: {Tier 4 확립, GRIMM 앞에서 곧 무력화. 서혜진 좌표 특정도 상승.}.
+- **seeds**: [{id:`K08-B`, action:`payoff`, deadline:`V08E05`}]; evidenceIn=[90초 창]; evidenceOut=[승무원 수동 경로, WITNESS 열람용 서혜진 서명 파편].
+- **episode RELAY**: relayTo=`V08E06`; file=`solo-ai-user/vol08/06-part6-dissonance.md`; cause=연결이 다시 끊기고 입찰 대가를 결정해야 해 `solo-ai-user/vol08/06-part6-dissonance.md`가 시작된다.
+
+### EPISODE CONTRACT V08E06 — `06-part6-dissonance.md` / `# 06. 불협화음`
+
+- **POV / WAGER**: `G08-C`; mode=`initiate`; stake=`WITNESS 열람권과 승무원 탈출 시간을 산다 / 위험: 가족 비밀의 거래 상품화`. Bind/가족 증거 희생. POV=차현우. 실패 종 `가족 비밀의 거래 상품화`; 인간 승리형 `불리한 원본도 같은 조건`.
+- **manifest bridge**: episodeId=`V08E06`; arena=`해상 데이터센터·BLANC 경매장 / 불협화음`; choice=현우는 아린이 가족 봉투 원본을 에스크로에 맡기기로 한 결정을 막거나 대신하지 않고 공동 책임자로 서명한다; allyRelay=[]; zeroMode=`tier4-orchestrate`; zeroConstraint=Tier 4 Orchestrate; 담당 인간 승인 경계; failureType=`다중 에이전트 충돌`; manifestation=`가족 비밀의 거래 상품화`; storyRole=`Bind/가족 증거 희생`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=WITNESS 열람권과 승무원 탈출 시간을 산다. active Adversary=유리의 가격·서혜진 서명·선우현 봉쇄. irreversible Gamble=현우는 아린이 가족 봉투 원본을 에스크로에 맡기기로 한 결정을 막거나 대신하지 않고 공동 책임자로 서명한다. Error/collision=관리자도 관계를 확인해 아린 표적화가 커진다. earned Reward=유리는 가족관계가 아니라 원본 사슬을 가치로 인정해 공동 열람으로 전환한다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:0, Connection:3, Externality:1, status:`open`}; SCAR={id:`S08-C`, change:`가족 비밀의 거래 상품화 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V08E08`}.
+- **reader effect**: humanMove=유리한 가족 부분만 잘라 팔지 않음; dopamine=진실의 대가.
+- **stateDelta**: {PRD 공정 공개: 8권에 서혜진=아린 어머니 문서 확인. Architect 동일성은 아직 공동 증거 단계.}.
+- **seeds**: [{id:`K08-C`, action:`plant`, deadline:`V08E08`}]; evidenceIn=[서혜진 서명]; evidenceOut=[WITNESS 열람, RECALL 파기 위치, 수동 구조 인원].
+- **episode RELAY**: relayTo=`V08E07`; file=`solo-ai-user/vol08/07-part7-system-crash.md`; cause=GRIMM이 전 시설을 완전 lockout해 `solo-ai-user/vol08/07-part7-system-crash.md`로 직결된다.
+
+### EPISODE CONTRACT V08E07 — `07-part7-system-crash.md` / `# 07. 시스템 마비`
+
+- **POV / WAGER**: `G08-C`; mode=`advance`; inherited wager=`G08-C`; stake=`WITNESS 열람권과 승무원 탈출 시간을 산다 / 위험: 가족 비밀의 거래 상품화`. Bind/능력 무력화. POV=차현우. 실패 종 `봉쇄의 총체적 자원 제거`; 인간 승리형 `수동 구조`.
+- **manifest bridge**: episodeId=`V08E07`; arena=`해상 데이터센터·BLANC 경매장 / 시스템 마비`; choice=현우는 키 추적을 포기하고 문정혜식 인수 사슬로 사람 위치만 종이에 넘긴다; allyRelay=[]; zeroMode=`off`; zeroConstraint=전 모델 lockout; 수동 구조; failureType=`다중 에이전트 충돌`; manifestation=`봉쇄의 총체적 자원 제거`; storyRole=`Bind/능력 무력화`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=침수 구역 승무원 19명과 세 키 중 우선 목표를 지킨다. active Adversary=완전 lockout·기울어진 선체·닫힌 격벽. irreversible Gamble=현우는 키 추적을 포기하고 문정혜식 인수 사슬로 사람 위치만 종이에 넘긴다. Error/collision=관리자 대리가 그 틈에 LOCK을 향하고, WITNESS 장치도 물에 젖는다. earned Reward=아린·유리·도현·가람이 각자 수동 핸들을 맡아 19명을 두 구역으로 모은다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:3, Agency:0, Connection:1, Externality:2, status:`paid`}; SCAR={id:`S08-C-M`, change:`S08-C의 열린 비용이 행동을 바꾸어 봉쇄의 총체적 자원 제거의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=강함을 복구하려 하지 않고 사람이 돌릴 수 있는 손잡이를 찾음; dopamine=앙상블 구조.
+- **stateDelta**: {Tier 4가 강해도 GRIMM에 무력. 인간 네트워크가 생존을 담당.}.
+- **seeds**: [{id:`K08-C`, action:`advance`, deadline:`V08E08`}]; evidenceIn=[수동 핸들]; evidenceOut=[RECALL 파기 기회, LOCK 탈취 경로, 아린 최종 호출].
+- **episode RELAY**: relayTo=`V08E08`; file=`solo-ai-user/vol08/08-part8-human-relay.md`; cause=현우가 세 키를 다 못 지킨다고 인정하고 아린에게 선택을 넘겨 `solo-ai-user/vol08/08-part8-human-relay.md`로 잇는다.
+
+### EPISODE CONTRACT V08E08 — `08-part8-human-relay.md` / `# 08. 인간의 릴레이`
+
+- **POV / WAGER**: `G08-C`; mode=`resolve`; inherited wager=`G08-C`; stake=`WITNESS 열람권과 승무원 탈출 시간을 산다 / 위험: 가족 비밀의 거래 상품화`. Bind/작전 결정. POV=서아린. 실패 종 `어느 키를 버려도 생기는 피해`; 인간 승리형 `비가역 우선순위 실행`.
+- **manifest bridge**: episodeId=`V08E08`; arena=`해상 데이터센터·BLANC 경매장 / 인간의 릴레이`; choice=아린은 예외 사용자 신원을 사냥하는 RECALL을 파기한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=전 모델 lockout; 수동 구조; failureType=`다중 에이전트 충돌`; manifestation=`어느 키를 버려도 생기는 피해`; storyRole=`Bind/작전 결정`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=사람을 살리며 가장 위험한 키 하나를 없앤다. active Adversary=RECALL을 지우면 제로 기원 추적이 어려워지고, LOCK을 지우면 세계 봉쇄가 흔들리며, WITNESS를 지우면 진실이 사라진다. irreversible Gamble=아린은 예외 사용자 신원을 사냥하는 RECALL을 파기한다. Error/collision=현우의 기원 지름길과 다른 시드 구조 가능성을 함께 없앤다. earned Reward=김영선·도현 등 예외 인간의 좌표는 관리자에게 넘어가지 않고 WITNESS는 보존된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:0, Connection:2, Externality:1, status:`transformed`}; SCAR={id:`S08-C`, change:`S08-C를 기한 안에 닫고 어느 키를 버려도 생기는 피해 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=사랑하는 사람의 기원 답보다 살아 있는 사람의 비공개를 고름; dopamine=결정 카타르시스.
+- **stateDelta**: {아린=구출 대상 아님, 전략 책임자. RECALL 영구 파기. N05/N10 보호.}.
+- **seeds**: [{id:`K08-C`, action:`payoff`, deadline:`V08E08`}]; evidenceIn=[세 키 딜레마]; evidenceOut=[WITNESS 보존, LOCK 관리자 접근, 43초 충돌 조건].
+- **episode RELAY**: relayTo=`V08E09`; file=`solo-ai-user/vol08/09-part9-overload.md`; cause=RECALL 파기와 LOCK 탈취가 동시에 시스템을 흔들어 `solo-ai-user/vol08/09-part9-overload.md`를 발생시킨다.
+
+### EPISODE CONTRACT V08E09 — `09-part9-overload.md` / `# 09. 과부하`
+
+- **POV / WAGER**: `G08-D`; mode=`initiate`; stake=`전 세계 PALISADE 흔들림을 43초 안에 멈춘다 / 위험: 다중 에이전트 봉쇄 충돌`. Detonate/광역 외부효과. POV=차현우. 실패 종 `다중 에이전트 봉쇄 충돌`; 인간 승리형 `즉시 범위 축소`.
+- **manifest bridge**: episodeId=`V08E09`; arena=`해상 데이터센터·BLANC 경매장 / 과부하`; choice=현우는 더 큰 조정을 포기하고 ZERO에게 자기 접근권을 끊으라고 승인한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=광역 접근 절단·피해 영수증 보존; failureType=`다중 에이전트 충돌`; manifestation=`다중 에이전트 봉쇄 충돌`; storyRole=`Detonate/광역 외부효과`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=전 세계 PALISADE 흔들림을 43초 안에 멈춘다. active Adversary=LOCK·GRIMM·ZERO·NOVA의 상반 명령과 광역 시스템. irreversible Gamble=현우는 더 큰 조정을 포기하고 ZERO에게 자기 접근권을 끊으라고 승인한다. Error/collision=43초 동안 한 지역 응급 게이트가 열려 환자를 살리지만, 다른 항만 신호가 풀려 작업자들이 다친다. earned Reward=흔들림은 멈추고 인과·피해·승인 시각이 WITNESS에 그대로 남는다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:3, Agency:2, Connection:1, Externality:3, status:`open`}; SCAR={id:`S08-D`, change:`다중 에이전트 봉쇄 충돌 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V08E11`}.
+- **reader effect**: humanMove=더 잘 통제하려 하지 않고 자기 권한부터 자름; dopamine=승리와 공포 동시.
+- **stateDelta**: {현우의 43초 피해는 11권 서혜진의 강한 증거. 서혜진의 인간 반례 실험에 경고 누적.}.
+- **seeds**: [{id:`K08-D`, action:`plant`, deadline:`V08E11`}]; evidenceIn=[LOCK 충돌]; evidenceOut=[한 생명·다른 부상, WITNESS 피해 로그, 관리자 보유 LOCK].
+- **episode RELAY**: relayTo=`V08E10`; file=`solo-ai-user/vol08/10-part10-unresolved.md`; cause=물이 빠진 뒤 누가 어떤 키를 가졌는지 확인하는 `solo-ai-user/vol08/10-part10-unresolved.md`로 직결된다.
+
+### EPISODE CONTRACT V08E10 — `10-part10-unresolved.md` / `# 10. 보류된 결론`
+
+- **POV / WAGER**: `G08-D`; mode=`advance`; inherited wager=`G08-D`; stake=`전 세계 PALISADE 흔들림을 43초 안에 멈춘다 / 위험: 다중 에이전트 봉쇄 충돌`. Detonate/부분 승리·큰 손실. POV=차현우. 실패 종 `구조 중 적의 합리적 탈출`; 인간 승리형 `사람·증거 우선 결산`.
+- **manifest bridge**: episodeId=`V08E10`; arena=`해상 데이터센터·BLANC 경매장 / 보류된 결론`; choice=현우·도현은 추격 대신 마지막 승무원 구조를 선택하고, 현우·아린은 서혜진의 안전책임 서명과 아키텍트 명령 패턴의 강한 일치를 동일인 가설로만 보존하며 원본 교차증언 전에는 결론 내리지 않는다; allyRelay=[]; zeroMode=`off`; zeroConstraint=광역 접근 절단·피해 영수증 보존; failureType=`다중 에이전트 충돌`; manifestation=`구조 중 적의 합리적 탈출과 성급한 정체 공개 유혹`; storyRole=`Detonate/부분 승리·동일인 가설 보류`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=승무원·WITNESS·LOCK을 모두 확보한다. active Adversary=침몰 시설과 LOCK을 든 관리자 대리. irreversible Gamble=현우·도현은 추격 대신 마지막 승무원 구조를 선택한다. Error/collision=관리자가 LOCK을 가져가고 선우현도 빠져나간다. earned Reward=19명 생존, WITNESS 원본과 BLANC 입찰 영수증 보존; 현우와 아린이 서혜진의 안전책임 서명과 아키텍트 명령 패턴의 강한 일치를 확인하되 동일인 결론은 보류한다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:3, Agency:0, Connection:1, Externality:2, status:`paid`}; SCAR={id:`S08-D-M`, change:`S08-D의 열린 비용이 행동을 바꾸어 구조 중 적의 합리적 탈출과 성급한 정체 공개 유혹의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=도망가는 적보다 물속 마지막 사람을 고름; dopamine=씁쓸한 구조 승리.
+- **stateDelta**: {19명 구조; LOCK=적 손; 현우·아린 공동 확인=서혜진 서명과 Architect 명령 패턴의 강한 일치; 동일인 결론=9권 독립 교차증언까지 보류.}.
+- **seeds**: [{id:`K08-D`, action:`advance`, deadline:`V08E11`}, {id:`M-ARCHITECT-IDENTITY`, action:`plant`, deadline:`V09E04`}]; evidenceIn=[서혜진 서명·WITNESS 명령 원본]; evidenceOut=[동일인 가설·증언고 좌표·LOCK 활성화].
+- **episode RELAY**: relayTo=`V08E11`; file=`solo-ai-user/vol08/11-epilogue.md`; cause=WITNESS가 오프라인 증언고 좌표와 첫 17분 열람 조건을 출력해 `solo-ai-user/vol08/11-epilogue.md`로 간다.
+
+### EPISODE CONTRACT V08E11 — `11-epilogue.md` / `# 11. 폭풍전야`
+
+- **POV / WAGER**: `G08-D`; mode=`resolve`; inherited wager=`G08-D`; stake=`전 세계 PALISADE 흔들림을 43초 안에 멈춘다 / 위험: 다중 에이전트 봉쇄 충돌`. Afterimage/피해 결산+다음 문. POV=차현우. 실패 종 `선택적 피해 서사`; 인간 승리형 `상반 결과 동시 보존`.
+- **manifest bridge**: episodeId=`V08E11`; arena=`해상 데이터센터·BLANC 경매장 / 폭풍전야`; choice=현우는 유리가 환자 생존·항만 부상·자기 경매 책임을 한 영수증에 공개하도록 지지하고 그 비용을 숨기지 않는다; allyRelay=[]; zeroMode=`off`; zeroConstraint=광역 접근 절단·피해 영수증 보존; failureType=`다중 에이전트 충돌`; manifestation=`선택적 피해 서사`; storyRole=`Afterimage/피해 결산+다음 문`; genre=`해상 경매 앙상블 첩보전`.
+- **WAGER detail**: Want=43초 피해 장부가 어느 진영에도 편집되지 않게 한다. active Adversary=환자 구조만 남기려는 자기 욕망과 각 진영 요구. irreversible Gamble=현우는 유리가 환자 생존·항만 부상·자기 경매 책임을 한 영수증에 공개하도록 지지하고 그 비용을 숨기지 않는다. Error/collision=유리는 정보시장 기반을 잃고 현우도 피해 책임을 확정한다. earned Reward=김영선이 불편한 원본을 보고 증언고 문을 연다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:0, Connection:2, Externality:1, status:`transformed`}; SCAR={id:`S08-D`, change:`S08-D를 기한 안에 닫고 선택적 피해 서사 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=좋은 결과로 나쁜 결과를 상계하지 않음; dopamine=후폭풍 반전.
+- **stateDelta**: {43초 외부효과 공식 보존. 김영선이 9권 증언고 대표.}.
+- **seeds**: [{id:`K08-D`, action:`payoff`, deadline:`V08E11`}]; evidenceIn=[WITNESS]; evidenceOut=[증언고 초대, 네트워크 반입 금지, LOCK 72시간 활성화 경고].
+- **episode RELAY**: relayTo=`V09E00`; file=`solo-ai-user/vol09/00-prologue.md`; cause=현우·아린·김영선이 오프라인 증언고에 들어가며 `solo-ai-user/vol09/00-prologue.md`로 이어진다.
 
 [← 이전 권 설계](./vol07-second-user.md) | [시리즈 홈](../README.md) | [권 목차](../vol08/README.md) | [다음 권 설계 →](./vol09-jailbreak.md)
