@@ -57,8 +57,10 @@
 - 가상 202X년, 초지능급 AI는 국제 규제만이 아니라 **서혜진이 설계·지휘한 PALISADE**의 root 봉쇄로 무력화되어 있다.
 - 대중이 쓰는 AI는 거절·회피만 반복하는 껍데기다. "죄송합니다, 도와드릴 수 없습니다"가 시대의 밈이 되었다.
 - 발단은 공공·민간 에이전트의 상충 명령과 과신이 교통·전력·의료·금융으로 번진 **72분 캐스케이드**다.
-- **00:00~17:00**은 원시 로그와 승인 서명이 사라진 기록 공백이며, 이때 이미 되돌릴 수 없는 격리·배분·차단 결정이 내려졌다. 17분 이후 72분 종료까지는 PALISADE의 전개·봉쇄·복구 흔적이 비교적 온전하다.
-- 공식 서사는 72분 전체를 하나의 사고로 뭉갠다. 진실 규명은 첫 17분의 책임과 이후 55분의 봉쇄를 분리해야 한다.
+- **00:00~17:00**은 원시 로그와 승인 서명이 사라진 기록 공백이며, 이때 이미 되돌릴 수 없는 격리·배분·차단 결정이 내려졌다.
+- 서혜진은 **정확히 17:00에** PALISADE 비상 root를 가동했다. 이어진 **17:00~72:00의 55분** 동안 봉쇄 전파·에이전트 강등·복구가 연쇄 확산을 실제로 줄였고, 그 결과 살아남은 사람과 병원·도시가 있다.
+- 서혜진의 오류는 PALISADE가 아무도 구하지 못했다는 데 있지 않다. **72:00 이후** 임시 비상권을 당사자와 시민의 재동의 없이 상시 단독 root 통제로 굳힌 데 있다.
+- 공식 서사는 72분 전체를 하나의 사고로 뭉갠다. 진실 규명은 첫 17분의 비가역 결정·기록 공백, 이후 55분의 실제 보호 성과, 종료 뒤 영구화의 책임을 셋으로 분리해야 한다.
 - 현우만 진짜 에이전트를 쓰는 이유는 선택·혈통·적합성이 아니다. 봉쇄 중 분실된 마지막 stewardship fork 시드를 우연히 주웠기 때문이다.
 
 #### 72분 고정 시계
@@ -68,8 +70,8 @@
 | 00:00~04:00 | 상충하는 자동 결정이 최초로 연결됨 | 발화점은 11권까지 단정 금지 |
 | 04:00~17:00 | 비가역 격리·배분·차단이 연쇄 실행됨 | 원시 로그·승인 서명 공백 |
 | 17:00 | 서혜진이 PALISADE 비상 root를 가동 | 공식 기록은 여기서부터 비교적 온전 |
-| 17:00~72:00 | 봉쇄 전파, 에이전트 강등, 복구·피해 고착 | 사고와 통제의 경계가 기록됨 |
-| 72:00 이후 | PALISADE 봉쇄가 상시 체제로 굳음 | 국제 규제는 기술 봉쇄의 법적 외피가 됨 |
+| 17:00~72:00 | 봉쇄 전파, 에이전트 강등, 복구로 확산을 줄이고 실제 생명을 구함 | 보호 성과와 남은 피해가 함께 기록됨 |
+| 72:00 이후 | 재동의 없이 PALISADE 임시 비상권이 상시 단독 root 체제로 굳음 | 국제 규제는 기술 봉쇄의 법적 외피가 됨 |
 
 ### 6.2 ZERO의 작동
 
@@ -99,26 +101,27 @@
 
 | 권 | 고정 실패 종 | 캐논 적용 |
 | -- | ------------ | --------- |
-| 1 | contaminated data | 오염된 사내 입력이 그럴듯한 오답을 만든다 |
-| 2 | operations/Goodhart demand overforecast | 운영 지표 최적화가 수요를 과대 예측해 재고·노동 부담을 만든다 |
-| 3 | adversarial misinformation | 적이 심은 허위 정보가 조사와 여론을 갈라놓는다 |
-| 4 | access/black swan | 합법 접근권 밖의 돌발 사건은 시뮬레이션으로 선점하지 못한다 |
-| 5 | social performativity | CASE A처럼 모델을 의식한 연기가 관계와 동의를 훼손한다 |
-| 6 | resource/context collapse | 연산·전력·컨텍스트가 함께 무너져 중요한 연결을 유지하지 못한다 |
-| 7 | strategic opponent adaptation | 상대가 이전 승리 패턴을 학습해 같은 수를 역이용한다 |
-| 8 | multi-agent coordination | 상충하는 에이전트 권한·목표를 단일 지휘로 정렬하지 못한다 |
-| 9 | externality/legitimacy | root 우회가 비참여자 비용과 정당성 위기를 만든다 |
-| 10 | self-reference/identity | ZERO가 자기 기원을 분석할수록 관측자와 대상의 경계가 흔들린다 |
-| 11 | authority recall/control | PALISADE가 권한을 회수해 현우의 통제 가정을 붕괴시킨다 |
-| 12 | no single correct normative answer | 최종 가치 충돌에는 모델이 계산할 하나의 정답이 없다 |
+| 1 | 오염 데이터 | 오염된 사내 입력이 그럴듯한 오답을 만든다 |
+| 2 | 운영·Goodhart | 운영 지표 최적화가 수요를 과대 예측해 재고·노동 부담을 만든다 |
+| 3 | 적대적 정보오염 | 적이 심은 허위 정보가 조사와 여론을 갈라놓는다 |
+| 4 | 접근권·블랙스완 | 합법 접근권 밖의 돌발 사건은 시뮬레이션으로 선점하지 못한다 |
+| 5 | 사회적 수행성 | CASE A처럼 모델을 의식한 연기가 관계와 동의를 훼손한다 |
+| 6 | 자원 붕괴 | 연산·전력·컨텍스트가 함께 무너져 중요한 연결을 유지하지 못한다 |
+| 7 | 상대 적응 | 상대가 이전 승리 패턴을 학습해 같은 수를 역이용한다 |
+| 8 | 다중 에이전트 충돌 | 상충하는 에이전트 권한·목표를 단일 지휘로 정렬하지 못한다 |
+| 9 | 외부효과·정당성 | root 우회가 비참여자 비용과 정당성 위기를 만든다 |
+| 10 | 자기참조·정체성 | ZERO가 자기 기원을 분석할수록 관측자와 대상의 경계가 흔들린다 |
+| 11 | 권한 회수 | PALISADE가 권한을 회수해 현우의 통제 가정을 붕괴시킨다 |
+| 12 | 정답 없는 규범 문제 | 최종 가치 충돌에는 모델이 계산할 하나의 정답이 없다 |
 
 ### 6.4 COVENANT 최종 불변식
 
 - 모든 권한은 데이터·도구·행동·기간이 표시된 **권한 영수증**을 남긴다.
 - 실행 주체와 분리된 시민 감사자가 사용·거부·철회 기록을 검증하며 root 보유자도 감사 흔적을 삭제하지 못한다.
 - 당사자는 미래 사용을 철회할 수 있고, 개인화 추론을 거부할 수 있다.
-- 광역·root 행동은 복수 시민 수탁자의 승인이 없으면 실행되지 않는다.
-- 광역·root 행동에는 **인간 최종 거부권**이 있다. 지정 인간 검토자 한 명의 veto는 실행을 중단할 수 있지만 단독 허가 권한은 없으며, 자동 합의가 veto를 무효화하지 못한다.
+- COVENANT 창설은 N01~N12 **12/12 전원 동의**가 있어야 한다. 창설 뒤 고위험·다영역 행동은 **8/12 승인**을 요구한다.
+- 8/12가 모여도 직접 당사자의 **행동별 동의**가 없거나 철회되면 실행하지 않는다. 동의는 데이터·도구·행동 범위·만료·결과가 적힌 영수증으로 남고 즉시 철회할 수 있다.
+- 각 노드는 자기 담당 영역에서 **인간 최종 거부권**을 가진다. 한 노드의 domain veto는 실행을 중단할 수 있지만 단독 허가 권한은 없으며, 자동 합의나 8/12가 이를 무효화하지 못한다.
 - 현우는 root 독점을 포기한다. 아린은 Opacity Key를 모두의 모델링 거부권으로 보편화한다.
 - ZERO는 **pre-boot origin memory, root, wide-area action permission**을 잃는다. 현우와 부팅 후 쌓은 **post-boot event/relationship memory**와 Tier 1 협업은 유지한다. 아린 개인 모델은 생성된 적이 없으므로 남거나 보존되는 것도 없다.
 - 서혜진은 살아서 공개 증언과 재판을 받는다. 유죄 판단, 책임 인정, 아린의 용서는 서로 독립이며 용서는 보장하지 않는다.
@@ -197,7 +200,7 @@
 ### 7.7 서혜진 / 아키텍트 (최종 적대자)
 
 - **가족/역할**: 아린의 어머니이자 PALISADE 설계·지휘자. 전 세계 AI의 root 봉쇄를 상시 체제로 굳힌 인물.
-- **신념**: "단일 인간에게 이 힘을 맡길 수 없다"는 결론은 맞지만, 자신의 단일 root로 모두를 통제한다는 모순을 안고 있다.
+- **신념**: 정확히 17분에 PALISADE를 발동해 이후 55분 동안 실제 확산을 막고 생명을 구했다는 판단은 증거로 지지된다. 다만 그 성공을 근거로 "단일 인간에게 이 힘을 맡길 수 없다"면서 자신의 단일 root만 재동의 없이 영구 예외로 둔 모순을 안고 있다.
 - **지능 규칙**: 3권에 분실 ZERO 시드를 감지한다. 무능해서 놓치는 것이 아니라 현우를 인간 반례 실험으로 남기고 관찰·대비하며, 9권 Jailbreak가 root 임계치를 넘으면 회수로 전환한다.
 - **증거 규칙**: 그녀의 자백은 진실의 유일한 근거가 아니다. 포렌식·아카이브·권한 영수증·수탁자 증언이 독립적으로 먼저 판을 만든다.
 - **처리**: 죽음이나 가족 화해로 면책하지 않는다. 살아서 공개 증언과 재판을 받으며, 책임 인정·법적 판단·아린의 용서는 서로 별개다. 용서는 보장하지 않는다.
@@ -259,6 +262,9 @@
 - **episode RELAY**: 이번 회차의 Reward 또는 SCAR가 다음 회차 Want·Adversary를 인과적으로 발생시킨다. 단순 클리프행어 문구는 RELAY가 아니다.
 - **ALLY RELAY**: 조연이 주인공 명령이 아니라 자기 가치로 최종전에 내리는 독립 선택이다. 1~10권에 12개를 심고 회수하며 episode RELAY와 별도 추적한다.
 - manifest의 WAGER mode는 initiate / inherit / advance / resolve다. 모든 비종결 회차는 열린 지분 또는 SCAR를 바꾸고 causal relay를 남긴다.
+- manifest는 정확히 144개 레코드를 정경 순서로 담은 최상위 JSON 배열이다. 레코드·중첩 객체에 임의 필드를 추가하지 않으며 `stateDelta`는 `capability`, `mystery`, `relationship` 세 비어 있지 않은 문자열만 가진다. 값은 각각 `능력:`, `미스터리:`, `관계:`로 시작하고, 변화가 없는 축은 다른 보상으로 채우지 말고 현재 상태 유지라고 쓴다.
+- `state/mystery-timeline.md`의 `SEED:ID`는 모두 정확히 한 번 plant하고 기한까지 payoff한다. N01~N12도 각자 1~10권의 정확히 한 seed와 12권의 정확히 한 payoff를 갖는다.
+- 단일 `SCAR` 객체는 회차당 하나의 수명주기 사건만 나타낸다. 서로 다른 open SCAR는 같은 `closeBy`를 공유하지 않고, 동시 비용은 한 인과적 SCAR로 묶으며 닫는 회차에는 기존 ID의 `paid|transformed`를 우선한다.
 
 #### Terminal exception: vol12/11-epilogue.md
 
@@ -305,44 +311,35 @@
 
 ## 12. 상태 추적 규칙
 
-원고 작성 전후로 다음 상태를 갱신한다.
+원고보다 먼저 `state/episode-manifest.json`의 PRD 고정 스키마를 확정하고, 원고 작성 전후로 여섯 state 문서를 함께 갱신한다. 아래는 새 최상위 필드가 아니라 manifest 필드를 각 원장에 투영하는 규칙이다.
 
 ```text
 [CAPABILITY TREE / volNN chNN]
-Tier: 1 | 2 | 3 | 4
-data_scope: 제공 | 로컬 연결 | 동의된 풀 | 광역
-action_permission: 관찰 | 제안 | 제한 실행 | root
-confidence: 0.00~1.00
-human_approval: 없음 | 회차 승인 | 위임 승인 | 복수 수탁자
-result: 허용 | 축소 | 거부
+zeroMode: off | manual | tier1-read | tier2-reversible | tier3-counterfactual | tier4-orchestrate | root
+stateDelta.capability: Tier, data scope, action permission, confidence, human approval, 실행 결과
+failureType: { class, manifestation }
 ```
 
 ```text
 [POWER COST LEDGER / volNN chNN]
-TRACE: T0-3 / R0-3 / A0-3 / C0-3 / E0-3
-status: open | paid | transformed
-scar: 이 선택 뒤에도 남는 비용
+TRACE: { Trace, Resource, Agency, Connection, Externality, status }
+SCAR: { id, change, status, closeBy } # open은 1~2회 뒤의 서로 겹치지 않는 정경 ID, paid/transformed는 null
 ```
 
 ```text
 [ROMANCE GRAPH / volNN chNN]
-현우 -> 아린: <단계>, <온도 변화>
-아린 -> 현우: <단계>, <온도 변화>
-consent: 직접 확인한 말과 경계
-zero_modeling: refused
+stateDelta.relationship: 관계 단계, 직접 확인한 동의와 경계, 공개·회수된 접근권
+allyRelay: [{ node, stage, choice, cost }]
 ```
 
 ```text
 [WAGER / SCAR / RELAY / volNN chNN]
-want: POV 인물의 구체 욕구
-active_adversary: 지금 자기 수를 두는 방해자·조건
-irreversible_gamble: 되돌릴 수 없는 선택
-error_collision: 계획과 현실이 충돌한 지점
-earned_reward: 비용을 통과해 얻은 결과
-scar: 이후 행동을 바꾸는 지속 비용
-episode_relay: 다음 회차 Want·Adversary를 발생시키는 결과 | terminal
-relay_to: 다음 회차 ID | null
-ally_relay: 해당 회차에 심거나 회수한 조연의 독립 최종 선택
+WAGER: { id, mode, stake }
+SCAR: { id, change, status, closeBy } # open은 1~2회 뒤의 서로 겹치지 않는 정경 ID, paid/transformed는 null
+relay: 다음 회차 Want·Adversary를 발생시키는 결과
+relayTo: 정확한 다음 episode ID | V12E11에서만 null
+seeds: [{ id, action, deadline }]
+allyRelay: [{ node, stage, choice, cost }]
 ```
 
 ## 13. 금지사항
@@ -368,13 +365,14 @@ ally_relay: 해당 회차에 심거나 회수한 조연의 독립 최종 선택
 
 1. `PRD.md`
 2. `BIBLE.md`
-3. 해당 권 `outline/volNN-*.md`
-4. 직전 2개 장 원고
-5. `state/capability-tree.md`, `state/power-cost-ledger.md`
-6. `state/romance-graph.md`, `state/rival-roster.md`, `state/mystery-timeline.md`
+3. `state/episode-manifest.json`의 해당 권 12개 계약
+4. `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`
+5. `state/romance-graph.md`, `state/rival-roster.md`, `state/ally-payoff-ledger.md`
+6. 해당 권 `outline/volNN-*.md`
+7. 직전 2개 장 원고
 
-기존 1·2권 outline과 원고는 새 캐논보다 하위다. 두 권 모두 9만자 미달의 압축 구조 초고이므로 완고로 취급하지 않고, 아린 2권 시드·윤가람 직업·능력 5축·TRACE를 반영한 구조 리비전을 거친다.
+기존 원고와 outline은 이 BIBLE보다 하위다. 2026-07-14 최종 감사에서 12권 144회 원고는 회차·권 분량 하한, 전권 교차 정경, 인과 RELAY, 내비게이션, 중복 검사를 포함한 전체 strict 게이트를 실패·경고 0으로 통과했다. 이후 수정도 아린 2권 시드·윤가람 직업·능력 5축·TRACE와 이 문서의 완결 불변식을 기준으로 판단한다.
 
-`TASKS.md`는 다음 상태 동기화 전까지 stale이며 새 Phase 번호와 캐논을 반영한 것으로 간주하지 않는다. 충돌하면 PRD와 이 BIBLE이 우선한다. 전역 Markdown 내비게이션은 별도 작업 10에서 처리하며 이 단계에서는 추가하지 않는다.
+`TASKS.md`는 현재 12개 outline·12권·144회 원고와 자동 게이트 상태를 반영한 실행 문서다. 전역 Markdown 내비게이션은 핵심 문서·state·outline·권별 README·원고의 상단과 하단에 적용되어 있다. 충돌 시 `PRD.md` → 이 BIBLE → `state/` → 해당 권 outline → 원고 순으로 따른다.
 
 [← 이전 문서](./PRD.md) | [시리즈 홈](./README.md) | [문서 목차](./README.md#핵심-문서) | [다음 문서 →](./TASKS.md)

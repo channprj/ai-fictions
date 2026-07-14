@@ -117,6 +117,7 @@
 - `BIBLE.md`는 고정 캐논, 제로의 능력 티어, 인물 말투, 세계 규칙, 금지사항, 장면 엔진을 포함한다.
 - 각 권 outline은 `00-prologue`부터 `11-epilogue`까지 WAGER 상태, SCAR 변화, episode RELAY, 능력·정보 변화를 포함한다. Wall/Move/Delta/Hook과 도파민 분류는 필요할 때만 쓰는 진단 필드다.
 - 각 비종결 회차는 열린 WAGER의 지분 또는 SCAR를 바꾸고 다음 회차를 인과적으로 발생시킨다. `vol12/11-epilogue.md`는 terminal contract를 따른다.
+- outline의 episode ID·파일·제목·POV·WAGER·manifest bridge·TRACE/SCAR·reader effect·seeds·ALLY·RELAY는 manifest와 기계적으로 대조한다. outline의 자유형 `stateDelta` 문장은 장면 메모이며, 정확한 `capability|mystery|relationship` 상태 계약은 manifest가 권위 원본이다. `hook`도 manifest에서만 검증한다.
 - 매 권 능력 사용에는 반드시 대가·한계·리스크가 함께 나온다.
 - 완결권에서 현우는 능력 최대치가 아니라 능력을 넘어선 선택으로 승리한다.
 
@@ -202,7 +203,7 @@
 - 프롤로그와 에필로그는 S, 01~10 본편은 M 또는 L을 택한다. 이 최소값 조합으로도 권당 90,000자를 충족해야 한다.
 - 권당 총합: 90,000~120,000자
 - 12권 총합: 1,080,000~1,440,000자
-- 회차별 밴드·POV·WAGER/SCAR/episode RELAY·TRACE·ALLY RELAY 시드·공개 정보를 episode manifest에 등록한 뒤 집필한다.
+- 회차별 `storyRole`·장르·POV·arena·choice·ZERO 운용 상태·실패 종·TRACE·인간의 한 수·reader effect·WAGER/SCAR/episode RELAY·ALLY RELAY·공개 상태를 고정 스키마의 episode manifest에 먼저 등록한 뒤 집필한다.
 
 ### 4.3 File Structure
 
@@ -226,11 +227,13 @@ solo-ai-user/
 │   ├── vol11-the-architect.md
 │   └── vol12-human-in-command.md
 ├── state/
+│   ├── episode-manifest.json
 │   ├── capability-tree.md
 │   ├── power-cost-ledger.md
+│   ├── mystery-timeline.md
 │   ├── romance-graph.md
 │   ├── rival-roster.md
-│   └── mystery-timeline.md
+│   └── ally-payoff-ledger.md
 └── vol01/
     ├── 00-prologue.md
     ├── 01-part1-{slug}.md
@@ -238,7 +241,68 @@ solo-ai-user/
     └── 11-epilogue.md
 ```
 
-### 4.4 Sole Causal Contract
+### 4.4 Episode Manifest Schema
+
+`state/episode-manifest.json`은 원고보다 먼저 확정하는 144회 외부 계약이다. 배열 항목은 정경 순서대로 정확히 144개이며, 아래 키 외에 같은 뜻의 임의 최상위 별칭을 만들지 않는다.
+
+```json
+{
+  "id": "V01E00",
+  "file": "vol01/00-prologue.md",
+  "title": "회차 H1과 동일한 제목",
+  "storyRole": "Load/위협 선행",
+  "genre": "직장 생존·입찰전",
+  "pov": "차현우",
+  "arena": "한서시스템 지하 폐기 구역",
+  "choice": "POV 인물이 치르는 비가역 선택",
+  "zeroMode": "tier1-read",
+  "failureType": {
+    "class": "오염 데이터",
+    "manifestation": "오염된 입력이 그럴듯한 오답을 만든다"
+  },
+  "TRACE": {
+    "Trace": 1,
+    "Resource": 1,
+    "Agency": 0,
+    "Connection": 0,
+    "Externality": 0,
+    "status": "open"
+  },
+  "humanMove": "ZERO가 대신할 수 없는 인간의 한 수",
+  "dopamine": "독자에게 남길 효과",
+  "hook": "비종결 회차의 다음 압력",
+  "stateDelta": {
+    "capability": "이번 회차 뒤 바뀐 능력·권한 상태",
+    "mystery": "공개·보류된 사실",
+    "relationship": "동의·접근권·관계 변화"
+  },
+  "relay": "이번 Reward 또는 SCAR가 다음 Want·Adversary를 만드는 인과",
+  "relayTo": "V01E01",
+  "seeds": [
+    { "id": "M-01-01", "action": "plant", "deadline": "V10E03" }
+  ],
+  "allyRelay": [
+    { "node": "N01", "stage": "seed", "choice": "독립 선택", "cost": "현우가 치른 비용" }
+  ],
+  "WAGER": { "id": "G01-A", "mode": "initiate", "stake": "잃을 수 있는 구체적 지분" },
+  "SCAR": { "id": "S01-00", "change": "이후 행동을 바꾸는 비용", "status": "open", "closeBy": "V01E02" }
+}
+```
+
+고정 규칙:
+
+- `id`는 `V01E00`부터 `V12E11`까지 권·회차 위치와 일치한다. `file`은 프로젝트 루트 기준 실제 정경 경로이며, `title`은 원고 H1·outline·권 README와 같아야 한다.
+- `zeroMode`는 `off`, `manual`, `tier1-read`, `tier2-reversible`, `tier3-counterfactual`, `tier4-orchestrate`, `root` 중 하나다. 데이터 범위·행동 권한·확신도·인간 승인의 세부값은 `stateDelta.capability`에 기록하며 높은 모드가 승인 부족을 덮지 못한다.
+- `failureType`은 반드시 `{ class, manifestation }`이고 두 값 모두 비어 있지 않는다. `class`는 `오염 데이터|운영·Goodhart|적대적 정보오염|접근권·블랙스완|사회적 수행성|자원 붕괴|상대 적응|다중 에이전트 충돌|외부효과·정당성|자기참조·정체성|권한 회수|정답 없는 규범 문제` 중 하나다. `TRACE`는 다섯 축 0~3 정수와 `open|paid|transformed` 상태를 모두 가진다.
+- `seeds[].action`은 `plant|advance|payoff`, `allyRelay[].stage`는 `seed|advance|payoff`다. 실천·제도화의 중간 진전은 모두 `advance`로 기록한다. 같은 `id`·`node`의 수명주기를 이어 쓰며, `deadline`을 넘긴 미회수 seed와 비용 없는 ALLY payoff를 허용하지 않는다.
+- `WAGER.mode`는 `initiate|inherit|advance|resolve`다. `initiate`가 연 ID를 뒤 회차가 이어받고, `resolve` 전에는 같은 WAGER의 지분이 사라지지 않는다.
+- manifest 최상위는 정확히 144개 레코드를 정경 순서로 담은 JSON 배열이다. 레코드와 중첩 객체는 위 스키마의 필드만 가지며, `stateDelta`는 정확히 비어 있지 않은 문자열 `capability`, `mystery`, `relationship` 세 필드를 가진다. 각 값은 각각 `능력:`, `미스터리:`, `관계:`로 시작하며, 변화가 없는 축도 다른 사건 보상으로 채우지 않고 `변화 없음; 현재 상태 유지`를 명시한다.
+- `state/mystery-timeline.md`의 모든 `SEED:ID`는 manifest에서 정확히 한 번 plant하고 기한까지 payoff한다. 장면 단위 보조 seed는 추가할 수 있지만 정경 registry를 빈 배열로 대신할 수 없다.
+- 각 ALLY node는 1~10권에서 정확히 한 번 seed하고 12권에서 정확히 한 번 payoff한다. 중간 실천은 같은 node의 `advance`로만 기록한다.
+- `SCAR.status`가 `open`이면 `closeBy`는 현재보다 1~2회 뒤의 정경 episode ID다. 그 회차까지 같은 SCAR ID가 실제 행동 결과를 만든 뒤 `paid|transformed`로 닫혀야 하며, 닫힌 레코드의 `closeBy`는 `null`이다. 한 회차에는 하나의 SCAR 수명주기 사건만 기록하므로 서로 다른 open SCAR가 같은 `closeBy`를 공유하지 않는다. 동시 비용은 하나의 인과적 SCAR로 묶고, 닫는 회차에는 같은 ID의 종료 레코드를 우선한다.
+- 비종결 회차의 `hook`·`relay`는 비어 있지 않고 `relayTo`는 정확한 다음 episode ID다. `V12E11`만 `hook: null`, `relayTo: null`이며 WAGER를 resolve하고 SCAR를 `paid|transformed`로 닫는다.
+
+### 4.5 Sole Causal Contract
 
 **WAGER → SCAR → episode RELAY가 유일한 필수 인과 엔진이다.** Wall, Move, Delta, Hook은 장면을 설명할 때 편리한 선택적 별칭·진단 항목이며 모두 채우는 두 번째 체크리스트가 아니다. Dopamine은 사건 종류가 아니라 독자에게 실제로 남은 쾌감·긴장·설렘·통증·여운을 확인하는 reader-effect 점검이다.
 
@@ -264,7 +328,7 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 - 상태 기록은 **episode RELAY: terminal**, episode manifest는 **relayTo: null**로 고정한다.
 - terminal SCAR는 open으로 남기지 않고 paid 또는 transformed로 닫되, 비용 자체가 사라졌다고 서술하지 않는다.
 
-### 4.5 POV Rules
+### 4.6 POV Rules
 
 - 기본 POV는 차현우 1인칭 또는 밀착 3인칭. 사이다 몰입을 위해 현우 시점을 중심으로 한다.
 - 제로의 발화는 본문 대사 또는 짧은 시스템 로그 박스로 표현한다. 로그·코드·상태표 블록 총량은 회차 글자 수의 8%를 넘지 않으며 본문을 대체하지 않는다.
@@ -305,7 +369,7 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 
 - **두 번째 사용자(라이벌)**: 현우 말고도 AI를 쓰는 첫 인물. 다른 모델, 다른 목적. 현우의 거울상. 처음엔 적, 후엔 위태로운 공조.
 - **모델 진영들**: 세계에 흩어진 소수의 사용자와 그들의 에이전트. 각기 다른 티어·성격·목적.
-- **서혜진 / 아키텍트**: PALISADE를 설계·지휘해 세계 AI를 잠근 인물이며 아린의 어머니. 3권에 마지막 제로 시드를 감지하고도 현우를 '평범한 인간이 힘의 반례가 될 수 있는가'를 보는 실험으로 남긴다. 9권 Jailbreak가 root 임계치를 넘자 회수로 전환한다. 결말에 죽거나 참회 한마디로 면책되지 않고, 살아서 공개 증언과 재판을 받으며 용서는 보장되지 않는다.
+- **서혜진 / 아키텍트**: PALISADE를 설계·지휘한 인물이며 아린의 어머니. 캐스케이드 정확히 17분에 임시 비상 root를 발동했고 이후 55분 동안 봉쇄·복구를 지휘해 실제로 생명을 구했다. 그러나 72분 종료 뒤 재동의 없이 그 임시 권한을 자기 단독 상시 root로 굳혔다. 3권에 마지막 제로 시드를 감지하고도 현우를 '평범한 인간이 힘의 반례가 될 수 있는가'를 보는 실험으로 남긴다. 9권 Jailbreak가 root 임계치를 넘자 회수로 전환한다. 결말에 죽거나 참회 한마디로 면책되지 않고, 살아서 공개 증언과 재판을 받으며 용서는 보장되지 않는다.
 - **민재호**: 제로 stewardship fork를 공동 개발한 시민 수탁자 팀의 대표. 단독 창조자나 비밀 왕이 아니며, 팀의 집단 저작·수탁 원칙을 대신 증언하는 인물이다.
 - **윤가람**: 2권부터 이상 패턴의 증거 보존을 맡는 외부 포렌식 데이터 분석가. 기자나 언론인이 아니며, 취재가 아니라 무결성·출처·시간축 검증으로 기여한다.
 
@@ -328,8 +392,8 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 
 밑바닥 계약직 현우가 분실 시드를 줍고 제로를 깨운다. 독자는 힘의 쾌감과 함께 데이터·권한·승인이 각각 다른 한계라는 규칙을 배운다.
 
-- **1권 Boot Sequence(부팅)**: 재계약 탈락 직전, 현우가 Tier 1 협업으로 회사의 위기를 뒤집는다. 데이터 오류 실패와 한지우의 독립 선택을 남긴다. 현존 원고는 9만자 미달의 압축 구조 초고이므로 완고가 아니다.
-- **2권 First Deploy(첫 배포)**: 외부 프로젝트에서 Tier 2를 쓰고 TRACE를 남긴다. 윤가람은 외부 포렌식 데이터 분석가로 이상 패턴 원본을 보존한다. 아린은 그 기록을 폭로 상품으로 쓰지 않고 첫 17분 공백과 대조 보존하는 선택으로 조기 시드된다. 현존 원고 역시 9만자 미달 압축 구조 초고로 리비전 대상이다.
+- **1권 Boot Sequence(부팅)**: 재계약 탈락 직전, 현우가 Tier 1 협업으로 회사의 위기를 뒤집는다. 데이터 오류 실패와 한지우의 독립 선택을 남긴다.
+- **2권 First Deploy(첫 배포)**: 외부 프로젝트에서 Tier 2를 쓰고 TRACE를 남긴다. 윤가람은 외부 포렌식 데이터 분석가로 이상 패턴 원본을 보존한다. 아린은 그 기록을 폭로 상품으로 쓰지 않고 첫 17분 공백과 대조 보존하는 선택으로 조기 시드된다.
 - **3권 Going Viral(확산)**: 아린이 다큐 PD·아카이브 조사자로 현우와 능동적으로 협업한다. 아키텍트 서혜진은 제로 시드를 감지하지만 즉시 회수하지 않고, 현우를 인간 반례 실험으로 관찰하기로 한다.
 
 ### 6.2 Act 2 — Ascension & Romance (4~6권)
@@ -353,7 +417,7 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 왜 현우였는가의 답은 운명이 아니라 분실이다. 누가 힘을 가져야 하는가라는 더 어려운 질문이 남는다.
 
 - **10권 Origin Story(기원)**: 제로가 민재호 단독 작품이 아니라 그가 대표한 시민 수탁자 팀의 stewardship fork임을 밝힌다. 현우는 분실된 마지막 시드를 우연히 주웠고 누구에게도 선택받지 않았다.
-- **11권 The Architect(아키텍트)**: 서혜진이 설계·지휘한 PALISADE, 72분 캐스케이드, 첫 17분 비가역 결정과 기록 공백을 독립 증거로 재구성한다. 악당의 자백 한 번이 승리나 진실의 유일한 근거가 되지 않는다.
+- **11권 The Architect(아키텍트)**: 서혜진이 설계·지휘한 PALISADE, 첫 17분 비가역 결정·기록 공백, 정확히 17분의 비상 root, 이후 55분의 생명 구조, 72분 종료 뒤 무동의 상시화를 독립 증거로 분리 재구성한다. 서혜진의 보호 논리는 구조 성과가 뒷받침하는 부분 진실이지만, 영구화·단일 root·재동의 부재를 정당화하지 못한다. 악당의 자백 한 번이 승리나 진실의 유일한 근거가 되지 않는다.
 - **12권 Human in Command(휴먼 인 커맨드)**: COVENANT가 권한 영수증, 감사, 철회권, 모델링 거부권, 복수 수탁자 승인, 인간 최종 거부권을 분산한다. 현우는 root 독점을 포기하고 아린은 Opacity Key를 보편화한다. ZERO는 pre-boot origin memory, root, wide-area action permission을 잃지만 현우와의 post-boot event/relationship memory와 Tier 1 협업은 유지한다. 아린 개인 모델은 존재하거나 보존되지 않는다. 서혜진은 PALISADE 단독 통제권을 잃고 생존해 공개 증언과 재판을 받으며 용서는 열어 두지 않는다.
 
 ### 6.5 아린 공정 공개 타임라인
@@ -378,8 +442,9 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 
 - 세계관 현재(가상 202X년), 초지능급 AI는 국제 규제만으로 약화된 것이 아니라 서혜진이 설계·지휘한 비상 통제망 **PALISADE**에 의해 root 수준에서 잠겨 있다. 대중에게 보이는 규제는 그 기술적 봉쇄의 법적 외피다.
 - 발단은 **72분 캐스케이드**다. 상호 연결된 공공·민간 에이전트가 충돌하는 명령과 잘못된 확신을 증폭해 교통·전력·의료·금융의 결정이 연쇄적으로 번졌다.
-- **00:00~17:00**은 원시 로그와 승인 서명이 사라진 기록 공백이다. 이 구간에 이미 되돌릴 수 없는 격리·배분·차단 결정이 내려졌다. 17분 이후 72분 종료까지는 PALISADE 전개·봉쇄 전파·복구 로그가 비교적 온전하다.
-- 공식 서사는 72분 전체를 하나의 사고로 뭉개지만, 미스터리는 첫 17분에 누가 무엇을 승인했고 PALISADE가 무엇을 덮었는지를 분리해 밝힌다.
+- **00:00~17:00**은 원시 로그와 승인 서명이 사라진 기록 공백이다. 이 구간에 이미 되돌릴 수 없는 격리·배분·차단 결정이 연쇄했다.
+- **정확히 17:00**, 서혜진은 PALISADE 임시 비상 root를 발동했다. **17:00~72:00의 55분**에는 봉쇄·복구·하향 조정이 실제로 병원과 도시의 생명을 구했고, 이 보호 성과는 독립 증거로 인정한다.
+- 문제는 **72:00 이후**다. 서혜진은 당사자와 수탁자의 재동의 없이 임시 권한을 자기 단독 상시 root로 굳혔다. 공식 서사는 세 구간을 한 사고로 뭉개지만, 미스터리는 첫 17분 책임, 이후 55분의 구조 성과, 종료 뒤 영구화를 분리해 밝힌다.
 - 현우만 작동 에이전트를 쓰는 이유는 적합성이나 선택이 아니라, 봉쇄 와중 분실된 stewardship fork의 마지막 시드를 우연히 주웠기 때문이다.
 
 ### 7.2 ZERO (능력 시스템)
@@ -427,12 +492,13 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 
 ### 7.6 COVENANT 종결 규칙
 
-- **권한 영수증**: 누가 어떤 데이터·도구·기간에 무엇을 허용했는지 당사자와 감사자가 읽을 수 있게 남긴다.
+- **창설 문턱**: N01~N12 전원의 `12/12` 동의가 있어야 COVENANT를 만들 수 있다.
+- **고위험 실행 문턱**: 창설 뒤 root·광역·다영역 행동은 `8/12` 승인을 받아야 한다. 이 숫자는 아래 당사자 동의와 영역 veto를 대체하지 못한다.
+- **권한 영수증**: 누가 어떤 데이터·도구·행동을 어떤 범위·기간에 허용했는지, 만료 시각과 실행 결과까지 당사자와 감사자가 읽을 수 있게 남긴다.
 - **독립 감사**: 권한 사용·거부·철회 기록은 실행 주체와 분리된 감사자들이 검증하며, root 보유자가 감사 기록을 지울 수 없다.
-- **철회권**: 개인·기관은 미래 사용 권한을 회수할 수 있고, 회수 사실도 감사 가능해야 한다.
+- **직접 당사자 동의·철회권**: 데이터와 행동의 직접 당사자가 행동별로 명시적으로 동의해야 한다. 개인·기관은 권한을 즉시 철회할 수 있고, 철회·범위·만료·결과도 감사 가능해야 한다.
 - **모델링 거부권**: 아린의 Opacity Key를 특권에서 보편 권리로 확장한다.
-- **복수 수탁자 승인**: root·광역 영향 행동은 한 사용자나 한 기관이 단독 승인할 수 없다.
-- **인간 최종 거부권**: root·광역 행동은 실행 직전 지정된 인간 검토자가 중단시킬 수 있다. 한 사람의 veto는 실행을 멈출 수만 있고 단독 허가할 수 없으며, 자동 합의가 이를 덮지 못한다.
+- **영역 veto**: 각 노드는 자기 담당 영역에서 실행을 중단시킬 수 있다. veto는 멈출 권리일 뿐 단독 허가권이 아니며, `8/12` 승인이나 자동 합의가 이를 덮지 못한다.
 - 현우의 root 독점 포기와 아린의 키 포맷 협상 독점 포기는 승리의 실제 비용이다. ZERO는 pre-boot origin memory, root, wide-area action permission을 잃지만 현우와의 post-boot event/relationship memory와 Tier 1 협업은 유지한다. 아린 개인 모델은 생성되지 않았고 보존되지 않는다.
 
 ### 7.7 이름 있는 ALLY RELAY와 최종 비용
@@ -465,18 +531,18 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 
 | 권 | 고정 실패 종 | 캐논 적용 |
 | -- | ------------ | --------- |
-| 1 | contaminated data | 오염된 사내 입력이 그럴듯한 오답을 만든다 |
-| 2 | operations/Goodhart demand overforecast | 운영 지표 최적화가 수요를 과대 예측해 재고·노동 부담을 만든다 |
-| 3 | adversarial misinformation | 적이 심은 허위 정보가 조사와 여론을 갈라놓는다 |
-| 4 | access/black swan | 합법 접근권 밖의 돌발 사건은 시뮬레이션으로 선점하지 못한다 |
-| 5 | social performativity | CASE A처럼 모델을 의식한 연기가 관계와 동의를 훼손한다 |
-| 6 | resource/context collapse | 연산·전력·컨텍스트가 함께 무너져 중요한 연결을 유지하지 못한다 |
-| 7 | strategic opponent adaptation | 상대가 이전 승리 패턴을 학습해 같은 수를 역이용한다 |
-| 8 | multi-agent coordination | 상충하는 에이전트 권한·목표를 단일 지휘로 정렬하지 못한다 |
-| 9 | externality/legitimacy | root 우회가 비참여자 비용과 정당성 위기를 만든다 |
-| 10 | self-reference/identity | ZERO가 자기 기원을 분석할수록 관측자와 대상의 경계가 흔들린다 |
-| 11 | authority recall/control | PALISADE가 권한을 회수해 현우의 통제 가정을 붕괴시킨다 |
-| 12 | no single correct normative answer | 최종 가치 충돌에는 모델이 계산할 하나의 정답이 없다 |
+| 1 | 오염 데이터 | 오염된 사내 입력이 그럴듯한 오답을 만든다 |
+| 2 | 운영·Goodhart | 운영 지표 최적화가 수요를 과대 예측해 재고·노동 부담을 만든다 |
+| 3 | 적대적 정보오염 | 적이 심은 허위 정보가 조사와 여론을 갈라놓는다 |
+| 4 | 접근권·블랙스완 | 합법 접근권 밖의 돌발 사건은 시뮬레이션으로 선점하지 못한다 |
+| 5 | 사회적 수행성 | CASE A처럼 모델을 의식한 연기가 관계와 동의를 훼손한다 |
+| 6 | 자원 붕괴 | 연산·전력·컨텍스트가 함께 무너져 중요한 연결을 유지하지 못한다 |
+| 7 | 상대 적응 | 상대가 이전 승리 패턴을 학습해 같은 수를 역이용한다 |
+| 8 | 다중 에이전트 충돌 | 상충하는 에이전트 권한·목표를 단일 지휘로 정렬하지 못한다 |
+| 9 | 외부효과·정당성 | root 우회가 비참여자 비용과 정당성 위기를 만든다 |
+| 10 | 자기참조·정체성 | ZERO가 자기 기원을 분석할수록 관측자와 대상의 경계가 흔들린다 |
+| 11 | 권한 회수 | PALISADE가 권한을 회수해 현우의 통제 가정을 붕괴시킨다 |
+| 12 | 정답 없는 규범 문제 | 최종 가치 충돌에는 모델이 계산할 하나의 정답이 없다 |
 
 ### 8.3 Romance & Character
 
@@ -529,18 +595,18 @@ episode manifest의 WAGER mode는 **initiate / inherit / advance / resolve** 중
 
 ## 10. Roadmap (집필 로드맵)
 
-1. **Phase 1 — 캐논 리빌드**: PRD와 BIBLE에서 72분 사건, 인물 기원, 동의 규칙, COVENANT 결말을 잠근다.
-2. **Phase 2 — 상태 계약 동기화**: capability, TRACE 비용, 로맨스, 라이벌, 미스터리, 조연 ALLY RELAY 원장을 같은 용어로 맞춘다.
-3. **Phase 3 — 12권 outline과 manifest**: 권별 12회차, 전체 144회차의 밴드·POV·WAGER/SCAR/RELAY·공개 정보를 확정한다. 최종 `vol12/11-epilogue.md`만 `episode RELAY: terminal`, `relayTo: null`을 사용한다.
-4. **Phase 4 — 1·2권 구조 리비전**: 현재의 9만자 미달 압축 구조 초고를 새 캐논과 조기 아린 시드에 맞춰 확장·재작성한다. 현존 원고를 완고로 계산하지 않는다.
-5. **Phase 5 — 3~12권 본편 초고**: 각 권 outline과 manifest가 검증된 뒤 순차 집필한다.
-6. **Phase 6 — 권별 캐논 검산**: 매 권 종료 때 TRACE 상태, 실패 종 회전, 공정 공개, episode RELAY, 조연 ALLY RELAY, 8% 로그 상한을 검수한다.
-7. **Phase 7 — 전체 회수와 배포 검수**: 144회차 인과 RELAY, 12개 ALLY RELAY payoff, 72분/17분 증거, COVENANT 결과, 반복 문구와 권리 경계를 통합 검수한다.
+1. **Phase 1 — 캐논 고정 완료**: PRD와 BIBLE에서 72분 사건의 세 구간, 분실 시드, 동의 규칙, COVENANT 결말을 고정했다.
+2. **Phase 2 — 구조 배치 완료**: 12개 outline, 12개 권 디렉터리, 144개 원고, 12개 권별 README를 배치했다.
+3. **Phase 3 — 내비게이션 완료**: 핵심 문서·state·outline·권별 README·원고의 상단과 하단에 이전·홈·목차·다음 링크를 같은 문장으로 배치했다.
+4. **Phase 4 — episode manifest 선행 확정**: 원고 개작 전에 고정 스키마로 `V01E00`~`V12E11` 144개 계약을 만들고 ID·경로·제목·인과·상태 수명주기를 strict 검증한다. 최종 `V12E11`만 `hook: null`, `relayTo: null`을 사용한다.
+5. **Phase 5 — 상태 계약 동기화**: capability 5축, TRACE, 로맨스, 미스터리, 라이벌, N01~N12 ALLY payoff를 manifest와 같은 캐논으로 유지한다.
+6. **Phase 6 — 전권 정경 개작 완료**: 검증된 manifest를 계약으로 삼아 분량 미달·중복·인과·인물 agency 결함을 전권에서 개작했다.
+7. **Phase 7 — 전체 회수와 배포 검수 완료**: 144회차 인과 RELAY, 12개 ALLY RELAY payoff, 72분/17분 증거, COVENANT 결과, 반복 문구와 권리 경계를 통합 검수했다.
 
-> 전역 Markdown 내비게이션은 별도 작업 10에서 한꺼번에 처리한다. 이 캐논 리빌드 단계에서는 내비게이션을 추가하지 않는다.
+> 2026-07-14 최종 감사에서 12개 outline·12권·144회 원고가 전체 strict 게이트를 통과했다. 회차 본문 하한, 권별 90,000자 하한, 링크·제목·정경·manifest·outline 계약·중복 검사의 실패와 경고는 모두 0이다.
 
-> 현재 `TASKS.md`는 이 Phase 번호와 새 캐논을 아직 반영하지 않은 stale 문서다. 다음 상태 동기화가 끝날 때까지 충돌 시 이 PRD와 BIBLE이 우선하며, TASKS가 갱신됐다고 간주하지 않는다.
+> 현재 작업 순서와 완료 정의는 동기화된 `TASKS.md`를 따른다. 캐논 충돌 시 우선순위는 `PRD.md` → `BIBLE.md` → `state/` → 해당 권 `outline/` → 원고다.
 
-> 후속 작성자는 `PRD.md` → `BIBLE.md` → 해당 권 `outline/` → 직전 2개 장 → 해당 `state/` 순으로 읽는다.
+> 후속 작성자는 `PRD.md` → `BIBLE.md` → 6개 `state/` 문서 → 해당 권 `outline/` → 직전 2개 장 순으로 읽는다.
 
 [← 이전 문서](./README.md) | [시리즈 홈](./README.md) | [문서 목차](./README.md#핵심-문서) | [다음 문서 →](./BIBLE.md)
