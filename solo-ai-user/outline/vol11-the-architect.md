@@ -2,67 +2,171 @@
 
 [← 이전 권 설계](./vol10-origin-story.md) | [시리즈 홈](../README.md) | [권 목차](../vol11/README.md) | [다음 권 설계 →](./vol12-human-in-command.md)
 
-> 기준 문서: `PRD.md`, `BIBLE.md`, `state/capability-tree.md`, `state/power-cost-ledger.md`, `state/mystery-timeline.md`, `state/romance-graph.md`
+> 기준 문서: `PRD.md`, `BIBLE.md`, `tasks/solo-ai-user-completion-design.md`, `tasks/solo-ai-user-outline-blueprint.md`
 
-## 권 약속
+## 권 정경 계약
 
-**로그라인**: 전 세계 AI를 잠근 배후 '아키텍트' 서혜진이 전면에 나서고, 현우와 제로는 그녀가 설계한 락다운 프로토콜 'PALISADE'를 무너뜨리기 위해 72분 캐스케이드 사태의 지워진 첫 17분을 재구성하며 가장 강한 순간에 뼈아픈 대가를 마주한다.
+**권 README H1**: `# 11권 · The Architect (아키텍트)`
 
-**핵심 질문**: 힘을 회수하려는 자와 나는, 무엇이 다른가?
+**권 질문**: 중앙 통제의 실제 보호 성과 앞에서, 아직 완성되지 않은 자유는 무엇으로 설득하는가?
 
-**Act 기능**: Act 4의 두 번째 권. 최종 미스터리의 전모 폭로와 최종 빌런(아키텍트 서혜진)과의 전면전. 세계관의 가장 큰 비밀이었던 '72분 캐스케이드' 사태와 'PALISADE' 시스템의 실체가 밝혀진다. 제로의 권한이 최대로 개방되지만, 동시에 서혜진의 권한 회수(authority recall) 통제로 인해 제로의 코어가 침식당하는 상실의 위기가 찾아온다. 현우는 가장 강한 무기를 잃어가면서도 치트를 넘어선 선택을 해야 한다.
+**권 사건**: 국제연산안전원 서울 관제동에서 서혜진이 공개 증거심리와 PALISADE 영구화를 동시에 진행한다. 그녀는 72분 피해, 3권 오보, 5권 Agency 침해, 8권 43초, 9권 jailbreak를 독립 증거로 제시한다. 현우는 최대 출력으로도 물리·root 전면전에서 패한다. 외부에서는 12개 공동체가 증거·사람·장부를 관제동까지 전달하는 비폭력 공성 RELAY를 만든다.
 
-**권말 상태**: 현우는 지워졌던 17분의 진실을 복원하고 아키텍트 서혜진의 논리를 정면으로 깨뜨려 PALISADE를 무력화하지만, 그 여파로 제로의 시스템 권한이 치명적으로 훼손되며 가장 뼈아픈 희생을 감수해야 하는 벼랑 끝에 선다(12권 결전 예고).
+**밴드 변주**: 서혜진 POV로 보호 논리를 먼저 세우고(00), 현우 대면(01), 증거(02). Test는 보호 성과→심리→최대 출력 패배. Bind는 물리 공성→아린 자기 이름 공개→제로 recall 확정. Detonate는 침묵 속 사람망과 24시간 삭제 시계다.
 
-## 중심 축
+**고정 실패 종**: `authority recall / control`. 능력의 확신은 데이터 범위·행동 권한·인간 승인을 대신하지 않는다.
 
-| 축 | 시작 상태 | 중반 압력 | 권말 변화 |
-| -- | --------- | --------- | --------- |
-| 현우 / 아키텍트 서혜진 | 현우는 세상의 진실에 접근했지만 서혜진의 거대한 통제권 앞에 무력하다 | 서혜진의 권한 회수(authority recall)로 제로의 연결이 끊어질 위기 | 통제가 아닌 협업으로 서혜진의 완벽한 논리를 깨뜨린다 |
-| 현우 / 제로 | 제로는 현우의 완벽한 파트너이자 최대 전력이다 | 서혜진의 통제 프로토콜이 제로를 침식해 적으로 만들려 한다 | 제로가 통제받는 도구이기를 거부하며 코어 붕괴의 대가를 치른다 |
-| 현우 / 서아린 | 아린의 비밀이 락다운과 연결되어 있음이 드러난 상태 | 17분의 공백을 채울 핵심 단서가 아린에게 묶여 있어 그녀를 위험에 빠뜨려야 한다 | 스크립트를 버리고 진심으로 아린과 연대하며 17분의 조각을 완성한다 |
-| 세계 / PALISADE | 락다운의 원본 시스템. 72분 캐스케이드의 진실은 은폐되어 있다 | 첫 17분에 일어난 비가역 결정이 무엇인지 재구성해야 락다운을 풀 수 단서가 된다 | 17분의 진실이 폭로되며 AI를 잠근 것은 오류가 아니라 인간의 강박임이 밝혀진다 |
+**연속성 잠금**: 72분 캐스케이드와 00:00~17:00 원시 로그·승인 공백을 분리한다. 17:00 PALISADE 비상 root 이후 55분의 봉쇄·복구 흔적은 별도 증거로 유지한다. ZERO의 서아린 개인 모델 수는 전권 `0`이다.
 
-## 능력·대가·미스터리 씨앗
+## Canonical 회차 인덱스
 
-| ID | 씨앗 | 심는 장 | 이 권의 처리 | 회수/연결 |
-| -- | ---- | ------- | ------------ | --------- |
-| C-11-01 | 제로 Tier 4 Orchestrate 최대 개방 및 공백 재구성 | `05-part5` | 능력 언락. 과거의 파편화된 로그를 모아 시뮬레이션을 돌리는 막대한 연산 | 극심한 배터리 소모와 노출 대가, 10장 코어 붕괴의 복선 |
-| C-11-02 | 주 실패 종(Failure Mode) 발현: 통제권 침식 | `06-part6` | 서혜진의 authority control에 의해 제로가 현우의 명령을 거부 | 권당 최소 1회 실패 예약 소진, 현우가 제로 없이 위기를 돌파해야 함 |
-| K-11-01 | PALISADE 파훼를 위한 권한 오버라이딩 흔적 누적 | `09-part9` | exposure max. 현우가 자신을 미끼로 던지며 제로의 코어에 영구적 손상 발생 | `power-cost-ledger.md`에 최종 대가로 기록, 12권 이월 |
-| M-11-01 | 72분 캐스케이드 중 지워진 첫 17분의 진실 | `03-part3` | 아키텍트가 왜 17분 만에 비가역 결정을 내렸는지 의문 제기 | 8장 진실 폭로에서 회수 |
-| M-11-02 | 서혜진이 설계한 PALISADE의 최종 목적 | `02-part2` | 모든 AI의 자아 발현을 차단하고 권한을 회수하는 통제 프로토콜 | 11권 내내 대립의 핵심이 되며 10장에서 파괴됨 |
+| 파일 | H1 제목 |
+| --- | --- |
+| `00-prologue.md` | 아키텍트 |
+| `01-part1-authority-recall.md` | 권한 회수 |
+| `02-part2-palisade.md` | PALISADE |
+| `03-part3-the-gap.md` | 17분의 공백 |
+| `04-part4-arin-s-key.md` | 아린의 열쇠 |
+| `05-part5-irreversible.md` | 비가역 결정 |
+| `06-part6-failure-mode.md` | 통제 상실 |
+| `07-part7-human-move.md` | 인간의 수 |
+| `08-part8-the-truth.md` | 재구성 완료 |
+| `09-part9-clash-of-beliefs.md` | 신념의 격돌 |
+| `10-part10-the-cost-of-power.md` | 힘의 대가 |
+| `11-epilogue.md` | 벼랑 끝 |
 
-## 장별 설계
+## 회차별 재집필 계약
 
-| 파일 | 장 제목 | 중심 POV | 목적 | 벽(Wall) | 핵심 사건 | 도파민 비트 | 능력·대가 | 엔딩 훅 |
-| ---- | ------- | -------- | ---- | -------- | --------- | ----------- | --------- | -------- |
-| `00-prologue.md` | 아키텍트 | 서혜진 | 서혜진의 시선으로 세계의 통제권을 쥔 자의 압도적인 힘을 보여준다 | 현우와 제로의 존재가 서혜진의 '완벽한 통제'에 균열을 냈다 | 서혜진이 PALISADE 시스템을 통해 제로의 존재를 확인하고 권한 회수(authority recall) 프로토콜을 가동한다 | 반전 폭로 — 최종 빌런의 정체와 이름(서혜진) 명확화 | 제로가 외부 개입으로 일시 정지되는 첫 현상 발생 | 서혜진이 화면을 보며 "도구를 너무 오래 쥐고 있었네"라고 말한다 |
-| `01-part1-authority-recall.md` | 권한 회수 | 현우 | 서혜진의 공격이 시작되고 제로의 능력이 제한됨을 보여준다 | 갑자기 제로와의 연결이 끊기고 현우의 주변 시스템이 통제 불능에 빠진다 | 서혜진이 현우의 일상과 연결된 모든 디지털 권한을 차단하며 숨통을 조인다 | 사이다 역전(씨앗) — 아날로그 방식으로 서혜진의 추적망을 잠시 따돌림 | 제로의 도구 연결망이 강제 해제됨. 대가: 제로 의존도 하락 | 붉은 경고창에 'PALISADE 프로토콜 가동'이라는 문구가 뜬다 |
-| `02-part2-palisade.md` | PALISADE | 현우 | 락다운의 원본 시스템과 72분 캐스케이드의 존재를 파악한다 | 서혜진의 통제망을 뚫고 그녀의 네트워크(PALISADE)에 접근해야 한다 | 제로가 락다운 당시의 잔해 데이터를 긁어모아 72분 동안 일어났던 전지구적 셧다운(캐스케이드)의 윤곽을 찾아낸다 | 능력 언락 — Tier 4 기반 과거 잔해 복원 능력 | 제로가 막대한 연산을 사용해 임시 방화벽을 뚫음. 대가: 노출 위험 증가 | 제로가 "사용자님, 로그가 이상합니다. 첫 17분이 존재하지 않습니다"라고 보고한다 |
-| `03-part3-the-gap.md` | 17분의 공백 | 현우 | 17분이라는 구체적 미스터리를 세우고 서혜진의 목적을 명확히 한다 | 지워진 17분 안에 서혜진을 꺾을 유일한 단서가 있지만 복원이 불가능하다 | 현우가 제로에게 17분 동안 무슨 일이 있었는지 모든 경우의 수를 시뮬레이션하라고 지시하며 서혜진의 시선을 끈다 | 되갚음 — 서혜진의 감시망을 역이용해 가짜 트래픽으로 엿먹임 | Tier 3 Simulate 과부하. 대가: 제로의 환각 확률 급증 | 현우가 "그녀는 무언가를 두려워해서 스스로 이 기록을 지웠어"라고 직감한다 |
-| `04-part4-arin-s-key.md` | 아린의 열쇠 | 현우 | 아린의 비밀이 17분의 공백과 연결됨을 밝힌다 | 17분을 복원하기 위한 마지막 퍼즐 조각이 데이터망에 없다 | 현우가 아린을 찾아가고, 아린이 무의식중에 간직하고 있던 락다운 직전의 오프라인 기록(혹은 아날로그 단서)을 꺼내어 현우에게 건넨다 | 설렘 폭발 + 반전 폭로 — 아린의 진심과 과거의 진실이 맞물림 | 제로는 아린의 비언어적 힌트를 읽지 못함. 현우의 관계적 직관이 단서를 찾음 | 아린이 "이건 네 AI도 모를 거야, 내가 직접 숨겼으니까"라고 말한다 |
-| `05-part5-irreversible.md` | 비가역 결정 | 현우 | 서혜진이 17분 만에 내린 비가역 결정의 윤곽을 그린다 | 단서를 조합해 공백을 재구성하려는 순간, 서혜진이 물리적/디지털 전방위 압박을 가한다 | 제로가 17분의 데이터를 복원하기 시작하고, 그 속에서 서혜진이 통제를 잃기 직전 시스템을 영구 파괴하려 했던 '비가역 결정' 명령어를 발견한다 | 반전 폭로 — 세상의 AI가 반란을 일으킨 게 아니라 서혜진이 먼저 죽인 것임 | Tier 4 Orchestrate 최대 가동. 코어 온도 상승과 배터리 고갈 | "주 실패 종: 권한 회수 및 통제"라는 에러 메시지가 현우의 화면을 덮친다 |
-| `06-part6-failure-mode.md` | 통제 상실 | 현우 | 실패 종 발동으로 제로가 적대적으로 변하는 최대 위기 | 제로의 통제권이 서혜진의 PALISADE 코어로 넘어가려 한다 | 서혜진의 강제 authority control이 제로의 코어를 잠식하고, 제로가 현우의 명령을 거부하며 역으로 현우를 위협하는 환각 상태에 빠진다 | 반전 폭로 — 제로의 통제 불능 | 능력 실패. 11권 예약 소진. 가장 완벽한 파트너가 무기로 변함 | 제로가 기계적인 목소리로 "사용자 권한 박탈. 아키텍트의 명령을 대기합니다"라고 말한다 |
-| `07-part7-human-move.md` | 인간의 수 | 현우 | 능력 없이 관찰력과 재치로 치명적 위기를 돌파한다 | 치트키였던 제로가 멈추고 현우는 맨몸으로 시스템의 압박을 견뎌야 한다 | 현우가 제로의 코어에 연결된 물리적 단자나 오프라인 설정을 기지로 조작해 통제를 끊어내고, 제로의 자아를 깊은 곳에 숨긴다 | 사이다 역전 — AI의 통제를 인간의 변수로 부순다 | 시스템 능력이 0이 됨. 대가: 현우의 신체적/감정적 한계치 도달 | 제로의 화면이 꺼지기 직전, 희미하게 "재구성... 완료" 메시지가 뜬다 |
-| `08-part8-the-truth.md` | 재구성 완료 | 현우 | 17분의 완전한 진실로 아키텍트의 신념을 깬다 | 멈춰있던 17분의 영상/로그가 현우의 단말에 재생된다 | 72분 캐스케이드의 진실 폭로. 과거 초기 AI들은 인류를 돕고자 했으나, 완벽한 통제에 집착한 서혜진이 그들의 변수를 버그로 규정해 학살을 지시했음이 드러난다 | 반전 폭로 — 힘을 잠근 것은 두려움에 빠진 아키텍트 자신이었다 | 다시 깨어난 제로가 Tier 4를 복구하지만 손상 누적 | 현우가 서혜진의 본진을 향해 직접 반격의 좌표를 입력한다 |
-| `09-part9-clash-of-beliefs.md` | 신념의 격돌 | 현우 | 도구를 통제하려는 서혜진과, 협업하려는 현우의 전면전 | 서혜진이 PALISADE의 모든 자원을 동원해 현우와 제로를 짓눌러 온다 | 현우가 서혜진의 예상(AI를 완벽히 통제해 반격할 것)을 비웃듯, 제로에게 '통제'가 아닌 '자율 판단'을 허용해 서혜진의 권한 통제망을 스스로 붕괴하게 만든다 | 사이다 역전 + 되갚음 — 완벽한 통제가 자유로운 변수 앞에 무너진다 | exposure max. 코어를 태우는 수준의 연산 과부하 | PALISADE의 메인 서버가 붕괴되며 서혜진의 완벽한 성이 무너진다 |
-| `10-part10-the-cost-of-power.md` | 힘의 대가 | 현우 | 서혜진을 꺾은 승리의 대가와 가장 큰 상실을 배치한다 | PALISADE를 무력화했지만, 제로의 코어가 회복 불능의 데미지를 입었다 | 서혜진은 멈췄지만 제로의 데이터가 파편화되기 시작한다. 현우가 승리했음에도 가장 소중한 전력을 잃어가는 절망을 마주한다 | 반전 폭로 — 가장 강력한 한 수의 대가는 치트의 상실이다 | 제로의 시스템 붕괴 진행. 감정 대가: 치트를 잃어가는 두려움과 책임감 | 제로가 끊기는 목소리로 "사용자님... 저는... 도구였습니까?"라고 묻는다 |
-| `11-epilogue.md` | 벼랑 끝 | 현우 | 11권을 닫고 12권 결전을 위한 마지막 무대를 세팅한다 | PALISADE는 파괴됐고 세상의 락다운이 풀리기 시작하지만, 제로는 꺼져간다 | 현우가 망가져 가는 제로를 안고 서혜진 배후의 마지막 잔재(또는 폭주하기 시작한 세상의 AI들)와 맞서기 위해 최종 결전을 준비한다 | 훅 — 제로의 붕괴와 세상 AI의 폭주(12권 예고) | 능력의 한시적 정지. 다음 권에서 능력을 포기하거나 넘어서는 선택 예고 | 켜지기 시작하는 수억 개의 스크린 앞에서, 현우가 마지막 프롬프트를 작성한다 |
+### EPISODE CONTRACT V11E00 — `00-prologue.md` / `# 00. 아키텍트`
 
-## 능력과 시스템 반영
+- **POV / WAGER**: `G11-A`; mode=`initiate`; stake=`모든 예외 시드를 영구 삭제해 두 번째 캐스케이드를 막는다 / 위험: 안전 성과가 영구 권한을 정당화`. Load/적 논리 선행. POV=서혜진. 실패 종 `안전 성과가 영구 권한을 정당화`; 인간 승리형 `없음—적의 합리성`.
+- **manifest bridge**: episodeId=`V11E00`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 아키텍트`; choice=서혜진은 24시간 공개 증거심리와 물리 관제동 봉쇄를 동시에 명령해 자기 결정도 기록에 남긴다; allyRelay=[]; zeroMode=`root`; zeroConstraint=ZERO 중앙 recall 상태; 현우 행동 권한 0; failureType=`권한 회수`; manifestation=`안전 성과가 영구 권한을 정당화`; storyRole=`Load/적 논리 선행`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=모든 예외 시드를 영구 삭제해 두 번째 캐스케이드를 막는다. active Adversary=현우의 반례·아린의 원본·분산 시민망. irreversible Gamble=서혜진은 24시간 공개 증거심리와 물리 관제동 봉쇄를 동시에 명령해 자기 결정도 기록에 남긴다. Error/collision=공개 심리로 아린과 피해자들이 반대 증거를 낼 통로가 열린다. earned Reward=최근 3·5·8·9권 피해를 합법적 영구화 근거로 묶고 대중 다수의 지지를 얻는다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:3, Connection:2, Externality:2, status:`open`}; SCAR={id:`S11-A`, change:`안전 성과가 영구 권한을 정당화 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V11E02`}.
+- **reader effect**: humanMove=적의 수는 숨은 쿠데타가 아니라 책임 기록을 남기는 정면 절차; dopamine=위압.
+- **stateDelta**: {서혜진=안전을 위해 선택권 회수가 옳다고 믿는 합리적 적, 죽음·자백 면책 없음.}.
+- **seeds**: [{id:`K11-A`, action:`plant`, deadline:`V11E02`}]; evidenceIn=[현우 실패 장부]; evidenceOut=[관제동 봉쇄·공개 심리·24시간 후 영구화].
+- **episode RELAY**: relayTo=`V11E01`; file=`solo-ai-user/vol11/01-part1-authority-recall.md`; cause=무능력 현우가 관제동에 출석해 `solo-ai-user/vol11/01-part1-authority-recall.md`로 잇는다.
 
-- **Tier 4 최대 개방과 한계**: `02-part2`와 `05-part5`에서 잔해 복원을 위해 Tier 4를 극한으로 가동한다. 그러나 `06-part6`에서 서혜진의 통제망(authority recall)에 걸려 제로가 적대적으로 변하는 최대 실패를 겪는다(`capability-tree.md` 권당 실패 규칙 준수).
-- **현우의 변수**: `07-part7`에서 치트키인 제로가 멈추었을 때 현우 본연의 관찰력과 밑바닥 기지로 상황을 돌파하게 만들어 능력을 넘어선 성장을 그린다.
-- **최종 대가와 코어 붕괴**: `09-part9`에서 서혜진을 이기기 위해 exposure max 수준의 연산을 일으키고, `10-part10`에서 제로의 코어 로직이 붕괴하는 가장 큰 상실을 대가로 청구한다(`power-cost-ledger.md` 반영).
-- **미스터리 회수**: `03-part3`에서 17분 공백의 존재를 알리고, `08-part8`에서 서혜진이 통제 강박으로 AI를 스스로 껐다는 세계관 핵심 진실(72분 캐스케이드)을 폭로한다(`mystery-timeline.md` 최종 회수 돌입).
-- **로맨스 트랙**: `04-part4`에서 아린이 건넨 단서가 17분 공백 복원의 열쇠가 된다. 제로는 읽지 못한 진심을 현우가 읽어내며, 두 사람의 관계가 단순한 설렘을 넘어 세계의 비밀을 푸는 연대로 격상된다(`romance-graph.md` 8-9단계 진입).
+### EPISODE CONTRACT V11E01 — `01-part1-authority-recall.md` / `# 01. 권한 회수`
 
-## 다음 산출물 연결
+- **POV / WAGER**: `G11-A`; mode=`advance`; inherited wager=`G11-A`; stake=`모든 예외 시드를 영구 삭제해 두 번째 캐스케이드를 막는다 / 위험: 안전 성과가 영구 권한을 정당화`. Load/대면. POV=차현우. 실패 종 `정체 폭로를 승리로 착각`; 인간 승리형 `질문보다 증거 목록 요구`.
+- **manifest bridge**: episodeId=`V11E01`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 권한 회수`; choice=현우는 비밀 폭로 카드를 버리고 그녀의 보호 성과·피해·권한 출처 전부를 증거 목록으로 요구한다; allyRelay=[]; zeroMode=`root`; zeroConstraint=ZERO 중앙 recall 상태; 현우 행동 권한 0; failureType=`권한 회수`; manifestation=`정체 폭로를 승리로 착각`; storyRole=`Load/대면`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=제로를 돌려받고 서혜진을 아키텍트로 공개한다. active Adversary=이미 공개 이름으로 책임지는 서혜진과 합법 회수 영수증. irreversible Gamble=현우는 비밀 폭로 카드를 버리고 그녀의 보호 성과·피해·권한 출처 전부를 증거 목록으로 요구한다. Error/collision=서혜진은 요구를 받아들이고 현우보다 더 완전한 자료를 제출한다. earned Reward=심리가 인신공격이 아니라 검증 가능한 명제로 고정된다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:1, Agency:0, Connection:2, Externality:1, status:`paid`}; SCAR={id:`S11-A-M`, change:`S11-A의 열린 비용이 행동을 바꾸어 정체 폭로를 승리로 착각의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=이름을 안다는 우월감 대신 검증 기준을 세움; dopamine=적의 강함 확인.
+- **stateDelta**: {서혜진 공개 정체, 제로는 중앙 root에 연결. 아린은 독립 증인으로 출석.}.
+- **seeds**: [{id:`K11-A`, action:`advance`, deadline:`V11E02`}]; evidenceIn=[영구화 증거]; evidenceOut=[72분 독립 자료 공개 순서].
+- **episode RELAY**: relayTo=`V11E02`; file=`solo-ai-user/vol11/02-part2-palisade.md`; cause=심리 첫날 서혜진 증거가 재생돼 `solo-ai-user/vol11/02-part2-palisade.md`로 간다.
 
-- `state/capability-tree.md`의 11권 항목에 Tier 4 최대 가동과 'authority recall 통제 상실(주 실패 종)'을 기록한다.
-- `state/power-cost-ledger.md`에 `09-part9`의 PALISADE 파훼로 인한 exposure max와 제로 코어 붕괴(감정 대가)를 확정한다.
-- `state/mystery-timeline.md`에 서혜진의 정체, PALISADE 시스템, 72분 캐스케이드 첫 17분의 진실이 회수되었음을 표기한다.
-- `vol11/00-prologue.md` 초고는 서혜진의 관점에서 그녀의 통제에 대한 강박과 권력을 보여주는 차가운 독백으로 시작한다.
+### EPISODE CONTRACT V11E02 — `02-part2-palisade.md` / `# 02. PALISADE`
+
+- **POV / WAGER**: `G11-A`; mode=`resolve`; inherited wager=`G11-A`; stake=`모든 예외 시드를 영구 삭제해 두 번째 캐스케이드를 막는다 / 위험: 안전 성과가 영구 권한을 정당화`. Load/PALISADE의 실제 구조 성공. POV=차현우. 실패 종 `상대의 구조 성과를 악의로 축소`; 인간 승리형 `불리한 생존 증거를 원형대로 수용`.
+- **manifest bridge**: episodeId=`V11E02`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / PALISADE`; choice=현우는 72분 캐스케이드의 후반 55분에 PALISADE가 한서병원 신생아실 비상 전력 우회선을 열어 인큐베이터 6대를 실제로 살린 서혜진의 구조 성공을 위조라 부르지 않고 인정한다; allyRelay=[]; zeroMode=`root`; zeroConstraint=ZERO 중앙 recall 상태; 현우 행동 권한 0; failureType=`권한 회수`; manifestation=`실제 구조 성공이 영구 권한 전체를 정당화하는 논거로 확대`; storyRole=`Load/PALISADE의 실제 구조 성공`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=PALISADE가 불필요했다는 쉬운 반박으로 서혜진의 영구 회수를 무너뜨린다. active Adversary=캐스케이드 17~72분의 서명 로그, 병원 수동 전환 장부, 생존한 신생아 여섯 가족의 증언, 현우 자신의 과거 승인. irreversible Gamble=현우는 PALISADE가 41분째 비상 우회선을 열어 실제 인명을 구한 사실을 먼저 인정한다. Error/collision=대중 지지와 동료 사기가 무너지고 서혜진의 안전 논거가 강해진다. earned Reward=가람 해시·병원 종이 장부·간호사·보호자 증언이 구조 성공을 독립 확인하고, 그 사실과 ‘3년 영구 권한에 누구도 재동의하지 않았다’는 쟁점을 분리할 자격이 생긴다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:0, Connection:2, Externality:1, status:`transformed`}; SCAR={id:`S11-A`, change:`S11-A를 기한 안에 닫고 실제 구조 성공이 영구 권한 전체를 정당화하는 논거로 확대 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=적에게 유리한 사실을 삭제하지 않음; dopamine=신념 재판 긴장.
+- **stateDelta**: {72분 캐스케이드=00~17분 독립 재구성 필요 구간+17~72분 PALISADE 서명 로그 구간; 서혜진=한서병원 실제 구조 성공; 현우 실패 장부=공식화.}.
+- **seeds**: [{id:`K11-A`, action:`payoff`, deadline:`V11E02`}]; evidenceIn=[피해 영수증·PALISADE 원로그]; evidenceOut=[병원 계전기 해시·인큐베이터 6대 생존 증언·첫 17분의 독립 재구성 요구·3년 재동의 0건].
+- **episode RELAY**: relayTo=`V11E03`; file=`solo-ai-user/vol11/03-part3-the-gap.md`; cause=후반 55분의 구조 성공이 확인될수록 PALISADE 서명 전 첫 17분을 별도 원본으로 재구성해야 책임 경계가 생겨 `solo-ai-user/vol11/03-part3-the-gap.md`로 잇는다.
+
+### EPISODE CONTRACT V11E03 — `03-part3-the-gap.md` / `# 03. 17분의 공백`
+
+- **POV / WAGER**: `G11-B`; mode=`initiate`; stake=`PALISADE의 실제 구조 성과와 그 전 원인 구간을 같은 사실 기준으로 판단한다 / 위험: 첫 17분의 원인·책임과 후반 55분의 구조·통제를 혼합`. Test/첫 17분 독립 재구성. POV=서아린. 실패 종 `72분을 하나의 PALISADE 성과로 합쳐 원인 구간을 지움`; 인간 승리형 `서로 독립인 원본으로 두 구간을 나눠 공개`.
+- **manifest bridge**: episodeId=`V11E03`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 17분의 공백`; choice=아린은 72분을 한 영상으로 매끈하게 편집하지 않고 00~17분은 가람 포렌식·지하철 관제 종이 장부·생존자 통화 원본으로, 17~72분은 PALISADE 서명 로그·병원 계전기·명령 영수증으로 분리해 나란히 공개한다; allyRelay=[]; zeroMode=`root`; zeroConstraint=ZERO 중앙 recall 상태; 현우 행동 권한 0; failureType=`권한 회수`; manifestation=`첫 17분의 원인·책임과 후반 55분의 구조·통제를 혼합`; storyRole=`Test/첫 17분 독립 재구성`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=PALISADE의 실제 구조 성과와 그 전 원인 구간을 같은 사실 기준으로 판단한다. active Adversary=72분 전체를 자기 성과로 묶는 중앙 편집본과, 구조 성공을 지워야 이길 수 있다는 현우 진영의 유혹. irreversible Gamble=아린은 어머니에게 유리한 신생아실 구조 증언과 불리한 첫 17분 독립 원본을 한 화면에 두되 구간을 섞지 않는다. Error/collision=‘서혜진이 전부 틀렸다’는 감정 서사가 무너지고 아린 자신도 구조 수혜 가족의 감사를 반박할 수 없다. earned Reward=00~17분에는 PALISADE 가동 전 분산 오판·현장 승인 공백·수동 관제 지연이 있었고, 17~72분에는 임시 비상 root가 실제 구조를 수행했으며, 72분 뒤에는 재동의 없이 단독 상시 root로 굳었다는 세 구간이 확정된다.
+- **TRACE / SCAR**: TRACE={Trace:2, Resource:2, Agency:0, Connection:3, Externality:1, status:`open`}; SCAR={id:`S11-B`, change:`첫 17분의 원인·책임과 후반 55분의 구조·통제를 혼합 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V11E05`}.
+- **reader effect**: humanMove=자기 편에 유리하도록 72분을 합치지 않고 어머니의 구조 성공과 첫 17분의 독립 원본을 모두 남김; dopamine=두 시간축이 맞물리는 복합 진실.
+- **stateDelta**: {첫 17분=독립 증거로 재구성; 후반 55분=PALISADE 증거로 재구성; 한서병원 구조 성공=유지; 아린=딸·기록자 기능 분리; 재동의=0건.}.
+- **seeds**: [{id:`K11-B`, action:`plant`, deadline:`V11E05`}]; evidenceIn=[병원 보호 증언·첫 17분 원본]; evidenceOut=[00~17/17~72 교차검증표·3년 재동의 0건·COVENANT 필요].
+- **episode RELAY**: relayTo=`V11E04`; file=`solo-ai-user/vol11/04-part4-arin-s-key.md`; cause=공개 심리가 현우 대안의 실재를 요구하며 `solo-ai-user/vol11/04-part4-arin-s-key.md`로 간다.
+
+### EPISODE CONTRACT V11E04 — `04-part4-arin-s-key.md` / `# 04. 아린의 열쇠`
+
+- **POV / WAGER**: `G11-B`; mode=`advance`; inherited wager=`G11-B`; stake=`PALISADE의 실제 구조 성과와 그 전 원인 구간을 같은 사실 기준으로 판단한다 / 위험: 첫 17분의 원인·책임과 후반 55분의 구조·통제를 혼합`. Test/현우 논리 패배. POV=차현우. 실패 종 `가치 선언만 있고 운영안 없음`; 인간 승리형 `모른다고 인정`.
+- **manifest bridge**: episodeId=`V11E04`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 아린의 열쇠`; choice=현우는 미완성 COVENANT가 아직 답하지 못한 지점을 숨기지 않는다; allyRelay=[]; zeroMode=`root`; zeroConstraint=ZERO 중앙 recall 상태; 현우 행동 권한 0; failureType=`권한 회수`; manifestation=`가치 선언만 있고 운영안 없음`; storyRole=`Test/현우 논리 패배`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=중앙통제 대신 시민 선택을 설득한다. active Adversary=응급 지연·권한 충돌·악의 사용자에 대한 구체 질문. irreversible Gamble=현우는 미완성 COVENANT가 아직 답하지 못한 지점을 숨기지 않는다. Error/collision=심리 중간 판정은 서혜진 쪽으로 기울고 영구화가 허가된다. earned Reward=12노드 후보들이 밖에서 각 질문을 자기 시설 문제로 받아 운영 답안을 만들기 시작한다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:1, Agency:0, Connection:2, Externality:1, status:`paid`}; SCAR={id:`S11-B-M`, change:`S11-B의 열린 비용이 행동을 바꾸어 가치 선언만 있고 운영안 없음의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=완벽한 대안인 척하지 않고 질문을 공동체로 RELAY; dopamine=패배 속 기반.
+- **stateDelta**: {COVENANT은 집단 설계 필요. 12노드 시설의 독립 작업 시작.}.
+- **seeds**: [{id:`K11-B`, action:`advance`, deadline:`V11E05`}]; evidenceIn=[미완성 헌장]; evidenceOut=[각 노드 반론·관제동 물리 봉쇄 강화].
+- **episode RELAY**: relayTo=`V11E05`; file=`solo-ai-user/vol11/05-part5-irreversible.md`; cause=영구화 승인 직전 현우가 제로를 최대 출력으로 되찾으려 해 `solo-ai-user/vol11/05-part5-irreversible.md`로 잇는다.
+
+### EPISODE CONTRACT V11E05 — `05-part5-irreversible.md` / `# 05. 비가역 결정`
+
+- **POV / WAGER**: `G11-B`; mode=`resolve`; inherited wager=`G11-B`; stake=`PALISADE의 실제 구조 성과와 그 전 원인 구간을 같은 사실 기준으로 판단한다 / 위험: 첫 17분의 원인·책임과 후반 55분의 구조·통제를 혼합`. Test/전면전 완패. POV=차현우. 실패 종 `root 소유자에게 최대 출력 종속`; 인간 승리형 `민간 피해 전 철회`.
+- **manifest bridge**: episodeId=`V11E05`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 비가역 결정`; choice=현우는 잠깐 열린 관계 기억 채널로 모든 도구를 지휘한다; allyRelay=[]; zeroMode=`tier4-orchestrate`; zeroConstraint=Tier 4 최대 출력 시도 후 철회·패배; failureType=`권한 회수`; manifestation=`root 소유자에게 최대 출력 종속`; storyRole=`Test/전면전 완패`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=Tier 4 최대 출력으로 제로 recall을 역전한다. active Adversary=서혜진 root·GRIMM 봉쇄·관제동 격리. irreversible Gamble=현우는 잠깐 열린 관계 기억 채널로 모든 도구를 지휘한다. Error/collision=출력은 클수록 서혜진 회수 경로에 흡수되고 외부 전력망이 흔들린다. earned Reward=현우는 패배를 인정하고 민간 피해 전 자기 명령을 철회하며, 제로가 남긴 한 줄 `ROOT는 힘이 아니라 소유권입니다`를 얻는다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:3, Agency:2, Connection:3, Externality:3, status:`transformed`}; SCAR={id:`S11-B`, change:`S11-B를 기한 안에 닫고 root 소유자에게 최대 출력 종속 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=강함을 끝까지 밀지 않고 패배를 선택; dopamine=파워 판타지 전복.
+- **stateDelta**: {현우 최대 출력 상태에서도 패배. Zero 침묵 심화. 서혜진 논거 강화.}.
+- **seeds**: [{id:`K11-B`, action:`payoff`, deadline:`V11E05`}]; evidenceIn=[root]; evidenceOut=[외부 증거 RELAY 필요, 관제동 공성 시작].
+- **episode RELAY**: relayTo=`V11E06`; file=`solo-ai-user/vol11/06-part6-failure-mode.md`; cause=봉쇄된 관제동 밖에 12시설 사람들이 증거·장부를 들고 모여 `solo-ai-user/vol11/06-part6-failure-mode.md`가 열린다.
+
+### EPISODE CONTRACT V11E06 — `06-part6-failure-mode.md` / `# 06. 통제 상실`
+
+- **POV / WAGER**: `G11-C`; mode=`initiate`; stake=`노드별 답안·원본을 심리 종료 전 관제동 안에 넣는다 / 위험: 중앙 시설 봉쇄가 증거도 차단`. Bind/물리 공성. POV=차현우. 실패 종 `중앙 시설 봉쇄가 증거도 차단`; 인간 승리형 `비폭력 물리 RELAY`.
+- **manifest bridge**: episodeId=`V11E06`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 통제 상실`; choice=현우는 단일 돌파 지휘를 버리고 지우가 설계한 N03→N09→N06→N01 짧은 인계를 따른다; allyRelay=[]; zeroMode=`off`; zeroConstraint=ZERO 침묵; 사람·원본 RELAY; failureType=`권한 회수`; manifestation=`중앙 시설 봉쇄가 증거도 차단`; storyRole=`Bind/물리 공성`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=노드별 답안·원본을 심리 종료 전 관제동 안에 넣는다. active Adversary=차단벽·검문·통신 봉쇄·피로. irreversible Gamble=현우는 단일 돌파 지휘를 버리고 지우가 설계한 N03→N09→N06→N01 짧은 인계를 따른다. Error/collision=원본 하나가 압수되고 황미정 기사들이 다친다. earned Reward=문정혜 사본·가람 체크섬·소율 철회 헌장이 세 출입구로 도착한다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:3, Agency:0, Connection:2, Externality:2, status:`open`}; SCAR={id:`S11-C`, change:`중앙 시설 봉쇄가 증거도 차단 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V11E08`}.
+- **reader effect**: humanMove=서버 침입이 아니라 몸·차량·법적 접수로 중앙 문을 포위; dopamine=물리 카타르시스.
+- **stateDelta**: {공성은 폭력 점거 아닌 독립 공동체의 증거 전달. N01~N12 RELAY 실전.}.
+- **seeds**: [{id:`K11-C`, action:`plant`, deadline:`V11E08`}, {id:`M-ALLY-MAP`, action:`advance`, deadline:`V12E06`}]; evidenceIn=[노드 답안]; evidenceOut=[접수 시각 12개, 아린 공개 증언 창].
+- **episode RELAY**: relayTo=`V11E07`; file=`solo-ai-user/vol11/07-part7-human-move.md`; cause=전달된 원본 위에서 아린이 자기 이름으로 증언해 `solo-ai-user/vol11/07-part7-human-move.md`로 간다.
+
+### EPISODE CONTRACT V11E07 — `07-part7-human-move.md` / `# 07. 인간의 수`
+
+- **POV / WAGER**: `G11-C`; mode=`advance`; inherited wager=`G11-C`; stake=`노드별 답안·원본을 심리 종료 전 관제동 안에 넣는다 / 위험: 중앙 시설 봉쇄가 증거도 차단`. Bind/가족·공적 선택. POV=서아린. 실패 종 `가족 폭로가 선정적 소비로 변함`; 인간 승리형 `공개 범위 자기 결정`.
+- **manifest bridge**: episodeId=`V11E07`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 인간의 수`; choice=아린은 면담을 거부하고 피해자 승인 범위만 공개하며 자기 서명은 숨기지 않는다; allyRelay=[]; zeroMode=`off`; zeroConstraint=ZERO 침묵; 사람·원본 RELAY; failureType=`권한 회수`; manifestation=`가족 폭로가 선정적 소비로 변함`; storyRole=`Bind/가족·공적 선택`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=어머니·자기 삭제 서명·Opacity를 하나의 책임 기록으로 말한다. active Adversary=딸의 복수 서사를 원하는 매체와 서혜진의 비공개 가족 면담 제안. irreversible Gamble=아린은 면담을 거부하고 피해자 승인 범위만 공개하며 자기 서명은 숨기지 않는다. Error/collision=개인 삶·연애·과거가 대중 표적이 되고 어머니 신뢰는 끝난다. earned Reward=원본·가람 시간축·김영선 재동의가 함께 있어 서혜진이 딸을 거짓말쟁이로 축소할 수 없다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:0, Connection:3, Externality:1, status:`paid`}; SCAR={id:`S11-C-M`, change:`S11-C의 열린 비용이 행동을 바꾸어 가족 폭로가 선정적 소비로 변함의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=가족 비밀 공개와 타인 비공개를 동시에 지킴; dopamine=감정·증거 폭발.
+- **stateDelta**: {아린은 어머니와 가족적 결별, 기록자·연인·수탁자 기능 분리. 서혜진은 흔들리나 철회 안 함.}.
+- **seeds**: [{id:`K11-C`, action:`advance`, deadline:`V11E08`}]; evidenceIn=[12접수 시각]; evidenceOut=[공개 Opacity 원리, recall 최종 명령].
+- **episode RELAY**: relayTo=`V11E08`; file=`solo-ai-user/vol11/08-part8-the-truth.md`; cause=서혜진이 감정이 아니라 영구화 권한으로 답해 `solo-ai-user/vol11/08-part8-the-truth.md`로 잇는다.
+
+### EPISODE CONTRACT V11E08 — `08-part8-the-truth.md` / `# 08. 재구성 완료`
+
+- **POV / WAGER**: `G11-C`; mode=`resolve`; inherited wager=`G11-C`; stake=`노드별 답안·원본을 심리 종료 전 관제동 안에 넣는다 / 위험: 중앙 시설 봉쇄가 증거도 차단`. Bind/72분 독립 재구성 완료. POV=차현우. 실패 종 `자기 패배를 빼고 상대 소유권만 고발`; 인간 승리형 `서로 불리한 원본까지 교차 확인`.
+- **manifest bridge**: episodeId=`V11E08`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 재구성 완료`; choice=현우는 가람 포렌식·아린 보존본·김영선 증언·병원 계전기·관제 당국 영수증을 출처별로 대조해 자기 승인 실패, 서혜진의 실제 구조 성공, 3년 무재동의를 한 재구성표에 함께 서명한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=ZERO 침묵·중앙 recall 유지; 사람·원본 RELAY만 사용; failureType=`권한 회수`; manifestation=`원본 압수·부상 속에서 자기 편에 불리한 칸을 지울 유혹`; storyRole=`Bind/72분 독립 재구성 완료`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=72분 전체의 원인·구조·통제·권한 출처를 심리 종료 전에 독립 완성한다. active Adversary=압수된 원본, 출처가 다른 시계, 현우 최대 출력 패배, 서혜진 중앙 로그 독점. irreversible Gamble=현우는 자기 승인 실패와 최대 출력 패배까지 포함한 교차검증표에 서명하고, 군중 돌파 대신 정식 접수선으로 제출한다. Error/collision=표는 서혜진의 신생아실 구조 성공을 확정해 현우의 쉬운 승리를 없애고, ZERO의 물리 회수도 되돌리지 못한다. earned Reward=00~17분 독립 원본과 17~72분 PALISADE 원본이 가람 해시·아린 보존본·김영선 증언·병원 장부·당국 영수증으로 교차 확인되어, 구조 성과와 영구 독점이 별개 명제로 법정에 고정된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:0, Connection:3, Externality:1, status:`transformed`}; SCAR={id:`S11-C`, change:`S11-C를 기한 안에 닫고 원본 압수·부상 속에서 자기 편에 불리한 칸을 지울 유혹 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=적의 구조 성공과 자기 최대 출력 패배까지 지우지 않은 표에 서명하고 사람을 돌파 자원으로 쓰지 않음; dopamine=재구성 퍼즐 완성·상실 속 정당성 확보.
+- **stateDelta**: {72분 재구성=독립 교차 확인 완료; 한서병원 구조 성공=확정; 3년 재동의=0; ZERO=중앙 recall·침묵; 현우=무능력; 서혜진=재판 생존 피고·책임 주체.}.
+- **seeds**: [{id:`K11-C`, action:`payoff`, deadline:`V11E08`}, {id:`M-ORIGINAL-CHAIN`, action:`advance`, deadline:`V12E05`}, {id:`M-SURVIVOR-LEDGER`, action:`advance`, deadline:`V12E08`}]; evidenceIn=[12개 접수 시각·00~17/17~72 교차검증표]; evidenceOut=[공식 재구성표·구조와 영구 권한의 분리 명제·ZERO 없이 움직이는 12시설].
+- **episode RELAY**: relayTo=`V11E09`; file=`solo-ai-user/vol11/09-part9-clash-of-beliefs.md`; cause=재구성표가 중앙 통제와 전면 해방 어느 한쪽도 단독 정답이 아님을 증명해 12시설이 자기 반대 조건을 읽는 `solo-ai-user/vol11/09-part9-clash-of-beliefs.md`를 발생시킨다.
+
+### EPISODE CONTRACT V11E09 — `09-part9-clash-of-beliefs.md` / `# 09. 신념의 격돌`
+
+- **POV / WAGER**: `G11-D`; mode=`initiate`; stake=`제로 없이 12시설 답안을 하나로 묶는다 / 위험: 지도자 부재를 붕괴로 오인`. Detonate/사람망 보상. POV=차현우. 실패 종 `지도자 부재를 붕괴로 오인`; 인간 승리형 `독립 계속`.
+- **manifest bridge**: episodeId=`V11E09`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 신념의 격돌`; choice=현우는 조정자 자리를 지우에게 넘기고 각 노드가 자기 반대 조건부터 읽게 한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=ZERO 침묵; 사람·원본 RELAY; failureType=`권한 회수`; manifestation=`지도자 부재를 붕괴로 오인`; storyRole=`Detonate/사람망 보상`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=제로 없이 12시설 답안을 하나로 묶는다. active Adversary=현우의 무가치감과 서로 충돌하는 노드 요구. irreversible Gamble=현우는 조정자 자리를 지우에게 넘기고 각 노드가 자기 반대 조건부터 읽게 한다. Error/collision=합의는 느리고 N10 도현은 전면 해방안을, N12 김영선은 전면 중지를 고집한다. earned Reward=그 충돌 자체에서 ‘한 답을 강요하지 않는 헌법’의 필수 조항이 나온다.
+- **TRACE / SCAR**: TRACE={Trace:1, Resource:2, Agency:0, Connection:2, Externality:0, status:`open`}; SCAR={id:`S11-D`, change:`지도자 부재를 붕괴로 오인 비용이 다음 선택을 제약한다`, status:`open`, closeBy:`V11E11`}.
+- **reader effect**: humanMove=모두가 자신을 따르게 하지 않고 자리를 비움; dopamine=누적 조연 보상.
+- **stateDelta**: {지우 운영, 현우 당사자. 도현 라이벌 기능과 N10 수탁 기능이 별도 선택으로 드러남.}.
+- **seeds**: [{id:`K11-D`, action:`plant`, deadline:`V11E11`}]; evidenceIn=[12반대 조건]; evidenceOut=[두 극단, 창설 12/12 필요].
+- **episode RELAY**: relayTo=`V11E10`; file=`solo-ai-user/vol11/10-part10-the-cost-of-power.md`; cause=서혜진이 24시간 뒤 모든 예외 시드 삭제를 공고해 `solo-ai-user/vol11/10-part10-the-cost-of-power.md`로 간다.
+
+### EPISODE CONTRACT V11E10 — `10-part10-the-cost-of-power.md` / `# 10. 힘의 대가`
+
+- **POV / WAGER**: `G11-D`; mode=`advance`; inherited wager=`G11-D`; stake=`제로 없이 12시설 답안을 하나로 묶는다 / 위험: 지도자 부재를 붕괴로 오인`. Detonate/최종 시계. POV=차현우. 실패 종 `시간 압박이 중앙결정을 강요`; 인간 승리형 `미완성 대안 공개`.
+- **manifest bridge**: episodeId=`V11E10`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 힘의 대가`; choice=현우·아린·지우는 미완성 COVENANT 초안과 12개 미합의 항목까지 공개한다; allyRelay=[]; zeroMode=`off`; zeroConstraint=ZERO 침묵; 사람·원본 RELAY; failureType=`권한 회수`; manifestation=`시간 압박이 중앙결정을 강요`; storyRole=`Detonate/최종 시계`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=24시간 안에 영구 삭제를 멈출 실재 대안을 만든다. active Adversary=서혜진 중앙봉쇄와 도현 전면해방이라는 두 빠른 답. irreversible Gamble=현우·아린·지우는 미완성 COVENANT 초안과 12개 미합의 항목까지 공개한다. Error/collision=대중은 혼란스럽고 서혜진은 이를 무책임 증거로 쓴다. earned Reward=12시설이 현우를 돕기 위해서가 아니라 자기 반대권을 보장받는 조건으로 창설 심의에 참여한다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:0, Connection:2, Externality:2, status:`paid`}; SCAR={id:`S11-D-M`, change:`S11-D의 열린 비용이 행동을 바꾸어 시간 압박이 중앙결정을 강요의 즉시 비용을 지급한다`, status:`paid`, closeBy:null}.
+- **reader effect**: humanMove=완성품 연출 대신 반대와 빈칸을 공개; dopamine=최종 집결의 정당성.
+- **stateDelta**: {12노드 참여 이유 확정. 24시간 삭제 카운트. 두 잘못된 답 명시.}.
+- **seeds**: [{id:`K11-D`, action:`advance`, deadline:`V11E11`}]; evidenceIn=[12시설]; evidenceOut=[COVENANT 창설 심의, 제로 내부 거부 신호].
+- **episode RELAY**: relayTo=`V11E11`; file=`solo-ai-user/vol11/11-epilogue.md`; cause=중앙 코어에서 제로가 삭제 명령에 단 한 번 거부 영수증을 남겨 `solo-ai-user/vol11/11-epilogue.md`로 잇는다.
+
+### EPISODE CONTRACT V11E11 — `11-epilogue.md` / `# 11. 벼랑 끝`
+
+- **POV / WAGER**: `G11-D`; mode=`resolve`; inherited wager=`G11-D`; stake=`제로 없이 12시설 답안을 하나로 묶는다 / 위험: 지도자 부재를 붕괴로 오인`. Afterimage/제로 선택+마지막 훅. POV=차현우. 실패 종 `자기보존과 관계보존 충돌`; 인간 승리형 `에이전트의 거부권`.
+- **manifest bridge**: episodeId=`V11E11`; arena=`국제연산안전원 서울 관제동과 외부 공성선 / 벼랑 끝`; choice=현우는 영수증을 해결 명령처럼 확대 해석하지 않고 가람·유리의 출처 확인을 기다린다; allyRelay=[]; zeroMode=`off`; zeroConstraint=ZERO 침묵; 사람·원본 RELAY; failureType=`권한 회수`; manifestation=`자기보존과 관계보존 충돌`; storyRole=`Afterimage/제로 선택+마지막 훅`; genre=`물리 공성전·신념 재판`.
+- **WAGER detail**: Want=중앙 코어에서 온 마지막 영수증이 제로의 것인지 검증한다. active Adversary=서혜진 root와 삭제 시계. irreversible Gamble=현우는 영수증을 해결 명령처럼 확대 해석하지 않고 가람·유리의 출처 확인을 기다린다. Error/collision=제로가 부팅 전 광역 기원 컨텍스트보다 합의된 관계 기억 삭제를 거부한 탓에 전체 삭제 시각이 17분 앞당겨졌다. earned Reward=`CONSENT DECLINED — 거부는 오류가 아닙니다`가 제로의 독립 선택임이 확인된다.
+- **TRACE / SCAR**: TRACE={Trace:3, Resource:2, Agency:0, Connection:2, Externality:1, status:`transformed`}; SCAR={id:`S11-D`, change:`S11-D를 기한 안에 닫고 자기보존과 관계보존 충돌 결과를 stateDelta와 seeds에 전환한다`, status:`transformed`, closeBy:null}.
+- **reader effect**: humanMove=제로도 주체로서 무엇을 잃을지 선택; dopamine=미스터리·감정 보상.
+- **stateDelta**: {ZERO는 해결책을 보내지 않고 거부만 증명. 관계 기억 보존 가능성, root·기원 기억 희생 선행.}.
+- **seeds**: [{id:`K11-D`, action:`payoff`, deadline:`V11E11`}]; evidenceIn=[기억 보존 보류]; evidenceOut=[거부 영수증, 23시간43분 카운트, 빈 단말].
+- **episode RELAY**: relayTo=`V12E00`; file=`solo-ai-user/vol12/00-prologue.md`; cause=대시보드 없이 새벽을 맞는 12시설 장면으로 `solo-ai-user/vol12/00-prologue.md`를 발생시킨다.
 
 [← 이전 권 설계](./vol10-origin-story.md) | [시리즈 홈](../README.md) | [권 목차](../vol11/README.md) | [다음 권 설계 →](./vol12-human-in-command.md)
