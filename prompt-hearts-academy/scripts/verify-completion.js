@@ -144,21 +144,21 @@ function episodeLinkTarget(fromNumber, targetNumber) {
 }
 
 function expectedEpisodeNavigationLine(number) {
-  const links = [
-    "[시리즈 홈](../README.md)",
-    "[목차](./README.md)",
-  ];
+  const links = [];
 
   if (number > 1) {
-    const previousLabel = (number - 1) % 30 === 0 ? "이전권" : "이전화";
-    links.push(`[${previousLabel}: 제 ${number - 1}화 ←](${episodeLinkTarget(number, number - 1)})`);
+    const previousTitle = episodeTitleForNumber(number - 1);
+    links.push(`[← 이전: ${number - 1}화: ${previousTitle}](${episodeLinkTarget(number, number - 1)})`);
   }
 
+  links.push(
+    "[시리즈홈](../README.md)",
+    "[목차](./README.md)",
+  );
+
   if (number < 210) {
-    const nextLabel = number % 30 === 0 ? "다음권" : "다음화";
-    links.push(`[${nextLabel}: 제 ${number + 1}화 →](${episodeLinkTarget(number, number + 1)})`);
-  } else {
-    links.push("완결");
+    const nextTitle = episodeTitleForNumber(number + 1);
+    links.push(`[다음: ${number + 1}화: ${nextTitle} →](${episodeLinkTarget(number, number + 1)})`);
   }
 
   return links.join(" | ");
@@ -273,20 +273,26 @@ function checkVolumes() {
     if (!episodeTitle) {
       fail(`${rel(episodePath)}: missing episode title text`);
     }
-    if (!text.includes("[시리즈 홈](../README.md)") || !text.includes("[목차](./README.md)")) {
+    if (!text.includes("[시리즈홈](../README.md)") || !text.includes("[목차](./README.md)")) {
       fail(`${rel(episodePath)}: missing standard navigation links`);
     }
-    const navigationLines = lines.filter((line) => line.startsWith("[시리즈 홈]"));
-    if (navigationLines.length !== 1) {
-      fail(`${rel(episodePath)}: expected exactly one navigation line, got ${navigationLines.length}`);
-    }
-    const navigationLine = navigationLines[0];
     const expectedNavigation = expectedEpisodeNavigationLine(number);
-    if (navigationLine !== expectedNavigation) {
-      fail(`${rel(episodePath)}: expected navigation "${expectedNavigation}", got "${navigationLine || "<missing>"}"`);
+    const navigationLines = lines.filter((line) => {
+      return line.includes("[시리즈홈](")
+        || line.includes("[시리즈 홈](")
+        || line.includes("[목차](");
+    });
+    if (navigationLines.length !== 2) {
+      fail(`${rel(episodePath)}: expected exactly two top/bottom navigation lines, got ${navigationLines.length}`);
+    }
+    if (navigationLines.some((line) => line !== expectedNavigation)) {
+      fail(`${rel(episodePath)}: expected both navigation lines to equal "${expectedNavigation}", got ${JSON.stringify(navigationLines)}`);
     }
     if (lines[1] !== "" || lines[2] !== expectedNavigation || lines[3] !== "") {
       fail(`${rel(episodePath)}: expected opening scaffold title, blank line, navigation, blank line`);
+    }
+    if (!text.endsWith(`\n\n---\n${expectedNavigation}\n`)) {
+      fail(`${rel(episodePath)}: expected closing scaffold blank line, separator, identical navigation, final newline`);
     }
     const canonMemoHeadings = [...text.matchAll(/^## Canon Memo$/gm)];
     if (!canonMemoHeadings.length) {
@@ -368,6 +374,7 @@ function checkMarkdown() {
   ];
   const docFiles = markdownFiles.filter((file) => !/\/vol\d{2}\/ep\d{3}\.md$/.test(rel(file)));
   const staleDocMarker = /TODO|TBD|FIXME|작성 예정|완결되지|예정 파일|진행 중/g;
+  const staleDistributionMarker = /dist\/|SHA256SUMS|build-dist\.js|배포본|권별 zip|체크섬/g;
   const localLink = /\[[^\]\n]+\]\((?!https?:|mailto:|#)([^)]+)\)/g;
 
   for (const file of markdownFiles) {
@@ -399,6 +406,10 @@ function checkMarkdown() {
     const markers = text.match(staleDocMarker);
     if (markers) {
       fail(`${rel(file)}: stale completion marker ${[...new Set(markers)].join(", ")}`);
+    }
+    const distributionMarkers = text.match(staleDistributionMarker);
+    if (distributionMarkers) {
+      fail(`${rel(file)}: stale distribution marker under no-dist policy ${[...new Set(distributionMarkers)].join(", ")}`);
     }
   }
 }
@@ -639,8 +650,23 @@ function checkRootCatalog() {
   }
 
   const expectedCatalogRow = "| **프롬프트 하트 아카데미** | AI 에이전트 캠퍼스 연애 라이트노벨 | 7권 210화 | ✅ 완결 | [작품 홈](./prompt-hearts-academy/README.md) |";
-  if (!text.includes(expectedCatalogRow)) {
-    fail(`README.md: missing exact catalog row ${expectedCatalogRow}`);
+  const catalogSectionStart = text.indexOf("## 작품 목록");
+  const catalogSectionEnd = catalogSectionStart === -1 ? -1 : text.indexOf("\n## ", catalogSectionStart + 1);
+  const catalogSection = catalogSectionStart === -1
+    ? ""
+    : text.slice(catalogSectionStart, catalogSectionEnd === -1 ? undefined : catalogSectionEnd);
+  const catalogTableLines = catalogSection.split(/\n/).filter((line) => line.startsWith("| "));
+  const expectedCatalogTableScaffold = [
+    "| 작품 | 장르 | 분량 | 상태 | 바로가기 |",
+    "| ---- | ---- | ---- | :--: | -------- |",
+  ];
+  if (catalogTableLines.slice(0, 2).join("\n") !== expectedCatalogTableScaffold.join("\n")) {
+    fail("README.md: expected exact current catalog table header and separator");
+  }
+
+  const promptHeartsRows = catalogTableLines.filter((line) => line.includes("**프롬프트 하트 아카데미**"));
+  if (promptHeartsRows.length !== 1 || promptHeartsRows[0] !== expectedCatalogRow) {
+    fail(`README.md: expected exactly one current catalog row ${expectedCatalogRow}, got ${JSON.stringify(promptHeartsRows)}`);
   }
 }
 
@@ -792,46 +818,34 @@ function checkCompletionDocs() {
 
   checkRequiredSnippets(path.join(projectRoot, "TASKS.md"), "prompt-hearts-academy/TASKS.md", [
     "본편 초고는 `vol01/ep001.md`부터 `vol07/ep210.md`까지 7권 210화 연속 구조로 완결되어 있다.",
+    "권별 README는 `vol01`부터 `vol07`까지 모두 존재하며, 각 권의 완결 회차 범위와 30개 회차 목록을 포함한다. 루트 `README.md`, `BIBLE.md`, `PRD.md`는 제210화 이후의 완결 상태를 반영한다.",
     "후속 에이전트는 본편 `ep211.md`나 `vol08` 같은 추가 권 디렉터리를 만들지 않는다.",
     "완결 원고의 검수, 부분 개정, 외전 후보 판단, 문서 동기화 기준으로 사용한다.",
     "본편 회차를 수정할 때는 제210화의 최종 상태인 공식 오버랩 페어링 종료, 비독점·철회 가능 자유 접속, 거절권 보존 결말을 깨지 않는다.",
     "시리즈 루트·outline·scripts·권별 디렉터리 허용 파일 집합",
     "회차별 이전/다음 내비게이션",
     "회차 제목 H1 고유성",
-    "회차 내비게이션 줄 고유성",
+    "회차 상·하단의 동일한 제목 포함 내비게이션 2줄",
+    "회차 첫머리 제목/내비게이션 배치",
     "회차 Canon Memo 필수 항목",
     "회차 Canon Memo 필수 항목과 말미 배치",
-    "회차 Canon Memo 필수 항목 순서",
-    "회차 Canon Memo 필수 항목 고유성",
-    "회차 Canon Memo 필수 항목 값 비어 있지 않음",
-    "회차 원고 최소 길이",
-    "권별 README 제목 H1 고유성과 첫 줄 배치",
-    "권별 README 완결 범위와 정확한 30화 목록",
-    "권별 README 회차 목록 표 정확한 헤더",
-    "권별 README 회차 목록 표 정확한 헤더와 추가 행 부재",
-    "권별 outline 30화 비트 표 정확한 헤더",
-    "권별 outline 30화 비트 표 정확한 헤더와 추가 행 부재",
-    "권별 outline 제목 H1 고유성과 첫 줄 배치",
-    "회차 파일 셀·링크 target",
-    "회차 역할 칸 비어 있지 않음",
-    "텍스트 파일 LF 줄바꿈과 마지막 개행",
+    "회차 원고 placeholder 마커 부재와 회차 원고 최소 길이",
+    "권별 README 회차 목록",
     "제210화 최종 결말 마커",
     "작품 홈 제목 H1 고유성과 첫 줄 배치",
-    "작품 홈 권 구성 표와 저장소 루트 작품 목록 행",
-    "작품 홈 권 구성 표 정확한 7행",
-    "작품 홈 권 구성 표 정확한 헤더",
-    "핵심 문서 PRD/BIBLE/TASKS 제목 H1 고유성과 첫 줄 배치",
+    "작품 홈 완결 표기와 권 구성 표",
     "저장소 루트 README 제목 H1 고유성과 첫 줄 배치",
-    "저장소 루트 작품 목록 표 정확한 헤더",
+    "저장소 루트 작품 목록 행",
     "저장소 루트 README의 픽션·AI 제작 안내",
-    "검산 스크립트 자체의 핵심 check 호출 순서",
+    "핵심 문서와 권별 문서의 픽션/허구 페르소나 경계",
     "node prompt-hearts-academy/scripts/verify-completion.js",
+    "이 명령이 통과하면 본편과 문서가 현재 파일 기준으로 일치한다.",
   ]);
 }
 
 function checkFictionBoundary() {
   checkRequiredSnippets(path.join(repoRoot, "README.md"), "README.md", [
-    "이 소설은 픽션이며, 등장하는 인물, 회사, 사건은 모두 허구이며 실제와 무관합니다.",
+    "이 소설들은 모두 픽션이며, 등장하는 인물, 회사, 기관, AI 페르소나, 사건은 모두 허구의 창작 설정이며 실제와 무관합니다.",
     "여러 AI 도구의 도움을 받아 작성되었으며, 자체 편집 및 퇴고를 통해 제작된 창작물입니다.",
   ]);
 
@@ -936,8 +950,8 @@ console.log(JSON.stringify({
     "episode ranges",
     "episode title/navigation/canon memo",
     "episode unique title heading",
-    "episode navigation line uniqueness",
-    "episode opening scaffold",
+    "episode two identical title-bearing navigation lines",
+    "episode opening and closing navigation scaffolds",
     "episode canon memo required fields",
     "episode canon memo field order",
     "episode canon memo unique fields",
@@ -962,8 +976,7 @@ console.log(JSON.stringify({
     "outline episode table no extra rows",
     "root catalog",
     "root catalog unique first-line title heading",
-    "root catalog table row",
-    "root catalog table exact rows",
+    "root catalog unique current series row",
     "root catalog table exact header",
     "series overview",
     "series overview unique first-line title heading",
@@ -979,6 +992,7 @@ console.log(JSON.stringify({
     "task guidance final markers",
     "verifier check orchestration",
     "doc stale markers",
+    "no distribution artifacts or stale distribution docs",
     "code fences",
     "trailing whitespace",
     "text file LF line endings",
