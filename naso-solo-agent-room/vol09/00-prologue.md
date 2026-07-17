@@ -1,6 +1,6 @@
 # 00. 관찰자 효과
 
-[← 이전 권: 8권](../vol08/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 윤아의 증거 →](./01-part1-yuna-proof.md)
+[← 이전: 11. 카메라 밖 대화](../vol08/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 윤아의 증거 →](./01-part1-yuna-proof.md)
 
 Codex는 관찰자라고 믿었다.
 
@@ -127,4 +127,4 @@ next_hook: 윤아가 한서윤에게 증거를 대조해 보여 준다
 
 ---
 
-[← 이전 권: 8권](../vol08/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 윤아의 증거 →](./01-part1-yuna-proof.md)
+[← 이전: 11. 카메라 밖 대화](../vol08/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 윤아의 증거 →](./01-part1-yuna-proof.md)

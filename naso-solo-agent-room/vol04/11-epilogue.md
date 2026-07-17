@@ -1,6 +1,6 @@
 # 11. 과거 로그
 
-[← 이전: 10. 레거시 오류](./10-part10-legacy-error.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음 권: 5권 →](../README.md)
+[← 이전: 10. 레거시 오류](./10-part10-legacy-error.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 의존성 그래프 →](../vol05/00-prologue.md)
 
 기수가 끝난 밤, 백이현은 또 제작실에 남았다.
 
@@ -173,4 +173,4 @@ next_volume_hook: 5권 Dependency Graph — 조건이 사랑을 방해하는가,
 
 ---
 
-[← 이전: 10. 레거시 오류](./10-part10-legacy-error.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음 권: 5권 →](../README.md)
+[← 이전: 10. 레거시 오류](./10-part10-legacy-error.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 의존성 그래프 →](../vol05/00-prologue.md)

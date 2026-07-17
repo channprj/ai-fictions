@@ -1,6 +1,6 @@
 # 11. 예측 중지
 
-[← 이전: 10. 제로샷 선택](./10-part10-zero-shot-choice.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음 권: 11권 →](../README.md)
+[← 이전: 10. 제로샷 선택](./10-part10-zero-shot-choice.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 루프 재개 →](../vol11/00-prologue.md)
 
 기수가 끝난 밤, 관찰실의 다섯은 한 가지를 요청했다.
 
@@ -114,4 +114,4 @@ next_volume_hook: 11권 Human-in-the-Loop — 방송 이후의 선택 결과는 
 
 ---
 
-[← 이전: 10. 제로샷 선택](./10-part10-zero-shot-choice.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음 권: 11권 →](../README.md)
+[← 이전: 10. 제로샷 선택](./10-part10-zero-shot-choice.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 루프 재개 →](../vol11/00-prologue.md)

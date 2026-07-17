@@ -1,6 +1,6 @@
 # 11. 마지막 기수
 
-[← 이전: 10. 라이브 선택](./10-part10-live-choice.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음 권: 12권 →](../vol12/README.md)
+[← 이전: 10. 라이브 선택](./10-part10-live-choice.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 마지막 관찰실 →](../vol12/00-prologue.md)
 
 나은결은 마지막 기수 공지를 받았다.
 
@@ -103,4 +103,4 @@ series_next: 12권 — 마지막 기수, 무예측 최종 선택, 예측 제거 
 
 ---
 
-[← 이전: 10. 라이브 선택](./10-part10-live-choice.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음 권: 12권 →](../vol12/README.md)
+[← 이전: 10. 라이브 선택](./10-part10-live-choice.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 마지막 관찰실 →](../vol12/00-prologue.md)

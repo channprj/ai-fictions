@@ -1,6 +1,6 @@
 # 00. 데드락 예고
 
-[← 이전 권: 7권](../vol07/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 선택 루프 →](./01-part1-choice-loop.md)
+[← 이전: 11. 개입 승인](../vol07/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 선택 루프 →](./01-part1-choice-loop.md)
 
 Gemini는 선명한 걸 좋아했다.
 
@@ -109,4 +109,4 @@ next_hook: 모두가 먼저 안 움직이는 선택 루프가 형성된다
 
 ---
 
-[← 이전 권: 7권](../vol07/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 선택 루프 →](./01-part1-choice-loop.md)
+[← 이전: 11. 개입 승인](../vol07/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 선택 루프 →](./01-part1-choice-loop.md)

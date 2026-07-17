@@ -1,6 +1,6 @@
 # 11. 위험 변수 삭제
 
-[← 이전: 10. 세경의 경계](./10-part10-segyeong-boundary.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음 권: 6권 →](../README.md)
+[← 이전: 10. 세경의 경계](./10-part10-segyeong-boundary.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 리팩터링 전야 →](../vol06/00-prologue.md)
 
 백이현의 감사 폴더는, 이제 증거집이었다.
 
@@ -183,4 +183,4 @@ next_volume_hook: 6권 Refactor Your Name — 새 사랑은 과거를 이기는 
 
 ---
 
-[← 이전: 10. 세경의 경계](./10-part10-segyeong-boundary.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음 권: 6권 →](../README.md)
+[← 이전: 10. 세경의 경계](./10-part10-segyeong-boundary.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 00. 리팩터링 전야 →](../vol06/00-prologue.md)

@@ -1,6 +1,6 @@
 # 00. 리팩터링 전야
 
-[← 이전 권: 5권](../vol05/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 오래된 이름 →](./01-part1-old-name.md)
+[← 이전: 11. 위험 변수 삭제](../vol05/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 오래된 이름 →](./01-part1-old-name.md)
 
 리팩터링은, 코드를 지우는 게 아니라 다시 쓰는 일이다.
 
@@ -135,4 +135,4 @@ next_hook: 참가자들이 "예전에 불리던 이름" 카드를 마주한다
 
 ---
 
-[← 이전 권: 5권](../vol05/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 오래된 이름 →](./01-part1-old-name.md)
+[← 이전: 11. 위험 변수 삭제](../vol05/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 오래된 이름 →](./01-part1-old-name.md)

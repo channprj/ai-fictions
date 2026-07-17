@@ -1,6 +1,6 @@
 # 00. 마지막 관찰실
 
-[← 이전 권: 11권](../vol11/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 대시보드 없음 →](./01-part1-no-dashboard.md)
+[← 이전: 11. 마지막 기수](../vol11/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 대시보드 없음 →](./01-part1-no-dashboard.md)
 
 마지막 기수의 첫 촬영이었다.
 
@@ -133,4 +133,4 @@ next_hook: 백이현이 무예측 촬영이 실제로 무엇을 끄고 무엇을
 
 ---
 
-[← 이전 권: 11권](../vol11/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 대시보드 없음 →](./01-part1-no-dashboard.md)
+[← 이전: 11. 마지막 기수](../vol11/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 대시보드 없음 →](./01-part1-no-dashboard.md)

@@ -1,6 +1,6 @@
 # 00. 데이터 없음
 
-[← 이전 권: 9권](../vol09/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 첫 번째 입소 →](./01-part1-first-ever-arrival.md)
+[← 이전: 11. 감사 로그](../vol09/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 첫 번째 입소 →](./01-part1-first-ever-arrival.md)
 
 Codex는 빈 화면을 처음 봤다.
 
@@ -115,4 +115,4 @@ next_hook: 데이터 없는 여섯 명이 첫 입소를 한다
 
 ---
 
-[← 이전 권: 9권](../vol09/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 첫 번째 입소 →](./01-part1-first-ever-arrival.md)
+[← 이전: 11. 감사 로그](../vol09/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 첫 번째 입소 →](./01-part1-first-ever-arrival.md)

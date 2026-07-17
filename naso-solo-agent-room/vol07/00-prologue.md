@@ -1,6 +1,6 @@
 # 00. 스펙표 공개
 
-[← 이전 권: 6권](../vol06/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 완벽한 입소 →](./01-part1-perfect-arrival.md)
+[← 이전: 11. 조작의 씨앗](../vol06/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 완벽한 입소 →](./01-part1-perfect-arrival.md)
 
 Codex는 조건 데이터를 좋아했다.
 
@@ -136,4 +136,4 @@ next_hook: 윤아가 완벽한 입소 장면 한가운데서 카메라를 정면
 
 ---
 
-[← 이전 권: 6권](../vol06/README.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 완벽한 입소 →](./01-part1-perfect-arrival.md)
+[← 이전: 11. 조작의 씨앗](../vol06/11-epilogue.md) | [시리즈홈](../README.md) | [목차](./README.md) | [다음: 01. 완벽한 입소 →](./01-part1-perfect-arrival.md)
