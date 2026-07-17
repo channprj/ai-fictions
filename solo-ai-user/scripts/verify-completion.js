@@ -989,11 +989,17 @@ function checkNavigations(discoveries, options) {
 
   const rootReadme = path.join(repoRoot, "README.md");
   if (exists(rootReadme)) {
-    checkNavigation(
-      rootReadme,
-      `${markdownLink("작품 목록", "#작품-목록")} | ${markdownLink("SOLOAI 바로가기", "./solo-ai-user/README.md")}`,
-      "repository catalog",
-    );
+    const text = read(rootReadme);
+    if (text !== null) {
+      const expectedCatalogRow = "| **나 혼자만 AI 사용자** | 현대 판타지 / 시스템 성장물 / 테크노 로맨스 | 전 12권 | ✅ 완결 | [작품 홈](./solo-ai-user/README.md) |";
+      const matches = text
+        .replace(/\r/g, "")
+        .split("\n")
+        .filter((line) => line === expectedCatalogRow);
+      if (matches.length !== 1) {
+        fail(`${relativeToRepo(rootReadme)}: repository catalog must contain exactly one current SOLOAI row "${expectedCatalogRow}"`);
+      }
+    }
   }
 }
 
