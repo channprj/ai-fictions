@@ -1,7 +1,5 @@
 # AI Fictions
 
-[작품 목록](#작품-목록) | [SOLOAI 바로가기](./solo-ai-user/README.md)
-
 ![Made with AI](https://img.shields.io/badge/Made%20with-AI-blueviolet)
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 ![Works](https://img.shields.io/badge/작품-8편-informational)
