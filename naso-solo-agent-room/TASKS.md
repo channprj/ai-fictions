@@ -75,7 +75,7 @@
 - 10권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 4 개막권 `Zero-Shot Hearts`가 완성되었다.
 - 11권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. Act 4 중반권 `Human-in-the-Loop`이 완성되었다.
 - 12권 `00-prologue.md`부터 `11-epilogue.md`까지 12개 장 초고가 모두 생성되었다. **완결권 `No Final Algorithm`이 완성되어 전 12권 시리즈가 완결되었다.**
-- **모든 본편 초고가 완료되었다(12권 × 12파일).** 후속 작업은 권리 검토, 분량 보강(권당 90,000~120,000자 목표 대비 점검), 문체 통일 패스 등 퇴고 단계다.
+- **모든 본편 12권 × 12파일은 문체 통일, 분량 보강, 캐논 교차 검수를 마쳤다.** strict 완결 검증과 Python 전수 감사도 통과해 독자용 리비전이 완료되었다.
 - 후속 작업은 `PRD.md`와 `BIBLE.md`를 먼저 읽은 뒤 진행한다.
 
 ## 작업 원칙
@@ -209,7 +209,14 @@ volNN/
 
 ## 완결 검증 게이트
 
-현재 revision gate는 **RED**다. 12권 초고 파일 존재만으로 완결 처리하지 않으며, vol04~vol12 권별 90,000자 하한과 남은 파일별 하한·내비게이션·제목 메타데이터·문서 위생 결함을 모두 해소한 뒤 아래 strict 명령이 exit 0이어야 한다. PRD 하한을 낮춰 통과시키지 않는다.
+현재 revision gate는 **GREEN**이다. 2026-07-17 최종 검증에서 PRD 하한을 낮추지 않고 다음 결과를 확인했다.
+
+- Node strict: outline 12개, volume 12개, 원고 144개, 캐논·상태 자료 31개
+- 파일별·권별 하한 미달 0건, 권별 94,948~108,864자
+- failures 0, warnings 0, effective failures 0
+- exact paragraph 중복 0, token sequence 중복 0
+- 검증기 테스트 13/13 통과
+- Python 전수 감사: 144개 원고 모두 PASS, 변경·신규·누락 0건
 
 ```sh
 node naso-solo-agent-room/scripts/verify-completion.js --strict
