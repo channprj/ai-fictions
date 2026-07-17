@@ -207,6 +207,16 @@ volNN/
 - Gemini가 만능 탐지기로 쓰이지 않았는가.
 - GLM이 개인의 용기를 구조로만 환원하지 않았는가.
 
+## 완결 검증 게이트
+
+현재 revision gate는 **RED**다. 12권 초고 파일 존재만으로 완결 처리하지 않으며, vol04~vol12 권별 90,000자 하한과 남은 파일별 하한·내비게이션·제목 메타데이터·문서 위생 결함을 모두 해소한 뒤 아래 strict 명령이 exit 0이어야 한다. PRD 하한을 낮춰 통과시키지 않는다.
+
+```sh
+node naso-solo-agent-room/scripts/verify-completion.js --strict
+node naso-solo-agent-room/scripts/verify-completion.js --volume volNN --strict
+python3 tasks/nasolo-verify.py
+```
+
 ## 구조 검증 명령
 
 현재 기반 문서만 검증할 때:
